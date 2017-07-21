@@ -1,0 +1,41 @@
+- name: Wireless
+  link: /wireless/doc
+  submenu:
+    - link: index
+      name: Introduction
+    - link: step1
+      name: Step 1 - Two hosts communicating wirelessly
+    - link: step2
+      name: Step 2 - Setting up some animations
+    - link: step3
+      name: Step 3 - Adding more nodes and decreasing the communication range
+    - link: step4
+      name: Step 4 - Setting up static routing
+    - link: step5
+      name: Step 5 - Taking interference into account
+    - link: step6
+      name: Step 6 - Using CSMA to better utilize the medium
+    - link: step7
+      name: Step 7 - Turning on ACKs in CSMA
+    - link: step8
+      name: Step 8 - Modeling energy consumption
+    - link: step9
+      name: Step 9 - Configuring node movements
+    - link: step10
+      name: Step 10 - Configuring ad-hoc routing (AODV)
+    - link: step11
+      name: Step 11 - Adding obstacles to the environment
+    - link: step12
+      name: Step 12 - Changing to a more realistic radio model
+    - link: step13
+      name: Step 13 - Configuring a more accurate pathloss model
+    - link: step14
+      name: Step 14 - Introducing antenna gain
+    - link: conclusion
+      name: Conclusion
+- name: Visualization    
+  link: /visualization/doc
+- name: Configurator
+  link: /configurator/doc
+- name: Repository
+  link: https://github.com/inet-framework/inet-tutorials

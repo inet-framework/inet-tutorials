@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+
+        <div class="row">
+
+          <div class="col-sm-9">
+
+          <div class="page">
+            <h1 class="page-title">{{ page.title }}</h1>
+            {{ content }}
+           </div>
+          </div>
+          
+          <div class="col-sm-3">
+            <div class="affix">
+            <!-- generated table of contents -->
+            {% if page.generateToC %}
+            <div id="toc" class="span3 bs-docs-sidebar">
+            </div>
+            {% endif %}
+
+            <!-- find active submenu -->
+            {% for item in site.data.menu %}
+              {% if item.submenu %}
+                {% if page.underMenu == item.name %}{% assign activeSubmenu = item.submenu %}{% endif %}
+              {% endif %}
+            {% endfor %}
+            
+            <!-- render it as a link group -->
+            {% if activeSubmenu  %}
+              <div style="height:30px"></div>
+              <h4>Related Pages</h4>
+              <div class="list-group" >
+              {% for submenuitem in activeSubmenu %}
+                {% unless submenuitem.separator %}
+                  <a class="list-group-item{% if page.url == submenuitem.link %} active{% endif %}" href="{{ submenuitem.link }}">{{ submenuitem.name }}</a>
+                {% endunless %}
+              {% endfor %}
+              </div>
+            {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
