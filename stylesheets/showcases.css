@@ -35,6 +35,7 @@ video, .screen {
 
 .screen {
 	padding: 1em 0em 1em 0em;
+	max-width: 100%;
 }
 
 .border {
