@@ -45,7 +45,7 @@ The assigned addresses are shown on the image below:
 
 The size of some of the routing tables are the following:
 
-<img src="step7a_rt.png">
+<img src="step7a_rt_2.png">
 
 The routing tables of a host (<i>area1lan2host2</i>) and a router (<i>area1router</i>) are shown below.
 The <i>backbonerouter's</i> routing table is similar to <i>area1router's</i>.
@@ -142,7 +142,7 @@ assignDisjunctSubnetAddresses, addDefaultRoutes, addSubnetRoutes, optimizeRoutes
 
 The addresses are the same, but the routing table sizes have gone down:
 
-<img src="step7b_rt.png">
+<img src="step7b_rt_2.png">
 
 The routing tables of a host, an area router and the backbone router are the following:
 
@@ -227,7 +227,7 @@ The image below shows the assigned addresses.
 
 The sizes of some of the routing tables are displayed on the following image.
 
-<img src="step7c_rt.png">
+<img src="step7c_rt_2.png">
 
 The routing tables are the following:
 
