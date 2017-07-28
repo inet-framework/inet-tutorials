@@ -1,41 +1,75 @@
 - name: Wireless
-  link: /wireless/doc
+  link: /inet-tutorials/wireless/doc
   submenu:
-    - link: index
+    - link: /inet-tutorials/wireless/doc/index
       name: Introduction
-    - link: step1
+    - link: /inet-tutorials/wireless/doc/step1
       name: Step 1 - Two hosts communicating wirelessly
-    - link: step2
+    - link: /inet-tutorials/wireless/doc/step2
       name: Step 2 - Setting up some animations
-    - link: step3
+    - link: /inet-tutorials/wireless/doc/step3
       name: Step 3 - Adding more nodes and decreasing the communication range
-    - link: step4
+    - link: /inet-tutorials/wireless/doc/step4
       name: Step 4 - Setting up static routing
-    - link: step5
+    - link: /inet-tutorials/wireless/doc/step5
       name: Step 5 - Taking interference into account
-    - link: step6
+    - link: /inet-tutorials/wireless/doc/step6
       name: Step 6 - Using CSMA to better utilize the medium
-    - link: step7
+    - link: /inet-tutorials/wireless/doc/step7
       name: Step 7 - Turning on ACKs in CSMA
-    - link: step8
+    - link: /inet-tutorials/wireless/doc/step8
       name: Step 8 - Modeling energy consumption
-    - link: step9
+    - link: /inet-tutorials/wireless/doc/step9
       name: Step 9 - Configuring node movements
-    - link: step10
+    - link: /inet-tutorials/wireless/doc/step10
       name: Step 10 - Configuring ad-hoc routing (AODV)
-    - link: step11
+    - link: /inet-tutorials/wireless/doc/step11
       name: Step 11 - Adding obstacles to the environment
-    - link: step12
+    - link: /inet-tutorials/wireless/doc/step12
       name: Step 12 - Changing to a more realistic radio model
-    - link: step13
+    - link: /inet-tutorials/wireless/doc/step13
       name: Step 13 - Configuring a more accurate pathloss model
-    - link: step14
+    - link: /inet-tutorials/wireless/doc/step14
       name: Step 14 - Introducing antenna gain
-    - link: conclusion
+    - link: /inet-tutorials/wireless/doc/conclusion
       name: Conclusion
-- name: Visualization    
-  link: /visualization/doc
+
+- name: Visualization
+  link: /inet-tutorials/visualization/doc
+  submenu:
+    - link: TODO
+      name: TODO
+
 - name: Configurator
-  link: /configurator/doc
+  link: /inet-tutorials/configurator/doc
+  submenu:
+    - link: /inet-tutorials/configurator/doc/index
+      name: Introduction
+    - link: /inet-tutorials/configurator/doc/step1
+      name: Step 1 - Fully automatic IP address assignment
+    - link: /inet-tutorials/configurator/doc/step2
+      name: Step 2 - Manually overriding individual IP addresses
+    - link: /inet-tutorials/configurator/doc/step3
+      name: Step 3 - Automatically assigning IP addresses to a subnet from a given range
+    - link: /inet-tutorials/configurator/doc/step4
+      name: Step 4 - Fully automatic static routing table configuration
+    - link: /inet-tutorials/configurator/doc/step5
+      name: Step 5 - Manually overriding individual routes
+    - link: /inet-tutorials/configurator/doc/step6
+      name: Step 6 - Setting different metric for automatic routing table configuration
+    - link: /inet-tutorials/configurator/doc/step7
+      name: Step 7 - Configuring a hierarchical network
+    - link: /inet-tutorials/configurator/doc/step8
+      name: Step 8 - Configuring a mixed wired/wireless network
+    - link: /inet-tutorials/configurator/doc/step9
+      name: Step 9 - Leaving some part of the network unconfigured
+    - link: /inet-tutorials/configurator/doc/step10
+      name: Step 10 - Configuring a completely wireless network
+    - link: /inet-tutorials/configurator/doc/step11
+      name: Step 11 - Manually modifying an automatically created configuration
+    - link: /inet-tutorials/configurator/doc/step12
+      name: Step 12 - Mixing different kinds of autorouting
+
 - name: Repository
   link: https://github.com/inet-framework/inet-tutorials
+

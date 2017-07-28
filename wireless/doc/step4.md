@@ -64,9 +64,7 @@ steps.
 
 Configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless04]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless04\]" until="####"></pre>
 
 ## Results
 

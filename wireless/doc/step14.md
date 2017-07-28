@@ -22,10 +22,7 @@ nodes of a simulated wireless network are on the same plane,
 as a vertical dipole. (INET contains support for directional antennas as
 well.)
 
-
-@dontinclude omnetpp.ini
-@skipline [Config Wireless14]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless14\]" until="####"></pre>
 
 ## Results
 

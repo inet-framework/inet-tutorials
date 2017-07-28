@@ -45,9 +45,7 @@ number of retries and is discarded, the MAC emits a <i>link break</i>
 signal. This signal may be interpreted by routing protocols such as AODV as
 a sign that a route has become broken, and a new one needs to be found.
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless07]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless07\]" until="####"></pre>
 
 ## Results
 

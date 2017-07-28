@@ -22,9 +22,7 @@ In this step we'll use the model depicted below.
 
 Here is the NED source of the network:
 
-@dontinclude WirelessA.ned
-@skip network WirelessA
-@until ####
+<pre src="../WirelessA.ned" from="network WirelessA" until="####"></pre>
 
 We'll explain the above NED file below.
 
@@ -71,7 +69,7 @@ kbps) UDP traffic, not counting protocol overhead. Host B contains a
 `UDPSink` application that just discards received packets.
 
 The model also displays the number of packets received by host B. The text
-is added by the `@figure[rcvdPkText]` line, and the subsequent 
+is added by the `@figure[rcvdPkText]` line, and the subsequent
 line arranges the figure to be updated during the simulation.
 
 ### Physical layer modeling
@@ -127,10 +125,7 @@ an optional out-of-band acknowledgement mechanism which we turn off here.
 
 The configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless01]
-@until ####
-
+<pre src="../omnetpp.ini" from="\[Config Wireless01\]" until="####"></pre>
 
 ## Results
 

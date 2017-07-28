@@ -80,9 +80,7 @@ so we turn it off.
 
 Configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless08]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless08\]" until="####"></pre>
 
 ## Results
 

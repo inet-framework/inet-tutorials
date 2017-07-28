@@ -19,9 +19,7 @@ We need to add three more hosts. This could be done by copying and editing the
 network used in the previous steps, but instead we extend `WirelessA` into
 `WirelessB` using the inheritance feature of NED:
 
-@dontinclude WirelessB.ned
-@skip network WirelessB
-@until ####
+<pre src="../WirelessB.ned" from="network WirelessB" until="####"></pre>
 
 We decrease the communication range of the radios of all hosts to 250
 meters. This will make direct communication between hosts A and B
@@ -32,9 +30,7 @@ able to communicate at all.
 
 The configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless03]
-@until ####
+<pre src="../omnetpp.ini" from="Config Wireless03" until="####"></pre>
 
 ## Results
 
@@ -122,12 +118,9 @@ Our UDP application generates packets with the name `UDPData-0`,
 in order to filter out other types of packets that will appear in later
 steps.
 
-
 Configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless04]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless04\]" until="####"></pre>
 
 ## Results
 

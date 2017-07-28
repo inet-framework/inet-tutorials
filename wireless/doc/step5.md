@@ -40,9 +40,7 @@ Regarding visualization, we turn off the arrows indicating successful data
 link layer receptions, because in our case it does not add much value above
 displaying the network routes.
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless05]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless05\]" until="####"></pre>
 
 ## Results
 

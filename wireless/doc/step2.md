@@ -46,14 +46,9 @@ When a packet is successfully received by the physical layer, the arrow between
 the transmitter and receiver hosts is created or reinforced. The arrows
 visible at any given time indicate recent successful communication patterns.
 
-@dontinclude omnetpp.ini
-@skipline
-
 Configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Wireless02]
-@until ####
+<pre src="../omnetpp.ini" from="\[Config Wireless02\]" until="####"></pre>
 
 ## Results
 
