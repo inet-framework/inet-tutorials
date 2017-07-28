@@ -112,7 +112,7 @@ The routing tables are the following (routes visualized on the image above are h
 
 <p>
 <div class="include fit">
-<pre class="monospace" style="background-color: transparent; border: 0px; margin-bottom: 0px">
+<pre class="monospace">
 Node ConfiguratorB.host0 (hosts 1-2 similar)
 -- Routing table --
 Destination      Netmask          Gateway          Iface           Metric

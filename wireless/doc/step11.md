@@ -27,7 +27,7 @@ First, we need to represent obstacles. In INET, obstacles are managed as
 part of the `PhysicalEnvironment` module, so we need to add an instance to
 the `WirelessB` network:
 
-<pre src="../WirelessC.ned" from="network WirelessC" until="####"></pre>
+<p><pre class="snippet" src="../WirelessC.ned" from="network WirelessC" until="####"></pre></p>
 
 Obstacles are described in an XML file. An obstacle is defined by its
 shape, location, orientation, and material. It may also have a name, and
@@ -45,7 +45,7 @@ computation of signal loss.
 Our wall is defined in walls.xml, and the file name is given to
 `PhysicalEnvironment` in its `config` parameter. The file contents:
 
-<pre src="../walls.xml" from="environment" until="/environment"></pre>
+<p><pre class="snippet" src="../walls.xml" from="environment" until="/environment"></pre></p>
 
 Having obstacles is not enough in itself, we also need to teach the model
 of the wireless medium to take them into account. This is done by
@@ -66,7 +66,7 @@ setting; we change this to 1.7m so that the wall definitely blocks their signals
 
 The configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless11\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless11\]" until="####"></pre></p>
 
 ## Results
 

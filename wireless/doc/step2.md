@@ -48,7 +48,7 @@ visible at any given time indicate recent successful communication patterns.
 
 Configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless02\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless02\]" until="####"></pre></p>
 
 ## Results
 

@@ -19,7 +19,7 @@ We need to add three more hosts. This could be done by copying and editing the
 network used in the previous steps, but instead we extend `WirelessA` into
 `WirelessB` using the inheritance feature of NED:
 
-<pre src="../WirelessB.ned" from="network WirelessB" until="####"></pre>
+<p><pre class="snippet" src="../WirelessB.ned" from="network WirelessB" until="####"></pre></p>
 
 We decrease the communication range of the radios of all hosts to 250
 meters. This will make direct communication between hosts A and B
@@ -30,7 +30,7 @@ able to communicate at all.
 
 The configuration:
 
-<pre src="../omnetpp.ini" from="Config Wireless03" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="Config Wireless03" until="####"></pre></p>
 
 ## Results
 
@@ -120,7 +120,7 @@ steps.
 
 Configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless04\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless04\]" until="####"></pre></p>
 
 ## Results
 

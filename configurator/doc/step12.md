@@ -69,7 +69,8 @@ As intended, <i>area1host1</i> connects to the network via <i>area1host2</i>.
 
 The routing table of <i>area1host1</i> is as follows:
 
-<div class="fragment fit">
+<p>
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorF.area1host1
 -- Routing table --
@@ -90,6 +91,7 @@ Destination      Netmask          Gateway          Iface             Metric
 10.0.0.40        255.255.255.248  10.0.0.19        wlan0 (10.0.0.17) 0
 </pre>
 </div>
+</p>
 
 The gateway is 10.0.0.19 (<i>area1host2</i>) in all rules, except the one where it is *. That rule is for reaching
 the other hosts in the LAN directly. This doesn't seem to be according to the error rate metric, but the * rule

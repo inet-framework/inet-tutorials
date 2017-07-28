@@ -46,7 +46,7 @@ cause mobile nodes to leave a trail as they move. We also enable a visualizer op
 
 The configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless09\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless09\]" until="####"></pre></p>
 
 ## Results
 

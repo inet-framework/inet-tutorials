@@ -8,8 +8,9 @@
 	margin: 4px 8px 4px 2px;
 }
 
-mark {
+.mark, .marker {
 	background-color: #cbda00;
+	padding: 0;
 }
 
 .snippet {
@@ -21,6 +22,7 @@ mark {
 	padding: 4px 6px;
 	margin: 4px 8px 4px 2px;
 	font-family: monospace;
+	border-radius: 0;
 }
 
 var {
@@ -49,4 +51,21 @@ video, .screen {
 	box-shadow: 0 1px 1px 0 grey;
 	display: block;
 	margin: 1em auto;
+}
+
+.fit {
+	display: inline-flex;
+}
+
+div.fragment
+{
+	overflow: auto;
+}
+
+.monospace {
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	background-color: transparent; 
+	border: 0px; 
+	margin-bottom: 0px
 }

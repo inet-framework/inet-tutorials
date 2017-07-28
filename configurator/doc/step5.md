@@ -53,7 +53,7 @@ Packets with the destination of 10.0.0.35/32 should use the interface 'eth1' and
 The routing table of <i>router0</i> (manually added route highlighted):
 
 <p>
-<div class="fragment fit">
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorB.router0
 -- Routing table --
@@ -62,7 +62,7 @@ Destination      Netmask          Gateway          Iface            Metric
 10.0.0.22        255.255.255.255  *                eth2 (10.0.0.21) 0
 10.0.0.25        255.255.255.255  10.0.0.22        eth2 (10.0.0.21) 0
 <span class="marker">10.0.0.35        255.255.255.255  10.0.0.18        eth1 (10.0.0.17) 0</span>
-10.0.0.0         255.255.255.248  *                eth0 (10.0.0.4) 	0
+10.0.0.0         255.255.255.248  *                eth0 (10.0.0.4)  0
 10.0.0.32        255.255.255.248  10.0.0.22        eth2 (10.0.0.21) 0
 10.0.0.0         255.255.255.224  10.0.0.18        eth1 (10.0.0.17) 0
 </pre>

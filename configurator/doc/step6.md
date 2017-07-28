@@ -73,7 +73,7 @@ The resulting routes are similar to the ones in Step 5B. The difference is that 
 The routing table of <i>router0</i> is as follows:
 
 <p>
-<div class="fragment fit">
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorA.router0
 -- Routing table --
@@ -91,7 +91,7 @@ should be routed towards <i>router1</i>.
 The routing table of <i>router2</i> is similar:
 
 <p>
-<div class="fragment fit">
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorA.router2
 -- Routing table --

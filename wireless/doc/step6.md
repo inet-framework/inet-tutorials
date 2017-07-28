@@ -54,7 +54,7 @@ period before each transmission. In the absence of ACKs, the MAC has to
 assume that all its transmissions are successful, so no frame is ever
 retransmitted.
 
-<pre src="../omnetpp.ini" from="\[Config Wireless06\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless06\]" until="####"></pre></p>
 
 ## Results
 

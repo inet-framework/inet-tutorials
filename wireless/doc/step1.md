@@ -22,7 +22,7 @@ In this step we'll use the model depicted below.
 
 Here is the NED source of the network:
 
-<pre src="../WirelessA.ned" from="network WirelessA" until="####"></pre>
+<p><pre class="snippet" src="../WirelessA.ned" from="network WirelessA" until="####"></pre></p>
 
 We'll explain the above NED file below.
 
@@ -125,7 +125,7 @@ an optional out-of-band acknowledgement mechanism which we turn off here.
 
 The configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless01\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless01\]" until="####"></pre></p>
 
 ## Results
 

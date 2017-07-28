@@ -62,7 +62,7 @@ for the unspecified hosts. For example, <i>area1router's eth3</i> interface has 
 The routing tables of <i>area1lan3host2, area1router and backbonerouter</i> are the following (routes for reaching the unspecified hosts are highlighted):
 
 <p>
-<div class="fragment fit">
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorC.area1lan3host2
 -- Routing table --

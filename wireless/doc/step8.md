@@ -80,7 +80,7 @@ so we turn it off.
 
 Configuration:
 
-<pre src="../omnetpp.ini" from="\[Config Wireless08\]" until="####"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless08\]" until="####"></pre></p>
 
 ## Results
 

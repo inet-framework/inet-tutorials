@@ -50,7 +50,7 @@ The size of some of the routing tables are the following:
 The routing tables of a host (<i>area1lan2host2</i>) and a router (<i>area1router</i>) are shown below.
 The <i>backbonerouter's</i> routing table is similar to <i>area1router's</i>.
 
-<p><div class="fragment fit">
+<p><div class="include fit">
 <pre class="monospace">
 Node ConfiguratorB.area1lan2host2
 -- Routing table --
@@ -146,7 +146,7 @@ The addresses are the same, but the routing table sizes have gone down:
 
 The routing tables of a host, an area router and the backbone router are the following:
 
-<p><div class="fragment fit">
+<p><div class="include fit">
 <pre class="monospace">
 Node ConfiguratorB.area1lan1host0
 -- Routing table --
@@ -231,7 +231,7 @@ The sizes of some of the routing tables are displayed on the following image.
 
 The routing tables are the following:
 
-<p><div class="fragment fit">
+<p><div class="include fit">
 <pre class="monospace">
 Node ConfiguratorB.area1lan1host0
 -- Routing table --
