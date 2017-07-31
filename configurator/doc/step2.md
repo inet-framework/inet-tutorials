@@ -17,9 +17,7 @@ and 10.0.0.100 to `host3` . The configurator will automatically assign addresses
 
 The configuration in omnetpp.ini for this step is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skip Step2
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step2" until="####"></pre></p>
 
 The XML configuration can be supplied to the `config`  parameter in one of two ways:
 
@@ -41,7 +39,7 @@ allocated addresses in their subnets, so they can be easily configured later dyn
 - The `netmask`  parameter attribute specifies the netmasks to be assigned. Address templetes can be used here as well.
 
 All attributes are optional. Attributes not specified are left for the automatic configuration. There are many other attributes available. For the complete list of attributes of the <interface> element
-(or any other element), please refer to the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt></a> NED documentation.
+(or any other element), please refer to the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><strong>IPv4NetworkConfigurator</strong></a> NED documentation.
 
 In the XML configuration for this step, the first two rules state that `host3's`  (hosts="*.host3") interface named 'eth0' (names="eth0") should get the IP address 10.0.0.100 (address="10.0.0.100"), and `host1's`  interface 'eth0' should get 10.0.0.50.
 The third rule is the exact copy of the default configuration, which tells the configurator to assign the rest of the addresses automatically.

@@ -11,41 +11,38 @@ This step demonstrates the default configuration for routing.
 
 ## The model
 
-This step uses the same network as the previous steps, <i>ConfiguratorA</i>.
+This step uses the same network as the previous steps, `ConfiguratorA`.
 
 ### Configuration
 
 The configuration for this step in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skip Step4
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step4" until="####"></pre></p>
+A ping app in `host1` is configured to send ping packets to `host7`, which is on the other side of the network. Ping packets will be used throughout the tutorial to illustrate how packets are routed.
 
-A ping app in <i>host1</i> is configured to send ping packets to <i>host7</i>, which is on the other side of the network. Ping packets will be used throughout the tutorial to illustrate how packets are routed.
-
-The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network.
+The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize IP routes in the network.
 Routes are visualized with arrows. In general, an arrow indicates an entry in the source host's routing table. It points
-to the host that is the next hop or gateway for that routing table entry. The visualization is activated by setting the <i>RoutingTableVisualizer</i>'s <i>displayRoutingTables</i> parameter to <i>true</i>.
-The set of routes to be visualized are selected with the visualizer's <i>destinationFilter</i> parameter.
-All routes leading towards that set of destinationa are indicated by arrows.
-The default setting is <tt>"*"</tt>, which means routes towards all destinations are visualized. The <tt>"*"</tt> setting visualizes all routes
-going from every node to every other node, which can make the screen cluttered.
-In this step the <i>destinationFilter</i> is set to visualize all routes heading towards <i>host7</i>. TODO: rewrite?
+to the host that is the next hop or gateway for that routing table entry. The visualization is activated by setting the `RoutingTableVisualizer`'s `displayRoutingTables` parameter to `true`.
+The set of routes to be visualized are selected with the visualizer's `destinationFilter` parameter.
+All routes leading towards that set of destinations are indicated by arrows.
+The default setting is <strong>"*"</strong>, which visualizes all routes
+going from every node to every other node. Visualizing routes to all destinations can often make the screen cluttered.
+In this step the `destinationFilter` is set to visualize all routes heading towards `host7`. TODO: rewrite?
 
 V2
 
-The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. Routes are visualized as arrows,
+The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize routes in the network. Routes are visualized as arrows,
 where an arrow represents a routing table entry of the source host. An arrow originates from the source host,
-and points at the next hop of the routing entry. The set of routing tables to be visualized are selected with the visualizer's <i>nodeFilter</i> parameter, and the set of destinations is specified by the <i>destinationFilter</i> parameter. The visualizer displays the best matching routes for each destination as arrows, from each selected node's routing table. By default, routes from all nodes to all destinations are visualized. This can sometimes make the screen cluttered.
+and points at the next hop of the routing entry. The set of routing tables to be visualized are selected with the visualizer's `nodeFilter` parameter, and the set of destinations is specified by the `destinationFilter` parameter. The visualizer displays the best matching routes for each destination as arrows, from each selected node's routing table. By default, routes from all nodes to all destinations are visualized. This can sometimes make the screen cluttered.
 
 V3
 
-The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry. By default, the best matching routing table entries towards all destinations from all nodes are visualized.
+The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry. By default, the best matching routing table entries towards all destinations from all nodes are visualized.
 
 V4
 
-The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry.
-The visualizer displays the best matching (longest prefix) routing table entries towards each destination, from each node's routing table. By default, the set of routing tables and destinatons are all nodes, this selection can be narrowed with the visualizer's <i>nodeFilter</i> and <i>destinationFilter</i> parameters, respectively.
+The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry.
+The visualizer displays the best matching (longest prefix) routing table entries towards each destination, from each node's routing table. By default, the set of routing tables and destinatons are all nodes, this selection can be narrowed with the visualizer's `nodeFilter` and `destinationFilter` parameters, respectively.
 
 V5
 
@@ -55,7 +52,7 @@ Routing table entries are represented visually by solid arrows. An arrow going f
 
 V6
 
-In INET, routes can be visualized by the <i>RoutingTableCanvasVisualizer</i> module, included in the network as a submodule of <i>IntegratedCanvasVisualizer</i>. The visualizer indicates how packets would be routed as solid arrows. An arrow represents a routing table entry in the source node's routing table, and points to the next hop address. 
+In INET, routes can be visualized by the `RoutingTableCanvasVisualizer` module, included in the network as a submodule of `IntegratedCanvasVisualizer`. The visualizer indicates how packets would be routed as solid arrows. An arrow represents a routing table entry in the source node's routing table, and points to the next hop address. 
 
 The visualizer visualizes the routing table entries that best match a set of destination addresses. 
 
@@ -63,10 +60,10 @@ Common: The arrows are annotated with details of the routing table entry, such a
 
 V7
 
-In INET, routes can be visualized using the <i>RoutingTableVisualizer</i> module, which is included in the network as a submodule of <i>IntegratedCanvasVisualizer</i>. <i>RoutingTableVisualizer</i> displays IPv4 routes are solid arrows. An arrow represents a routing table entry of the source node, and points from said node to the next hop node of the routing table entry. Those routing table entries are displayed, that best match a set of destination addresses. They are visualized from a set of source nodes.
+In INET, routes can be visualized using the `RoutingTableVisualizer` module, which is included in the network as a submodule of `IntegratedCanvasVisualizer`. `RoutingTableVisualizer` displays IPv4 routes are solid arrows. An arrow represents a routing table entry of the source node, and points from said node to the next hop node of the routing table entry. Those routing table entries are displayed, that best match a set of destination addresses. They are visualized from a set of source nodes.
 
-The visualization can be activated by setting the visualizer's <i>displayRoutingTables</i>
-parameter to <i>true</i>. By default, the set of source and destination nodes are all nodes in the network. This selection can be narrowed with the visualizer's <i>nodeFilter</i> and <i>destinationFilter</i> parameter.
+The visualization can be activated by setting the visualizer's `displayRoutingTables`
+parameter to `true`. By default, the set of source and destination nodes are all nodes in the network. This selection can be narrowed with the visualizer's `nodeFilter` and `destinationFilter` parameter.
 
 Here, the destinationfilter is set to host7 so routes from all hosts towards host7 are visualized.
 
@@ -76,26 +73,23 @@ The IP address assignment is fully automatic, and the resulting addresses should
 
 The configurator's parameters concerning static routing are the following:
 
-- <i>addStaticRoutes = default(true)</i>: Add static routes to the routing table of all nodes in the network, 
+- `addStaticRoutes = default(true)`: Add static routes to the routing table of all nodes in the network, 
 with routes leading to all destination interfaces.
-- <i>addDefaultRoutes = default(true)</i>: Add a default route if all routes from a node go through the same gateway.
+- `addDefaultRoutes = default(true)`: Add a default route if all routes from a node go through the same gateway.
 This is often the case with hosts, which usually connect to a network via a single interface. This parameter
-is not used if <i>addStaticRoutes = false</i>.
-- <i>addSubnetRoutes = default(true)</i>: Optimize routing tables by adding routes towards subnets instead of individial interfaces. 
-This is only used where applicable, and not used if <i>addStaticRoutes = false</i>.
-- <i>optimizeRoutes = default(true)</i>: Optimize routing tables by merging entries where possible. Not used if <i>addStaticRoutes = false</i>.
+is not used if `addStaticRoutes = false`.
+- `addSubnetRoutes = default(true)`: Optimize routing tables by adding routes towards subnets instead of individial interfaces. 
+This is only used where applicable, and not used if `addStaticRoutes = false`.
+- `optimizeRoutes = default(true)`: Optimize routing tables by merging entries where possible. Not used if `addStaticRoutes = false`.
 
 The configuration for this step didn't set any of these parameters, thus the default values will take effect.
-Additionally, the <i>dumpTopology</i>, <i>dumpLinks</i> and <i>dumpRoutes</i> parameters are set to true in the <i>General</i> configuration.
+Additionally, the `dumpTopology`, `dumpLinks` and `dumpRoutes` parameters are set to true in the `General` configuration.
 These instruct the configurator to print to the module output the topology of the network, the recognized network links, and the routing tables of all nodes, respectively. Topology describes which nodes are connected to which nodes. Hosts that can directly reach each other (i.e. the next hop is the destination), 
 are considered to be on the same link.
 
-@dontinclude omnetpp.uncommented.ini
-@skip General
-@until ####
-
-The <i>General</i> configuration also sets GlobalARP to keep the packet exchanges simpler. GlobalARP fills the ARP tables of all nodes in advance,
-so when the simulation begins no ARP exchanges are necessary. The <i>**.routingTable.netmaskRoutes = ""</i> keeps the routing table modules from
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="General" until="####"></pre></p>
+The `General` configuration also sets GlobalARP to keep the packet exchanges simpler. GlobalARP fills the ARP tables of all nodes in advance,
+so when the simulation begins no ARP exchanges are necessary. The `**.routingTable.netmaskRoutes = ""` keeps the routing table modules from
 adding netmask routes to the routing tables. Netmask routes mean that nodes with the same netmask but different IP should reach each other directly.
 These routes are also added by the configurator, so netmaskRoutes is turned off to avoid duplicate routes.
 
@@ -105,7 +99,7 @@ The visualized routes are displayed on the following image:
 
 <img class="screen" src="step4routes.png" width="850px">
 
-Routes from all nodes to <i>host7</i> are visualized. Note that arrows don't go through switches,
+Routes from all nodes to `host7` are visualized. Note that arrows don't go through switches,
 because they are not the next hop. When routes are concerned, they are transparent L2 devices.
 
 The routing tables are the following (routes visualized on the image above are highlighted):
@@ -168,9 +162,9 @@ The * for the gateway means that the gateway is the same as the destination. Hos
 the gateway for packets sent to outside-of-subnet addresses. Routers have three rules in their routing tables for reaching the other routers,
 specifically, those interfaces of the other routers that are not facing the hosts.
 
-Below is an animation of <i>host1</i> pinging <i>host7</i>.
+Below is an animation of `host1` pinging `host7`.
 
-<img src="step4_new_4.gif" width="850px">
+<img class="screen" src="step4_new_4.gif" width="850px">
 <!--TODO delete-->
 
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step4_2_cropped.mp4" width="850" height="560"></video></p>

@@ -14,9 +14,9 @@ This step consists of two parts:
 
 ## Part A - Overriding routes to a specific host
 
-Both parts in this step use the <i>ConfiguratorA</i> network (displayed below), just as in the previous steps.
-In this part we will override the routes going from the subnet of <i>router0</i> to <i>host7</i>. With the automatic configuration, packets
-from <i>router0's</i> subnet would go through <i>router2</i> to reach <i>host7</i> (as in the previous step.) We want them to go through <i>router1</i> instead.
+Both parts in this step use the `ConfiguratorA` network (displayed below), just as in the previous steps.
+In this part we will override the routes going from the subnet of `router0` to `host7`. With the automatic configuration, packets
+from `router0's` subnet would go through `router2` to reach `host7` (as in the previous step.) We want them to go through `router1` instead.
 
 <img class="screen" src="step4network.png">
 
@@ -24,33 +24,29 @@ from <i>router0's</i> subnet would go through <i>router2</i> to reach <i>host7</
 
 The configuration in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step5
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step5" until="####"></pre></p>
 
-A ping application is added to <i>host0</i>, in addition to the one in <i>host1</i> added in Step 4.
-The new app in <i>host0</i> pings <i>host6</i> to demonstrate that only packets sent to <i>host7</i>
+A ping application is added to `host0`, in addition to the one in `host1` added in Step 4.
+The new app in `host0` pings `host6` to demonstrate that only packets sent to `host7`
 are affected by the route override.
 
-For the routes to go through <i>router1</i>, the routing table of <i>router0</i> has to be altered.
-The new rules should dictate that packets with the destination of <i>host7</i> (10.0.0.35) should be routed
-towards <i>router2</i>. The XML configuration in step5a.xml is the following:
+For the routes to go through `router1`, the routing table of `router0` has to be altered.
+The new rules should dictate that packets with the destination of `host7` (10.0.0.35) should be routed
+towards `router2`. The XML configuration in step5a.xml is the following:
 
-@dontinclude step5a.xml
-@skipline <config>
-@until </config>
+<p><pre class="snippet" src="../step5a.xml" from="<config>" until="</config>"></pre></p>
 
 The <route> element describes a routing table entry for one or more nodes in the network.
-The <i>hosts</i> optional selector attribute specifies which hosts' routing tables should contain the entry.
+The `hosts` optional selector attribute specifies which hosts' routing tables should contain the entry.
 There are 5 additional optional parameter attributes. These are the same as in real life routing tables:
 address, netmask, gateway, interface, metric.
 
-The <route> element in this XML configuration adds the following rule to <i>router0's</i> routing table:
+The <route> element in this XML configuration adds the following rule to `router0's` routing table:
 Packets with the destination of 10.0.0.35/32 should use the interface 'eth1' and the gateway 10.0.0.18 (router2.)
 
 ### Results
 
-The routing table of <i>router0</i> (manually added route highlighted):
+The routing table of `router0` (manually added route highlighted):
 
 <p>
 <div class="include fit">
@@ -69,14 +65,14 @@ Destination      Netmask          Gateway          Iface            Metric
 </div>
 </p>
 
-The routing table of <i>router0</i> in the previous step had six entries. Now it has seven,
+The routing table of `router0` in the previous step had six entries. Now it has seven,
 as the rule specified in the XML configuration has been added (highlighted).
-This and the last rule both match packets to <i>host7</i> but the manually added route takes effect
+This and the last rule both match packets to `host7` but the manually added route takes effect
 because it comes earlier.
 
-The following animation depicts <i>host1</i> pinging <i>host7</i>, and <i>host0</i> pinging <i>host6</i>. Routes to <i>host7</i> are visualized.
+The following animation depicts `host1` pinging `host7`, and `host0` pinging `host6`. Routes to `host7` are visualized.
 
-<img src="step5a.gif" width="850px">
+<img class="screen" src="step5a.gif" width="850px">
 <!--TODO delete-->
 
 
@@ -84,41 +80,37 @@ The following animation depicts <i>host1</i> pinging <i>host7</i>, and <i>host0<
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
 
-Note that only routes towards <i>host7</i> are diverted at <i>router0</i>. The ping reply packet uses the original route between <i>router0</i> and <i>router2</i>.
-Ping packets to <i>host6</i> (and back) also use the original route.
+Note that only routes towards `host7` are diverted at `router0`. The ping reply packet uses the original route between `router0` and `router2`.
+Ping packets to `host6` (and back) also use the original route.
 
 ## Part B - Overriding routes to a set of hosts
 
-In this part, we will override routes going from the subnet of <i>hosts 0-2</i> to the subnet of <i>hosts 6-8</i>.
-These routes will go through <i>router1</i>, just as in Part A.
+In this part, we will override routes going from the subnet of `hosts 0-2` to the subnet of `hosts 6-8`.
+These routes will go through `router1`, just as in Part A.
 
 ### Configuration
 
 The configuration in omnetpp.ini:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step5B
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step5B" until="####"></pre></p>
 
-As in Part A, the routing table of <i>router0</i> has to be altered, so that packets to <i>hosts 6-8</i> go towards <i>router1</i>. 
+As in Part A, the routing table of `router0` has to be altered, so that packets to `hosts 6-8` go towards `router1`. 
 The XML configuration in step5b.xml is as follows:
 
-@dontinclude step5b.xml
-@skipline config
-@until config
+<p><pre class="snippet" src="../step5b.xml" from="config" until="config"></pre></p>
 
-The <route> element specifies a routing table entry for <i>router0</i>. The destination is 10.0.0.32 with netmask 255.255.255.248,
-which designates the addresses of hosts 6-8. The gateway is <i>router1's</i> address, the interface is the one connected towards
-<i>router1</i> (eth1). This rule is added to <i>router0's</i> routing table <strong>in addition</strong>
+The <route> element specifies a routing table entry for `router0`. The destination is 10.0.0.32 with netmask 255.255.255.248,
+which designates the addresses of hosts 6-8. The gateway is `router1's` address, the interface is the one connected towards
+`router1` (eth1). This rule is added to `router0's` routing table <strong>in addition</strong>
 to the rule added automatically by the configurator. They match the same packets, but the parameters are different (see at the result section
 below.) The manually added routes come before the automatic ones in routing tables, thus the manual ones take precedence.
 
 ### Results
 
-Here is the routing table of <i>router0</i> (the manually added route highlighted):
+Here is the routing table of `router0` (the manually added route highlighted):
 
 <p>
-<div class="fragment fit">
+<div class="include fit">
 <pre class="monospace">
 Node ConfiguratorB.router0
 -- Routing table --
@@ -137,14 +129,14 @@ Destination      Netmask          Gateway          Iface            Metric
 </div>
 </p>
 
-The following is the animation of <i>host1</i> pinging <i>host7</i> and <i>host0</i> pinging <i>host6</i>, similarly
-to Part A. Routes to <i>host7</i> are visualized.
+The following is the animation of `host1` pinging `host7` and `host0` pinging `host6`, similarly
+to Part A. Routes to `host7` are visualized.
 
-<img src="step5b.gif" width="850px">
+<img class="screen" src="step5b.gif" width="850px">
 
 
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5B_1_cropped.mp4" width="850" height="560"></video>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
 
-This time both packets outbound to <i>hosts 6 and 7</i> take the diverted route, the replies come back on the original route.
+This time both packets outbound to `hosts 6 and 7` take the diverted route, the replies come back on the original route.

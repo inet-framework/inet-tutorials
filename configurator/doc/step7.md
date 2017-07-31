@@ -8,9 +8,9 @@ tutorial: Configurator
 
 In complex hierarchical networks, routing tables can grow very big. This step demonstrates ways the configurator can reduce the size of
 routing tables by optimization and the use of hierarchically assigned addresses. The step contains three parts:
-- <strong>Part A</strong>: Automatically assigned addresses, no optimization
-- <strong>Part B</strong>: Automatically assigned addresses, using optimization
-- <strong>Part C</strong>: Hierarchically assigned addresses, using optimization
+- **Part A**: Automatically assigned addresses, no optimization
+- **Part B**: Automatically assigned addresses, using optimization
+- **Part C**: Hierarchically assigned addresses, using optimization
 
 ## Part A - Automatically assigned addresses
 
@@ -19,19 +19,17 @@ and the configurator's routing table optimization features are turned off. The s
 
 ### Configuration
 
-All three parts in this step use the <i>ConfiguratorB</i> network defined in ConfiguratorB.ned. The network looks like this:
+All three parts in this step use the `ConfiguratorB` network defined in ConfiguratorB.ned. The network looks like this:
 
-<img src="step7network.png" width="850px">
+<img class="screen" src="step7network.png" width="850px">
 
-The network is comprised of three areas, each containing two local area networks (LANs). Each LAN contains three <tt>standardHosts</tt>. The hosts in the LAN connect to an area router
+The network is comprised of three areas, each containing two local area networks (LANs). Each LAN contains three `standardHosts`. The hosts in the LAN connect to an area router
 through switches. The three area routers connect to a central backbone router. The network contains three hierarchical levels, which correspond to the hosts in the LANs, the area
 routers, and the backbone router.
 
 The configuration for this part in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step7A
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7A" until="####"></pre></p>
 
 The configuration turns off every kind of optimization relating to address assignment and route generation.
 This means that nodes will have an individual routing table entry to every destination interface.
@@ -40,15 +38,15 @@ This means that nodes will have an individual routing table entry to every desti
 
 The assigned addresses are shown on the image below:
 <p>
-<center><a href="step7a_addresses.png" data-lightbox="step7a_addresses"><img src="step7a_addresses.png" width="850px"></a></center>
+<center><a href="step7a_addresses.png" data-lightbox="step7a_addresses"><img class="screen" src="step7a_addresses.png" width="850px"></a></center>
 </p>
 
 The size of some of the routing tables are the following:
 
-<img src="step7a_rt_2.png">
+<img class="screen" src="step7a_rt_2.png">
 
-The routing tables of a host (<i>area1lan2host2</i>) and a router (<i>area1router</i>) are shown below.
-The <i>backbonerouter's</i> routing table is similar to <i>area1router's</i>.
+The routing tables of a host (`area1lan2host2`) and a router (`area1router`) are shown below.
+The `backbonerouter's` routing table is similar to `area1router's`.
 
 <p><div class="include fit">
 <pre class="monospace">
@@ -131,9 +129,7 @@ This should optimize routing tables and decrease table size.
 
 The configuration for this part in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step7B
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7B" until="####"></pre></p>
 
 The configuration is empty, the default NED parameter values take effect. That means that the following optimization features are turned on:
 assignDisjunctSubnetAddresses, addDefaultRoutes, addSubnetRoutes, optimizeRoutes.
@@ -142,7 +138,7 @@ assignDisjunctSubnetAddresses, addDefaultRoutes, addSubnetRoutes, optimizeRoutes
 
 The addresses are the same, but the routing table sizes have gone down:
 
-<img src="step7b_rt_2.png">
+<img class="screen" src="step7b_rt_2.png">
 
 The routing tables of a host, an area router and the backbone router are the following:
 
@@ -185,7 +181,7 @@ through the backbone router.
 - Similarly, the backbone router has three rules for reaching the three area routers, and six rules for reaching the six LANs
 in the network.
 - The backbone router has separate rules for the two LANs connected to an area router, because the addresses are not contiguously assigned to the two LANs
-(e.g. <i>area2lan1</i> has address 10.0.0.8/29, <i>area2lan2</i> has 10.0.0.32/29. But <i>area3lan1</i> has 10.0.0.16/29, which is between the two former address ranges). Thus area2 cannot be covered by a single rule.
+(e.g. `area2lan1` has address 10.0.0.8/29, `area2lan2` has 10.0.0.32/29. But `area3lan1` has 10.0.0.16/29, which is between the two former address ranges). Thus area2 cannot be covered by a single rule.
 
 @section Part C - Hierarchically assigned addresses, optimized routing tables
 
@@ -196,9 +192,7 @@ because a large distant network can be covered with just one rule in a core rout
 
 The configuration for this part in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step7C
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7C" until="####"></pre></p>
 
 As in the previous part, all of the configurator's routing table optimization features are enabled.
 The XML configuration for this part in step7c.xml is the following:
@@ -207,11 +201,11 @@ The XML configuration for this part in step7c.xml is the following:
 
 This XML configuration assigns addresses hierarchically in the following way, when looking down the hierarchy from the backbone router towards the hosts:
 - The first octet of the address for all nodes is 10, i.e. 10.x.x.x
-- The second octet denotes the area, e.g. 10.2.x.x corresponds to <i>area2</i>
+- The second octet denotes the area, e.g. 10.2.x.x corresponds to `area2`
 - The third octet denotes the LAN within the area, e.g. 10.2.1.x corresponds to 
-<i>lan1</i> in <i>area2</i>
+`lan1` in `area2`
 - The forth octet is the host identifier within a LAN, e.g. 10.2.1.4 corresponds to 
-<i>host4</i> in <i>lan1</i> in <i>area2</i>
+`host4` in `lan1` in `area2`
 
 With this setup, it's possible to cover an area with just one rule in the routing table
 of the backbone router. Similarly, the area routers need two rules for each LAN that they
@@ -222,12 +216,12 @@ are connected to.
 The image below shows the assigned addresses.
 
 <p>
-<center><a href="step7c_addresses.png" data-lightbox="step7c_addresses"><img src="step7c_addresses.png" width="850px"></a></center>
+<center><a href="step7c_addresses.png" data-lightbox="step7c_addresses"><img class="screen" src="step7c_addresses.png" width="850px"></a></center>
 </p>
 
 The sizes of some of the routing tables are displayed on the following image.
 
-<img src="step7c_rt_2.png">
+<img class="screen" src="step7c_rt_2.png">
 
 The routing tables are the following:
 

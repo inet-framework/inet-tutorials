@@ -34,43 +34,39 @@ for wireless networks because the error rate of wired connections is usually neg
 The configuration for this step extends Step 4, thus it uses the `ConfiguratorA` network. The configuration in omnetpp.ini is the following:
 <!TODO: network image?>
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step6A
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step6A" until="####"></pre></p>
 
 Below is the XML configuration in step6a.xml:
 
-@dontinclude step6a.xml
-@skipline config
-@until config
+<p><pre class="snippet" src="../step6a.xml" from="config" until="config"></pre></p>
 
 The XML configuration contains the default rule for IP address assignment, and an <autoroute> element that configures the metric to be used.
 The <autoroute> element specifies parameters for automatic static routing table configuration. If no <autoroute> element is specified, the configurator
 assumes a default that affects all routing tables in the network, and computes shortest paths to all interfaces according to the hop count metric.
 The <autoroute> element can contain the following attributes:
-- <strong>sourceHosts</strong>: Selector attribute that selects which hosts' routing tables should be modified. The default value is <tt>"**"</tt>.
+- <strong>sourceHosts</strong>: Selector attribute that selects which hosts' routing tables should be modified. The default value is <strong>"**"</strong>.
 - <strong>destinationInterfaces</strong>: Parameter attribute that selects destination interfaces for which the shortest paths will be calculated.
-The default value is <tt>"**"</tt>.
-- <strong>metric</strong>: Parameter attribute that sets the metric to be used when calculating shortest paths. The default value is <tt>"hopCount"</tt>.
+The default value is <strong>"**"</strong>.
+- <strong>metric</strong>: Parameter attribute that sets the metric to be used when calculating shortest paths. The default value is <strong>"hopCount"</strong>.
 
 There are subelements available in <autoroute>, which will be discussed in Part B.
 
-Here the <autoroute> element specifies that routes should be added to the routing table of each host and the metric should be <i>dataRate</i>. The configurator assigns weights to the graph's edges that are inversely proportional to the data rate of the network links.
+Here the <autoroute> element specifies that routes should be added to the routing table of each host and the metric should be `dataRate`. The configurator assigns weights to the graph's edges that are inversely proportional to the data rate of the network links.
 This way route generation will favor routes with higher data rates.
 
-Note that <i>router0</i> and <i>router2</i> are connected with a 10 Mbit/s ethernet cable, while <i>router1</i> connects to the other routers with
-100 Mbit/s ethernet cables. Since routes are optimized for data rate, packets from <i>router0</i> to <i>router2</i> will go via <i>router1</i> because this path has higher bandwidth.
+Note that `router0` and `router2` are connected with a 10 Mbit/s ethernet cable, while `router1` connects to the other routers with
+100 Mbit/s ethernet cables. Since routes are optimized for data rate, packets from `router0` to `router2` will go via `router1` because this path has higher bandwidth.
 
 <img class="screen" src="step4routes_3.png">
 
 ### Results
 
-The following image shows the backward routes towards <i>host1</i>.
-The resulting routes are similar to the ones in Step 5B. The difference is that routes going backward, from <i>hosts 6-8</i> to <i>hosts 0-2</i>, go through <i>router1</i>. No traffic is routed between <i>router0</i> and <i>router2</i> at all (as opposed to Step 4 and 5.)
+The following image shows the backward routes towards `host1`.
+The resulting routes are similar to the ones in Step 5B. The difference is that routes going backward, from `hosts 6-8` to `hosts 0-2`, go through `router1`. No traffic is routed between `router0` and `router2` at all (as opposed to Step 4 and 5.)
 
 <img class="screen" src="step6aroutes.png" width="850px">
 
-The routing table of <i>router0</i> is as follows:
+The routing table of `router0` is as follows:
 
 <p>
 <div class="include fit">
@@ -85,10 +81,10 @@ Destination      Netmask          Gateway          Iface            Metric
 </div>
 </p>
 
-The first two rules describe reaching <i>router1</i> and <i>hosts 0-2</i> directly. The last rule specifies that traffic to any other destination
-should be routed towards <i>router1</i>.
+The first two rules describe reaching `router1` and `hosts 0-2` directly. The last rule specifies that traffic to any other destination
+should be routed towards `router1`.
 
-The routing table of <i>router2</i> is similar:
+The routing table of `router2` is similar:
 
 <p>
 <div class="include fit">
@@ -103,44 +99,36 @@ Destination      Netmask          Gateway          Iface            Metric
 </div>
 </p>
 
-The following animation shows <i>host1</i> pinging <i>host7</i> and <i>host0</i> pinging <i>host6</i>. Routes towards <i>host1</i> are visualized.
-The packets don't use the link between <i>router0</i> and <i>router2</i>.
+The following animation shows `host1` pinging `host7` and `host0` pinging `host6`. Routes towards `host1` are visualized.
+The packets don't use the link between `router0` and `router2`.
 
 <img class="screen" src="step6a.gif" width="850px">
 <!--TODO delete-->
 
-@htmlonly
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
-@endhtmlonly
 
-One can easily check that no routes go through the link between <i>router0</i> and <i>router2</i> by setting the destination filter to "*" in the visualizer.
+One can easily check that no routes go through the link between `router0` and `router2` by setting the destination filter to "*" in the visualizer.
 This indicates all routes in the network:
 
 <img class="screen" src="step6allroutes.png" width="850px">
 
-@endhtmlonly
-
 ## Part B - Manually specifying link cost
 
-This part configures the same routes as Part A, where routes between <i>router0</i> and <i>router2</i> lead through <i>router1</i>.
+This part configures the same routes as Part A, where routes between `router0` and `router2` lead through `router1`.
 
-The configurator is instructed not to use the link between <i>router0</i> and <i>router2</i> when setting up routes, by specifying the cost of the link to
+The configurator is instructed not to use the link between `router0` and `router2` when setting up routes, by specifying the cost of the link to
 be infinite.
 
 ### Configuration
 
 The configuration for this step in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step6B
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step6B" until="####"></pre></p>
 
 The XML configuration in step6b.xml is as follows:
 
-@dontinclude step6b.xml
-@skipline config
-@until config
+<p><pre class="snippet" src="../step6b.xml" from="config" until="config"></pre></p>
 
 The <autoroute> elements can also contain the following optional subelements, which can be used to specify costs in the graph:
 - <strong><node></strong>: Specifies cost parameters to network nodes. The <strong>hosts</strong> selector
@@ -149,17 +137,17 @@ attribute selects which hosts are affected, and the <strong>cost</strong> parame
 attribute selects which links are affected, by specifying an interface they belong to. The <strong>cost</strong> parameter
 sets the cost. Both attributes are mandatory.
 
-This XML configuration specifies the metric to be hop count, and sets the cost of <i>router0's</i> eth2 interface to infinite.
-This affects the link between <i>router0</i> and <i>router2</i> - no routes should go through it.
+This XML configuration specifies the metric to be hop count, and sets the cost of `router0's` eth2 interface to infinite.
+This affects the link between `router0` and `router2` - no routes should go through it.
 
 ### Results
 
-The routes towards <i>host1</i> are visualized on the following image:
+The routes towards `host1` are visualized on the following image:
 
 <img class="screen" src="step6broutes.png" width="850px">
 
-The routes are the same as in Part A, where the data rate metric was used, and routes didn't use the 10Mbps link between <i>router0</i> and <i>router2</i>.
-In this part, the link between <i>router0</i> and <i>router2</i> is "turned off" by specifying an infinite cost for it.
+The routes are the same as in Part A, where the data rate metric was used, and routes didn't use the 10Mbps link between `router0` and `router2`.
+In this part, the link between `router0` and `router2` is "turned off" by specifying an infinite cost for it.
 
 <img class="screen" src="step6a.gif" width="850px">
 

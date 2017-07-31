@@ -11,32 +11,28 @@ In this step, some wired and wireless LANs' addresses are left unspecified by th
 
 ## The model
 
-This step uses the <i>ConfiguratorC</i> network, defined in ConfiguratorC.ned.
+This step uses the `ConfiguratorC` network, defined in ConfiguratorC.ned.
 
-<img src="step8network.png" width="850px">
+<img class="screen" src="step8network.png" width="850px">
 
 The configuration for this step in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step9
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step9" until="####"></pre></p>
 
 - Similarly to Step8B, members of the two wireless LANs are specified by SSID. 
-- <i>Area1lan3host2</i> is configured to ping <i>area3lan3host3</i>.
+- `Area1lan3host2` is configured to ping `area3lan3host3`.
 The ping application is delayed, so it starts sending pings after the hosts associated with the access points and got their addresses from the dhcp servers.
-- <i>DHCPServer</i> submodules are added to the area routers. The DHCP server is configured to listen on the interface connecting to the unspecified LAN.
+- `DHCPServer` submodules are added to the area routers. The DHCP server is configured to listen on the interface connecting to the unspecified LAN.
 The interface's netmask is the DHCP server's address range. 
-- <i>DHCPClient</i> submodules are added to the LANs which are unspecified by the configurator. There is one such LAN in each area, they are
-<i>area1lan3, area2lan1 and area3lan3</i>. Hosts in these LANs get
+- `DHCPClient` submodules are added to the LANs which are unspecified by the configurator. There is one such LAN in each area, they are
+`area1lan3, area2lan1 and area3lan3`. Hosts in these LANs get
 the addresses from the DHCP server in the corresponding area router.
 
-- Routes to <i>area3lan3host3</i> are visualized.
+- Routes to `area3lan3host3` are visualized.
 
 The XML configuration in step9.xml is the following:
 
-@dontinclude step9.xml
-@skipline config
-@until config
+<p><pre class="snippet" src="../step9.xml" from="config" until="config"></pre></p>
 
 Addresses are assigned hierarchically. Five LANs in the network have addresses assigned by the configurator. Three LANs get their
 addresses from DHCP servers, their interfaces are left unspecified by the configurator. This is accomplished by the lack of address assignment rules for
@@ -49,17 +45,17 @@ The addresses and routes are visualized below. This is the state of the network 
 
 The state of the network at the start of the simulation is shown on the following image:
 
-<center><a href="step9routes_2.png" data-lightbox="step9routes_2"><img src="step9routes_2.png" width="850px"></a></center>
+<center><a href="step9routes_2.png" data-lightbox="step9routes_2"><img class="screen" src="step9routes_2.png" width="850px"></a></center>
 
-The hosts of <i>area1lan3, area2lan1 and area3lan3</i> have unspecified addresses. The routing tables of all hosts contain subnet routes
-to these three LANs. Since these hosts don't have addresses at the start of the simulation, there are no routes leading to <i>area3lan3host2</i> that can be
+The hosts of `area1lan3, area2lan1 and area3lan3` have unspecified addresses. The routing tables of all hosts contain subnet routes
+to these three LANs. Since these hosts don't have addresses at the start of the simulation, there are no routes leading to `area3lan3host2` that can be
 visualized.
 
 Though the hosts in the three LANs have unspecified addresses, subnet routes leading to these LANs are added to the routing tables
 of all hosts. The addresses for the interfaces connecting to these LANs have a netmask assigned so there are addresses allocated
-for the unspecified hosts. For example, <i>area1router's eth3</i> interface has the address 10.1.4.1/29, and has four addresses allocated (10.1.4.2-5).
+for the unspecified hosts. For example, `area1router's eth3` interface has the address 10.1.4.1/29, and has four addresses allocated (10.1.4.2-5).
 
-The routing tables of <i>area1lan3host2, area1router and backbonerouter</i> are the following (routes for reaching the unspecified hosts are highlighted):
+The routing tables of `area1lan3host2, area1router and backbonerouter` are the following (routes for reaching the unspecified hosts are highlighted):
 
 <p>
 <div class="include fit">
@@ -92,11 +88,11 @@ Destination      Netmask          Gateway          Iface            Metric
 </div>
 </p>
 
-- <i>area1lan3host2</i> has a default route for reaching the other hosts in the LAN. 
-- <i>area1Router</i> has a route for reaching hosts in <i>area1lan3</i>, and a default route for reaching <i>area2 and area3</i>.
-- <i>backbonerouter</i> has subnet routes to each area.
+- `area1lan3host2` has a default route for reaching the other hosts in the LAN. 
+- `area1Router` has a route for reaching hosts in `area1lan3`, and a default route for reaching `area2 and area3`.
+- `backbonerouter` has subnet routes to each area.
 
 
-<center><a href="step9_6.gif" data-lightbox="step9_6"><img src="step9_6.gif" width="850px"></a></center>
+<center><a href="step9_6.gif" data-lightbox="step9_6"><img class="screen" src="step9_6.gif" width="850px"></a></center>
 
 TODO: when the destination host gets its IP address, the routes appear

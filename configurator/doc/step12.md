@@ -11,63 +11,59 @@ using the hop count and error rate metrics in a mixed wired/wireless network.
 
 ## The model
 
-This step uses the <i>ConfiguratorE</i> network, defined in ConfiguratorE.ned. The network looks like this:
+This step uses the `ConfiguratorE` network, defined in ConfiguratorE.ned. The network looks like this:
 
-<img src="step12network.png">
+<img class="screen" src="step12network.png">
 
 The core of the network is composed of three routers connected to each other, each belonging to an area. There are three areas, each containing a number of hosts,
 connected to the area router. 
-- Area1 is composed of three <tt>WirelessHosts</tt>, one of them
+- Area1 is composed of three `WirelessHosts`, one of them
 is connected to the router with a wired connection. 
-- Area2 has an <tt>AccessPoint</tt>, and three <tt>WirelessHosts</tt>. 
-- Area3 has three <tt>StandardHosts</tt> connected to the
+- Area2 has an `AccessPoint`, and three `WirelessHosts`. 
+- Area3 has three `StandardHosts` connected to the
 router through a switch.
 
-Since there is no access point in <i>area1</i>, the hosts create an ad-hoc wireless network. They connect to the rest of the network through <i>area1host3</i>,
+Since there is no access point in `area1`, the hosts create an ad-hoc wireless network. They connect to the rest of the network through `area1host3`,
 which has a wired connection to the router.
-However, <i>area1host3</i> is not in the communication range of <i>area1host1</i> (illustrated on the image below.) Thus <i>area1host2</i> needs configured to forward
-<i>area1host1's</i> packets to <i>area1host3</i>. The error rate metric, rather than hop count, is best suited to configure routes in this LAN. Routes in the rest of the network
+However, `area1host3` is not in the communication range of `area1host1` (illustrated on the image below.) Thus `area1host2` needs configured to forward
+`area1host1's` packets to `area1host3`. The error rate metric, rather than hop count, is best suited to configure routes in this LAN. Routes in the rest of the network
 can be configured properly based on the hop count metric.
 
-<img src="step12ranges.png">
+<img class="screen" src="step12ranges.png">
 
 The configuration for this step in omnetpp.ini is the following:
 
-@dontinclude omnetpp.uncommented.ini
-@skipline Step12
-@until ####
+<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step12" until="####"></pre></p>
 
-- For hosts in <i>area1</i> to operate in ad-hoc mode, IP forwarding is turned on, and their management modules are set to ad-hoc management.
-- <i>area1host1</i> is configured to ping <i>area2host1</i>, which is on the other side of the network.
+- For hosts in `area1` to operate in ad-hoc mode, IP forwarding is turned on, and their management modules are set to ad-hoc management.
+- `area1host1` is configured to ping `area2host1`, which is on the other side of the network.
 - Routes to all hosts and communication ranges are visualized.
 
 The XML configuration in step12.xml is the following:
 
-@dontinclude step12.xml
-@skipline config
-@until config
+<p><pre class="snippet" src="../step12.xml" from="config" until="config"></pre></p>
 
 To have routes from every node to every other node, all nodes must be covered by an autoroute element.
-The XML configuration contains two autoroute elements. Routing tables of hosts in <i>area1</i> are configured according to the error rate metric,
+The XML configuration contains two autoroute elements. Routing tables of hosts in `area1` are configured according to the error rate metric,
 while all others according to hop count.
 
-The global <i>addStaticRoutes, addDefaultRoutes and addSubnetRoutes</i> parameters can be specified per interface, with the <interface> element.
+The global `addStaticRoutes, addDefaultRoutes and addSubnetRoutes` parameters can be specified per interface, with the <interface> element.
 These can be set with the <strong>add-static-route</strong>, <strong>add-default-route</strong> and <strong>add-subnet-route</strong> bool parameters.
 They are true by default. The global and per-interface settings are in a logical AND relationship, thus both have to be true to take effect.
 
 The default route assumes there is one gateway,
-and all nodes on the link can reach it directly. This is not the case for <i>area1</i>, because <i>area1host1</i> is out of range of the gateway host. 
-The <i>add-default-route</i> parameter is set to false for the <i>area1</i> hosts.
+and all nodes on the link can reach it directly. This is not the case for `area1`, because `area1host1` is out of range of the gateway host. 
+The `add-default-route` parameter is set to false for the `area1` hosts.
 
 ## Results
 
 The routes are visualized on the following image.
 
-<img src="step12routes_2.png" width="850px">
+<img class="screen" src="step12routes_2.png" width="850px">
 
-As intended, <i>area1host1</i> connects to the network via <i>area1host2</i>.
+As intended, `area1host1` connects to the network via `area1host2`.
 
-The routing table of <i>area1host1</i> is as follows:
+The routing table of `area1host1` is as follows:
 
 <p>
 <div class="include fit">
@@ -93,7 +89,7 @@ Destination      Netmask          Gateway          Iface             Metric
 </div>
 </p>
 
-The gateway is 10.0.0.19 (<i>area1host2</i>) in all rules, except the one where it is *. That rule is for reaching
+The gateway is 10.0.0.19 (`area1host2`) in all rules, except the one where it is *. That rule is for reaching
 the other hosts in the LAN directly. This doesn't seem to be according to the error rate metric, but the * rule
 matches destinations 10.0.0.18 and 10.0.0.19 only. Since 10.0.0.18 is covered by a previous rule, this one
 is actually for reaching 10.0.0.19 directly.
