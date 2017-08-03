@@ -55,7 +55,8 @@ from host B.
 <img src="step7_12.gif">
 <!--TODO: delete-->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step7-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step7-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.65, from #767-->
 
 The UDPData + ACK sequences can be seen in the sequence chart below:

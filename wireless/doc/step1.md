@@ -146,7 +146,8 @@ transmitted by the wlan interface.
 The next animation shows the communication between the hosts, using
 OMNeT++'s default "message sending" animation.
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step1_1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step1_1.mp4" width="655" height="575"></video></p>
 
 When the simulation concludes at t=25s, the packet count meter indicates that
 around 2000 packets were sent. A packet with overhead is 1028 bytes, which means

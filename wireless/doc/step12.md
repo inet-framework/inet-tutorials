@@ -86,7 +86,8 @@ There is no distinct distance where receptions fail, as in the case of
 <img src="step12_1.gif">
 <!--TODO: delete-->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step12-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step12-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed animation speed 1-->
 
 In host A, the MAC receives the packet UDPData-408 from the radio. The MAC drops

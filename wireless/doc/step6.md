@@ -64,7 +64,8 @@ host B receives them correctly, because only host R1 is transmitting.
 <img src="step6_7.gif">
 <!--TODO: delete-->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step6-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step6-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.72 -->
 
 The following sequence chart displays that after receiving the UDPData-2 packet,

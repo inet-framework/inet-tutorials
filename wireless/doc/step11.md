@@ -80,7 +80,8 @@ A-R2-R3-B route is used, as seen in the previous steps.
 <img src="step11_2.gif">
 <!--TODO: delete -->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step11-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step11-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, animation and playback speed 1, fadeOut animation time 1.5s-->
 
 **Number of packets received by host B: 784**

@@ -62,7 +62,8 @@ animation below.
 <img src="step10_2.gif">
 <!--TODO remove-->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step10.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step10.mp4" width="655" height="575"></video></p>
 <!--internal video recording, animation time = playback speed = 1, fadeOutMode animationTime, 1s -> 26 sec video, blue arrows only
 if playback speed = 2 -> 13 sec video, blue and red arrows
 not sure which one is better

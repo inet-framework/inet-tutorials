@@ -35,7 +35,8 @@ two hops.
 
 <img src="step14_2.gif">
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step14-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step14-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed animation speed 1-->
 
 **Number of packets received by host B: 1045**

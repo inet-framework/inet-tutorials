@@ -81,7 +81,8 @@ reception is successfully completed, when the packet is passed up to the
 link layer. The arrow is displayed when the reception of the first packet
 at host B is over.
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step2_1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step2_1.mp4" width="655" height="575"></video></p>
 
 Frame exchanges may also be visualized using the Sequence Chart tool in the
 OMNeT++ IDE. The following image was obtained by recording an event log

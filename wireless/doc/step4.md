@@ -98,7 +98,8 @@ them.
 <img src="step4_8.gif">
 <!--TODO: remove-->
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step4-4-1.mp4" width="655" height="575"></video>
+<video(.*?)>(?s).*?</video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step4-4-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.72, fadeOutMode animationTime, fadeOutTime 1.5s, normal run until event #184-->
 <!--crop green background: top bottom left right 8 5 8 5 width 655-->
 
