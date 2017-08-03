@@ -14,7 +14,7 @@ routing tables by optimization and the use of hierarchically assigned addresses.
 
 ## Part A - Automatically assigned addresses
 
-Assigning addresses hierarchially in a network with hierarchical topology can reduce the size of routing tables. However, the configurator's automatic address assignment with its default settings doesn't assign addresses hierarchically. This part uses automatic address assignment,
+Assigning addresses hierarchically in a network with hierarchical topology can reduce the size of routing tables. However, the configurator's automatic address assignment with its default settings doesn't assign addresses hierarchically. This part uses automatic address assignment,
 and the configurator's routing table optimization features are turned off. The size of routing tables in this part can serve as a baseline to compare with.
 
 ### Configuration
@@ -257,10 +257,10 @@ Destination      Netmask          Gateway          Iface           Metric
 else through the area's router.
 
 - The area routers' routing tables contain a specific rule for reaching the backbone router, two rules for reaching the two LANs that belong to the router's area,
-and a default rule for reaching everything else throught the backbone router.
+and a default rule for reaching everything else through the backbone router.
 
 - The backbone router's routing table contains three specific rules for reaching the three area routers, and three rules to reach the three areas.
 
-The difference between the configuration for this part and the previous one is that addresses are assigned hierechically in this part. The routing
+The difference between the configuration for this part and the previous one is that addresses are assigned hierarchically in this part. The routing
 table of the backbone router contains six entries instead of 10 in the previous part. The other nodes' routing tables remained the same. The difference is not drastic because the network is small. However, using hierarchical address assignment in a larger network would make a significant
 difference in routing table size.

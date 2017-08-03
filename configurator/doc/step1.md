@@ -15,8 +15,7 @@ any user input. This is useful when it is irrelevant what the nodes' actual IP a
 ###  About IPv4NetworkConfigurator
 
 In INET simulations, configurator modules are responsible for assigning IP addresses to network nodes, and for setting up their
-routing tables. Essentially, configurator modules simulate a real life network administrator. There are various configuratorosdfz sdf
-models in INET (`IPv4NetworkConfigurator`, `FlatNetworkConfigurator`, etc.), but this tutorial is about the features of `IPv4NetworkConfigurator`, 
+routing tables. Essentially, configurator modules simulate a real life network administrator. There are various configurator models in INET (`IPv4NetworkConfigurator`, `FlatNetworkConfigurator`, etc.), but this tutorial is about the features of `IPv4NetworkConfigurator`, 
 which we will refer to as **configurator**. The following is a broad review of the configurator's features and operation,
 these and others will be discussed in detail in the following steps.
 
@@ -58,7 +57,7 @@ or the default XML configuration if none is specified. Since no XML configuratio
 to nodes on different links (nodes are considered to be on the same link if they can reach each other directly, or through L2 devices only.)
 
 Additionally, the `dumpAddresses` parameter sets whether the configurator prints assigned IP addresses to the module output.
-This is false by default, but it's set to true in the `General` configuration at the begining of omnetpp.ini (along with other settings, which
+This is false by default, but it's set to true in the `General` configuration at the beginning of omnetpp.ini (along with other settings, which
 will be discussed later.)
 
 Network interface information, such as interface names and IP addresses, can be visualized by the `InterfaceTableCanvasVisualizer` module, which is included in the network as a submodule of `IntegratedCanvasVisualizer`. In the `General` configuration, interface visualization is turned on, and set to not visualize interface information for switches and access points for clarity, as these don't have IP addresses.

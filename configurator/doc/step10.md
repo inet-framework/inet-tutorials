@@ -25,7 +25,7 @@ This step uses the `ConfiguratorD` network, defined in ConfiguratorD.ned. The ne
 
 It contains eight `AODVRouters` laid out in a chain.
 
-The configuration for this part in omnetpp.ini is the folowing:
+The configuration for this part in omnetpp.ini is the following:
 
 <p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step10A" until="####"></pre></p>
 
@@ -88,7 +88,7 @@ As specified in the previous part, the configurator is still instructed not to a
 
 The routing tables are initially empty. The first ping packet triggers AODV's route discovery process, which eventually configures the routes.
 AODV is a reactive protocol, so unused routes expire after a while. This happens to the routes to `host2`, as it's not in the path between
-`host1` and `host7`. This is diplayed in the following animation.
+`host1` and `host7`. This is displayed in the following animation.
 
 <img class="screen" src="step10_6.gif">
 <!--TODO remove-->

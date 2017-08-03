@@ -49,7 +49,7 @@ The <autoroute> element can contain the following attributes:
 The default value is <strong>"**"</strong>.
 - <strong>metric</strong>: Parameter attribute that sets the metric to be used when calculating shortest paths. The default value is <strong>"hopCount"</strong>.
 
-There are subelements available in <autoroute>, which will be discussed in Part B.
+There are sub-elements available in <autoroute>, which will be discussed in Part B.
 
 Here the <autoroute> element specifies that routes should be added to the routing table of each host and the metric should be `dataRate`. The configurator assigns weights to the graph's edges that are inversely proportional to the data rate of the network links.
 This way route generation will favor routes with higher data rates.
@@ -130,7 +130,7 @@ The XML configuration in step6b.xml is as follows:
 
 <p><pre class="snippet" src="../step6b.xml" from="config" until="config"></pre></p>
 
-The <autoroute> elements can also contain the following optional subelements, which can be used to specify costs in the graph:
+The <autoroute> elements can also contain the following optional sub-elements, which can be used to specify costs in the graph:
 - <strong><node></strong>: Specifies cost parameters to network nodes. The <strong>hosts</strong> selector
 attribute selects which hosts are affected, and the <strong>cost</strong> parameter sets their costs. Both attributes are mandatory.
 - <strong><link></strong>: Specifies cost parameters to network links. The <strong>interfaces</strong> selector

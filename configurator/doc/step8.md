@@ -71,7 +71,7 @@ can receive them correctly (i.e. nodes in the same LAN).
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video>
 <!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
 
-This is how the routes would look like if the XML configuration didnt contain the <wireless> elements:
+This is how the routes would look like if the XML configuration didn't contain the <wireless> elements:
 
 <center><a href="step8fullmesh_2.png" data-lightbox="step8fullmesh_2"><img class="screen" src="step8fullmesh_2.png" width="850px"></a></center>
 

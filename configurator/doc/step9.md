@@ -21,7 +21,7 @@ The configuration for this step in omnetpp.ini is the following:
 
 - Similarly to Step8B, members of the two wireless LANs are specified by SSID. 
 - `Area1lan3host2` is configured to ping `area3lan3host3`.
-The ping application is delayed, so it starts sending pings after the hosts associated with the access points and got their addresses from the dhcp servers.
+The ping application is delayed, so it starts sending pings after the hosts associated with the access points and got their addresses from the DHCP servers.
 - `DHCPServer` submodules are added to the area routers. The DHCP server is configured to listen on the interface connecting to the unspecified LAN.
 The interface's netmask is the DHCP server's address range. 
 - `DHCPClient` submodules are added to the LANs which are unspecified by the configurator. There is one such LAN in each area, they are

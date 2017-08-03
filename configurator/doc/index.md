@@ -12,7 +12,7 @@ This is an advanced tutorial, and assumes that the reader is familiar with creat
 the <a href="https://omnetpp.org/doc/omnetpp/tictoc-tutorial/"
 target="_blank">TicToc Tutorial</a> is a good starting point to get familiar with OMNeT++. The <a
 href="../../../doc/walkthrough/tutorial.html" target="_blank">INET Walkthrough</a> is an introduction to INET and how to work with protocols.
-The <a href="https://omnetpp.org/doc/inet/api-current/tutorials/wireless/" target="_blank">Wireless Tutorial</a> is another advanced tutorial, and deals with wireless features of the INET framework. There is a comprehensive description of `IPv4NetworkConfigurator's` features in the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt> NED documentation</a>
+The <a href="../../wireless/doc" target="_blank">Wireless Tutorial</a> is another advanced tutorial, and deals with wireless features of the INET framework. There is a comprehensive description of `IPv4NetworkConfigurator's` features in the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt> NED documentation</a>
 in the INET reference.
 
 For additional information, the following documentation should be useful:

@@ -11,7 +11,7 @@ Sometimes it might be useful to specify the IP addresses of some nodes with spec
 ## The model
 
 This step uses the `ConfiguratorA`  network from the previous step. We will assign the 10.0.0.50 address to `host1` 
-and 10.0.0.100 to `host3` . The configurator will automatically assign addresses to the rest of the nodes.
+and 10.0.0.100 to `host3`. The configurator will automatically assign addresses to the rest of the nodes.
 
 ### Configuration
 
@@ -36,7 +36,7 @@ With these address templates it is possible to leave everything to the configura
 - The `address`  parameter attribute specifies the addresses to be assigned. Address templates can be used, where an 'x' in place of an octet means that the value
 should be selected by the configurator automatically. The value "" means that the no address will be assigned. Unconfigured interfaces will still have
 allocated addresses in their subnets, so they can be easily configured later dynamically.
-- The `netmask`  parameter attribute specifies the netmasks to be assigned. Address templetes can be used here as well.
+- The `netmask`  parameter attribute specifies the netmasks to be assigned. Address templates can be used here as well.
 
 All attributes are optional. Attributes not specified are left for the automatic configuration. There are many other attributes available. For the complete list of attributes of the <interface> element
 (or any other element), please refer to the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><strong>IPv4NetworkConfigurator</strong></a> NED documentation.

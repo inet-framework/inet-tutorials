@@ -18,16 +18,20 @@ This step uses the same network as the previous steps, `ConfiguratorA`.
 The configuration for this step in omnetpp.ini is the following:
 
 <p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step4" until="####"></pre></p>
-A ping app in `host1` is configured to send ping packets to `host7`, which is on the other side of the network. Ping packets will be used throughout the tutorial to illustrate how packets are routed.
+A ping application in `host1` is configured to send ping packets to `host7`, which is on the other side of the network. Ping packets will be used throughout the tutorial to illustrate how packets are routed.
 
 The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize IP routes in the network.
 Routes are visualized with arrows. In general, an arrow indicates an entry in the source host's routing table. It points
 to the host that is the next hop or gateway for that routing table entry. The visualization is activated by setting the `RoutingTableVisualizer`'s `displayRoutingTables` parameter to `true`.
-The set of routes to be visualized are selected with the visualizer's `destinationFilter` parameter.
-All routes leading towards that set of destinations are indicated by arrows.
-The default setting is <strong>"*"</strong>, which visualizes all routes
-going from every node to every other node. Visualizing routes to all destinations can often make the screen cluttered.
-In this step the `destinationFilter` is set to visualize all routes heading towards `host7`. TODO: rewrite?
+The set of routes to be visualized are selected with the visualizer's `destinationFilter` and `nodeFilter` parameters.
+All routes leading towards the selected set of destinations from the selected set of source nodes are indicated by arrows.
+The default setting for both parameters is <strong>"*"</strong>, which visualizes all routes
+going from every node to every other node. Visualizing routes from all nodes to all destinations can often make the screen cluttered.
+In this step the `destinationFilter` is set to visualize all routes heading towards `host7`.
+
+The visualizer annotates the arrows with information about the visualized route by default. This feature can be customized and toggled on and off with the visualizer's parameters (discussed in later steps.)
+
+<!--
 
 V2
 
@@ -42,7 +46,7 @@ The `RoutingTableCanvasVisualizer` module (present in the network as a submodule
 V4
 
 The `RoutingTableCanvasVisualizer` module (present in the network as a submodule of `IntegratedCanvasVisualizer`) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry.
-The visualizer displays the best matching (longest prefix) routing table entries towards each destination, from each node's routing table. By default, the set of routing tables and destinatons are all nodes, this selection can be narrowed with the visualizer's `nodeFilter` and `destinationFilter` parameters, respectively.
+The visualizer displays the best matching (longest prefix) routing table entries towards each destination, from each node's routing table. By default, the set of routing tables and destinations are all nodes, this selection can be narrowed with the visualizer's `nodeFilter` and `destinationFilter` parameters, respectively.
 
 V5
 
@@ -65,8 +69,9 @@ In INET, routes can be visualized using the `RoutingTableVisualizer` module, whi
 The visualization can be activated by setting the visualizer's `displayRoutingTables`
 parameter to `true`. By default, the set of source and destination nodes are all nodes in the network. This selection can be narrowed with the visualizer's `nodeFilter` and `destinationFilter` parameter.
 
-Here, the destinationfilter is set to host7 so routes from all hosts towards host7 are visualized.
-
+Here, the destination filter is set to host7 so routes from all hosts towards host7 are visualized.
+TODO: delete sometime
+-->
 The IP address assignment is fully automatic, and the resulting addresses should be the same as in Step 1.
 
 ### Configurator routing parameters
@@ -78,7 +83,7 @@ with routes leading to all destination interfaces.
 - `addDefaultRoutes = default(true)`: Add a default route if all routes from a node go through the same gateway.
 This is often the case with hosts, which usually connect to a network via a single interface. This parameter
 is not used if `addStaticRoutes = false`.
-- `addSubnetRoutes = default(true)`: Optimize routing tables by adding routes towards subnets instead of individial interfaces. 
+- `addSubnetRoutes = default(true)`: Optimize routing tables by adding routes towards subnets instead of individual interfaces. 
 This is only used where applicable, and not used if `addStaticRoutes = false`.
 - `optimizeRoutes = default(true)`: Optimize routing tables by merging entries where possible. Not used if `addStaticRoutes = false`.
 
