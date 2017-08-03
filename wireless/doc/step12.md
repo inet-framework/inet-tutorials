@@ -4,7 +4,6 @@ title: Step 12 - Changing to a more realistic radio model
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 After so many steps, we let go of the ideal radio model, and introduce a

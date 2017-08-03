@@ -4,7 +4,6 @@ title: Step 5 - Taking interference into account
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we make our model of the physical layer a little bit more

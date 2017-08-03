@@ -4,7 +4,6 @@ title: Step 9 - Configuring node movements
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we make the model more interesting by adding node mobility.

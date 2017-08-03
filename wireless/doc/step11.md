@@ -4,8 +4,6 @@ title: Step 11 - Adding obstacles to the environment
 tutorial: Wireless
 ---
 
-
-
 ## Goals
 
 In an attempt to make our simulation both more realistic and more

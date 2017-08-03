@@ -4,7 +4,6 @@ title: Step 14 - Introducing antenna gain
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In the previous steps, we have assumed an isotropic antenna for the radio,

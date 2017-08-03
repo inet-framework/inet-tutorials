@@ -4,7 +4,6 @@ title: Step 4 - Setting up static routing
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we set up routing so that packets can flow from host A to B.

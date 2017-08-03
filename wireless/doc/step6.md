@@ -4,7 +4,6 @@ title: Step 6 - Using CSMA to better utilize the medium
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we try to increase the utilization of the communication

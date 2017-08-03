@@ -4,7 +4,6 @@ title: Step 10 - Configuring ad-hoc routing (AODV)
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we configure a routing protocol that adapts to the changing

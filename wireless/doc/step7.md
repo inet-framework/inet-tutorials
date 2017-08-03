@@ -4,7 +4,6 @@ title: Step 7 - Turning on ACKs in CSMA
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In this step, we try to make link layer communication more reliable by

@@ -4,7 +4,6 @@ title: Step 1 - Two hosts communicating wirelessly
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 In the first step, we want to create a network that contains two hosts,

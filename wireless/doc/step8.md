@@ -4,7 +4,6 @@ title: Step 8 - Modeling energy consumption
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 Wireless ad-hoc networks often operate in an energy-constrained

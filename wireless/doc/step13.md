@@ -4,7 +4,6 @@ title: Step 13 - Configuring a more accurate pathloss model
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 By default, the medium uses the free-space path loss model, which assumes

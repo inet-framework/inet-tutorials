@@ -4,7 +4,6 @@ title: Step 3 - Adding more nodes and decreasing the communication range
 tutorial: Wireless
 ---
 
-
 ## Goals
 
 Later in this tutorial, we'll want to turn our model into an ad-hoc network
