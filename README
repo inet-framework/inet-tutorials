@@ -35,7 +35,7 @@ $ docker pull madduci/docker-github-pages
 Then run the jekyll server with the following command (replace ~/inet/
 with the actual location of your INET repo):
 
-$ docker run --rm -it -p 4000:4000 -v ~/inet/tutorials/:/site madduci/docker-github-pages serve --watch --host 0.0.0.0
+$ ./start_local_server
 
 Open your browser on http://localhost:4000/inet-tutorials/
 
