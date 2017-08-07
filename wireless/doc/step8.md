@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 8 - Modeling energy consumption
+title: Step 8. Modeling energy consumption
 tutorial: Wireless
 ---
 

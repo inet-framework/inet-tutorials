@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 2 - Setting up some animations
+title: Step 2. Setting up some animations
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 9 - Configuring node movements
+title: Step 9. Configuring node movements
 tutorial: Wireless
 ---
 

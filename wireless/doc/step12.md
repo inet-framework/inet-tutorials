@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 12 - Changing to a more realistic radio model
+title: Step 12. Changing to a more realistic radio model
 tutorial: Wireless
 ---
 

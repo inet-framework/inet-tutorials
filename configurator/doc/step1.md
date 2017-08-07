@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 1 - Fully automatic IP address assignment
+title: Step 1. Fully automatic IP address assignment
 tutorial: Configurator
 ---
 

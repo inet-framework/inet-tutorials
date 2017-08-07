@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 7 - Turning on ACKs in CSMA
+title: Step 7. Turning on ACKs in CSMA
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 11 - Manually modifying an automatically created configuration
+title: Step 11. Manually modifying an automatically created configuration
 tutorial: Configurator
 ---
 

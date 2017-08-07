@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 2 - Manually overriding individual IP addresses
+title: Step 2. Manually overriding individual IP addresses
 tutorial: Configurator
 ---
 

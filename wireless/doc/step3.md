@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 3 - Adding more nodes and decreasing the communication range
+title: Step 3. Adding more nodes and decreasing the communication range
 tutorial: Wireless
 ---
 

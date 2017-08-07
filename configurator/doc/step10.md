@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 10 - Configuring a completely wireless network
+title: Step 10. Configuring a completely wireless network
 tutorial: Configurator
 ---
 

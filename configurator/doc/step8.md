@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 8 - Configuring a mixed wired/wireless network
+title: Step 8. Configuring a mixed wired/wireless network
 tutorial: Configurator
 ---
 

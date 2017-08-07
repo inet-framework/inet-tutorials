@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 12 - Mixing different kinds of autorouting
+title: Step 12. Mixing different kinds of autorouting
 tutorial: Configurator
 ---
 

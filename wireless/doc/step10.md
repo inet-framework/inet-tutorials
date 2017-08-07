@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 10 - Configuring ad-hoc routing (AODV)
+title: Step 10. Configuring ad-hoc routing (AODV)
 tutorial: Wireless
 ---
 

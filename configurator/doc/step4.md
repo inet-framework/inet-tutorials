@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 4 - Fully automatic static routing table configuration
+title: Step 4. Fully automatic static routing table configuration
 tutorial: Configurator
 ---
 

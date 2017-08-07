@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 9 - Leaving some part of the network unconfigured
+title: Step 9. Leaving some part of the network unconfigured
 tutorial: Configurator
 ---
 

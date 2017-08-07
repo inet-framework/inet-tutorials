@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 4 - Setting up static routing
+title: Step 4. Setting up static routing
 tutorial: Wireless
 ---
 

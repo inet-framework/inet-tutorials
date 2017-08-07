@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 11 - Adding obstacles to the environment
+title: Step 11. Adding obstacles to the environment
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 14 - Introducing antenna gain
+title: Step 14. Introducing antenna gain
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 1 - Two hosts communicating wirelessly
+title: Step 1. Two hosts communicating wirelessly
 tutorial: Wireless
 ---
 

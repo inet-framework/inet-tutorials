@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 3 - Automatically assigning IP addresses to a subnet from a given range
+title: Step 3. Automatically assigning IP addresses to a subnet from a given range
 tutorial: Configurator
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 13 - Configuring a more accurate pathloss model
+title: Step 13. Configuring a more accurate pathloss model
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 6 - Using CSMA to better utilize the medium
+title: Step 6. Using CSMA to better utilize the medium
 tutorial: Wireless
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 5 - Manually overriding individual routes
+title: Step 5. Manually overriding individual routes
 tutorial: Configurator
 ---
 

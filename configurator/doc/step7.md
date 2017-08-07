@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 7 - Configuring a hierarchical network
+title: Step 7. Configuring a hierarchical network
 tutorial: Configurator
 ---
 

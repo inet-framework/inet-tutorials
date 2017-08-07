@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 5 - Taking interference into account
+title: Step 5. Taking interference into account
 tutorial: Wireless
 ---
 

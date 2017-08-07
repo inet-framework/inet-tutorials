@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Step 6 - Setting different metric for automatic routing table configuration
+title: Step 6. Setting different metric for automatic routing table configuration
 tutorial: Configurator
 ---
 
