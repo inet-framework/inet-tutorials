@@ -1,5 +1,6 @@
 - name: Wireless
   link: /inet-tutorials/wireless/doc
+  tutorial: Wireless
   submenu:
     - link: /inet-tutorials/wireless/doc/index
       name: Introduction
@@ -36,6 +37,7 @@
 
 - name: Configurator
   link: /inet-tutorials/configurator/doc
+  tutorial: Configurator
   submenu:
     - link: /inet-tutorials/configurator/doc/index
       name: Introduction
@@ -66,6 +68,7 @@
 
 - name: Visualization    
   link: /inet-tutorials/visualization/doc
+  tutorial: Visualization
   submenu:
     - link: /inet-tutorials/visualization/doc/step1
       name: Step 1 - Enabling visualization
@@ -120,6 +123,5 @@
     - link: /inet-tutorials/visualization/doc/conclusion
       name: Conclusion
 
-- name: Repository
-  link: https://github.com/inet-framework/inet-tutorials
-
+- name: Back to INET
+  link: https://inet.omnetpp.org

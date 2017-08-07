@@ -156,19 +156,3 @@ the transmission rate was around 660 kbps.
 **Number of packets received by host B: 2017**
 
 Sources: [omnetpp.ini](../omnetpp.ini), [WirelessA.ned](../WirelessA.ned)
-
-<!-- find active submenu -->
-{% for item in site.data.menu %}
-  {% if item.submenu %}
-    {% if page.tutorial == item.name %}{% assign activeSubmenu = item.submenu %}{% endif %}
-  {% endif %}
-{% endfor %}
-
-{% if activeSubmenu  %}
-  {% for submenuitem in activeSubmenu %}
-    {% unless submenuitem.separator %}
-{% if page.url == submenuitem.link %} active{% endif %}
-<a href="{{ submenuitem.link }}">{{ submenuitem.name }}</a>
-    {% endunless %}
-  {% endfor %}
-{% endif %}
