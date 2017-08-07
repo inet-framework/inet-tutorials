@@ -1,8 +1,10 @@
-@page step14 Step 14 - Displaying statistic
+---
+layout: page
+title: Step 14. Displaying statistic
+tutorial: Visualization
+---
 
-@nav{step13,step15}
-
-@section s14goals Goals
+## Goals
 
 We need precise data to monitor working of simulation. These can
 be obtained from statistics. In this step we make statistic about VoIP playout delay,
@@ -26,7 +28,7 @@ Ezeket statisztikákból tudjuk kinyerni. Ebben a lépésben a playout delayről
 statisztikát, amiből információt kapunk a VoIP kommunikációról.
 -->
 
-@section s14model The model
+## The model
 
 <!--
 Communication is still the same. Pedestrian0 sends VoIP stream to pedestrian1 through accessPoint0.
@@ -48,7 +50,7 @@ The configuration:
 @until ####
 -->
 
-@section s14results Results
+## Results
 
 <img src="step14_statistic_3d.gif">
 <!--

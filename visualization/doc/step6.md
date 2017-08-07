@@ -1,8 +1,10 @@
-@page step6 Step 6 - Using 3D models for network nodes
+---
+layout: page
+title: Step 6. Using 3D models for network nodes
+tutorial: Visualization
+---
 
-@nav{step5, step7}
-
-@section s6goals Goals
+## Goals
 
 However it doesn't directly affect the outcome of the simulation, it is 
 more understandable if the appearance of nodes is similar as in real world.
@@ -29,7 +31,7 @@ A pedestrian-ok default ikonja egy mobil. Ebben a lépésben kicseréljük egy
 3D animált modellre. Ennek semmi közvetlen hatása nincs a szimuláció eredményére.
 -->
 
-@section s6model The model
+## The model
 <!--
 <i>Pedestrian0</i> and <i>pedestrian1</i> are <tt>WirelessHost</tt> node type, so by default their icon is a cellphone.
 We want to show, how to change network nodes' default icon.
@@ -46,7 +48,7 @@ The three numbers are in for the rot keyword mean the rotation of the 3D model a
 @skipline [Config Visualization04]
 @until ####
 -->
-@section s6results Results
+## Results
 
 <img src="step4_result1.gif">
 <!--

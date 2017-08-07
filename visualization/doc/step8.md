@@ -1,8 +1,10 @@
-@page step8 Step 8 - Showing IP adresses
+---
+layout: page
+title: Step 8. Showing IP adresses
+tutorial: Visualization
+---
 
-@nav{step7,step9}
-
-@section s8goals Goals
+## Goals
 
 Understanding network traffic often requires identifying nodes based on their IP addresses.
 In this step we show the IP addresses assigned by the network configurator. 
@@ -11,7 +13,7 @@ TODO:
 It's often convenient to tell a node's IP address at a glance, without using the module inspector.
 In this step we show the IP addresses assigned by the network configurator.
 
-@section s8model The model
+## The model
 <!--
 If we want to see the network nodes' IP addresses we have to set the parameters of the <tt>InterfaceTableVisualizer</tt>.
 Here is the configuration:
@@ -30,7 +32,7 @@ These settings are optional, that may make the IP addresses clearly visible.
 With <tt>InterfaceTableVisualizer</tt> we can display not only the IP address of a NIC, but the MAC address too.
 To that we need to change the <tt>content</tt> parameter to <tt>macAddress</tt>.
 -->
-@section s8results Results
+## Results
 
 <img src="step08_ipaddress_2d.gif">
 <img src="step6_result4.gif"  width="850">

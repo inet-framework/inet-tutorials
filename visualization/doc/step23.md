@@ -1,8 +1,10 @@
-@page step23 Step 23 - Visualizing handovers
+---
+layout: page
+title: Step 23. Visualizing handovers
+tutorial: Visualization
+---
 
-@nav{step22,step24}
-
-@section s23goals Goals
+## Goals
 
 A handoff occurs when a client moves beyond the radio range of one access point, 
 and into the range of another access point. In general, it's difficult to tell 
@@ -17,8 +19,8 @@ step shows what happens during a handover, i.e. how the association state change
 -----
 -->
 
-@section s23model The model
+## The model
 
-@section s23results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

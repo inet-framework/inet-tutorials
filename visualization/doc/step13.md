@@ -1,8 +1,10 @@
-@page step13 Step 13 - Showing active data links
+---
+layout: page
+title: Step 13. Showing active data links
+tutorial: Visualization
+---
 
-@nav{step12,step14}
-
-@section s13goals Goals
+## Goals
 
 In this step we visualize the VoIP communication's data link layer connections. By visualizing 
 active data links, we can verify that the VoIP packets arrived correctly at the destination node.
@@ -12,7 +14,7 @@ Ebben a lépésben a VoIP kommunikáció data linkjeit mutatjuk meg. A data link
 vizualizálásával ellenőrizzük, hogy a VoIP csomag hibátlanul megérkezett-e a receiverhez.
 -->
 
-@section s13model The model
+## The model
 
 <!--
 The configuration is similar as the physical link visualizer's settings.
@@ -27,7 +29,7 @@ Configuration:
 @until ####
 -->
 
-@section s13results Results
+## Results
 
 <img src="step13_data_link_2d.gif">
 <img src="step13_data_link_3d.gif">

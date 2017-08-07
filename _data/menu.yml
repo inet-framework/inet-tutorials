@@ -1,4 +1,4 @@
-- name: Wireless
+- name: Wireless Tutorial
   tutorial: Wireless
   submenu:
     - page: wireless/doc/index.md
@@ -19,7 +19,7 @@
     - page: wireless/doc/step14.md
     - page: wireless/doc/conclusion.md
 
-- name: Configurator
+- name: Configurator Tutorial
   tutorial: Configurator
   submenu:
     - page: configurator/doc/index.md
@@ -37,7 +37,7 @@
     - page: configurator/doc/step11.md
     - page: configurator/doc/step12.md
 
-- name: Visualization    
+- name: Visualization Tutorial
   tutorial: Visualization
   submenu:
     - page: visualization/doc/step1.md

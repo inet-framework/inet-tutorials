@@ -1,5 +1,7 @@
-@page conclusion Conclusion
-
-@nav{step24,index}
+---
+layout: page
+title: Conclusion
+tutorial: Visualization
+---
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

@@ -1,8 +1,10 @@
-@page step5 Step 5 - Displaying communication/interference range
+---
+layout: page
+title: Step 5. Displaying communication/interference range
+tutorial: Visualization
+---
 
-@nav{step4, step6}
-
-@section s5goals Goals
+## Goals
 
 Wireless communication is only possible if devices are within each other's communication range.
 In this step we visualize communication and interference ranges. This can help in the placement of network nodes.
@@ -14,7 +16,7 @@ range-ében legyenek. A node-ok elhelyezésekor erre figyelnünk kell, a range-e
 vizualizálása segíti ezt.
 -->
 
-@section s5model The model
+## The model
 <!--
 In this step we display the communication and interfaces range of wireless nodes in the network.
 
@@ -45,7 +47,7 @@ Below, there is the appropriate part of the ini file:
 @skipline [Config Visualization03]
 @until ####
 -->
-@section s5results Results
+## Results
 
 <img src="step3_result1.png">
 <img src="step3_result2.png">

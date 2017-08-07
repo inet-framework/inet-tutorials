@@ -1,8 +1,10 @@
-@page step7 Step 7 - Displaying recent movement
+---
+layout: page
+title: Step 7. Displaying recent movement
+tutorial: Visualization
+---
 
-@nav{step6, step8}
-
-@section s7goals Goals
+## Goals
 
 When wireless nodes roam in a network, it's often difficult to follow their movement. 
 In this step we visualize the recent movement trajectory of network nodes.
@@ -11,7 +13,7 @@ TODO:
 When wireless nodes move around the playground, it can be easier to track them
 by displaying their recent movement. In this step, we visualize nodes' movement trails.
 
-@section s7model The model
+## The model
 
 <img src="step7_without_movement_trails.gif">
 <!--
@@ -35,7 +37,7 @@ The <tt>changeInterval</tt> is the frequency of changing speed and angle, the <t
 After that we need to add some visualizer parameters.
 We display a trail, that shows the passed route, and we visualize an arrow, that represents the velocity of the pedestrians.
 -->
-@section s7results Results
+## Results
 
 <img src="step07_moving_2d.gif">
 <img src="step5_result3.gif" width="850">

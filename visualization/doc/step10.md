@@ -1,8 +1,10 @@
-@page step10 Step 10 - Displaying transmissions and receptions
+---
+layout: page
+title: Step 10. Displaying transmissions and receptions
+tutorial: Visualization
+---
 
-@nav{step9,step11}
-
-@section s10goals Goals
+## Goals
 
 It can be useful to have a visual clue about which nodes are currently transmitting or receiving a signal.
 In this step we visualize nodes' transmission and reception states.
@@ -11,7 +13,7 @@ In this step we visualize nodes' transmission and reception states.
 ---
 -->
 
-@section s10model The model
+## The model
 <!--
 After the successful association process we can start the VoIP application between the pedestrians, so we need to add one udp application to them.
 The pedestrian0 will be the sender and the pedestrian1 will be the receiver.
@@ -31,7 +33,7 @@ Configuration:
 @skipline [Config Visualization08]
 @until ####
 -->
-@section s10results Results
+## Results
 
 <img src="step8_result1.gif">
 <!--

@@ -1,8 +1,10 @@
-@page step16 Step 16 - Displaying 802.11 channel access state
+---
+layout: page
+title: Step 16. Displaying 802.11 channel access state
+tutorial: Visualization
+---
 
-@nav{step15,step17}
-
-@section s16goals Goals
+## Goals
 
 In this step we display how wireless nodes gain access to the channel using
 CSMA/CA access method. Visualizing this, we get a clear picture of the state 
@@ -36,7 +38,7 @@ Network nodes can be in different channel access states like <i>idle</i>,
 and who listen. We want to display that in this step.
 -->
 
-@section s16model The model
+## The model
 
 <!--
 Firstly we hide some visualizers, because they are distracting.
@@ -52,7 +54,7 @@ determines what is displayed on network nodes. In addition we can adjust the
 background color, the font color, and the opacity. These are optional settings.
 -->
 
-@section s16results Results
+## Results
 
 <img src="step16_channel_access_2d.gif">
 <!--

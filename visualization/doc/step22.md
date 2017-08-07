@@ -1,8 +1,10 @@
-@page step22 Step 22 - Showing link breaks
+---
+layout: page
+title: Step 22. Showing link breaks
+tutorial: Visualization
+---
 
-@nav{step21,step23}
-
-@section s22goals Goals
+## Goals
 
 In this step we display link breaks between network devices. When a mobile node 
 exits from an access point's communication range the link breaks up and the devices 
@@ -16,8 +18,8 @@ megszakad az eszközök között és nem lesznek képesek a kommunikációra egy
 csomagvesztés lehet a következménye, ha a mozgó eszköz adatokat forgalmaz a hálózaton.
 -->
 
-@section s22model The model
+## The model
 
-@section s22results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

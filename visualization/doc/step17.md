@@ -1,8 +1,10 @@
-@page step17 Step 17 - Showing active network routes
+---
+layout: page
+title: Step 17. Showing active network routes
+tutorial: Visualization
+---
 
-@nav{step16,step18}
-
-@section s17goals Goals
+## Goals
 
 In this step we enable displaying active network routes for the videostream. 
 With this visualizer, we can verify whether the videostream packets arrived at the 
@@ -20,7 +22,7 @@ a hálózati útvonal. Ezzel a visualizer-rel megnézhetjük, hogy a csomag
 eljut-e a célállomás megfelelő alkalmazásához.
 -->
 
-@section s17model The model
+## The model
 
 <!--
 Firstly we have to edit the configurator. We make an xml file (in this case configurationD.xml),
@@ -51,7 +53,7 @@ The configuration:
 @until ####
 -->
 
-@section s17results Results
+## Results
 
 <img src="step17_networkroute_3d.gif">
 

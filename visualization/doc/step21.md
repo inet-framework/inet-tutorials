@@ -1,8 +1,10 @@
-@page step21 Step 21 - Displaying transport connections
+---
+layout: page
+title: Step 21. Displaying transport connections
+tutorial: Visualization
+---
 
-@nav{step20,step22}
-
-@section s21goals Goals
+## Goals
 
 In this step we show transport connections. To establish a link, TCP uses 
 three-way handshake. It's open until one of the participants initiate closing the 
@@ -19,8 +21,8 @@ nem kezdeményezi a kapcsolat lezárását, addig nyitva marad. A megjelenítés
 könnyen átlátható lesz, hogy melyik nyitott kapcsolatnak melyik node-ok a résztvevői.
 -->
 
-@section s21model The model
+## The model
 
-@section s21results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

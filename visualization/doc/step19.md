@@ -1,8 +1,10 @@
-@page step19 Step 19 - Displaying obstacle loss
+---
+layout: page
+title: Step 19. Displaying obstacle loss
+tutorial: Visualization
+---
 
-@nav{step18,step20}
-
-@section s19goals Goals
+## Goals
 
 Impediments shield the signals of wireless communication. In this step we 
 show the obstacle loss.
@@ -15,8 +17,8 @@ Az akadályok árnyékolják a vezeték nélküli kommunikáció jeleit.
 Ebben a lépésben az akadályokon eső veszteségeket mutatjuk meg.
 -->
 
-@section s19model The model
+## The model
 
-@section s19results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

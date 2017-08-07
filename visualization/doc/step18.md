@@ -1,8 +1,10 @@
-@page step18 Step 18 - Displaying physical environment
+---
+layout: page
+title: Step 18. Displaying physical environment
+tutorial: Visualization
+---
 
-@nav{step17,step19}
-
-@section s18goals Goals
+## Goals
 
 We can place obstacles into our simulation, which can obstruct radio signals. In this step we display the physical environment.
 
@@ -15,8 +17,8 @@ hatással vannak a hálózat működésére. Ebben a lépésben a fizikai körny
 jelenítjük meg.
 -->
 
-@section s18model The model
+## The model
 
-@section s18results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

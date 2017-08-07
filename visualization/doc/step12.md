@@ -1,8 +1,10 @@
-@page step12 Step 12 - Showing active physical links
+---
+layout: page
+title: Step 12. Showing active physical links
+tutorial: Visualization
+---
 
-@nav{step11,step13}
-
-@section s12goals Goals
+## Goals
 
 In this step we visualize active physical links in a VoIP communication.
 These display which node receives VoIP packets successfully from the sender device at the physical layer. 
@@ -18,7 +20,7 @@ Physical links appear, when a node receives VoIP message. With this visualizer
 we can monitor which network node transmits VoIP message and which node receives that.
 -->
 
-@section s12model The model
+## The model
 
 <!--
 The communication is given, we need to handle the visualizer only.
@@ -37,7 +39,7 @@ Here is the configuration:
 @until ####
 -->
 
-@section s12results Results
+## Results
 
 <img src="step12_phys_link_3d.gif">
 <img src="step12_phys_link_2d.gif">

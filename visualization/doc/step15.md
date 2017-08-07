@@ -1,4 +1,8 @@
-@page step15 Step 15 - Showing configured routing tables
+---
+layout: page
+title: Step 15. Showing configured routing tables
+tutorial: Visualization
+---
 
 TODO: Showing configured routes
 
@@ -6,7 +10,7 @@ TODO: Add RIP to this step ?
 
 @nav{step14,step16}
 
-@section s15goals Goals
+## Goals
 
 We can visualize IP routes as set up by the configurator.
 We can see how routes are set up without examining routing tables, just by looking at the network.
@@ -28,7 +32,7 @@ pedestrian, who want to watch video stream, we need a router.<br>
 We want to see how can the devices reach the server. To this, in this step we will show routing table entries.
 -->
 
-@section s15model The model
+## The model
 
 <!--
 The video streamed by the videoStreamserver, that connects to the router0 through switch0.
@@ -62,7 +66,7 @@ The configuration:
 @until ####
 -->
 
-@section s15results Results
+## Results
 
 <!--
 When we start the simulation we can see that, the routingTableVisualizer draw arrows

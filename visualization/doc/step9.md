@@ -1,8 +1,10 @@
-@page step9 Step 9 - Showing wifi association
+---
+layout: page
+title: Step 9. Showing wifi association
+tutorial: Visualization
+---
 
-@nav{step8,step10}
-
-@section s9goals Goals
+## Goals
 
 In infrastructure mode, wireless nodes have to be associated with an access point to be able to communicate.
 The association may change over time, or at any given time there might be several access points for a
@@ -11,7 +13,7 @@ In this step we enable displaying the association between wireless nodes and acc
 
 TODO/NOTE: its easier to tell which nodes are associated with which access points if its visualized. e.g. dont have to use the inspector window...
 
-@section s9model The model
+## The model
 <!--
 The pedestrians are in the access point's communication range, so they can associate with that.
 
@@ -25,7 +27,7 @@ Here is the appropriate configuration:
 @skipline [Config Visualization07]
 @until ####
 -->
-@section s9results Results
+## Results
 
 <img src="step09_wifi_assoc_2d.gif">
 <img src="step7_result2.gif">

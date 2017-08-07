@@ -1,8 +1,10 @@
-@page step24 Step 24 - Displaying changing routes
+---
+layout: page
+title: Step 24. Displaying changing routes
+tutorial: Visualization
+---
 
-@nav{step23,conclusion}
-
-@section s24goals Goals
+## Goals
 
 In this step we visualize changing routes between videoStreamServer and video clients.
 When devices roam in the network, routes may change between two nodes. By displaying 
@@ -16,8 +18,8 @@ A változások megjelenítésével bármelyik pillanatban meg tudjuk állapítan
 eszközök között milyen úton folyik a kommunikáció.
 -->
 
-@section s24model The model
+## The model
 
-@section s24results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

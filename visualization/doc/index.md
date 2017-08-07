@@ -1,4 +1,9 @@
-@mainpage Visualization Tutorial for the INET Framework
+---
+layout: page
+title: Visualization Tutorial for the INET Framework
+tutorial: Visualization
+---
+
 In this tutorial we show you, how to use the visualization module in the INET Framework.
 The tutorial contains a series of simulation models, numbered from 1 through 24.
 The models are of increasing complexity – they start from the basics and in each step, they introduce new INET features and concepts related to visualization module.

@@ -1,8 +1,10 @@
-@page step11 Step 11 - Showing propagating signals
+---
+layout: page
+title: Step 11. Showing propagating signals
+tutorial: Visualization
+---
 
-@nav{step10,step12}
-
-@section s11goals Goals
+## Goals
 
 We can visualize radio signals as they propagate through the medium.
 It can provide information about how transmissions happen in time, and can help in detecting overlapping signals and collisions.
@@ -12,7 +14,7 @@ Sokszor fontos, hogy lássuk a vezeték nélküli jeleket, mert így monitorozha
 a hálózat forgalmát. Ebben a lépésben a jelek terjedését vizualizáljuk.
 -->
 
-@section s11model The model
+## The model
 <!--
 The communication works, we can see who is the sender and the receiver, but we don't see the signal.
 In this step we want to display the signal propagation.
@@ -30,7 +32,7 @@ If we set both, we can see a ring on the ground, and a sphere in the air. This i
 @skipline [Config Visualization09]
 @until ####
 -->
-@section s11results Results
+## Results
 
 <img src="step9_result1.gif">
 <img src="step9_result2.gif">

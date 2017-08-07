@@ -1,8 +1,10 @@
-@page step20 Step 20 - Showing packet drops
+---
+layout: page
+title: Step 20. Showing packet drops
+tutorial: Visualization
+---
 
-@nav{step19,step21}
-
-@section s20goals Goals
+## Goals
 
 In packet switching networks sometimes packets may fail to reach their destination.
 WIP
@@ -30,8 +32,8 @@ Ha természeti vagy mesterséges akadályok vannak a környezetben, akkor segít
 wireless AP-k megfelelő helyre telepítését, ha látjuk, hogy hol történik csomag vesztés.
 -->
 
-@section s20model The model
+## The model
 
-@section s20results Results
+## Results
 
 Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned

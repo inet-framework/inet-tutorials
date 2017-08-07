@@ -1,13 +1,15 @@
-@page step2 Step 2 - Showing Boston downtown
+---
+layout: page
+title: Step 2. Showing Boston downtown
+tutorial: Visualization
+---
 
-@nav{step1,step3}
-
-@section s2goals Goals
+## Goals
 In network simulation it's often desirable to have a real world context. Although displaying a map
 doesn't directly affect the outcome of the simulation, nevertheless it can still facilitate understanding.
 In this step we display a street map of downtown Boston.
 
-@section s2model The model
+## The model
 <!--
 Here is the NED file of the network:
 @dontinclude VisualizationNetworks.ned
@@ -30,7 +32,7 @@ Besides these options we turn off the playground shading and configure the opaci
 We need to make the playground transparent, because it's over the map, and later if we place a node, we can't see the map under of the area from the origin to the node. 
 With the <tt>axisLength</tt> parameter we can change the axis' size on the map.
 -->
-@section s2results Results
+## Results
 
 <img src="step2_map_without_axis.png" width="850">
 <!--
