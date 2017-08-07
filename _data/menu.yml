@@ -1,127 +1,71 @@
 - name: Wireless
-  link: /inet-tutorials/wireless/doc
   tutorial: Wireless
   submenu:
-    - link: /inet-tutorials/wireless/doc/index
+    - page: wireless/doc/index.md
       name: Introduction
-    - link: /inet-tutorials/wireless/doc/step1
-      name: Step 1 - Two hosts communicating wirelessly
-    - link: /inet-tutorials/wireless/doc/step2
-      name: Step 2 - Setting up some animations
-    - link: /inet-tutorials/wireless/doc/step3
-      name: Step 3 - Adding more nodes and decreasing the communication range
-    - link: /inet-tutorials/wireless/doc/step4
-      name: Step 4 - Setting up static routing
-    - link: /inet-tutorials/wireless/doc/step5
-      name: Step 5 - Taking interference into account
-    - link: /inet-tutorials/wireless/doc/step6
-      name: Step 6 - Using CSMA to better utilize the medium
-    - link: /inet-tutorials/wireless/doc/step7
-      name: Step 7 - Turning on ACKs in CSMA
-    - link: /inet-tutorials/wireless/doc/step8
-      name: Step 8 - Modeling energy consumption
-    - link: /inet-tutorials/wireless/doc/step9
-      name: Step 9 - Configuring node movements
-    - link: /inet-tutorials/wireless/doc/step10
-      name: Step 10 - Configuring ad-hoc routing (AODV)
-    - link: /inet-tutorials/wireless/doc/step11
-      name: Step 11 - Adding obstacles to the environment
-    - link: /inet-tutorials/wireless/doc/step12
-      name: Step 12 - Changing to a more realistic radio model
-    - link: /inet-tutorials/wireless/doc/step13
-      name: Step 13 - Configuring a more accurate pathloss model
-    - link: /inet-tutorials/wireless/doc/step14
-      name: Step 14 - Introducing antenna gain
-    - link: /inet-tutorials/wireless/doc/conclusion
-      name: Conclusion
+    - page: wireless/doc/step1.md
+    - page: wireless/doc/step2.md
+    - page: wireless/doc/step3.md
+    - page: wireless/doc/step4.md
+    - page: wireless/doc/step5.md
+    - page: wireless/doc/step6.md
+    - page: wireless/doc/step7.md
+    - page: wireless/doc/step8.md
+    - page: wireless/doc/step9.md
+    - page: wireless/doc/step10.md
+    - page: wireless/doc/step11.md
+    - page: wireless/doc/step12.md
+    - page: wireless/doc/step13.md
+    - page: wireless/doc/step14.md
+    - page: wireless/doc/conclusion.md
 
 - name: Configurator
-  link: /inet-tutorials/configurator/doc
   tutorial: Configurator
   submenu:
-    - link: /inet-tutorials/configurator/doc/index
+    - page: configurator/doc/index.md
       name: Introduction
-    - link: /inet-tutorials/configurator/doc/step1
-      name: Step 1 - Fully automatic IP address assignment
-    - link: /inet-tutorials/configurator/doc/step2
-      name: Step 2 - Manually overriding individual IP addresses
-    - link: /inet-tutorials/configurator/doc/step3
-      name: Step 3 - Automatically assigning IP addresses to a subnet from a given range
-    - link: /inet-tutorials/configurator/doc/step4
-      name: Step 4 - Fully automatic static routing table configuration
-    - link: /inet-tutorials/configurator/doc/step5
-      name: Step 5 - Manually overriding individual routes
-    - link: /inet-tutorials/configurator/doc/step6
-      name: Step 6 - Setting different metric for automatic routing table configuration
-    - link: /inet-tutorials/configurator/doc/step7
-      name: Step 7 - Configuring a hierarchical network
-    - link: /inet-tutorials/configurator/doc/step8
-      name: Step 8 - Configuring a mixed wired/wireless network
-    - link: /inet-tutorials/configurator/doc/step9
-      name: Step 9 - Leaving some part of the network unconfigured
-    - link: /inet-tutorials/configurator/doc/step10
-      name: Step 10 - Configuring a completely wireless network
-    - link: /inet-tutorials/configurator/doc/step11
-      name: Step 11 - Manually modifying an automatically created configuration
-    - link: /inet-tutorials/configurator/doc/step12
-      name: Step 12 - Mixing different kinds of autorouting
+    - page: configurator/doc/step1.md
+    - page: configurator/doc/step2.md
+    - page: configurator/doc/step3.md
+    - page: configurator/doc/step4.md
+    - page: configurator/doc/step5.md
+    - page: configurator/doc/step6.md
+    - page: configurator/doc/step7.md
+    - page: configurator/doc/step8.md
+    - page: configurator/doc/step9.md
+    - page: configurator/doc/step10.md
+    - page: configurator/doc/step11.md
+    - page: configurator/doc/step12.md
 
 - name: Visualization    
-  link: /inet-tutorials/visualization/doc
   tutorial: Visualization
   submenu:
-    - link: /inet-tutorials/visualization/doc/step1
-      name: Step 1 - Enabling visualization
-    - link: /inet-tutorials/visualization/doc/step2
-      name: Step 2 - Showing Boston downtown
-    - link: /inet-tutorials/visualization/doc/step3
-      name: Step 3 - Showing the playground
-    - link: /inet-tutorials/visualization/doc/step4
-      name: Step 4 - Adding static 3D objects to the scene (WIP)
-    - link: /inet-tutorials/visualization/doc/step5
-      name: Step 5 - Displaying communication/interference range
-    - link: /inet-tutorials/visualization/doc/step6
-      name: Step 6 - Using 3D models for network nodes
-    - link: /inet-tutorials/visualization/doc/step7
-      name: Step 7 - Displaying recent movement
-    - link: /inet-tutorials/visualization/doc/step8
-      name: Step 8 - Showing IP adresses
-    - link: /inet-tutorials/visualization/doc/step9
-      name: Step 9 - Showing wifi association
-    - link: /inet-tutorials/visualization/doc/step10
-      name: Step 10 - Displaying transmissions and receptions
-    - link: /inet-tutorials/visualization/doc/step11
-      name: Step 11 - Showing propagating signals
-    - link: /inet-tutorials/visualization/doc/step12
-      name: Step 12 - Showing active physical links
-    - link: /inet-tutorials/visualization/doc/step13
-      name: Step 13 - Showing active data links
-    - link: /inet-tutorials/visualization/doc/step14
-      name: Step 14 - Displaying statistic
-    - link: /inet-tutorials/visualization/doc/step15
-      name: Step 15 - Showing configured routing tables
-    - link: /inet-tutorials/visualization/doc/step16
-      name: Step 16 - Displaying 802.11 channel access state
-    - link: /inet-tutorials/visualization/doc/step17
-      name: Step 17 - Showing active network routes
-    - link: /inet-tutorials/visualization/doc/step18
-      name: Step 18 - Displaying physical environment
-    - link: /inet-tutorials/visualization/doc/step19
-      name: Step 19 - Displaying obstacle loss
-    - link: /inet-tutorials/visualization/doc/step20
-      name: Step 20 - Showing packet drops
-    - link: /inet-tutorials/visualization/doc/step21
-      name: Step 21 - Displaying transport connections
-    - link: /inet-tutorials/visualization/doc/step22
-      name: Step 22 - Showing link breaks
-    - link: /inet-tutorials/visualization/doc/step23
-      name: Step 23 - Visualizing handovers
-    - link: /inet-tutorials/visualization/doc/step24
-      name: Step 24 - Displaying changing routes
-    - link: /inet-tutorials/visualization/doc/step25
-      name: Step 25 - Turning on all visualizers at once
-    - link: /inet-tutorials/visualization/doc/conclusion
-      name: Conclusion
+    - page: visualization/doc/step1.md
+    - page: visualization/doc/step2.md
+    - page: visualization/doc/step3.md
+    - page: visualization/doc/step4.md
+    - page: visualization/doc/step5.md
+    - page: visualization/doc/step6.md
+    - page: visualization/doc/step7.md
+    - page: visualization/doc/step8.md
+    - page: visualization/doc/step9.md
+    - page: visualization/doc/step10.md
+    - page: visualization/doc/step11.md
+    - page: visualization/doc/step12.md
+    - page: visualization/doc/step13.md
+    - page: visualization/doc/step14.md
+    - page: visualization/doc/step15.md
+    - page: visualization/doc/step16.md
+    - page: visualization/doc/step17.md
+    - page: visualization/doc/step18.md
+    - page: visualization/doc/step19.md
+    - page: visualization/doc/step20.md
+    - page: visualization/doc/step21.md
+    - page: visualization/doc/step22.md
+    - page: visualization/doc/step23.md
+    - page: visualization/doc/step24.md
+    - page: visualization/doc/step25.md
+    - page: visualization/doc/conclusion.md
 
 - name: Back to INET
   link: https://inet.omnetpp.org

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Wireless Tutorial for the INET Framework -- Part 1
+title: Wireless Tutorial for the INET Framework
 tutorial: Wireless
 ---
 
@@ -28,22 +28,3 @@ INET documentation:
 In the tutorial, each step is a separate configuration in the same omnetpp.ini file.
 Steps build on each other, they extend the configuration of the previous step by adding
 a few new lines. Consecutive steps mostly share the same network, defined in NED.
-
-## Contents
-
-<!-- find active submenu -->
-{% for item in site.data.menu %}
-  {% if item.submenu %}
-    {% if page.tutorial == item.name %}{% assign activeSubmenu = item.submenu %}{% endif %}
-  {% endif %}
-{% endfor %}
-
-<ul>
-{% if activeSubmenu  %}
-  {% for submenuitem in activeSubmenu %}
-    {% unless submenuitem.separator %}
-<li><a href="{{ submenuitem.link }}">{{ submenuitem.name }}</a></li>
-    {% endunless %}
-  {% endfor %}
-{% endif %}
-</ul>

@@ -18,25 +18,28 @@ layout: default
             {% endfor %}
 
             {% for item in activeTutorialSubmenu %}
-                {% assign p = page.path | prepend: "/inet-tutorials/" %}
-                {% assign l = item.link | append: ".md" %}
-                {% if p == l %}
-                    {% assign activeStepItem = item %}
+                {% assign pg = site.pages | where: 'path', item.page | first %}
+                {% capture pagetitle %}{% if item.name %}{{ item.name }}{% else %}{{ pg.title }}{% endif %}{% endcapture %}
+                {% if page.path == item.page %}
+                    {% assign activeStepPage = pg %}
+                    {% assign activeStepTitle = pagetitle %}
                     {% continue %}
                 {% endif %}
-                {% if activeStepItem == nil %}
-                    {% assign prevStepItem = item %}
+                {% if activeStepPage == nil %}
+                    {% assign prevStepPage = pg %}
+                    {% assign prevStepTitle = pagetitle %}
                 {% endif %}
-                {% if nextStepItem == nil and activeStepItem != nil %}
-                    {% assign nextStepItem = item %}
+                {% if nextStepPage == nil and activeStepPage != nil %}
+                    {% assign nextStepPage = pg %}
+                    {% assign nextStepTitle = pagetitle %}
                 {% endif %}
             {% endfor %}
 
             <div class="page">
               <h1 class="page-title">{{ page.title }}</h1>
               {{ content }}
-              {% if prevStepItem %}<a href="{{ prevStepItem.link }}" class="btn btn-primary btn-sm">Previous</a>{% endif %}
-              {% if nextStepItem %}<a href="{{ nextStepItem.link }}" class="btn btn-primary btn-sm" >Next: {{ nextStepItem.name }}</a>{% endif %}
+              {% if prevStepPage %}<a href="{{site.baseurl}}/{{prevStepPage.url}}" class="btn btn-primary btn-sm">Previous</a>{% endif %}
+              {% if nextStepPage %}<a href="{{site.baseurl}}/{{nextStepPage.url}}" class="btn btn-primary btn-sm" >Next: {{nextStepTitle}}</a>{% endif %}
             </div>
           </div>
 
