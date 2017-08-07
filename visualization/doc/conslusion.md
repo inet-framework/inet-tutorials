@@ -4,4 +4,4 @@ title: Conclusion
 tutorial: Visualization
 ---
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

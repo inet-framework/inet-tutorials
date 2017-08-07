@@ -14,4 +14,4 @@ for visualizations. In the first step we create a model with INET visualizations
 
 ## Results
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

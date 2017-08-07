@@ -21,4 +21,4 @@ Ebben a lépésben az akadályokon eső veszteségeket mutatjuk meg.
 
 ## Results
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

@@ -56,4 +56,4 @@ In Module view mode there's no difference compared to the simulation before this
 But in 3D Scene view mode instead of phones we see walker boxmans.
 -->
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

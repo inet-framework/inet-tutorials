@@ -52,4 +52,4 @@ range too, so its wlan NIC also can receive the VoIP packet.The array always poi
 to the receiver.
 -->
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

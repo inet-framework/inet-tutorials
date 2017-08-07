@@ -13,4 +13,4 @@ TODO: We can add static 3D models to the scene, to put things in real world cont
 
 ## Results
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

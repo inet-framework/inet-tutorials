@@ -22,4 +22,4 @@ eszközök között milyen úton folyik a kommunikáció.
 
 ## Results
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

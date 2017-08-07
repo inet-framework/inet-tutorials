@@ -57,4 +57,4 @@ The configuration:
 
 <img src="step17_networkroute_3d.gif">
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

@@ -36,4 +36,4 @@ wireless AP-k megfelelő helyre telepítését, ha látjuk, hogy hol történik 
 
 ## Results
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

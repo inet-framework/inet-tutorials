@@ -52,4 +52,4 @@ Here's that in Module view mode:
 And here's that in 3D Scene view mode:
 -->
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)

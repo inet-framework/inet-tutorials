@@ -40,4 +40,4 @@ If the association is successful it's <tt>AssocResp-OK</tt> and a signal sign ap
 In 3D view mode as a result of the association process the signal sing appears above the appropriate network node.
 -->
 
-Sources: @ref omnetpp.ini, @ref VisualizationNetworks.ned
+Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
