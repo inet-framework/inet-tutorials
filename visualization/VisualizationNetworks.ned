@@ -49,46 +49,33 @@ network VisualizationA
             parameters:
                 @display("p=100,50");
         }
-        
 }
-//#### doxygen marker
 
 network VisualizationB extends VisualizationA
 {
-    parameters:
-        @display("bgb=0,0");
     submodules:
 		coordinateSystem: OsgGeographicCoordinateSystem {
             parameters:
                 @display("p=100,150");
 		}
 }
-//#### doxygen marker
 
 network VisualizationC extends VisualizationB
 {
     parameters:
-        @display("bgb=0,0");
-//    submodules:
-//		coordinateSystem: OsgGeographicCoordinateSystem {
-//            parameters:
-//                @display("p=100,150");
-//        }
+        @display("bgb=1000,1000");
 }
-//#### doxygen marker
 
 network VisualizationD extends VisualizationC
 {
-    parameters:
-        @display("bgb=0,0");
     submodules:
         pedestrian0: WirelessHost {
             parameters:
-                @display("p=398,89;i=device/cellphone");
+                @display("i=device/cellphone");
         }
         pedestrian1: WirelessHost {
             parameters:
-                @display("p=548,89;i=device/cellphone");
+                @display("i=device/cellphone");
         }
         accessPoint0: AccessPoint {
             parameters:
@@ -103,12 +90,10 @@ network VisualizationD extends VisualizationC
                 @display("p=100,350");
         }
 }
-//#### doxygen marker
 
 network VisualizationE extends VisualizationD
 {
-    parameters:
-        @display("bgb=0,0");
+
     submodules:
         pedestrianVideo: WirelessHost {
             parameters:
@@ -131,7 +116,6 @@ network VisualizationE extends VisualizationD
         switch0.ethg++ <--> Eth100M <--> router0.ethg++;
         videoStreamServer.ethg++ <--> Eth100M <--> switch0.ethg++;
 }
-//#### doxygen marker
 
 network VisualizationF extends VisualizationE
 {
@@ -150,7 +134,6 @@ network VisualizationF extends VisualizationE
         router0.pppg++ <--> Eth100M <--> router1.pppg++;
         accessPoint1.ethg++ <--> Eth100M <--> router1.ethg++;
 }
-//#### doxygen marker
 
 network VisualizationG extends VisualizationF
 {
@@ -162,7 +145,6 @@ network VisualizationG extends VisualizationF
                 @display("p=100,450");
         }
 }
-//#### doxygen marker
 
 network VisualizationH extends VisualizationG
 {
@@ -199,4 +181,3 @@ network VisualizationH extends VisualizationG
         router0.pppg++ <--> Eth100M <--> router3.pppg++;
         accessPoint3.ethg++ <--> Eth100M <--> router3.ethg++;
 }
-//#### doxygen marker
