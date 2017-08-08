@@ -93,7 +93,6 @@ network VisualizationD extends VisualizationC
 
 network VisualizationE extends VisualizationD
 {
-
     submodules:
         pedestrianVideo: WirelessHost {
             parameters:
@@ -119,8 +118,6 @@ network VisualizationE extends VisualizationD
 
 network VisualizationF extends VisualizationE
 {
-	parameters:
-        @display("bgb=0,0");
     submodules:
         accessPoint1: AccessPoint {
             parameters:
@@ -137,8 +134,6 @@ network VisualizationF extends VisualizationE
 
 network VisualizationG extends VisualizationF
 {
-    parameters:
-        @display("bgb=0,0");
     submodules:
         physicalEnvironment: PhysicalEnvironment {
             parameters:
@@ -148,8 +143,6 @@ network VisualizationG extends VisualizationF
 
 network VisualizationH extends VisualizationG
 {
-    parameters:
-        @display("bgb=0,0");
     submodules:
         car: WirelessHost {
             @display("p=215,122");
