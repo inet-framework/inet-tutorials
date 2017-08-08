@@ -71,11 +71,11 @@ network VisualizationD extends VisualizationC
     submodules:
         pedestrian0: WirelessHost {
             parameters:
-                @display("i=device/cellphone");
+                @display("p=398,89;i=device/cellphone");
         }
         pedestrian1: WirelessHost {
             parameters:
-                @display("i=device/cellphone");
+                @display("p=548,89;i=device/cellphone");
         }
         accessPoint0: AccessPoint {
             parameters:
