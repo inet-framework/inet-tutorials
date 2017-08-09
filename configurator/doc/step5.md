@@ -132,3 +132,5 @@ to Part A. Routes to `host7` are visualized.
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
 This time both packets outbound to `hosts 6 and 7` take the diverted route, the replies come back on the original route.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>

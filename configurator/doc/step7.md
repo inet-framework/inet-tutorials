@@ -264,3 +264,5 @@ and a default rule for reaching everything else through the backbone router.
 The difference between the configuration for this part and the previous one is that addresses are assigned hierarchically in this part. The routing
 table of the backbone router contains six entries instead of 10 in the previous part. The other nodes' routing tables remained the same. The difference is not drastic because the network is small. However, using hierarchical address assignment in a larger network would make a significant
 difference in routing table size.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorB.ned"/>

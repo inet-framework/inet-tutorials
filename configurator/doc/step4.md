@@ -172,3 +172,5 @@ Below is an animation of `host1` pinging `host7`.
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step4_2_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording playback speed 1.38 animation speed none
 zoom level 0.77 crop: 30 70 150 80-->
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>

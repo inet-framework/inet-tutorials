@@ -70,3 +70,5 @@ The ping exchanges highlight the modified routes on the following animation:
 <!--from #295 zoom 0.77 playback speed 2.5 animation speed none crop 30 70 150 80-->
 
 The packets travel only counter-clockwise in the triangle of the three routers.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>

@@ -94,3 +94,5 @@ AODV is a reactive protocol, so unused routes expire after a while. This happens
 
 To record the animation, the simulation was run in fast mode, thus routes appear instantly. It takes a few seconds simulation time for the unused
 routes to expire.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorD.ned"/>

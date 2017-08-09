@@ -60,3 +60,5 @@ The assigned addresses are shown in the following image.
 As in the previous step, the configurator assigned disjunct subnet addresses. Note that the configurator still assigned addresses sequentially,
 i.e. after setting the 10.0.0.100 address to `host3` , it didn't go back to the beginning of the address pool when assigning the
 remaining addresses.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>

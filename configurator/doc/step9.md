@@ -96,3 +96,5 @@ Destination      Netmask          Gateway          Iface            Metric
 <center><a href="step9_6.gif" data-lightbox="step9_6"><img class="screen" src="step9_6.gif" width="850px"></a></center>
 
 TODO: when the destination host gets its IP address, the routes appear
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorC.ned"/>

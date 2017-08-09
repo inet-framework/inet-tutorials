@@ -56,3 +56,5 @@ The assigned addresses are shown on the following image.
 
 The addresses are assigned as intended.
 This is useful because it is easy to recognize which group a node belongs to just by looking at its address (e.g. in the logs.)
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>

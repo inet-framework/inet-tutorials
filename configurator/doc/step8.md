@@ -94,3 +94,5 @@ They are not needed because different SSIDs are configured for the members of th
 ### Results
 
 The results are the same as in the previous part. The two wireless LANs are considered to be different wireless networks.
+
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorC.ned"/>

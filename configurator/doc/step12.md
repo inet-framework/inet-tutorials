@@ -99,3 +99,4 @@ The following video shows `area1host1` pinging `area2host1`:
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video></p>
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
+Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorE.ned"/>
