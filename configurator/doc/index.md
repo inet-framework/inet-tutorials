@@ -4,7 +4,7 @@ title: IPv4Configurator Tutorial for the INET Framework
 tutorial: Configurator
 ---
 
-This tutorial will show how to use the <tt>IPv4NetworkConfigurator</tt> module to configure IP addresses and routing tables in wired and wireless IPv4 networks in the INET framework.
+This tutorial will show how to use the `IPv4NetworkConfigurator` module to configure IP addresses and routing tables in wired and wireless IPv4 networks in the INET framework.
 The tutorial is organized into multiple steps, each corresponding to a simulation model. The steps demonstrate how to accomplish certain
 tasks with the `IPv4NetworkConfigurator`.
 
