@@ -50,9 +50,9 @@ transmit state may be _idle_ or _transmitting_, and a sub-state stores
 which part of the signal is being transmitted (if any).
 
 `StateBasedEpEnergyConsumer` expects the consumption in various states to be
-specified in watts in parameters like `sleep&shy;PowerConsumption`,
-`receiverBusy&shy;PowerConsumption`,
-`transmitterTransmitting&shy;PreamblePowerConsumption` and so on.
+specified in watts in parameters like `sleepPowerConsumption`,
+`receiverBusyPowerConsumption`,
+`transmitterTransmittingPreamblePowerConsumption` and so on.
 
 ### Measuring energy consumption
 
