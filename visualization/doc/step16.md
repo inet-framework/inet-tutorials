@@ -70,4 +70,4 @@ to its waiting period, to reduce the collision probability.
 After that the the network node starts transmitting the data, and it's owning the channel.
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

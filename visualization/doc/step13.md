@@ -40,4 +40,4 @@ from the sender, towards the receiver. It fades away the same way as physical
 links.
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

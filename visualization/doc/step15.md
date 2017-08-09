@@ -82,4 +82,4 @@ and in response the server starts the video stream.
 [gif: video stream start]
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

@@ -96,5 +96,5 @@ which host can transmit and when.
 
 **Number of packets received by host B: 183**
 
-Sources: [omnetpp.ini](../omnetpp.ini), [WirelessB.ned](../WirelessB.ned)
+Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessB.ned" />
 

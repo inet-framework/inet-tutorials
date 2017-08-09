@@ -61,4 +61,4 @@ because of the adaptive playout setting. After that, the visualizer display the 
 with that font and background color, that we set.
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

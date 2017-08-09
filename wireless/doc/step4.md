@@ -106,5 +106,5 @@ only relay packets at half the rate that host A emits.
 
 **Number of packets received by host B: 1125**
 
-Sources: [omnetpp.ini](../omnetpp.ini), [WirelessB.ned](../WirelessB.ned)
+Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessB.ned" />
 

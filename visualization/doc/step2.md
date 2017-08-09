@@ -46,4 +46,4 @@ If we click with the right mouse button, we can change between camera modes.
 In the top right corner of the playground, we can change between 3D Scene view mode and Module view.
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

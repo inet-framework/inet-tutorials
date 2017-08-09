@@ -22,4 +22,4 @@ csomagvesztés lehet a következménye, ha a mozgó eszköz adatokat forgalmaz a
 
 ## Results
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

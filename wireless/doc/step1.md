@@ -90,7 +90,7 @@ failure) and interference range (a range where the signal cannot be
 received correctly, but still collides with other signals causing their
 reception to fail) are optional.
 
-@note Naturally, this model of the physical layer has little correspondence
+NOTE: Naturally, this model of the physical layer has little correspondence
 to reality. However, it has its uses in the simulation. Its simplicity and
 consequent predictability are an advantage in scenarios where realistic
 modeling of the physical layer is not a primary concern, for example in the

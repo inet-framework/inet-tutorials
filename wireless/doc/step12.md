@@ -93,5 +93,5 @@ the packet because of bit errors, this can be seen in the following log:
 
 **Number of packets received by host B: 665**
 
-Sources: [omnetpp.ini](../omnetpp.ini), [WirelessC.ned](../WirelessC.ned)
+Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessC.ned" />
 

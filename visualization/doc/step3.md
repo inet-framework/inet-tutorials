@@ -17,4 +17,4 @@ playground along with its coordinate axes.
 
 <img src="step1_map_with_axes.png" width="850">
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

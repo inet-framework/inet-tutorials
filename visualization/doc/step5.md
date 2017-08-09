@@ -62,4 +62,4 @@ The communication and interference ranges seen in the Module view mode too.
 When we run the simulation, the pedestrians associate with the access point.
 In Module view mode there's a bubble message when its happens.
 -->
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

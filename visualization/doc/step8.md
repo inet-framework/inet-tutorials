@@ -45,4 +45,4 @@ In 3D view mode the text is a little bit fainter.
 If we set the content parameter to <tt>macAddress</tt>, we can see the given NIC MAC (layer 2) address.
 -->
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)

@@ -25,4 +25,4 @@ könnyen átlátható lesz, hogy melyik nyitott kapcsolatnak melyik node-ok a r�
 
 ## Results
 
-Sources: [omnetpp.ini](../omnetpp.ini), [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
