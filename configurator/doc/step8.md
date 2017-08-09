@@ -62,12 +62,6 @@ the routing table visualizer arrows. Wireless hosts get associated with their co
 On the following animation, `area1lan3host2` pings `area3lan3host2`. Transmissions are sent to all wireless nodes, but only those in communication range
 can receive them correctly (i.e. nodes in the same LAN).
 
-<center><a href="step8_2.gif" data-lightbox="step8_2"><img class="screen" src="step8_2.gif" width="850px"></a></center>
-
-<!--TODO: delete-->
-
-<!TODO: outdated gif>
-
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video>
 <!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
 

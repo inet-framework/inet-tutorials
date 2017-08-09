@@ -169,9 +169,6 @@ specifically, those interfaces of the other routers that are not facing the host
 
 Below is an animation of `host1` pinging `host7`.
 
-<img class="screen" src="step4_new_4.gif" width="850px">
-<!--TODO delete-->
-
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step4_2_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording playback speed 1.38 animation speed none
 zoom level 0.77 crop: 30 70 150 80-->

@@ -66,9 +66,6 @@ Routes to all nodes are visualized on the following image. Note that arrows poin
 
 The ping exchanges highlight the modified routes on the following animation:
 
-<img class="screen" src="step11_3.gif" width="850px">
-<!--TODO delete-->
-
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step11B_2_cropped.mp4" width="850" height="560"></video>
 <!--from #295 zoom 0.77 playback speed 2.5 animation speed none crop 30 70 150 80-->
 

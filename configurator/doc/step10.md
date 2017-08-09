@@ -90,9 +90,6 @@ The routing tables are initially empty. The first ping packet triggers AODV's ro
 AODV is a reactive protocol, so unused routes expire after a while. This happens to the routes to `host2`, as it's not in the path between
 `host1` and `host7`. This is displayed in the following animation.
 
-<img class="screen" src="step10_6.gif">
-<!--TODO remove-->
-
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step10C_4.mp4" width="706" height="650"></video></p>
 
 To record the animation, the simulation was run in fast mode, thus routes appear instantly. It takes a few seconds simulation time for the unused

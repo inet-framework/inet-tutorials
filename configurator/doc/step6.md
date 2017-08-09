@@ -102,9 +102,6 @@ Destination      Netmask          Gateway          Iface            Metric
 The following animation shows `host1` pinging `host7` and `host0` pinging `host6`. Routes towards `host1` are visualized.
 The packets don't use the link between `router0` and `router2`.
 
-<img class="screen" src="step6a.gif" width="850px">
-<!--TODO delete-->
-
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
@@ -148,8 +145,6 @@ The routes towards `host1` are visualized on the following image:
 
 The routes are the same as in Part A, where the data rate metric was used, and routes didn't use the 10Mbps link between `router0` and `router2`.
 In this part, the link between `router0` and `router2` is "turned off" by specifying an infinite cost for it.
-
-<img class="screen" src="step6a.gif" width="850px">
 
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->

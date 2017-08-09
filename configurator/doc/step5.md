@@ -72,10 +72,6 @@ because it comes earlier.
 
 The following animation depicts `host1` pinging `host7`, and `host0` pinging `host6`. Routes to `host7` are visualized.
 
-<img class="screen" src="step5a.gif" width="850px">
-<!--TODO delete-->
-
-
 <video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5A_1_cropped.mp4" width="850" height="560"></video>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
