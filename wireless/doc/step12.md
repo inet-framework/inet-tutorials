@@ -89,7 +89,7 @@ There is no distinct distance where receptions fail, as in the case of
 In host A, the MAC receives the packet UDPData-408 from the radio. The MAC drops
 the packet because of bit errors, this can be seen in the following log:
 
-<img src="wireless-step12-log.png">
+<img class="screen" src="wireless-step12-log.png">
 
 **Number of packets received by host B: 665**
 

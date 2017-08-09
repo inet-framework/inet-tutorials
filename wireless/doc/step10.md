@@ -75,7 +75,7 @@ quickly fade, and the UDP traffic continues.
 
 The AODV route discovery messages can be seen in the following packet log:
 
-<img src="wireless-step10-packetlog.png">
+<img class="screen" src="wireless-step10-packetlog.png">
 
 The number of successfully received packets at host B has roughly doubled
 compared to the previous step. This is because the flow of packets doesn't stop

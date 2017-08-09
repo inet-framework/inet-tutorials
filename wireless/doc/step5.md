@@ -75,7 +75,7 @@ sequence chart illustrates packet traffic between hosts A's, R1's and B's networ
 The image indicates that host B only occasionally receives packets successfully,
 most packets sent by R1 do not make it to host B's IP layer.
 
-<img src="wireless-step5-seq.png" width="900px">
+<img class="screen" src="wireless-step5-seq.png" width="900px">
 
 The sequence chart below shows host R1's and host A's signals overlapping
 at host B.
@@ -89,7 +89,7 @@ does not necessarily correspond a larger simulation time interval, because
 the more events there are in an interval, the more it is inflated to make
 the events visible and discernible on the chart.
 
-<img src="wireless-step5-seq-2.png">
+<img class="screen" src="wireless-step5-seq-2.png">
 
 To minimize interference, some kind of media access protocol is needed to govern
 which host can transmit and when.

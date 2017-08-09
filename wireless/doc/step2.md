@@ -99,7 +99,7 @@ it is possible to configure the Sequence Chart tool to represent time in a
 non-linear way.) The chart also indicates that UDPData-0 and UDPData-1
 are transmitted back-to-back, because there's no gap between them. UDPData-2 and UDPData-3 are also transmitted back-to-back.
 
-<img src="wireless-step2-seq3.png" width="900px">
+<img class="screen" src="wireless-step2-seq3.png" width="900px">
 
 **Number of packets received by host B: 2017**
 

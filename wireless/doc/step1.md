@@ -17,7 +17,7 @@ We'll make the model more realistic in later steps.
 
 In this step we'll use the model depicted below.
 
-<img src="wireless-step1.png">
+<img class="screen" src="wireless-step1.png">
 
 Here is the NED source of the network:
 
@@ -141,7 +141,7 @@ the simulation. One can see a UDP packet being sent down from the
 `udpApp` submodule, traversing the intermediate protocol layers, and being
 transmitted by the wlan interface.
 
-<img src="step1_10.gif">
+<img class="screen" src="step1_10.gif">
 
 The next animation shows the communication between the hosts, using
 OMNeT++'s default "message sending" animation.

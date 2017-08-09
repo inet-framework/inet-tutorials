@@ -33,7 +33,7 @@ A's communication range only at the very end of the simulation. When this
 happens, host A's transmission is routed through host R2, which is again just
 two hops.
 
-<img src="step14_2.gif">
+<img class="screen" src="step14_2.gif">
 
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step14-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed animation speed 1-->

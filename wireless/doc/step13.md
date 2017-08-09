@@ -49,7 +49,7 @@ propagation path loss and the two-ray ground reflection path loss at first. The
 two curves separate towards the end of the displayed interval. As expected, in
 the case of the two-ray ground reflection model, the bit error rate is greater.
 
-<img src="wireless-step13.png">
+<img class="screen" src="wireless-step13.png">
 
 **Number of packets received by host B: 679**
 

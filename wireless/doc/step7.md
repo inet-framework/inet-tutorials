@@ -57,13 +57,13 @@ from host B.
 
 The UDPData + ACK sequences can be seen in the sequence chart below:
 
-<img src="wireless-step7-seq-2.png" width="900px">
+<img class="screen" src="wireless-step7-seq-2.png" width="900px">
 
 In the following chart, the UDPData packet sequence numbers that are received by
 host B's UDPApp, are plotted against time. This chart contains the statistics of
 the previous step (ACK off, blue) and of the current step (ACK on, red).
 
-<img src="wireless-step7-seqno.png">
+<img class="screen" src="wireless-step7-seqno.png">
 
 When ACKs are turned on, each successfully received UDPData packet has to be
 ackowledged before the next one can be sent. Lost packets are retransmitted
@@ -80,8 +80,8 @@ However, often there are gaps in the sequence numbers, signifying lost packets.
 The second one (red) is for the current step,  where the difference is always 1,
 as there are no lost packets.
 
-<img src="wireless-step7-seqdiff6.png" width="900px">
-<img src="wireless-step7-seqdiff7.png" width="900px">
+<img class="screen" src="wireless-step7-seqdiff6.png" width="900px">
+<img class="screen" src="wireless-step7-seqdiff7.png" width="900px">
 
 **Number of packets received by host B: 1393**
 

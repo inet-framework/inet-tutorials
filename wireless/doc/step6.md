@@ -67,7 +67,7 @@ host B receives them correctly, because only host R1 is transmitting.
 The following sequence chart displays that after receiving the UDPData-2 packet,
 host R1 transmits it after the backoff period timer has expired.
 
-<img src="wireless-step6-seq-3.png" width="900px">
+<img class="screen" src="wireless-step6-seq-3.png" width="900px">
 
 It is already apparent by watching the simulation that there are much fewer
 collisions this time. The numbers also confirm that CSMA has worked: nearly

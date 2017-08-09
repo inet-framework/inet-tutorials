@@ -72,7 +72,7 @@ can be inspected in the runtime GUI. The routing table of host A (10.0.0.1)
 can be seen in the following image. It tells that host B (10.0.0.2) can be
 reached via host R1 (10.0.0.3), as specified by the gateway (gw) value.
 
-<img src="wireless-step4-rt.png">
+<img class="screen" src="wireless-step4-rt.png">
 
 When the first packet sent by host A arrives at host R1, a dotted dark yellow arrow appears
 between the two hosts indicating a successful physical layer exchange, as it was
