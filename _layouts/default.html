@@ -37,6 +37,20 @@
       }
     </script>
     {% endif %}
+
+    <!-- process <a> tags that have 'srcfile' attribute. Use showfile.html to display these files. -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      $('a[srcfile]').each(function(i) {
+          var srcref = $(this).attr('srcfile');
+          var name = srcref.replace(/.*\//g, "");
+          $(this).text(name);
+          $(this).attr('href', 'showfile.html?url='+srcref);
+          $(this).attr('target', '_blank');
+      });
+    });
+    </script>
+
     <style type="text/css">
       h1:not(.panel-title), h2:not(.panel-title) { padding-top: 70px; margin-top: -70px; } /* without this, heading will be covered by top navbar when jumping to heading via anchor */
       ul.nav li.dropdown:hover ul.dropdown-menu { display: block; }  /* open menus on hover */
