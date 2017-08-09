@@ -63,7 +63,7 @@ network VisualizationB extends VisualizationA
 network VisualizationC extends VisualizationB
 {
     parameters:
-        @display("bgb=1000,1000");
+        @display("bgb=800,800");
 }
 
 network VisualizationD extends VisualizationC
