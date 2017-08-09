@@ -146,7 +146,6 @@ transmitted by the wlan interface.
 The next animation shows the communication between the hosts, using
 OMNeT++'s default "message sending" animation.
 
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step1_1.mp4" width="655" height="575"></video></p>
 
 When the simulation concludes at t=25s, the packet count meter indicates that
