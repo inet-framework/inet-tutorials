@@ -43,7 +43,7 @@ computation of signal loss.
 Our wall is defined in walls.xml, and the file name is given to
 `PhysicalEnvironment` in its `config` parameter. The file contents:
 
-<p><pre class="snippet" src="../walls.xml" from="environment" until="/environment"></pre></p>
+<p><pre class="snippet" src="../walls.xml"></pre></p>
 
 Having obstacles is not enough in itself, we also need to teach the model
 of the wireless medium to take them into account. This is done by
