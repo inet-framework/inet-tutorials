@@ -40,6 +40,8 @@
 - name: Visualization Tutorial
   tutorial: Visualization
   submenu:
+    - page: visualization/doc/index.md
+      name: Introduction
     - page: visualization/doc/step1.md
     - page: visualization/doc/step2.md
     - page: visualization/doc/step3.md
