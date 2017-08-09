@@ -38,7 +38,7 @@ The configuration for this step extends Step 4, thus it uses the `ConfiguratorA`
 
 Below is the XML configuration in step6a.xml:
 
-<p><pre class="snippet" src="../step6a.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step6a.xml"></pre></p>
 
 The XML configuration contains the default rule for IP address assignment, and an <autoroute> element that configures the metric to be used.
 The <autoroute> element specifies parameters for automatic static routing table configuration. If no <autoroute> element is specified, the configurator
@@ -102,7 +102,7 @@ Destination      Netmask          Gateway          Iface            Metric
 The following animation shows `host1` pinging `host7` and `host0` pinging `host6`. Routes towards `host1` are visualized.
 The packets don't use the link between `router0` and `router2`.
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
 One can easily check that no routes go through the link between `router0` and `router2` by setting the destination filter to "*" in the visualizer.
@@ -125,7 +125,7 @@ The configuration for this step in omnetpp.ini is the following:
 
 The XML configuration in step6b.xml is as follows:
 
-<p><pre class="snippet" src="../step6b.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step6b.xml"></pre></p>
 
 The <autoroute> elements can also contain the following optional sub-elements, which can be used to specify costs in the graph:
 - <strong><node></strong>: Specifies cost parameters to network nodes. The <strong>hosts</strong> selector
@@ -146,5 +146,5 @@ The routes towards `host1` are visualized on the following image:
 The routes are the same as in Part A, where the data rate metric was used, and routes didn't use the 10Mbps link between `router0` and `router2`.
 In this part, the link between `router0` and `router2` is "turned off" by specifying an infinite cost for it.
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->

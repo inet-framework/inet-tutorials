@@ -34,7 +34,7 @@ For the routes to go through `router1`, the routing table of `router0` has to be
 The new rules should dictate that packets with the destination of `host7` (10.0.0.35) should be routed
 towards `router2`. The XML configuration in step5a.xml is the following:
 
-<p><pre class="snippet" src="../step5a.xml" from="<config>" until="</config>"></pre></p>
+<p><pre class="snippet" src="../step5a.xml"></pre></p>
 
 The <route> element describes a routing table entry for one or more nodes in the network.
 The `hosts` optional selector attribute specifies which hosts' routing tables should contain the entry.
@@ -72,7 +72,7 @@ because it comes earlier.
 
 The following animation depicts `host1` pinging `host7`, and `host0` pinging `host6`. Routes to `host7` are visualized.
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5A_1_cropped.mp4" width="850" height="560"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5A_1_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
 
@@ -93,7 +93,7 @@ The configuration in omnetpp.ini:
 As in Part A, the routing table of `router0` has to be altered, so that packets to `hosts 6-8` go towards `router1`. 
 The XML configuration in step5b.xml is as follows:
 
-<p><pre class="snippet" src="../step5b.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step5b.xml"></pre></p>
 
 The <route> element specifies a routing table entry for `router0`. The destination is 10.0.0.32 with netmask 255.255.255.248,
 which designates the addresses of hosts 6-8. The gateway is `router1's` address, the interface is the one connected towards
@@ -128,11 +128,7 @@ Destination      Netmask          Gateway          Iface            Metric
 The following is the animation of `host1` pinging `host7` and `host0` pinging `host6`, similarly
 to Part A. Routes to `host7` are visualized.
 
-<img class="screen" src="step5b.gif" width="850px">
-
-
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5B_1_cropped.mp4" width="850" height="560"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5B_1_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
-
 
 This time both packets outbound to `hosts 6 and 7` take the diverted route, the replies come back on the original route.

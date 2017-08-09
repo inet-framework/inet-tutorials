@@ -197,7 +197,7 @@ The configuration for this part in omnetpp.ini is the following:
 As in the previous part, all of the configurator's routing table optimization features are enabled.
 The XML configuration for this part in step7c.xml is the following:
 
-@include step7c.xml
+<p><pre class="snippet" src="../step7c.xml"></pre></p>
 
 This XML configuration assigns addresses hierarchically in the following way, when looking down the hierarchy from the backbone router towards the hosts:
 - The first octet of the address for all nodes is 10, i.e. 10.x.x.x

@@ -38,7 +38,7 @@ mean that it can receive the transmission correctly.
 
 The XML configuration in step10a.xml is as follows:
 
-<p><pre class="snippet" src="../step10a.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step10a.xml"></pre></p>
 
 It contains a copy of the default address configurations, and an autoroute element using the error rate metric.
 The configurator calculates the packet error rate for a Maximum Transfer Unit (MTU) sized packet. Edge costs in the connectivity

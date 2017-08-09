@@ -22,9 +22,7 @@ The configuration is the following:
 
 This time the XML configuration is supplied in an external file (step3.xml), using the xmldoc function:
 
-@include step3.xml
-
-<pre src="../step3.xml" from="<config>" until="</config>"></pre>
+<p><pre class="snippet" src="../step3.xml"></pre></p>
 
 - The first three lines assign IP addresses with different network prefixes to hosts in the three different subnets.
 
@@ -37,14 +35,14 @@ routers. These seven rules assign addresses to all interfaces in the network, th
 
 The same effect can be achieved in more than one way. Here is an alternative XML configuration (step3alt1.xml) that results in the same address assignment:
 
-@include step3alt1.xml
+<p><pre class="snippet" src="../step3alt1.xml"></pre></p>
 
 The `among` selector selects the interfaces of the specified hosts towards the specified hosts (the statement `among="X Y Z"` is the same as
 `hosts="X Y Z" towards="X Y Z"`).
 
 Another alternative XML configuration is the following:
 
-@include step3alt2.xml
+<p><pre class="snippet" src="../step3alt2.xml"></pre></p>
 
 This assigns an address to one host in each of the three subnets. It assigns addresses to the interfaces of the routers facing the other routers, and includes a copy of the default
 configuration. Because `assignDisjunctSubnetAddresses=true`, the configurator puts the unspecified hosts, and the subnet facing

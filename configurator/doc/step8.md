@@ -46,7 +46,7 @@ There is a setting in the `General` configuration pertaining to wireless network
 
 The XML configuration in step8a.xml is the following:
 
-<p><pre class="snippet" src="../step8a.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step8a.xml"></pre></p>
 
 The XML configuration uses the same hierarchical addressing scheme as in Step 7. The two wireless LANs are specified to be in separate wireless networks. Note that the wireless interfaces of the access points also belong to the wireless networks.
 
@@ -62,7 +62,7 @@ the routing table visualizer arrows. Wireless hosts get associated with their co
 On the following animation, `area1lan3host2` pings `area3lan3host2`. Transmissions are sent to all wireless nodes, but only those in communication range
 can receive them correctly (i.e. nodes in the same LAN).
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video></p>
 <!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
 
 This is how the routes would look like if the XML configuration didn't contain the <wireless> elements:
@@ -89,7 +89,7 @@ The configuration for this part extends Part A. The configuration in omnetpp.ini
 The XML configuration in step8b.xml (displayed below) is the same as the XML configuration for Part A, except there are no <wireless> elements that defined wireless networks.
 They are not needed because different SSIDs are configured for the members of the two wireless LANs.
 
-<p><pre class="snippet" src="../step8b.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step8b.xml"></pre></p>
 
 ### Results
 

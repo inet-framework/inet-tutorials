@@ -32,7 +32,7 @@ the addresses from the DHCP server in the corresponding area router.
 
 The XML configuration in step9.xml is the following:
 
-<p><pre class="snippet" src="../step9.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step9.xml"></pre></p>
 
 Addresses are assigned hierarchically. Five LANs in the network have addresses assigned by the configurator. Three LANs get their
 addresses from DHCP servers, their interfaces are left unspecified by the configurator. This is accomplished by the lack of address assignment rules for

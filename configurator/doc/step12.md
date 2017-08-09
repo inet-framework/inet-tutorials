@@ -41,7 +41,7 @@ The configuration for this step in omnetpp.ini is the following:
 
 The XML configuration in step12.xml is the following:
 
-<p><pre class="snippet" src="../step12.xml" from="config" until="config"></pre></p>
+<p><pre class="snippet" src="../step12.xml"></pre></p>
 
 To have routes from every node to every other node, all nodes must be covered by an autoroute element.
 The XML configuration contains two autoroute elements. Routing tables of hosts in `area1` are configured according to the error rate metric,
@@ -96,6 +96,6 @@ is actually for reaching 10.0.0.19 directly.
 
 The following video shows `area1host1` pinging `area2host1`:
 
-<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video>
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video></p>
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
