@@ -83,10 +83,6 @@ model. The blue circles representing communication range is an approximation.
 There is no distinct distance where receptions fail, as in the case of
 `IdealRadio`.
 
-<img src="step12_1.gif">
-<!--TODO: delete-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step12-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed animation speed 1-->
 

@@ -59,10 +59,6 @@ to go through R2 and R3. The UDP stream is re-established using these
 intermediate hosts to relay host A's packets to host B. This can be seen in the
 animation below.
 
-<img src="step10_2.gif">
-<!--TODO remove-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step10.mp4" width="655" height="575"></video></p>
 <!--internal video recording, animation time = playback speed = 1, fadeOutMode animationTime, 1s -> 26 sec video, blue arrows only
 if playback speed = 2 -> 13 sec video, blue and red arrows

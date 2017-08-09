@@ -52,10 +52,6 @@ With ACKs enabled, each successfully received packet is acknowledged. The animat
 below depicts a packet transmission from host R1, and the corresponding ACK
 from host B.
 
-<img src="step7_12.gif">
-<!--TODO: delete-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step7-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.65, from #767-->
 

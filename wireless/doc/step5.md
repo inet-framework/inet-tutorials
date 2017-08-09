@@ -66,10 +66,6 @@ indicated by the appearance of the blue polyline arrow between host A and host B
 
 This is shown in the animation below:
 
-<img src="step5_6_4.gif">
-<!--TODO: delete-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step5-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.72, from #1418-->
 

@@ -61,10 +61,6 @@ The effect of CSMA can be seen in the animation below. The first two packets are
 and after waiting for a backoff period, host R1 retransmits both packets. This time,
 host B receives them correctly, because only host R1 is transmitting.
 
-<img src="step6_7.gif">
-<!--TODO: delete-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step6-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 0.72 -->
 

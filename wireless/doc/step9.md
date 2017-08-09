@@ -61,10 +61,6 @@ path breaks, the blue arrow that represents successful network layer
 communication paths fades away, because there are no more packets to
 reinforce it.
 
-<img src="step9_2.gif">
-<!--TODO: delete-->
-
-<video(.*?)>(?s).*?</video>
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step9-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed 2, animation speed 1, fadeOutMode animationTime, fadeOutTime 1s-->
 
