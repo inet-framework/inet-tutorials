@@ -51,6 +51,3 @@ network WirelessA
             @display("p=450,325");
         }
 }
-
-//##### (marker for doxygen)
-

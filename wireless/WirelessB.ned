@@ -31,5 +31,3 @@ network WirelessB extends WirelessA
             @display("p=350,450");
         }
 }
-
-//##### (marker for doxygen)

@@ -25,5 +25,3 @@ network WirelessC extends WirelessB
             @display("p=580,425");
         }
 }
-
-//##### (marker for doxygen)
