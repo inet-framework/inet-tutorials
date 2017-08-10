@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     $('h1.page-title').text(name);
     pre = $('pre#content');
+    var language = url.includes(".ned") ? "ned" : url.includes(".xml") ? "html" : url.includes(".ini") ? "ini" : "generic";
     jQuery.ajax({url: url,
-                   success: function(data) { pre.text(data) },
+                   success: function(data) { 
+                   	Rainbow.color(data, language, function(highlightedCode) {
+    				pre.html(highlightedCode);
+					});
+                   },
                    error: function() { pre.text('Failed to load '+url)},
                    dataType: "text" });   
 });
 </script>
+
 <pre id="content">Loading...</pre>
