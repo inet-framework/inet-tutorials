@@ -67,7 +67,7 @@ noise level to a nonzero value (-110dBm).
 
 Configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless12\]" until="####"></pre></p>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless12\]" until="#---"></pre></p>
 
 ## Results
 

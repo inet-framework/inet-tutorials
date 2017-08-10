@@ -63,7 +63,7 @@ steps.
 
 Configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless04\]" until="####"></pre></p>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless04\]" until="#---"></pre></p>
 
 ## Results
 

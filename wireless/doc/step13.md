@@ -33,7 +33,7 @@ the `physicalEnvironment` module. (Note that we added `physicalEnvironment`
 to the network when we introduced obstacles.) The ground's elevation is the
 `elevation` parameter of `FlatGround`. We set this parameter to 0m.
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless13\]" until="####"></pre></p>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless13\]" until="#---"></pre></p>
 
 ## Results
 

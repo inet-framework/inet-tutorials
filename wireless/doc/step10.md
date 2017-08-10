@@ -48,7 +48,7 @@ the topology of the network changes due to the movement of nodes.
 
 The configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless10\]" until="####"></pre></p>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless10\]" until="#---"></pre></p>
 
 ## Results
 
