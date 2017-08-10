@@ -80,7 +80,7 @@ most packets sent by R1 do not make it to host B's IP layer.
 The sequence chart below shows host R1's and host A's signals overlapping
 at host B.
 
-@note On this and all other sequence charts in this tutorial, grey vertical
+NOTE: On this and all other sequence charts in this tutorial, grey vertical
 strips are constant-time zones: all events within a same grey area have the
 same simulation time. Also, time is mapped to the horizontal axis using a
 nonlinear transformation, so that both small and large time intervals can

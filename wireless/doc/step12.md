@@ -32,7 +32,7 @@ rate and other values, and ultimately determine the success of reception.
 preceded by a preamble and a physical layer header. Their lengths are also
 parameters (and may be set to zero when not needed.)
 
-@note When choosing the preamble and the physical layer header lengths, we
+NOTE: When choosing the preamble and the physical layer header lengths, we
 needed to take care that the `ackTimeout` parameter of `CsmaCaMac` is still
 valid. (The preamble and the physical layer header contribute to the duration
 of the ACK frame as well.)
