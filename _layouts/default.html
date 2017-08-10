@@ -46,7 +46,7 @@
           var srcref = $(this).attr('srcfile');
           var name = srcref.replace(/.*\//g, "");
           $(this).text(name);
-          $(this).attr('href', 'showfile.html?url='+srcref);
+          $(this).attr('href', '{{site.baseurl}}/showfile.html?url='+srcref);
           $(this).attr('target', '_blank');
       });
     });
@@ -138,7 +138,9 @@
     <script src="{{site.baseurl}}/etc/javascripts/cerulean.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/quoting.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/rainbow-custom.min.js"></script>
-    <script src="{{site.baseurl}}/etc/javascripts/rainbow-shell.js"></script>
+    <script src="{{site.baseurl}}/etc/javascripts/rainbow-ned.js"></script>
+    <script src="{{site.baseurl}}/etc/javascripts/rainbow-ini.js"></script>
+    <script src="{{site.baseurl}}/etc/javascripts/rainbow-html.js"></script>
     <script>Rainbow.defer = true;</script>
   </body>
 </html>

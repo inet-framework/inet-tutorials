@@ -75,5 +75,5 @@ eight times as many packets are received by host B than in the previous step.
 
 **Number of packets received by host B: 1374**
 
-Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessB.ned" />
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 

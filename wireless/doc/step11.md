@@ -82,5 +82,5 @@ A-R2-R3-B route is used, as seen in the previous steps.
 
 **Number of packets received by host B: 784**
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../WirelessC.ned"/>, <a srcfile="../walls.xml"/>
+Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessC.ned"/>, <a srcfile="wireless/walls.xml"/>
 

@@ -102,6 +102,6 @@ are transmitted back-to-back, because there's no gap between them. UDPData-2 and
 
 **Number of packets received by host B: 2017**
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../WirelessA.ned"/>
+Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
 
 

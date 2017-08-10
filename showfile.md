@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     $('h1.page-title').text(name);
     pre = $('pre#content');
-    var language = url.includes(".ned") ? "ned" : url.includes(".xml") ? "html" : url.includes(".ini") ? "ini" : "generic";
+    var language = url.includes(".ned") ? "ned" : url.includes(".xml") ? "xml" : url.includes(".ini") ? "ini" : "generic";
     jQuery.ajax({url: url,
                    success: function(data) { 
                    	Rainbow.color(data, language, function(highlightedCode) {
@@ -22,4 +22,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 
-<pre id="content">Loading...</pre>
+<pre id="content" class="snippet">Loading...</pre>

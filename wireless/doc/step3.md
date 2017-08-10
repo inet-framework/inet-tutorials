@@ -52,5 +52,5 @@ not addressed to it:
 
 **Number of packets received by host B: 0**
 
-Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessB.ned" />
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 

@@ -23,7 +23,10 @@ var fileLoaded = function(file, data) {
       excerpt = getLines(data, 
                          pre.attributes.from ? pre.attributes.from.value : null, 
                          pre.attributes.until ? pre.attributes.until.value : null);
-      $(pre).text(excerpt);
+      var language = file.includes(".ned") ? "ned" : file.includes(".xml") ? "xml" : file.includes(".ini") ? "ini" : "generic";
+      Rainbow.color(excerpt, language, function(highlightedCode) {
+            $(pre).html(highlightedCode);
+      });
    });
 };
 

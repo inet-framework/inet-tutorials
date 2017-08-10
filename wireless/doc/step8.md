@@ -96,5 +96,5 @@ the other nodes.
 
 **Number of packets received by host B: 1393**
 
-Sources: <a srcfile="../omnetpp.ini" />, <a srcfile="../WirelessB.ned"/>
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned"/>
 
