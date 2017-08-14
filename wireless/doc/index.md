@@ -13,9 +13,7 @@ networks.
 This is an advanced tutorial, and it assumes that you are familiar with creating
 and running simulations in OMNeT++ and  INET. If you aren't, you can check out
 the <a href="https://omnetpp.org/doc/omnetpp/tictoc-tutorial/"
-target="_blank">TicToc Tutorial</a> to get started with using OMNeT++. The <a
-href="../../../doc/walkthrough/tutorial.html" target="_blank">INET Walkthrough</a>
-is an introduction to INET and working with protocols.
+target="_blank">TicToc Tutorial</a> to get started with using OMNeT++. 
 
 If you need more information at any time, feel free to refer to the OMNeT++ and
 INET documentation:

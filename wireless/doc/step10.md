@@ -87,3 +87,7 @@ number received packets still increases substantially.
 
 Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

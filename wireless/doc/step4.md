@@ -7,7 +7,7 @@ tutorial: Wireless
 ## Goals
 
 In this step, we set up routing so that packets can flow from host A to B.
-For this to happen, the intermediate nodes will need to act as a routers.
+For this to happen, the intermediate nodes will need to act as routers.
 As we still want to keep things simple, we'll use statically added routes
 that remain unchanged throughout the simulation.
 
@@ -108,3 +108,7 @@ only relay packets at half the rate that host A emits.
 
 Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

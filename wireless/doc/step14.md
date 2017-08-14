@@ -38,3 +38,7 @@ two hops.
 
 **Number of packets received by host B: 1045**
 
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

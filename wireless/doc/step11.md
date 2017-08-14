@@ -84,3 +84,7 @@ A-R2-R3-B route is used, as seen in the previous steps.
 
 Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessC.ned"/>, <a srcfile="wireless/walls.xml"/>
 
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

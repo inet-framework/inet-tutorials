@@ -104,4 +104,7 @@ are transmitted back-to-back, because there's no gap between them. UDPData-2 and
 
 Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
 
+## Discussion
 
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

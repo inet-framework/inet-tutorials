@@ -155,3 +155,8 @@ the transmission rate was around 660 kbps.
 **Number of packets received by host B: 2017**
 
 Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
+
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/1" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.
