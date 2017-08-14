@@ -16,43 +16,79 @@
 package inet.tutorials.configurator;
 
 import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
-import inet.node.aodv.AODVRouter;
+import inet.node.ethernet.Eth10M;
+import inet.node.ethernet.EtherSwitch;
+import inet.node.inet.Router;
+import inet.node.inet.StandardHost;
+import inet.node.inet.WirelessHost;
+import inet.node.wireless.AccessPoint;
 import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
 import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 
 
 network ConfiguratorE
 {
-    @display("bgb=939.89996,581.1");
+    @display("bgb=1426.212,959.112");
     submodules:
-        host1: AODVRouter {
-            @display("p=239.148,74.897995");
+        area1router: Router {
+            @display("p=519.75,535.8375");
         }
-        host2: AODVRouter {
-            @display("p=483,221");
+        area1host1: WirelessHost {
+            @display("p=208.008,369.792");
         }
-        host3: AODVRouter {
-            @display("p=513.774,345.582");
+        area1host3: WirelessHost {
+            @display("p=404.6625,506.1375");
         }
-        host4: AODVRouter {
-            @display("p=304.848,182.646;b=7,5");
+        area1host2: WirelessHost {
+            @display("p=379.422,369.792");
         }
-        host5: AODVRouter {
-            @display("p=650.43,436.248");
+        area3host3: StandardHost {
+            @display("p=973,770");
         }
-        host6: AODVRouter {
-            @display("p=361.35,294.336");
+        area3host2: StandardHost {
+            @display("p=780,859");
         }
-        host7: AODVRouter {
-            @display("p=778,462");
+        area3host1: StandardHost {
+            @display("p=599,770");
+        }
+        area3router: Router {
+            @display("p=780.8625,535.8375");
+        }
+        area3Switch: EtherSwitch {
+            @display("p=805.6125,665.775");
         }
         configurator: IPv4NetworkConfigurator {
-            @display("p=50,50");
+            @display("p=100,50");
         }
         radioMedium: Ieee80211ScalarRadioMedium {
-            @display("p=50,100");
+            @display("p=100,150");
         }
         visualizer: IntegratedCanvasVisualizer {
-            @display("p=50,150");
+            @display("p=100,250");
         }
+        area2router: Router {
+            @display("p=657.1125,356.4");
+        }
+        area2AP: AccessPoint {
+            @display("p=763.53754,280.9125");
+        }
+        area2host1: WirelessHost {
+            @display("p=855.144,175.26599");
+        }
+        area2host2: WirelessHost {
+            @display("p=934.11,281.19598");
+        }
+        area2host3: WirelessHost {
+            @display("p=855.144,390.978");
+        }
+    connections:
+        area3host1.ethg++ <--> Eth10M <--> area3Switch.ethg++;
+        area3host2.ethg++ <--> Eth10M <--> area3Switch.ethg++;
+        area3Switch.ethg++ <--> Eth10M <--> area3host3.ethg++;
+        area3Switch.ethg++ <--> Eth10M <--> area3router.ethg++;
+        area3router.ethg++ <--> Eth10M <--> area1router.ethg++;
+        area1router.ethg++ <--> Eth10M <--> area1host3.ethg++;
+        area1router.ethg++ <--> Eth10M <--> area2router.ethg++;
+        area2router.ethg++ <--> Eth10M <--> area3router.ethg++;
+        area2router.ethg++ <--> Eth10M <--> area2AP.ethg++;
 }

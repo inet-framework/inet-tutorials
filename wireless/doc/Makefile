@@ -11,6 +11,6 @@ all:
 	rm -rf $(OUTDIR)
 	mkdir $(OUTDIR)
 	$(DOXYGEN)
-	cp *.gif *.png $(OUTDIR)
+	cp *.gif *.png *.mp4 $(OUTDIR)
 clean:
 	-rm -rf $(OUTDIR)

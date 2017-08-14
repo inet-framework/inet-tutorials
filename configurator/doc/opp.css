@@ -15,6 +15,10 @@ div.contents {
 	font-weight: bold;
 }
 
+pre.monospace {
+	margin: 0;
+}
+
 h1 {
 	line-height: 1.25;
 }
@@ -31,4 +35,9 @@ div.line
 
 .fit {
 	display: inline-flex;
+}
+
+video, .screen {
+	display: block;
+	margin: auto;
 }

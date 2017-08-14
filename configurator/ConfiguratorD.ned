@@ -15,49 +15,44 @@
 
 package inet.tutorials.configurator;
 
-import inet.node.ethernet.Eth100M;
-import inet.node.ethernet.Eth10M;
-import inet.node.inet.StandardHost;
-import inet.node.inet.WirelessHost;
-import inet.node.wireless.AccessPoint;
+import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.node.aodv.AODVRouter;
 import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
 import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 
-channel Eth100MLong extends Eth100M
+
+network ConfiguratorD
 {
-    length = 100m;
-}
-network ConfiguratorD extends ConfiguratorC
-{
+    @display("bgb=939.89996,581.1");
     submodules:
-        area1AP: AccessPoint {
-            @display("p=611.64716,928.3376");
+        host1: AODVRouter {
+            @display("p=239.148,74.897995");
         }
-        area3AP: AccessPoint {
-            @display("p=2552.152,881.76544");
+        host2: AODVRouter {
+            @display("p=483,221");
         }
-        area1lan3host1: WirelessHost {
-            @display("p=211.3514,585.5005");
+        host3: AODVRouter {
+            @display("p=513.774,345.582");
         }
-        area1lan3host2: WirelessHost {
-            @display("p=211.3514,754.0104");
+        host4: AODVRouter {
+            @display("p=304.848,182.646;b=7,5");
         }
-        area1lan3host3: WirelessHost {
-            @display("p=211.3514,911.0958");
+        host5: AODVRouter {
+            @display("p=650.43,436.248");
         }
-        area3lan3host1: WirelessHost {
-            @display("p=2825.3418,551.44696");
+        host6: AODVRouter {
+            @display("p=361.35,294.336");
         }
-        area3lan3host2: WirelessHost {
-            @display("p=2936.0706,725.44934");
+        host7: AODVRouter {
+            @display("p=778,462");
         }
-        area3lan3host3: WirelessHost {
-            @display("p=2824.6829,885.3909");
+        configurator: IPv4NetworkConfigurator {
+            @display("p=50,50");
         }
         radioMedium: Ieee80211ScalarRadioMedium {
-            @display("p=150,400");
+            @display("p=50,100");
         }
-    connections:
-        area1router.ethg++ <--> Eth10M <--> area1AP.ethg++;
-        area3router.ethg++ <--> Eth10M <--> area3AP.ethg++;
+        visualizer: IntegratedCanvasVisualizer {
+            @display("p=50,150");
+        }
 }

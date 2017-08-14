@@ -3,13 +3,13 @@
 
 This tutorial will show how to use the <tt>IPv4NetworkConfigurator</tt> module to configure IP addresses and routing tables in wired and wireless IPv4 networks in the INET framework.
 The tutorial is organized into multiple steps, each corresponding to a simulation model. The steps demonstrate how to accomplish certain
-tasks with the configurator.
+tasks with the `IPv4NetworkConfigurator`.
 
 This is an advanced tutorial, and assumes that the reader is familiar with creating and running simulations in @opp and INET. If that wasn't the case,
 the <a href="https://omnetpp.org/doc/omnetpp/tictoc-tutorial/"
 target="_blank">TicToc Tutorial</a> is a good starting point to get familiar with @opp. The <a
 href="../../../doc/walkthrough/tutorial.html" target="_blank">INET Walkthrough</a> is an introduction to INET and how to work with protocols.
-The <a href="https://omnetpp.org/doc/inet/api-current/tutorials/wireless/" target="_blank">Wireless Tutorial</a> is another advanced tutorial, and deals with wireless features of the INET framework. There is a comprehensive description of the configurator's features in the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt> NED documentation</a>
+The <a href="https://omnetpp.org/doc/inet/api-current/tutorials/wireless/" target="_blank">Wireless Tutorial</a> is another advanced tutorial, and deals with wireless features of the INET framework. There is a comprehensive description of `IPv4NetworkConfigurator's` features in the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt> NED documentation</a>
 in the INET reference.
 
 For additional information, the following documentation should be useful:
@@ -45,17 +45,17 @@ defined in separate .NED files.
 
 @section s1goals Goals
 
-The goal of this step is to demonstrate that in many scenarios, the configurator can properly configure IP addresses in a network with its default settings, without
+In many scenarios, `IPv4NetworkConfigurator` can properly configure IP addresses in a network with its default settings, without
 any user input. This is useful when it is irrelevant what the nodes' actual IP addresses are in a simulation
 (this step deals with IP addresses only, routing will be discussed in later steps).
 
 @section s1model The model
 
-@subsection s1about  About the configurator
+@subsection s1about  About IPv4NetworkConfigurator
 
 In INET simulations, configurator modules are responsible for assigning IP addresses to network nodes, and for setting up their
-routing tables. Essentially, the configurator modules simulate a real life network administrator. There are various configurator
-models in INET (<tt>IPv4NetworkConfigurator</tt>, <tt>FlatNetworkConfigurator</tt>, etc.), but this tutorial is about the features of the <tt>IPv4NetworkConfigurator</tt>, 
+routing tables. Essentially, configurator modules simulate a real life network administrator. There are various configurator
+models in INET (<tt>IPv4NetworkConfigurator</tt>, <tt>FlatNetworkConfigurator</tt>, etc.), but this tutorial is about the features of <tt>IPv4NetworkConfigurator</tt>, 
 which we will refer to as <strong>configurator</strong>. The following is a broad review of the configurator's features and operation,
 these and others will be discussed in detail in the following steps.
 
@@ -64,7 +64,7 @@ It doesn't configure IP addresses and routes directly, but stores the configurat
 Network nodes contain an instance of <tt>IPv4NodeConfigurator</tt>, which configures the corresponding node's interface table and routing table
 based on information contained in the global <tt>IPv4NetworkConfigurator</tt> module.
 
-The configurator supports automatic and manual network configuration, and their combination. By default,
+The configurator supports automatic and manual network configuration, and their combinations. By default,
 the configuration is fully automatic, but the user can specify parts (or all) of the configuration manually, and the rest
 will be configured automatically by the configurator. The configurator's various features can be turned on and off with NED parameters. The details of the configuration, such as IP addresses and routes, can be specified in an XML configuration file.
 
@@ -75,7 +75,7 @@ The network looks like this:
 
 <img src="step1network.png">
 
-The network contains 3 routers, each connected to the other two. There are 3 subnetworks with <tt>StandardHosts</tt>, connected to the routers by ethernet switches.
+The network contains three routers, each connected to the other two. There are three subnetworks with <tt>StandardHosts</tt>, connected to the routers by ethernet switches.
 It also contains an instance of <tt>IPv4NetworkConfigurator</tt>.
 
 The configuration for this step in omnetpp.ini is the following: 
@@ -97,11 +97,13 @@ assignDisjunctSubnetAddresses = default(true);
 or the default XML configuration if none is specified. Since no XML configuration is specified in this step, it uses the default configuration.
 
 - <strong>assignDisjunctSubnetAddresses = true</strong> sets that the configurator should assign different address prefixes and netmasks
-to nodes on different links (nodes are considered to be on the same link if they can reach each other directly, or through L2 devices only).
+to nodes on different links (nodes are considered to be on the same link if they can reach each other directly, or through L2 devices only.)
 
 Additionally, the <strong>dumpAddresses</strong> parameter sets whether the configurator prints assigned IP addresses to the module output.
 This is false by default, but it's set to true in the <i>General</i> configuration at the begining of omnetpp.ini (along with other settings, which
-will be discussed later).
+will be discussed later.)
+
+Network interface information, such as interface names and IP addresses, can be visualized by the <i>InterfaceTableCanvasVisualizer</i> module, which is included in the network as a submodule of <i>IntegratedCanvasVisualizer</i>. In the <i>General</i> configuration, interface visualization is turned on, and set to not visualize interface information for switches and access points for clarity, as these don't have IP addresses.
 
 @dontinclude omnetpp.uncommented.ini
 @skipline General
@@ -129,9 +131,8 @@ as instructed by the <strong>assignDisjunctSubnetAddresses</strong> parameter.
 <img src="step1addresses.png" width=850px>
 
 Note that the configurator assigned a 29 bit netmask to the hosts and the router interfaces connecting to the switches, and a 30 bit netmask
-to the other router interfaces. 3 hosts and the router's interface towards a switch as group has 4 interfaces, thus a 30 bit netmask/2 bit host identifier
-would have sufficed. However, the configurator doesn't assign addresses where part of the address not covered by the subnet mask - the host identifier -
-is all-zeros or all-ones (indicating subnet zero and the subnet broadcast address).
+to the other router interfaces. Three hosts and the router's interface towards a switch as a group has four interfaces, thus a 30 bit netmask/2 bit host identifier
+would have sufficed. However, the configurator doesn't assign addresses where the host identifier (part of the address not covered by the subnet mask) is all-zeros or all-ones (indicating subnet zero and the subnet broadcast address.)
 
 @nav{index,step2}
 @fixupini
@@ -162,15 +163,15 @@ The configuration in omnetpp.ini for this step is the following:
 The XML configuration can be supplied to the <i>config</i> parameter in one of two ways:
 
 - Inline XML using the <i>xml()</i> function. The argument of the function is the XML code.
-- External XML file using the <i>XMLdoc()</i> function. The argument of the function is the name of the XML configuration file.
+- External XML file using the <i>xmldoc()</i> function. The argument of the function is the name of the XML configuration file.
 
 In this step, the XML configuration is supplied to the configurator as inline XML. XML configurations contain one <i><config></i> element. Under this root element there can be
 multiple configuration elements, such as the <i><interface></i> elements here.
 The <interface> element (and other elements) can contain selector attributes, which limit the scope of what interfaces are affected by the <interface> element.
 Multiple interfaces can be selected with one <interface> element using the * wildcard.
-They can also contain parameter attributes, which deal with what parameters those selected interfaces will have, like IP addresses and
+They can also contain parameter attributes, which deal with the parameters those selected interfaces will have, like IP addresses and
 netmasks. Address templates can be specified with one or more 'x' in the address. The 'x' in the IP address and netmask signify that the value is not fixed, but the configurator should choose it automatically.
-With these address templates it is possible to leave everything to the configurator or specify everything, and anything in between.
+With these address templates it is possible to leave everything to the configurator or specify everything, and anything in between. The selector attributes used in the XML configuration for this step are detailed below.
 - The <strong>hosts</strong> selector attribute selects hosts. The selection pattern can be full path (e.g. "*.host0") or a module name anywhere in the hierarchy (e.g. "host0"). Only interfaces in the selected host will be affected by the <interface> element.
 - The <strong>names</strong> selector attribute selects interfaces. Only the interfaces that match the specified names will be selected (e.g. "eth0").
 - The <strong>address</strong> parameter attribute specifies the addresses to be assigned. Address templates can be used, where an 'x' in place of an octet means that the value
@@ -187,9 +188,9 @@ Note that this is the default rule in two contexts. It is the default rule that 
 the last and least specific among the address assignment rules here, thus it takes effect for interfaces that don't match the previous rules.
 
 Note that the order of configuration elements is important, but the configurator doesn't assign addresses in the order of XML interface elements. It iterates
-interfaces in the network, and for each interface the first matching rule in the XML configuration will take effect. Thus, the statements that are positioned earlier in the configuration take precedence over those that come later.
+interfaces in the network, and for each interface the first matching rule in the XML configuration will take effect. Thus statements that are positioned earlier in the configuration take precedence over those that come later.
 
-When an XML configuration is supplied, it must contain interface elements in order to assign addresses at all. To make sure the configurator automatically assigns addresses to all interfaces, a rule similar to the one in the default configuration has to be included. Unless the intention is to leave some interfaces unassigned. The default rule should be the <strong>last</strong> one among the interface rules (so the more specific ones override it).
+When an XML configuration is supplied, it must contain interface elements in order to assign addresses at all. To make sure the configurator automatically assigns addresses to all interfaces, a rule similar to the one in the default configuration has to be included (unless the intention is to leave some interfaces unassigned.) The default rule should be the <strong>last</strong> one among the interface rules (so the more specific ones override it).
 
 @section s2results Results
 
@@ -198,7 +199,7 @@ The assigned addresses are shown in the following image.
 <img src="step2address.png" width=850px>
 
 As in the previous step, the configurator assigned disjunct subnet addresses. Note that the configurator still assigned addresses sequentially,
-that is after setting the 10.0.0.100 address to <i>host3</i>, it didn't go back to the beginning of the address pool when assigning the
+i.e. after setting the 10.0.0.100 address to <i>host3</i>, it didn't go back to the beginning of the address pool when assigning the
 remaining addresses.
 
 @nav{step1,step3}
@@ -219,7 +220,7 @@ This step demonstrates how to assign a range of IP addresses to subnets.
 @section s3model The model
 
 This step uses the <i>ConfiguratorA</i> network, as in the previous two steps.
-One switch and the connected hosts as a group will be one the same subnet, and there are 3 such groups in the network.
+One switch and the connected hosts as a group will be on the same subnet, and there are three such groups in the network.
 
 
 The configuration is the following:
@@ -232,14 +233,14 @@ This time the XML configuration is supplied in an external file (step3.xml), usi
 
 @include step3.xml
 
-- The first 3 lines assign IP addresses with different network prefixes to hosts in the 3 different subnets.
+- The first three lines assign IP addresses with different network prefixes to hosts in the three different subnets.
 
 - The <i>towards</i> selector can be used to easily select the interfaces that are connected towards a certain host (or set of hosts using wildcards).
 The next 3 entries specify that each router's interface that connects to the subnet should belong in that subnet.
 
 - The last entry sets the network prefix of interfaces of all routers to be 10.1.x.x. 
 The routers' interfaces facing the subnets were assigned addresses by the previous rules, so this rule only effects the interfaces facing the other
-routers. These 7 rules assign addresses to all interfaces in the network, thus a default rule is not required.
+routers. These seven rules assign addresses to all interfaces in the network, thus a default rule is not required.
 
 The same effect can be achieved in more than one way. Here is an alternative XML configuration (step3alt1.xml) that results in the same address assignment:
 
@@ -252,7 +253,7 @@ Another alternative XML configuration is the following:
 
 @include step3alt2.xml
 
-This assigns an address to one host in each of the 3 subnets. It assigns addresses to the interfaces of the routers facing the other routers, and includes a copy of the default
+This assigns an address to one host in each of the three subnets. It assigns addresses to the interfaces of the routers facing the other routers, and includes a copy of the default
 configuration. Because <i>assignDisjunctSubnetAddresses=true</i>, the configurator puts the unspecified hosts, and the subnet facing
 router interfaces into the same subnet as the specified host.
 
@@ -263,7 +264,7 @@ The assigned addresses are shown on the following image.
 <img src="step3address.png" width=850px>
 
 The addresses are assigned as intended.
-This is useful because it is easy to recognize which group a node belongs to just by looking at its address (e.g. in the logs).
+This is useful because it is easy to recognize which group a node belongs to just by looking at its address (e.g. in the logs.)
 
 @nav{step2,step4}
 @fixupini
@@ -281,14 +282,7 @@ This step demonstrates the default configuration for routing.
 
 @section s4model The model
 
-This step uses the <i>ConfiguratorB</i> network, defined in ConfiguratorB.ned. This extends the previous network, <i>ConfiguratorA</i>, with
-the addition of a <tt>RoutingTableCanvasVisualizer</tt> module.
-
-@dontinclude ConfiguratorB.ned
-@skip ConfiguratorB
-@until ####
-
-<img src="step4network.png">
+This step uses the same network as the previous steps, <i>ConfiguratorA</i>.
 
 @subsection s4config Configuration
 
@@ -298,42 +292,71 @@ The configuration for this step in omnetpp.ini is the following:
 @skip Step4
 @until ####
 
-A ping app in <i>host1</i> is configured to send ping packets to <i>host7</i>, which is on the other side of the network.
-This application is suitable for visualizing routing tables.
+A ping app in <i>host1</i> is configured to send ping packets to <i>host7</i>, which is on the other side of the network. Ping packets will be used throughout the tutorial to illustrate how packets are routed.
 
-The <i>RoutingTableCanvasVisualizer</i> module can be used to visualize routes in the network.
+The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network.
 Routes are visualized with arrows. In general, an arrow indicates an entry in the source host's routing table. It points
-to the host that is the next hop or gateway for that routing table entry.
-Routes to be visualized are selected with the visualizer's <i>destinationFilter</i> parameter.
-All routes leading towards that destination are indicated by arrows.
-The default setting is <tt>""</tt>, which means no routes are visualized. The <tt>"**"</tt> setting visualizes all routes
+to the host that is the next hop or gateway for that routing table entry. The visualization is activated by setting the <i>RoutingTableVisualizer</i>'s <i>displayRoutingTables</i> parameter to <i>true</i>.
+The set of routes to be visualized are selected with the visualizer's <i>destinationFilter</i> parameter.
+All routes leading towards that set of destinationa are indicated by arrows.
+The default setting is <tt>"*"</tt>, which means routes towards all destinations are visualized. The <tt>"*"</tt> setting visualizes all routes
 going from every node to every other node, which can make the screen cluttered.
-In this step the <i>destinationFilter</i> is set to visualize all routes heading towards <i>host7</i>.
+In this step the <i>destinationFilter</i> is set to visualize all routes heading towards <i>host7</i>. TODO: rewrite?
+
+V2
+
+The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. Routes are visualized as arrows,
+where an arrow represents a routing table entry of the source host. An arrow originates from the source host,
+and points at the next hop of the routing entry. The set of routing tables to be visualized are selected with the visualizer's <i>nodeFilter</i> parameter, and the set of destinations is specified by the <i>destinationFilter</i> parameter. The visualizer displays the best matching routes for each destination as arrows, from each selected node's routing table. By default, routes from all nodes to all destinations are visualized. This can sometimes make the screen cluttered.
+
+V3
+
+The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry. By default, the best matching routing table entries towards all destinations from all nodes are visualized.
+
+V4
+
+The <i>RoutingTableCanvasVisualizer</i> module (present in the network as a submodule of <i>IntegratedCanvasVisualizer</i>) can be used to visualize routes in the network. The visualizer indicates how packets are routed with solid arrows that point from a source node to the next hop node, basically representing a routing table entry.
+The visualizer displays the best matching (longest prefix) routing table entries towards each destination, from each node's routing table. By default, the set of routing tables and destinatons are all nodes, this selection can be narrowed with the visualizer's <i>nodeFilter</i> and <i>destinationFilter</i> parameters, respectively.
+
+V5
+
+The visualizer basically annotates network links with labeled arrows that connect source nodes to next hop nodes. The module visualizes those routing table entries that participate in the routing of a given set of destination addresses, by default the addresses of all interfaces of all nodes in the network. That is, it selects the best (longest prefix) matching routes for all destination addresses from each routing table, and shows them as arrows that point to the next hop. Note that one arrow might need to represent several routing entries, for example when distinct prefixes are routed towards the same next hop.
+
+Routing table entries are represented visually by solid arrows. An arrow going from a source node represents a routing table entry in the source node's routing table.
+
+V6
+
+In INET, routes can be visualized by the <i>RoutingTableCanvasVisualizer</i> module, included in the network as a submodule of <i>IntegratedCanvasVisualizer</i>. The visualizer indicates how packets would be routed as solid arrows. An arrow represents a routing table entry in the source node's routing table, and points to the next hop address. 
+
+The visualizer visualizes the routing table entries that best match a set of destination addresses. 
+
+Common: The arrows are annotated with details of the routing table entry, such as destination address, next hop address and interface name. Also, an arrow might represent multiple routes. Routes towards host7 are visualized.
+
+V7
+
+In INET, routes can be visualized using the <i>RoutingTableVisualizer</i> module, which is included in the network as a submodule of <i>IntegratedCanvasVisualizer</i>. <i>RoutingTableVisualizer</i> displays IPv4 routes are solid arrows. An arrow represents a routing table entry of the source node, and points from said node to the next hop node of the routing table entry. Those routing table entries are displayed, that best match a set of destination addresses. They are visualized from a set of source nodes.
+
+The visualization can be activated by setting the visualizer's <i>displayRoutingTables</i>
+parameter to <i>true</i>. By default, the set of source and destination nodes are all nodes in the network. This selection can be narrowed with the visualizer's <i>nodeFilter</i> and <i>destinationFilter</i> parameter.
+
+Here, the destinationfilter is set to host7 so routes from all hosts towards host7 are visualized.
 
 The IP address assignment is fully automatic, and the resulting addresses should be the same as in Step 1.
 
 @subsection s4defaults Configurator routing parameters
 
-The configurator's default parameters concerning static routing are the following:
+The configurator's parameters concerning static routing are the following:
 
-<pre>
-addStaticRoutes = default(true)
-addDefaultRoutes = default(true)
-addSubnetRoutes = default(true)
-optimizeRoutes = default(true)
-</pre>
-
-The configuration for this step didn't set any of these parameters, thus the default values will take effect.
-
-- <i>addStaticRoutes</i>: Add static routes to the routing table of all nodes in the network, 
+- <i>addStaticRoutes = default(true)</i>: Add static routes to the routing table of all nodes in the network, 
 with routes leading to all destination interfaces.
-- <i>addDefaultRoutes</i>: Add a default route if all routes from a node go through the same gateway.
+- <i>addDefaultRoutes = default(true)</i>: Add a default route if all routes from a node go through the same gateway.
 This is often the case with hosts, which usually connect to a network via a single interface. This parameter
 is not used if <i>addStaticRoutes = false</i>.
-- <i>addSubnetRoutes</i>: Optimize routing tables by adding routes towards subnets instead of individial interfaces. 
+- <i>addSubnetRoutes = default(true)</i>: Optimize routing tables by adding routes towards subnets instead of individial interfaces. 
 This is only used where applicable, and not used if <i>addStaticRoutes = false</i>.
-- <i>optimizeRoutes</i>: Optimize routing tables by merging entries where possible. Not used if <i>addStaticRoutes = false</i>.
+- <i>optimizeRoutes = default(true)</i>: Optimize routing tables by merging entries where possible. Not used if <i>addStaticRoutes = false</i>.
 
+The configuration for this step didn't set any of these parameters, thus the default values will take effect.
 Additionally, the <i>dumpTopology</i>, <i>dumpLinks</i> and <i>dumpRoutes</i> parameters are set to true in the <i>General</i> configuration.
 These instruct the configurator to print to the module output the topology of the network, the recognized network links, and the routing tables of all nodes, respectively. Topology describes which nodes are connected to which nodes. Hosts that can directly reach each other (i.e. the next hop is the destination), 
 are considered to be on the same link.
@@ -413,12 +436,19 @@ Destination      Netmask          Gateway          Iface            Metric
 @endhtmlonly
 
 The * for the gateway means that the gateway is the same as the destination. Hosts have a routing table entry to reach other nodes on the same subnet directly. They also have a default route with the router as
-the gateway for packets sent to outside-of-subnet addresses. Routers have 3 rules in their routing tables for reaching the other routers,
+the gateway for packets sent to outside-of-subnet addresses. Routers have three rules in their routing tables for reaching the other routers,
 specifically, those interfaces of the other routers that are not facing the hosts.
 
 Below is an animation of <i>host1</i> pinging <i>host7</i>.
 
 <img src="step4_new_4.gif" width="850px">
+<!--TODO delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step4_2_cropped.mp4" width="850" height="560"></video>
+<!--internal video recording playback speed 1.38 animation speed none
+zoom level 0.77 crop: 30 70 150 80-->
+@endhtmlonly
 
 @nav{step3,step5}
 @fixupini
@@ -432,28 +462,29 @@ Below is an animation of <i>host1</i> pinging <i>host7</i>.
 @section s5goals Goals
 
 The automatic configuration can configure routes properly, but sometimes the user might want to manually override some of the routes.
-This step has two parts:
+This step consists of two parts:
 
 - In the <strong>A</strong> part we will override the routes to just one specific host
 - In the <strong>B</strong> part we will override routes to a set of hosts
 
 @section s5a Part A - Overriding routes to a specific host
 
+Both parts in this step use the <i>ConfiguratorA</i> network (displayed below), just as in the previous steps.
 In this part we will override the routes going from the subnet of <i>router0</i> to <i>host7</i>. With the automatic configuration, packets
-from <i>router0's</i> subnet would go through <i>router2</i> to reach <i>host7</i> (as in the previous step). We want them to go through <i>router1</i> instead.
+from <i>router0's</i> subnet would go through <i>router2</i> to reach <i>host7</i> (as in the previous step.) We want them to go through <i>router1</i> instead.
 
 <img src="step4network.png">
 
 @subsection s5aconfig Configuration
 
-This configuration uses the same network as the previous step, ConfiguratorB. The configuration in omnetpp.ini is the following:
+The configuration in omnetpp.ini is the following:
 
 @dontinclude omnetpp.uncommented.ini
 @skipline Step5
 @until ####
 
 A ping application is added to <i>host0</i>, in addition to the one in <i>host1</i> added in Step 4.
-The new app in <i>host0</i> pings <i>host6</i>, this can demonstrate that only packets sent to <i>host7</i>
+The new app in <i>host0</i> pings <i>host6</i> to demonstrate that only packets sent to <i>host7</i>
 are affected by the route override.
 
 For the routes to go through <i>router1</i>, the routing table of <i>router0</i> has to be altered.
@@ -470,7 +501,7 @@ There are 5 additional optional parameter attributes. These are the same as in r
 address, netmask, gateway, interface, metric.
 
 The <route> element in this XML configuration adds the following rule to <i>router0's</i> routing table:
-Packets with the destination of 10.0.0.35/32 should use the interface 'eth1' and the gateway 10.0.0.18 (router2).
+Packets with the destination of 10.0.0.35/32 should use the interface 'eth1' and the gateway 10.0.0.18 (router2.)
 
 @subsection s5aresults Results
 
@@ -491,7 +522,7 @@ Destination      Netmask          Gateway          Iface            Metric
 </pre>
 </div>
 
-The routing table of <i>router0</i> in the last step had 6 entries. Now it has 7,
+The routing table of <i>router0</i> in the previous step had six entries. Now it has seven,
 as the rule specified in the XML configuration has been added (highlighted).
 This and the last rule both match packets to <i>host7</i> but the manually added route takes effect
 because it comes earlier.
@@ -499,6 +530,12 @@ because it comes earlier.
 The following animation depicts <i>host1</i> pinging <i>host7</i>, and <i>host0</i> pinging <i>host6</i>. Routes to <i>host7</i> are visualized.
 
 <img src="step5a.gif" width="850px">
+<!--TODO delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5A_1_cropped.mp4" width="850" height="560"></video>
+<!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
+@endhtmlonly
 
 Note that only routes towards <i>host7</i> are diverted at <i>router0</i>. The ping reply packet uses the original route between <i>router0</i> and <i>router2</i>.
 Ping packets to <i>host6</i> (and back) also use the original route.
@@ -517,7 +554,7 @@ The configuration in omnetpp.ini:
 @until ####
 
 As in Part A, the routing table of <i>router0</i> has to be altered, so that packets to <i>hosts 6-8</i> go towards <i>router1</i>. 
-The XML configuration in step5b.xml:
+The XML configuration in step5b.xml is as follows:
 
 @dontinclude step5b.xml
 @skipline config
@@ -527,11 +564,11 @@ The <route> element specifies a routing table entry for <i>router0</i>. The dest
 which designates the addresses of hosts 6-8. The gateway is <i>router1's</i> address, the interface is the one connected towards
 <i>router1</i> (eth1). This rule is added to <i>router0's</i> routing table <strong>in addition</strong>
 to the rule added automatically by the configurator. They match the same packets, but the parameters are different (see at the result section
-below). The manually added routes come before the automatic ones in routing tables, thus the manual ones take precedence.
+below.) The manually added routes come before the automatic ones in routing tables, thus the manual ones take precedence.
 
 @subsection s5bresults Results
 
-The routing table of <i>router0</i> (the manually added route highlighted):
+Here is the routing table of <i>router0</i> (the manually added route highlighted):
 
 <div class="fragment fit">
 <pre class="monospace">
@@ -556,6 +593,11 @@ to Part A. Routes to <i>host7</i> are visualized.
 
 <img src="step5b.gif" width="850px">
 
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step5B_1_cropped.mp4" width="850" height="560"></video>
+<!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
+@endhtmlonly
+
 This time both packets outbound to <i>hosts 6 and 7</i> take the diverted route, the replies come back on the original route.
 
 @nav{step4,step6}
@@ -572,9 +614,9 @@ This time both packets outbound to <i>hosts 6 and 7</i> take the diverted route,
 @section s6goals Goals
 
 When setting up routes, the configurator uses the shortest path algorithm. By default, paths are optimized for hop count.
-However, there are other cost functions available, like data rate, error rate, etc. This step has two parts:
+However, there are other cost functions available, like data rate, error rate, etc. This step consists of two parts:
 - <strong>Part A</strong> demonstrates using the data rate metric for automatically setting up routes.
-- <strong>Part B</strong> demonstrates instructing the configurator not to use a link when setting up routes by manually specifying link cost.
+- <strong>Part B</strong> demonstrates instructing the configurator not to use a link when setting up routes, by manually specifying link cost.
 
 @section s6a Part A: Using the data rate metric
 
@@ -585,7 +627,7 @@ nodes in the same wireless network.
 
 After the graph is built, the configurator assigns weights to vertices and edges according to the configured metric.
 Vertices that represent network nodes with IP forwarding turned off have infinite weight, all others have 0.
-At last the shortest path algorithm is used to determine the routes based on the assigned weights.
+Finally, the shortest path algorithm is used to determine the routes based on the assigned weights.
 
 The available metrics are the following:
 - <strong>hopCount</strong>: routes are optimized for hop count. All edges have a cost of 1. This is the default metric.
@@ -596,7 +638,7 @@ for wireless networks because the error rate of wired connections is usually neg
 
 @subsection s6aconfig Configuration
 
-The configuration for this step extends Step 4, thus it uses the ConfiguratorB network. The configuration in omnetpp.ini is the following:
+The configuration for this step extends Step 4, thus it uses the `ConfiguratorA` network. The configuration in omnetpp.ini is the following:
 <!TODO: network image?>
 
 @dontinclude omnetpp.uncommented.ini
@@ -618,7 +660,7 @@ The <autoroute> element can contain the following attributes:
 The default value is <tt>"**"</tt>.
 - <strong>metric</strong>: Parameter attribute that sets the metric to be used when calculating shortest paths. The default value is <tt>"hopCount"</tt>.
 
-There are subelements available in <autoroute>, which are discussed in Part B.
+There are subelements available in <autoroute>, which will be discussed in Part B.
 
 Here the <autoroute> element specifies that routes should be added to the routing table of each host and the metric should be <i>dataRate</i>. The configurator assigns weights to the graph's edges that are inversely proportional to the data rate of the network links.
 This way route generation will favor routes with higher data rates.
@@ -631,7 +673,7 @@ Note that <i>router0</i> and <i>router2</i> are connected with a 10 Mbit/s ether
 @subsection s6results Results
 
 The following image shows the backward routes towards <i>host1</i>.
-The resulting routes are similar to the ones in Step 5B. The difference is that routes going backward, from <i>hosts 6-8</i> to <i>hosts 0-2</i>, go through <i>router1</i>. No traffic is routed between <i>router0</i> and <i>router2</i> at all (as opposed to Step 4 and 5).
+The resulting routes are similar to the ones in Step 5B. The difference is that routes going backward, from <i>hosts 6-8</i> to <i>hosts 0-2</i>, go through <i>router1</i>. No traffic is routed between <i>router0</i> and <i>router2</i> at all (as opposed to Step 4 and 5.)
 
 <img src="step6aroutes.png" width="850px">
 
@@ -648,7 +690,7 @@ Destination      Netmask          Gateway          Iface            Metric
 </pre>
 </div>
 
-The first 2 rules describe reaching <i>router1</i> and <i>hosts 0-2</i> directly. The last rule specifies that traffic to any other destination
+The first two rules describe reaching <i>router1</i> and <i>hosts 0-2</i> directly. The last rule specifies that traffic to any other destination
 should be routed towards <i>router1</i>.
 
 The routing table of <i>router2</i> is similar:
@@ -666,9 +708,16 @@ Destination      Netmask          Gateway          Iface            Metric
 
 The following animation shows <i>host1</i> pinging <i>host7</i> and <i>host0</i> pinging <i>host6</i>. Routes towards <i>host1</i> are visualized.
 The packets don't use the link between <i>router0</i> and <i>router2</i>.
-<img src="step6a.gif" width="850px">
 
-One can easily check that no routes go through the link between <i>router0</i> and <i>router2</i> by setting the destination filter to "*.*" in the visualizer.
+<img src="step6a.gif" width="850px">
+<!--TODO delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
+<!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
+@endhtmlonly
+
+One can easily check that no routes go through the link between <i>router0</i> and <i>router2</i> by setting the destination filter to "*" in the visualizer.
 This indicates all routes in the network:
 
 <img src="step6allroutes.png" width=850px>
@@ -698,24 +747,29 @@ The XML configuration in step6b.xml is as follows:
 
 The <autoroute> elements can also contain the following optional subelements, which can be used to specify costs in the graph:
 - <strong><node></strong>: Specifies cost parameters to network nodes. The <strong>hosts</strong> selector
-attribute selects which hosts are affected, and the <strong>cost</strong> parameter sets a number for their costs. Both attributes are mandatory.
+attribute selects which hosts are affected, and the <strong>cost</strong> parameter sets their costs. Both attributes are mandatory.
 - <strong><link></strong>: Specifies cost parameters to network links. The <strong>interfaces</strong> selector
 attribute selects which links are affected, by specifying an interface they belong to. The <strong>cost</strong> parameter
 sets the cost. Both attributes are mandatory.
 
 This XML configuration specifies the metric to be hop count, and sets the cost of <i>router0's</i> eth2 interface to infinite.
-This affects the link between <i>router0</i> and <i>router2</i>, no routes should go through it.
+This affects the link between <i>router0</i> and <i>router2</i> - no routes should go through it.
 
 @subsection s6bresults Results
 
-The routes towards <i>host1</i> are visualized in the following image:
+The routes towards <i>host1</i> are visualized on the following image:
 
 <img src="step6broutes.png" width="850px">
 
-The routes are the same as in Part A. In that part the data rate metric was used, routes didn't use the 10Mbps link between <i>router0</i> and <i>router2</i>.
-In this part, that link is "turned off" by specifying an infinite cost for it.
+The routes are the same as in Part A, where the data rate metric was used, and routes didn't use the 10Mbps link between <i>router0</i> and <i>router2</i>.
+In this part, the link between <i>router0</i> and <i>router2</i> is "turned off" by specifying an infinite cost for it.
 
 <img src="step6a.gif" width="850px">
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video>
+<!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
+@endhtmlonly
 
 @nav{step5,step7}
 @fixupini
@@ -730,7 +784,7 @@ In this part, that link is "turned off" by specifying an infinite cost for it.
 @section s7goals Goals
 
 In complex hierarchical networks, routing tables can grow very big. This step demonstrates ways the configurator can reduce the size of
-routing tables by optimization and the use of hierarchically assigned addresses. The step contains 3 parts:
+routing tables by optimization and the use of hierarchically assigned addresses. The step contains three parts:
 - <strong>Part A</strong>: Automatically assigned addresses, no optimization
 - <strong>Part B</strong>: Automatically assigned addresses, using optimization
 - <strong>Part C</strong>: Hierarchically assigned addresses, using optimization
@@ -742,12 +796,12 @@ and the configurator's routing table optimization features are turned off. The s
 
 @subsection s7aconfig Configuration
 
-All 3 parts in this step use the ConfiguratorC network defined in ConfiguratorC.ned. The network looks like this:
+All three parts in this step use the <i>ConfiguratorB</i> network defined in ConfiguratorB.ned. The network looks like this:
 
 <img src="step7network.png" width="850px">
 
-The network is comprised of 3 areas, each containing 2 local area networks (LANs). Each LAN contains 3 <tt>standardHosts</tt>. The hosts in the LAN connect to an area router
-through switches. The 3 area routers connect to a central backbone router. The network contains 3 hierarchical levels, which correspond to the hosts in the LANs, the area
+The network is comprised of three areas, each containing two local area networks (LANs). Each LAN contains three <tt>standardHosts</tt>. The hosts in the LAN connect to an area router
+through switches. The three area routers connect to a central backbone router. The network contains three hierarchical levels, which correspond to the hosts in the LANs, the area
 routers, and the backbone router.
 
 The configuration for this part in omnetpp.ini is the following:
@@ -763,7 +817,7 @@ This means that nodes will have an individual routing table entry to every desti
 
 The assigned addresses are shown on the image below:
 @htmlonly
-<center><a href="step7a.png" data-lightbox="step7a"><img src="step7a.png" width="850px"></a></center>
+<center><a href="step7a_addresses.png" data-lightbox="step7a_addresses"><img src="step7a_addresses.png" width="850px"></a></center>
 @endhtmlonly
 
 The size of some of the routing tables are the following:
@@ -858,7 +912,7 @@ The configuration for this part in omnetpp.ini is the following:
 @skipline Step7B
 @until ####
 
-The configuration is empty, the default ned parameter values take effect. That means that the following optimization features are turned on:
+The configuration is empty, the default NED parameter values take effect. That means that the following optimization features are turned on:
 assignDisjunctSubnetAddresses, addDefaultRoutes, addSubnetRoutes, optimizeRoutes.
 
 @subsection s7bresults Results
@@ -873,9 +927,9 @@ The routing tables of a host, an area router and the backbone router are the fol
 <pre class="monospace">
 Node ConfiguratorC.area1lan1host0
 -- Routing table --
-Destination      Netmask          Gateway          Iface           Metric
-10.0.0.0         255.255.255.248  *                eth0 (10.0.0.1) 0
-<i></i>*                *                10.0.0.4         eth0 (10.0.0.1) 0
+Destination      Netmask          Gateway          Iface            Metric
+10.0.0.0         255.255.255.248  *                eth0 (10.0.0.1)  0
+<i></i>*                *                10.0.0.4         eth0 (10.0.0.1)  0
 
 Node ConfiguratorC.area1router
 -- Routing table --
@@ -901,13 +955,13 @@ Destination      Netmask          Gateway          Iface            Metric
 </pre>
 </div>
 
-- Hosts have just 2 routing table entries. One for reaching other hosts in their LANs, and a default route. 
+- Hosts have just two routing table entries. One for reaching other hosts in their LANs, and a default route. 
 - The area routers have a rule
-for reaching the backbone router, 2 rules for reaching the 2 LANs it's connected to, and a default rule for reaching the rest of the network
+for reaching the backbone router, two rules for reaching the two LANs they're connected to, and a default rule for reaching the rest of the network
 through the backbone router. 
-- Similarly, the backbone router has 3 rules for reaching the 3 area routers, and 6 rules for reaching the 6 LANs
+- Similarly, the backbone router has three rules for reaching the three area routers, and six rules for reaching the six LANs
 in the network.
-- The backbone router has separate rules for the 2 LANs connected to an area router, because the addresses are not contiguously assigned to the 2 LANs
+- The backbone router has separate rules for the two LANs connected to an area router, because the addresses are not contiguously assigned to the two LANs
 (e.g. <i>area2lan1</i> has address 10.0.0.8/29, <i>area2lan2</i> has 10.0.0.32/29. But <i>area3lan1</i> has 10.0.0.16/29, which is between the two former address ranges). Thus area2 cannot be covered by a single rule.
 
 @section Part C - Hierarchically assigned addresses, optimized routing tables
@@ -937,7 +991,7 @@ This XML configuration assigns addresses hierarchically in the following way, wh
 <i>host4</i> in <i>lan1</i> in <i>area2</i>
 
 With this setup, it's possible to cover an area with just one rule in the routing table
-of the backbone router. Similarly, the area routers need 2 rules for each LAN that they
+of the backbone router. Similarly, the area routers need two rules for each LAN that they
 are connected to.
 
 @subsection s7cresults Results
@@ -945,10 +999,10 @@ are connected to.
 The image below shows the assigned addresses.
 
 @htmlonly
-<center><a href="step7caddresses.png" data-lightbox="step7caddresses"><img src="step7caddresses.png" width="850px"></a></center>
+<center><a href="step7c_addresses.png" data-lightbox="step7c_addresses"><img src="step7c_addresses.png" width="850px"></a></center>
 @endhtmlonly
 
-The sizes of some of the routing tables are displayed in the following image.
+The sizes of some of the routing tables are displayed on the following image.
 
 <img src="step7c_rt.png">
 
@@ -982,16 +1036,16 @@ Destination      Netmask          Gateway          Iface           Metric
 </pre>
 </div>
 
-- Hosts' routing tables contain just 2 rules, as in the previous part. One is for reaching the other members of the host's LAN, and a default rule for reaching everything
+- Hosts' routing tables contain just two rules, as in the previous part. One is for reaching the other members of the host's LAN, and a default rule for reaching everything
 else through the area's router.
 
-- The area routers' routing tables contain a specific rule for reaching the backbone router, 2 rules for reaching the 2 LANs that belong to the router's area,
+- The area routers' routing tables contain a specific rule for reaching the backbone router, two rules for reaching the two LANs that belong to the router's area,
 and a default rule for reaching everything else throught the backbone router.
 
-- The backbone router's routing table contains 3 specific rules for reaching the 3 area routers, and 3 rules to reach the 3 areas.
+- The backbone router's routing table contains three specific rules for reaching the three area routers, and three rules to reach the three areas.
 
 The difference between the configuration for this part and the previous one is that addresses are assigned hierechically in this part. The routing
-table of the backbone router contains 6 entries instead of 10 in the previous part. The other nodes' routing tables remained the same. The difference is not drastic because the network is small. However, using hierarchical address assignment in a larger network would make a significant
+table of the backbone router contains six entries instead of 10 in the previous part. The other nodes' routing tables remained the same. The difference is not drastic because the network is small. However, using hierarchical address assignment in a larger network would make a significant
 difference in routing table size.
 
 @lightbox
@@ -1007,14 +1061,14 @@ difference in routing table size.
 
 @section s8goals Goals
 
-This step demonstrates routing table configuration in a mixed wired/wireless network. This step consists of 2 parts:
-- Part A: Determining members of wireless networks with <wireless> element
+This step demonstrates routing table configuration in a mixed wired/wireless network. This step consists of two parts:
+- Part A: Determining members of wireless networks with the <wireless> element
 - Part B: Determining members of wireless networks by SSID
 
 @section s8a Part A: Using the <wireless> element
 
 The configurator assumes that interfaces of wireless nodes in the same wireless network can reach each other directly.
-It can determine which nodes belong to a wireless network in 2 ways:
+It can determine which nodes belong to a wireless network in two ways:
 - It looks at the <i>default_ssid</i> parameter in nodes' agent submodule. Nodes with the same SSID are assumed to be in the same wireless network.
 - Members of wireless networks can be specified by the <wireless> element in the XML configuration. In the <wireless> element, the <strong>hosts</strong> and <strong>interfaces</strong> selector attributes can be used to specify members.
 
@@ -1022,18 +1076,18 @@ Note that nodes need to use the same radio medium module to be in the same wirel
 
 @subsection s8aconfig Configuration
 
-This step uses the ConfiguratorD network defined in ConfiguratorD.ned. The network is displayed on the following image.
+This step uses the <i>ConfiguratorC</i> network defined in ConfiguratorC.ned. The network is displayed on the following image.
 
 <img src="step8network.png" width="850px">
 
-The ConfiguratorD network extends ConfiguratorC by adding 2 wireless LANs, <i>area1lan3</i> and <i>area3lan3</i>. The additional LANs consist of an <tt>AccessPoint</tt>
-and 3 <tt>WirelessHosts</tt>. The visualizer module is <tt>IntegratedCanvasVisualizer</tt>, which contains multiple visualizer submodules.
+The <i>ConfiguratorD</i> network extends <i>ConfiguratorC</i> by adding two wireless LANs, <i>area1lan3</i> and <i>area3lan3</i>. The additional LANs consist of an <tt>AccessPoint</tt>
+and three <tt>WirelessHosts</tt>.
 
 The default SSID settings of all wireless nodes is "SSID". By default,
 the configurator would put them in the same wireless network, and assume that they can all reach each other directly. This would be reflected
 in the routes, hosts in <i>area1lan3</i> would reach hosts in <i>area3lan3</i> directly. This is obviously wrong, because they are out of
-range from each other. The 2 LANs need to be in
-2 different wireless networks.
+range of each other. The two LANs need to be in
+two different wireless networks.
 
 Here is the configuration for this step in omnetpp.ini:
 
@@ -1041,11 +1095,9 @@ Here is the configuration for this step in omnetpp.ini:
 @skipline Step8
 @until ####
 
-A wireless host in <i>area1</i> is configured to ping a wireless host in <i>area3</i>, this helps visualize routes.
+A wireless host in <i>area1</i> is configured to ping a wireless host in <i>area3</i>, this helps in visualizing routes.
 
-There are some settings in the General configuration pertaining to wireless networks:
-- The control bit rate of all wireless nodes is set to 54 Mbps for faster ACK transmissions.
-- <tt>InterfaceTableVisualizer</tt> is configured to indicate the IP addresses of wireless hosts.
+There is a setting in the <i>General</i> configuration pertaining to wireless networks: the control bit rate of all wireless nodes is set to 54 Mbps for faster ACK transmissions.
 
 @dontinclude omnetpp.uncommented.ini
 @skipline General
@@ -1057,7 +1109,7 @@ The XML configuration in step8a.xml is the following:
 @skipline config
 @until config
 
-The XML configuration uses the same hierarchical addressing scheme as in Step 7. The 2 wireless LANs are specified to be in separate wireless networks. Note that the wireless interfaces of the access points also belong to the wireless networks.
+The XML configuration uses the same hierarchical addressing scheme as in Step 7. The two wireless LANs are specified to be in separate wireless networks. Note that the wireless interfaces of the access points also belong to the wireless networks.
 
 
 @subsection s8aresults Results
@@ -1065,10 +1117,8 @@ The XML configuration uses the same hierarchical addressing scheme as in Step 7.
 The addresses and routes are indicated on the following image. Routes leading towards hosts <i>area3lan3</i> are visualized.
 
 @htmlonly
-<center><a href="step8a.png" data-lightbox="step8a"><img src="step8a.png" width="850px"></a></center>
+<center><a href="step8a_2.png" data-lightbox="step8a_2"><img src="step8a_2.png" width="850px"></a></center>
 @endhtmlonly
-
-<!TODO: outdated screenshot>
 
 Wireless hosts connect to the router through the access points. The access points are L2 devices, similar to switches, so they are transparent for
 the routing table visualizer arrows. Wireless hosts get associated with their corresponding access points before they can communicate with the rest of the network.
@@ -1079,25 +1129,31 @@ can receive them correctly (i.e. nodes in the same LAN).
 @htmlonly
 <center><a href="step8_2.gif" data-lightbox="step8_2"><img src="step8_2.gif" width="850px"></a></center>
 @endhtmlonly
+<!--TODO: delete-->
 
 <!TODO: outdated gif>
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video>
+<!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
+@endhtmlonly
 
 This is how the routes would look like if the XML configuration didnt contain the <wireless> elements:
 
 @htmlonly
-<center><a href="step8fullmesh.png" data-lightbox="step8fullmesh"><img src="step8fullmesh.png" width="850px"></a></center>
+<center><a href="step8fullmesh_2.png" data-lightbox="step8fullmesh_2"><img src="step8fullmesh_2.png" width="850px"></a></center>
 @endhtmlonly
 
 There are no routes visualized between the <i>backbonerouter</i> and <i>area3router</i>, because routes towards <i>area3lan3</i> go via <i>area1router</i>.
-<i>Area3lan3</i> can be reached from the <i>backbonerouter</i> in 2 ways:
-- <i>area1router->area1AP->area3lan3</i> (<i>area1AP</i> reaches <i>area3lan3</i> directly since they are assumed to be in the same wireless network)
-- <i>area3router->area3AP->area3lan3</i>
+<i>Area3lan3</i> can be reached from the <i>backbonerouter</i> in two ways:
+- <i>area1router -> area1AP -> area3lan3</i> (<i>area1AP</i> reaches <i>area3lan3</i> directly since they are assumed to be in the same wireless network)
+- <i>area3router -> area3AP -> area3lan3</i>
 
-In both ways, <i>area3lan3</i> is 2 hops away from the <i>backbonerouter</i>. Routes are configured according to hop count, and the configurator chose the first way.
+In both ways, <i>area3lan3</i> is two hops away from the <i>backbonerouter</i>. Routes are configured according to hop count, and the configurator chose the first way.
 
 @section s8b Part B - Using SSID
 
-In this part, the SSID is used to put the 2 wireless LANs in 2 different wireless networks.
+In this part, the SSID is used to put the two wireless LANs in two different wireless networks.
 
 @subsection s8bconfig Configuration
 
@@ -1108,7 +1164,7 @@ The configuration for this part extends Part A. The configuration in omnetpp.ini
 @until ####
 
 The XML configuration in step8b.xml (displayed below) is the same as the XML configuration for Part A, except there are no <wireless> elements that defined wireless networks.
-They are not needed because different SSIDs are configured for the members of the 2 wireless LANs.
+They are not needed because different SSIDs are configured for the members of the two wireless LANs.
 
 @dontinclude step8b.xml
 @skipline config
@@ -1116,7 +1172,7 @@ They are not needed because different SSIDs are configured for the members of th
 
 @subsection s8bresults Results
 
-The results are the same as in the previous part. The 2 wireless LANs are considered to be different wireless networks.
+The results are the same as in the previous part. The two wireless LANs are considered to be different wireless networks.
 
 @nav{step7,step9}
 @fixupini
@@ -1132,11 +1188,11 @@ The results are the same as in the previous part. The 2 wireless LANs are consid
 @section s9goals Goals
 
 Configuring the whole network is not always desirable, because some part of the network should rather be configured dynamically.
-In this step, some wired and wireless LANs' addresses are unspecified by the configurator, and they get addresses with DHCP.
+In this step, some wired and wireless LANs' addresses are left unspecified by the configurator, and they get addresses with DHCP.
 
 @section s9model The model
 
-This step uses the ConfiguratorD network, defined in ConfiguratorD.ned.
+This step uses the <i>ConfiguratorC</i> network, defined in ConfiguratorC.ned.
 
 <img src="step8network.png" width="850px">
 
@@ -1146,13 +1202,13 @@ The configuration for this step in omnetpp.ini is the following:
 @skipline Step9
 @until ####
 
-- Similarly to Step8B, members of the 2 wireless LANs are specified by SSID. 
+- Similarly to Step8B, members of the two wireless LANs are specified by SSID. 
 - <i>Area1lan3host2</i> is configured to ping <i>area3lan3host3</i>.
-The pingApp is delayed, so it starts sending pings after the hosts associated with the access points and got their addresses from the dhcp servers.
+The ping application is delayed, so it starts sending pings after the hosts associated with the access points and got their addresses from the dhcp servers.
 - <i>DHCPServer</i> submodules are added to the area routers. The DHCP server is configured to listen on the interface connecting to the unspecified LAN.
 The interface's netmask is the DHCP server's address range. 
-- DHCPClient submodules are added to the LANs which are unspecified by the configurator. There is one such LAN in each area, they are
-<i>area1lan3, area2lan1 and area3lan3</i>. These get
+- <i>DHCPClient</i> submodules are added to the LANs which are unspecified by the configurator. There is one such LAN in each area, they are
+<i>area1lan3, area2lan1 and area3lan3</i>. Hosts in these LANs get
 the addresses from the DHCP server in the corresponding area router.
 
 - Routes to <i>area3lan3host3</i> are visualized.
@@ -1163,27 +1219,29 @@ The XML configuration in step9.xml is the following:
 @skipline config
 @until config
 
-Addresses are assigned hierarchically. 5 LANs in the network have addresses assigned by the configurator. 3 LANs get their
+Addresses are assigned hierarchically. Five LANs in the network have addresses assigned by the configurator. Three LANs get their
 addresses from DHCP servers, their interfaces are left unspecified by the configurator. This is accomplished by the lack of address assignment rules for
 these hosts in the XML configuration. The area routers' interfaces connecting to the latter LANs need to be specified in order to have correct routes to these
-LANs. Additionally, the addresses for these interfaces need to be assigned specifically, and they have to fall in the configured dhcp server address ranges.
+LANs. Additionally, the addresses for these interfaces need to be assigned specifically, and they have to fall in the configured DHCP server address ranges.
 
 
 @section s9results Results
 
 The addresses and routes are visualized below. This is the state of the network at the start of the simulation.
 
+The state of the network at the start of the simulation is shown on the following image:
+
 @htmlonly
-<center><a href="step9routes.png" data-lightbox="step9routes"><img src="step9routes.png" width="850px"></a></center>
+<center><a href="step9routes_2.png" data-lightbox="step9routes_2"><img src="step9routes_2.png" width="850px"></a></center>
 @endhtmlonly
 
 The hosts of <i>area1lan3, area2lan1 and area3lan3</i> have unspecified addresses. The routing tables of all hosts contain subnet routes
-to these 3 LANs. Since these hosts don't have addresses at the start of the simulation, not all routes leading to <i>area3lan3host2</i> can be
-visualized. The only routes indicated are the default routes of hosts with static address assignment.
+to these three LANs. Since these hosts don't have addresses at the start of the simulation, there are no routes leading to <i>area3lan3host2</i> that can be
+visualized.
 
-Though the hosts in the 3 LANs have unspecified addresses, subnet routes leading to these LANs are added to the routing tables
+Though the hosts in the three LANs have unspecified addresses, subnet routes leading to these LANs are added to the routing tables
 of all hosts. The addresses for the interfaces connecting to these LANs have a netmask assigned so there are addresses allocated
-for the unspecified hosts. For example, <i>area1router's eth3</i> interface has the address 10.1.4.1/29, and has 4 addresses allocated (10.1.4.2-5).
+for the unspecified hosts. For example, <i>area1router's eth3</i> interface has the address 10.1.4.1/29, and has four addresses allocated (10.1.4.2-5).
 
 The routing tables of <i>area1lan3host2, area1router and backbonerouter</i> are the following (routes for reaching the unspecified hosts are highlighted):
 
@@ -1216,13 +1274,15 @@ Destination      Netmask          Gateway          Iface            Metric
 </pre>
 </div>
 
-- <i>Area1lan3host2</i> has a default route for reaching the other hosts in the LAN. 
-- <i>Area1Router</i> has a route for reaching hosts in <i>area1lan3</i>, and a default route for reaching <i>area2 and area3</i>.
-- The <i>backbonerouter</i> has subnet routes to each area.
+- <i>area1lan3host2</i> has a default route for reaching the other hosts in the LAN. 
+- <i>area1Router</i> has a route for reaching hosts in <i>area1lan3</i>, and a default route for reaching <i>area2 and area3</i>.
+- <i>backbonerouter</i> has subnet routes to each area.
 
 @htmlonly
 <center><a href="step9_6.gif" data-lightbox="step9_6"><img src="step9_6.gif" width="850px"></a></center>
 @endhtmlonly
+
+TODO: when the destination host gets its IP address, the routes appear
 
 @lightbox
 @fixupini
@@ -1239,11 +1299,11 @@ Destination      Netmask          Gateway          Iface            Metric
 
 @section s10goals Goals
 
-This step demonstrates using the error rate metric for configuring static routes. It also demonstrates leaving the routing tables unconfigured, so a dynamic routing protocol can configure them. The step has 3 parts:
+This step demonstrates using the error rate metric for configuring static routes. It also demonstrates leaving the routing tables unconfigured, so a dynamic routing protocol can configure them. The step consists of three parts:
 
-- Part A: Static routing based on error rate metric
-- Part B: Unconfigured routing tables, prepared for MANET routing
-- Part C: Unconfigured routing tables, configured using AODV protocol
+- @ref s10a
+- @ref s10b
+- @ref s10c
 
 @section s10a Part A: Static routing based on error rate metric
 
@@ -1252,11 +1312,11 @@ When they can't, the error rate metric can be used for automatic route configura
 
 @subsection s10aconfig Configuration
 
-This step uses the ConfiguratorE network, defined in ConfiguratorE.ned. The network looks like this:
+This step uses the <i>ConfiguratorD</i> network, defined in ConfiguratorD.ned. The network looks like this:
 
 <img src="step10network.png" width="850px">
 
-It contains 8 <tt>AODVRouters</tt> laid out in a chain.
+It contains eight <tt>AODVRouters</tt> laid out in a chain.
 
 The configuration for this part in omnetpp.ini is the folowing:
 
@@ -1265,7 +1325,7 @@ The configuration for this part in omnetpp.ini is the folowing:
 @until ####
 
 The transmitter power of radios determine their communication range. The range is set up so hosts are only in range of the adjacent hosts in the chain.
-The <tt>routingTableCanvasVisualizer</tt> is set to visualize routes to all destinations. Communication ranges of all hosts are displayed.
+<tt>RoutingTableCanvasVisualizer</tt> is set to visualize routes to all destinations. The routing table visualization is simplified by turning off arrow labels, and setting the arrow line shift to 0. The latter setting causes the visualizer to draw only one arrow between any nodes even if there would be multiple arrows, e.g. one for both directions (bi-directional routes will be displayed as bi-directional arrows now.) Communication ranges of all hosts will be displayed.
 
 The transmission power outside the communication range is below the sensitivity of the receiving node, thus the
 error rate is infinite. However, the fact that the receiving host is within the communication range circle doesn't
@@ -1278,8 +1338,8 @@ The XML configuration in step10a.xml is as follows:
 @until config
 
 It contains a copy of the default address configurations, and an autoroute element using the error rate metric.
-The configurator calculates the packet error rate for an Maximum Transfer Unit (MTU) sized packet. Edge costs in the connectivity
-graph are assigned according to this. 
+The configurator calculates the packet error rate for a Maximum Transfer Unit (MTU) sized packet. Edge costs in the connectivity
+graph are assigned accordingly. 
 
 
 @subsection s10aresults Results
@@ -1288,7 +1348,7 @@ Configured routes and communication ranges are displayed on the following image.
 thus all arrows are within the circles. Routes lead through adjacent hosts in the chain. In each
 segment of the path, correct reception is possible.
 
-<img src="step10aroutes.png" width="850px">
+<img src="step10a_routes.png" width="850px">
 
 @section s10b Part B: Unconfigured routing tables, prepared for MANET routing
 
@@ -1296,7 +1356,7 @@ Static routing is often not adequate in wireless networks, as the nodes might mo
 Dynamic routing protocols can react to these changes. When using dynamic protocols, the configurator is only used
 to configure the addresses. It leaves the routing table configuration to the dynamic protocol.
 
-The configuration for this part in omnetpp.ini extends the one for Part A. It is the following:
+The configuration for this part in omnetpp.ini extends the one for Part A:
 
 @dontinclude omnetpp.uncommented.ini
 @skipline Step10B
@@ -1305,9 +1365,11 @@ The configuration for this part in omnetpp.ini extends the one for Part A. It is
 The configurator is instructed to leave the routing tables empty, by setting <tt>addStaticRoutes</tt> to false. The configurator just assigns
 the addresses according to the default XML configuration.
 
+The visualizer is still set to visualize all routes towards all destinations.
+
 @subsection s10bresults Results
 
-<img src="step10a.png" width="850px">
+<img src="step10b.png" width="850px">
 
 As instructed, the configurator didn't add any routes, as indicated by the lack of arrows. The routing tables are empty.
 
@@ -1321,16 +1383,21 @@ In this part, routing tables are set up by the Ad-hoc On-demand Distance Vector 
 @skipline Step10C
 @until ####
 
-As specified in the previous part, the configurator is still instructed not to add any routes. Additionally, <i>host1</i> is set to ping
+As specified in the previous part, the configurator is still instructed not to add any routes. Also, the visualizer is still set to visualize all routes. Additionally, <i>host1</i> is set to ping
 <i>host2</i>. Since AODV is a reactive routing protocol, the ping is required to trigger the AODV protocol to set up routes.
 
 @subsection s10cresults Results
 
 The routing tables are initially empty. The first ping packet triggers AODV's route discovery process, which eventually configures the routes.
-AODV is a reactive protocol, unused routes expire after a while. This happens to the routes to <i>host2</i>, as it's not in the path between
+AODV is a reactive protocol, so unused routes expire after a while. This happens to the routes to <i>host2</i>, as it's not in the path between
 <i>host1</i> and <i>host7</i>. This is diplayed in the following animation.
 
 <img src="step10_6.gif">
+<!--TODO remove-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step10C_4.mp4" width="706" height="650"></video>
+@endhtmlonly
 
 To record the animation, the simulation was run in fast mode, thus routes appear instantly. It takes a few seconds simulation time for the unused
 routes to expire.
@@ -1347,20 +1414,20 @@ routes to expire.
 
 @section s11goals Goals
 
-Sometimes the configuration is just almost right. In such a case it's possible to dump the configuration into a file, edit it and use the file in place of the original configuration. This step has 2 parts:
+Sometimes the configurator's configuration is just almost right. In such a case it's possible to dump the configuration into a file, edit it and use the file in place of the original configuration. This step consists of two parts:
 
-- Part A: dumping the full configuration
-- Part B: using the modified configuration
+- @ref s11a
+- @ref s11b
 
-@section s11a Part A - dumping the full configuration
+@section s11a Part A - Dumping the full configuration
 
-The configurator can be instructed to dump its configuration in a config file, in the XML configuration format. This contains
+The configurator can be instructed to dump its configuration into a config file, in the XML configuration format. This contains
 all the assigned addresses, routing table entries and members of wireless links, so they can be easily modified. The modified
 config file can be used as the XML configuration for subsequent simulation runs.
 
 @subsection s11aconfig Configuration
 
-This step uses the ConfiguratorB network defined in ConfiguratorB.ned.
+Both parts in this step use the <i>ConfiguratorA</i> network defined in ConfiguratorA.ned:
 
 <img src="step4network.png">
 
@@ -1370,21 +1437,21 @@ The configuration for this part in omnetpp.ini is the following:
 @skipline Step11A
 @until ####
 
-The configurator's <tt>dumpConfig</tt> parameter can be used to dump the configuration into a file.
+The configurator's <tt>dumpConfig</tt> parameter can be used to dump the configuration into a file. The parameter's value is the name of the config file.
 
 @subsection s11aresults Results
 
 Routes to all nodes are visualized on the following image.
 
-<img src="step11a.png" width="850px">
+@htmlonly
+<center><a href="step11a_routes.png" data-lightbox="step11a_routes"><img src="step11a_routes.png" width="850px"></a></center>
+@endhtmlonly
 
-The configuration is dumped into step11a_dump.xml.
-
-<!TODO: modify addresses?>
+The configuration is dumped into step11a_dump.xml. We will modify this config file in the next part.
 
 @section s11b Part B - Using the modified configuration
 
-In this part, we edit the config file, and use it as the XML configuration. The goal is that packets should travel counter-clockwise in the triangle of the 3 routers. That is, every router should forward packets in the triangle through its interface on the right.
+In this part, we edit the config file, and use it as the XML configuration. The goal is that packets should travel counter-clockwise in the triangle of the three routers, i.e. each router should forward packets in the triangle through its interface on the right.
 
 @subsection s11bconfig Configuration
 
@@ -1397,11 +1464,11 @@ The configuration for this part in omnetpp.ini is the following:
 The modified config is used as the XML configuration. Since the configuration specifies all routes, <tt>addStaticRoutes</tt> needs to be set to
 <strong>false</strong>, so the configurator doesn't add automatic static routes. A host in each LAN pings another host in the adjacent LAN in the counter-clockwise direction.
 
-To this end, the routes in the router are modified. Routes that would send packets the wrong way (i.e. not counter-clockwise in the triangle) are
+The routes in all three routers' routing tables are modified. Routes that would send packets the wrong way (i.e. not counter-clockwise in the triangle) are
 redirected to the other interface. In essence, all routers send out packets through their interface to the right (expect for packets destined to
-the connecting LAN).
+the connecting LAN.)
 
-The modified XML configuration is in step11b.xml (see step11dump.xml for the original). The differences between the original and the modified config files area displayed below (the original is shown in red).
+The modified XML configuration is in step11b.xml (see step11a_dump.xml for the original.) The differences between the original and the modified config files area displayed below (the original is shown in red).
 
 @htmlonly
 <a href="step11diff.png" data-lightbox="step11diff"><img src="step11diff.png" width="900px"></a>
@@ -1412,14 +1479,20 @@ The modified XML configuration is in step11b.xml (see step11dump.xml for the ori
 Routes to all nodes are visualized on the following image. Note that arrows point only counter-clockwise in the triangle.
 
 @htmlonly
-<center><a href="step11b.png" data-lightbox="step11b"><img src="step11b.png" width="850px"></a></center>
+<center><a href="step11b_routes.png" data-lightbox="step11b_routes"><img src="step11b_routes.png" width="850px"></a></center>
 @endhtmlonly
 
-The ping exchanges are displayed in the animation below.
+The ping exchanges highlight the modified routes on the following animation:
 
 <img src="step11_3.gif" width="850px">
+<!--TODO delete-->
 
-The packets travel only counter-clockwise in the triangle of the 3 routers.
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step11B_2_cropped.mp4" width="850" height="560"></video>
+<!--from #295 zoom 0.77 playback speed 2.5 animation speed none crop 30 70 150 80-->
+@endhtmlonly
+
+The packets travel only counter-clockwise in the triangle of the three routers.
 
 
 @lightbox
@@ -1439,22 +1512,22 @@ using the hop count and error rate metrics in a mixed wired/wireless network.
 
 @section s12model The model
 
-The step uses the ConfiguratorE network, defined in ConfiguratorF.ned. The network looks like this:
+This step uses the <i>ConfiguratorE</i> network, defined in ConfiguratorE.ned. The network looks like this:
 
 <img src="step12network.png">
 
-The core of the network is composed of 3 routers connected to each other, each belonging to an area. There are 3 areas, each contains a number of hosts,
+The core of the network is composed of three routers connected to each other, each belonging to an area. There are three areas, each containing a number of hosts,
 connected to the area router. 
-- Area1 is composed of 3 <tt>WirelessHosts</tt>, one of them
+- Area1 is composed of three <tt>WirelessHosts</tt>, one of them
 is connected to the router with a wired connection. 
-- Area2 has an <tt>AccessPoint</tt>, and 3 <tt>WirelessHosts</tt>. 
-- Area3 has 3 <tt>StandardHosts</tt> connected to the
+- Area2 has an <tt>AccessPoint</tt>, and three <tt>WirelessHosts</tt>. 
+- Area3 has three <tt>StandardHosts</tt> connected to the
 router through a switch.
 
 Since there is no access point in <i>area1</i>, the hosts create an ad-hoc wireless network. They connect to the rest of the network through <i>area1host3</i>,
 which has a wired connection to the router.
-However, <i>area1host3</i> is not in the communication range of <i>area1host1</i> (illustrated on the image below). Thus <i>area1host2</i> is configured to forward
-<i>area1host1's</i> packets to <i>area1host3</i>. The error rate metric is better suited to configure routes in this LAN. Routes in the rest of the network
+However, <i>area1host3</i> is not in the communication range of <i>area1host1</i> (illustrated on the image below.) Thus <i>area1host2</i> needs configured to forward
+<i>area1host1's</i> packets to <i>area1host3</i>. The error rate metric, rather than hop count, is best suited to configure routes in this LAN. Routes in the rest of the network
 can be configured properly based on the hop count metric.
 
 <img src="step12ranges.png">
@@ -1465,8 +1538,8 @@ The configuration for this step in omnetpp.ini is the following:
 @skipline Step12
 @until ####
 
-- For hosts in area1 to operate in ad-hoc mode, IP forwarding is turned on, and their management modules are set to ad-hoc management.
-- <i>area1host1</i> is configured to ping <i>area2host1</i>, which is on the other side of the network
+- For hosts in <i>area1</i> to operate in ad-hoc mode, IP forwarding is turned on, and their management modules are set to ad-hoc management.
+- <i>area1host1</i> is configured to ping <i>area2host1</i>, which is on the other side of the network.
 - Routes to all hosts and communication ranges are visualized.
 
 The XML configuration in step12.xml is the following:
@@ -1476,7 +1549,7 @@ The XML configuration in step12.xml is the following:
 @until config
 
 To have routes from every node to every other node, all nodes must be covered by an autoroute element.
-The XML configuration contains 2 autoroute elements. Routing tables of hosts in <i>area1</i> are configured according to the error rate metric,
+The XML configuration contains two autoroute elements. Routing tables of hosts in <i>area1</i> are configured according to the error rate metric,
 while all others according to hop count.
 
 The global <i>addStaticRoutes, addDefaultRoutes and addSubnetRoutes</i> parameters can be specified per interface, with the <interface> element.
@@ -1491,11 +1564,11 @@ The <i>add-default-route</i> parameter is set to false for the <i>area1</i> host
 
 The routes are visualized on the following image.
 
-<img src="step12routes.png">
+<img src="step12routes_2.png" width="850px">
 
 As intended, <i>area1host1</i> connects to the network via <i>area1host2</i>.
 
-The routing of <i>area1host1</i> is as follows:
+The routing table of <i>area1host1</i> is as follows:
 
 <div class="fragment fit">
 <pre class="monospace">
@@ -1519,12 +1592,17 @@ Destination      Netmask          Gateway          Iface             Metric
 </pre>
 </div>
 
-The gateway is 10.0.0.19 (<i>area1host2</i>) in all rules, expect the one where it is *. That rule is for reaching
-the other hosts in the LAN directly. This doesn't seem to be according to the error rate metric, but this rule
+The gateway is 10.0.0.19 (<i>area1host2</i>) in all rules, except the one where it is *. That rule is for reaching
+the other hosts in the LAN directly. This doesn't seem to be according to the error rate metric, but the * rule
 matches destinations 10.0.0.18 and 10.0.0.19 only. Since 10.0.0.18 is covered by a previous rule, this one
 is actually for reaching 10.0.0.19 directly.
 
-<TODO: !gif>
+The following video shows `area1host1` pinging `area2host1`:
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video>
+<!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
+@endhtmlonly
 
 @fixupini
 @keyword

@@ -119,8 +119,8 @@ kbps) UDP traffic, not counting protocol overhead. Host B contains a
 `UDPSink` application that just discards received packets.
 
 The model also displays the number of packets received by host B. The text
-is added by the `@figure[rcvdPkText]` line, and the subsequent few
-lines arrange the figure to be updated during the simulation.
+is added by the `@figure[rcvdPkText]` line, and the subsequent 
+line arranges the figure to be updated during the simulation.
 
 <b>Physical layer modeling</b>
 
@@ -130,7 +130,7 @@ represents the shared physical medium where communication takes place. It
 is responsible for taking signal propagation, attenuation, interference,
 and other physical phenomena into account.
 
-INET can model the wireless physical layer at at various levels of detail,
+INET can model the wireless physical layer at various levels of detail,
 realized with different radio medium modules. In this step, we use
 `IdealRadioMedium`, which is the simplest model. It implements a variation
 of unit disc radio, meaning that physical phenomena like signal attenuation
@@ -200,13 +200,15 @@ transmitted by the wlan interface.
 The next animation shows the communication between the hosts, using
 OMNeT++'s default "message sending" animation.
 
-<img src="step1_11.gif">
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step1_1.mp4" width="655" height="575"></video>
+@endhtmlonly
 
 When the simulation concludes at t=25s, the packet count meter indicates that
 around 2000 packets were sent. A packet with overhead is 1028 bytes, which means
 the transmission rate was around 660 kbps.
 
-<b>Number of packets received by host B: 2018</b>
+<b>Number of packets received by host B: 2017</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessA.ned
 
@@ -251,12 +253,11 @@ The visualization of signal propagation is enabled with the
 `displaySignals` parameter of `MediumCanvasVisualizer`. It displays
 transmissions as colored rings emanating from hosts. Since this is
 sufficient to represent radio signals visually, it is advisable to turn off
-message animations in the Tkenv/Qtenv preferences dialog. The `signalPropagationUpdateInterval`
-parameter tells the visualizer to periodically update the display when
-there's at least one propagating radio signal on the medium.
+message animations in the Tkenv/Qtenv preferences dialog.
 
 The visualization of recent successful physical layer transmissions is
-enabled with the `packetFilter` parameter of the `physicalLinkVisualizer` submodule.
+enabled with the `displayLinks` parameter of the `physicalLinkVisualizer` submodule.
+Additionally, its `packetFilter` parameter is set to only display packets whose names being with "UDPData".
 Matching successful transmissions are displayed with dotted dark yellow arrows that fade with time.
 When a packet is successfully received by the physical layer, the arrow between
 the transmitter and receiver hosts is created or reinforced. The arrows
@@ -274,10 +275,10 @@ Configuration:
 @section s2results Results
 
 The most notable change is the bubble animations representing radio
-signals. Each transmission starts with displaying a growing filled circle
-centered at the transmitter. The outer edge of the circle indicates the
+signals. Each transmission starts with displaying a growing colored disk
+centered at the transmitter. The outer edge of the disk indicates the
 propagation of the radio signal's first bit. When the transmission ends,
-the circle becomes a ring and the inner edge appears at the transmitter.
+the disk becomes a ring and the inner edge appears at the transmitter.
 The growing inner edge of the ring indicates the propagation of the radio
 signal's last bit. The reception starts when the outer edge reaches the
 receiver, and it finishes when the inner edge arrives.
@@ -302,26 +303,28 @@ reception is successfully completed, when the packet is passed up to the
 link layer. The arrow is displayed when the reception of the first packet
 at host B is over.
 
-<img src="step2_5.gif">
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step2_1.mp4" width="655" height="575"></video>
+@endhtmlonly
 
 Frame exchanges may also be visualized using the Sequence Chart tool in the
 OMNeT++ IDE. The following image was obtained by recording an event log
 (`.elog`) file from the simulation, opening it in the IDE, and tweaking the
 settings in the Sequence Chart tool.
 
-The transmission of packet UDPData-0 starts at around 15ms, and
-completes at around 23ms. The signal propagation takes a nonzero amount of
+The transmission of packet UDPData-0 starts at around 23ms, and
+completes at around 30ms. The signal propagation takes a nonzero amount of
 time, but it's such a small value compared to the transmission duration
 that it's not visible in this image. (The arrow signifying the beginning of
 the transmission appears to be vertical, one needs to zoom in along the
 time axis to see that in fact it is not. In a later step, we will see that
 it is possible to configure the Sequence Chart tool to represent time in a
-non-linear way.) The chart also indicates that UDPData-1 and UDPData-2
-are transmitted back-to-back, because there's no gap between them.
+non-linear way.) The chart also indicates that UDPData-0 and UDPData-1
+are transmitted back-to-back, because there's no gap between them. UDPData-2 and UDPData-3 are also transmitted back-to-back.
 
-<img src="wireless-step2-seq.png" width=900px>
+<img src="wireless-step2-seq3.png" width=900px>
 
-<b>Number of packets received by host B: 2018</b>
+<b>Number of packets received by host B: 2017</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessA.ned
 
@@ -345,7 +348,7 @@ routing and use the extra nodes as relays.
 
 @section s3model The model
 
-We need to add three more hosts. This could be done by copying end editing the
+We need to add three more hosts. This could be done by copying and editing the
 network used in the previous steps, but instead we extend `WirelessA` into
 `WirelessB` using the inheritance feature of NED:
 
@@ -378,7 +381,7 @@ Host B is in the transmission range of host R1, and R1 could potentially relay A
 but it drops them, because routing is not configured yet (it will be configured
 in a later step). Therefore no packets are received by host B.
 
-<img src="wireless-step3.png">
+<img src="wireless-step3-2.png">
 
 Host R1's MAC submodule logs indicate that it is discarding the received packets, as they are
 not addressed to it:
@@ -440,18 +443,18 @@ nodes that can forward them.)
 <b>Visualization</b>
 
 The `IntegratedCanvasVisualizer` we use as the `visualizer` submodule in
-this network contains a `routeVisualizer` module which is able to render
+this network contains a `networkRouteVisualizer` module which is able to render
 packet paths. This module displays paths where a packet has been recently
 sent between the network layers of the two end hosts. The path is displayed as
 a colored arrow that goes through the visited hosts. The path continually
 fades and then it disappears after a certain amount of time unless it is
 reinforced by another packet.
 
-The route visualizer is activated by specifying in its `packetFilter`
-parameter which packets it should take into account. By default it is set
-to the empty string, meaning *none*. Setting `*` would mean all packets.
+The network route visualizer is activated by setting its `displayRoutes` parameter to `true`. Its `packetFilter`
+parameter specifies which packets it should take into account. By default it is set
+to `*`, which means all packets.
 Our UDP application generates packets with the name `UDPData-0`,
-`UDPData-1`, etc, so we set the name filter to `UDPData*`
+`UDPData-1`, etc, so we set the packet filter to `UDPData*`
 in order to filter out other types of packets that will appear in later
 steps.
 
@@ -493,13 +496,20 @@ but they discard the packets at the link layer because it is not addressed to
 them.
 
 <img src="step4_8.gif">
+<!--TODO: remove-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step4-4-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed 0.72, fadeOutMode animationTime, fadeOutTime 1.5s, normal run until event #184-->
+<!--crop green background: top bottom left right 8 5 8 5 width 655-->
+@endhtmlonly
 
 Note that the number of packets received by host B has dropped to about half
 of what we saw in step 2. This is so because R1's NIC operates in half-duplex
 mode (it can only transmit or receive at any time, but not both), so it can
 only relay packets at half the rate that host A emits.
 
-<b>Number of packets received by host B: 1107</b>
+<b>Number of packets received by host B: 1125</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessB.ned
 
@@ -560,15 +570,15 @@ Most of the time, A and R1 are transmitting simultaneously, causing two signals 
 present at the receiver of host B, which results in collisions. When the gap between host A's
 two successive transmissions is large enough, R1 can transmit a packet without collision at B.
 
-When the first packet (UDPData-0) of host A arrives at host R1, it gets routed towards
+When the packet UDPData-54 of host A arrives at host R1, it gets routed towards
 host B, so host R1 immediately starts transmitting it. Unfortunately at the same
-time, host A already transmits the second packet (UDPData-1) back-to-back with the
-first one. Thus, the reception of the first packet from host R1 at host B fails due
-to a collision. The colliding packets are the second packet (UDPData-1) of host A and
-the first packet (UDPData-0) of host R1. This is indicated by the lack of appearance
+time, host A already transmits the next packet (UDPData-55) back-to-back with the
+previous one. Thus, the reception of UDPData-54 from host R1 at host B fails due
+to a collision. The colliding packets are the UDPData-55 from host A and
+UDPData-54 from host R1. This is indicated by the lack of appearance
 of a blue polyline arrow between host A and host B.
 
-Luckily, the third packet (UDPData-2) of host A is not part of a back-to-back transmission.
+Luckily, the next packet (UDPData-56) of host A is not part of a back-to-back transmission.
 When it gets routed and retransmitted at host R1, there's no other transmission from host A
 to collide with at host B. Interestingly, the first bit of the transmission of host R1 is just
 after the last bit of the transmission of host A. This happens because the processing, including
@@ -578,6 +588,12 @@ indicated by the appearance of the blue polyline arrow between host A and host B
 This is shown in the animation below:
 
 <img src="step5_6_4.gif">
+<!--TODO: delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step5-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed 0.72, from #1418-->
+@endhtmlonly
 
 
 As we expected, the number of packets received by host B is low. The following
@@ -604,7 +620,7 @@ the events visible and discernible on the chart.
 To minimize interference, some kind of media access protocol is needed to govern
 which host can transmit and when.
 
-<b>Number of packets received by host B: 197</b>
+<b>Number of packets received by host B: 183</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessB.ned
 
@@ -673,11 +689,17 @@ retransmitted.
 
 @section s6results Results
 
-The effect of CSMA can be seen in the animation below. The first packet is sent by host A,
-and after waiting for a backoff period, host R1 retransmits the first packet. This time,
-host B receives it correctly, because only host R1 is transmitting.
+The effect of CSMA can be seen in the animation below. The first two packets are sent by host A,
+and after waiting for a backoff period, host R1 retransmits both packets. This time,
+host B receives them correctly, because only host R1 is transmitting.
 
 <img src="step6_7.gif">
+<!--TODO: delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step6-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed 0.72 -->
+@endhtmlonly
 
 The following sequence chart displays that after receiving the UDPData-2 packet,
 host R1 transmits it after the backoff period timer has expired.
@@ -686,9 +708,9 @@ host R1 transmits it after the backoff period timer has expired.
 
 It is already apparent by watching the simulation that there are much fewer
 collisions this time. The numbers also confirm that CSMA has worked: nearly
-seven times as many packets are received by host B than in the previous step.
+eight times as many packets are received by host B than in the previous step.
 
-<b>Number of packets received by host B: 1358</b>
+<b>Number of packets received by host B: 1374</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessB.ned
 
@@ -752,6 +774,12 @@ below depicts a packet transmission from host R1, and the corresponding ACK
 from host B.
 
 <img src="step7_12.gif">
+<!--TODO: delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step7-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed 0.65, from #767-->
+@endhtmlonly
 
 The UDPData + ACK sequences can be seen in the sequence chart below:
 
@@ -860,7 +888,7 @@ the storage.
 
 The energy storage module contains an `energyBalance` watched variable that
 can be used to track energy consumption. Also, energy consumption over time
-can be obtained by plotting the `residualCapacity` statistic.
+can be obtained by plotting the `residualEnergyCapacity` statistic.
 
 <b>Visualization</b>
 
@@ -936,7 +964,7 @@ consequence of packet drops, we expect that the sequence numbers of packets
 received by host B will no longer be continuous.
 
 We also update the visualization settings, and turn on an option that will
-cause mobile nodes to leave a trail as they move.
+cause mobile nodes to leave a trail as they move. We also enable a visualizer option that will display the velocity vector of the moving nodes.
 
 The configuration:
 
@@ -959,13 +987,19 @@ communication paths fades away, because there are no more packets to
 reinforce it.
 
 <img src="step9_2.gif">
+<!--TODO: delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step9-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed 2, animation speed 1, fadeOutMode animationTime, fadeOutTime 1s-->
+@endhtmlonly
 
 As mentioned before, a communication path could be established between host
 A and B by routing traffic through hosts R2 and R3. To reconfigure routes
 according to the changing topology of the network, an ad-hoc routing
 protocol is required.
 
-<b>Number of packets received by host B: 559</b>
+<b>Number of packets received by host B: 547</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessB.ned
 
@@ -1036,6 +1070,15 @@ intermediate hosts to relay host A's packets to host B. This can be seen in the
 animation below.
 
 <img src="step10_2.gif">
+<!--TODO remove-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step10.mp4" width="655" height="575"></video>
+<!--internal video recording, animation time = playback speed = 1, fadeOutMode animationTime, 1s -> 26 sec video, blue arrows only
+if playback speed = 2 -> 13 sec video, blue and red arrows
+not sure which one is better
+-->
+@endhtmlonly
 
 AODV detects when a route is no longer able to pass packets. When the link is
 broken, there are no ACKs arriving at host A, so its AODV submodule triggers the
@@ -1055,7 +1098,7 @@ when host R1 gets out of communication range of host A. Although the AODV
 protocol adds some overhead, in this simulation it is not significant, the
 number received packets still increases substantially.
 
-<b>Number of packets received by host B: 994</b>
+<b>Number of packets received by host B: 956</b>
 
 Sources: @ref omnetpp.ini, @ref WirelessB.ned
 
@@ -1077,7 +1120,7 @@ In the real world, objects like walls, trees, buildings and hills act as
 obstacles to radio signal propagation. They absorb and reflect radio waves,
 reducing signal quality and decreasing the chance of successful reception.
 
-In this step, we add a concrete wall to the model that sits between host A
+In this step, we add a concrete wall to the model that sits between hosts `A`
 and `R1`, and see what happens. Since our model still uses the ideal radio
 and ideal wireless medium models that do not model physical phenomena,
 obstacle modeling will be very simple: all obstacles completely absorb
@@ -1148,6 +1191,12 @@ this route until host R1 moves out of communication range. After that, the
 A-R2-R3-B route is used, as seen in the previous steps.
 
 <img src="step11_2.gif">
+<!--TODO: delete -->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step11-1.mp4" width="655" height="575"></video>
+<!--internal video recording, animation and playback speed 1, fadeOut animation time 1.5s-->
+@endhtmlonly
 
 <b>Number of packets received by host B: 784</b>
 
@@ -1245,6 +1294,12 @@ There is no distinct distance where receptions fail, as in the case of
 `IdealRadio`.
 
 <img src="step12_1.gif">
+<!--TODO: delete-->
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step12-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed animation speed 1-->
+@endhtmlonly
 
 In host A, the MAC receives the packet UDPData-408 from the radio. The MAC drops
 the packet because of bit errors, this can be seen in the following log:
@@ -1357,6 +1412,11 @@ happens, host A's transmission is routed through host R2, which is again just
 two hops.
 
 <img src="step14_2.gif">
+
+@htmlonly
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step14-1.mp4" width="655" height="575"></video>
+<!--internal video recording, playback speed animation speed 1-->
+@endhtmlonly
 
 <b>Number of packets received by host B: 1045</b>
 
