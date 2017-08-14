@@ -21,6 +21,7 @@
 
 - name: Configurator Tutorial
   tutorial: Configurator
+  hidden: true
   submenu:
     - page: configurator/doc/index.md
       name: Introduction
@@ -39,6 +40,7 @@
 
 - name: Visualization Tutorial
   tutorial: Visualization
+  hidden: ture
   submenu:
     - page: visualization/doc/index.md
       name: Introduction

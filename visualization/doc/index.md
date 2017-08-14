@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Visualization Tutorial for the INET Framework
+title: Visualization Tutorial
 tutorial: Visualization
+hidden: true
 ---
 
 In this tutorial we show you, how to use the visualization module in the INET Framework.

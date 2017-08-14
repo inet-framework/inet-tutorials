@@ -75,7 +75,16 @@
 
             {% for item in site.data.menu %}
               {% if item.submenu %}
-                <li class="dropdown{% if page.underMenu == item.name %} active{% assign activeSubmenu = item.submenu %}{% endif %}">
+                {% capture linkstyle %}
+                  {% if item.hidden %}
+                    {% if site.showallpages != true or site.github %}
+                      style="display: none;"
+                    {% else %}
+                      style="text-decoration: line-through;"
+                    {% endif %}
+                  {% endif %}
+                {% endcapture %}
+                <li {{linkstyle}} class="dropdown{% if page.underMenu == item.name %} active{% assign activeSubmenu = item.submenu %}{% endif %}">
                   <a class="dropdown-toggle" href="{{ item.link }}">{{ item.name }}</a>
                   <ul class="dropdown-menu">
                     {% for submenuitem in item.submenu %}
