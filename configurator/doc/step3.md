@@ -12,7 +12,7 @@ This step demonstrates how to assign a range of IP addresses to subnets.
 
 ## The model
 
-This step uses the <i>ConfiguratorA</i> network, as in the previous two steps.
+This step uses the `ConfiguratorA` network, as in the previous two steps.
 One switch and the connected hosts as a group will be on the same subnet, and there are three such groups in the network.
 
 
@@ -57,4 +57,4 @@ The assigned addresses are shown on the following image.
 The addresses are assigned as intended.
 This is useful because it is easy to recognize which group a node belongs to just by looking at its address (e.g. in the logs.)
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>

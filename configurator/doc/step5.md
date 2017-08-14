@@ -9,8 +9,8 @@ tutorial: Configurator
 The automatic configuration can configure routes properly, but sometimes the user might want to manually override some of the routes.
 This step consists of two parts:
 
-- In the <strong>A</strong> part we will override the routes to just one specific host
-- In the <strong>B</strong> part we will override routes to a set of hosts
+- In the **A** part we will override the routes to just one specific host
+- In the **B** part we will override routes to a set of hosts
 
 ## Part A - Overriding routes to a specific host
 
@@ -36,12 +36,12 @@ towards `router2`. The XML configuration in step5a.xml is the following:
 
 <p><pre class="snippet" src="../step5a.xml"></pre></p>
 
-The <route> element describes a routing table entry for one or more nodes in the network.
+The \<route\> element describes a routing table entry for one or more nodes in the network.
 The `hosts` optional selector attribute specifies which hosts' routing tables should contain the entry.
 There are 5 additional optional parameter attributes. These are the same as in real life routing tables:
 address, netmask, gateway, interface, metric.
 
-The <route> element in this XML configuration adds the following rule to `router0's` routing table:
+The \<route\> element in this XML configuration adds the following rule to `router0's` routing table:
 Packets with the destination of 10.0.0.35/32 should use the interface 'eth1' and the gateway 10.0.0.18 (router2.)
 
 ### Results
@@ -95,9 +95,9 @@ The XML configuration in step5b.xml is as follows:
 
 <p><pre class="snippet" src="../step5b.xml"></pre></p>
 
-The <route> element specifies a routing table entry for `router0`. The destination is 10.0.0.32 with netmask 255.255.255.248,
+The \<route\> element specifies a routing table entry for `router0`. The destination is 10.0.0.32 with netmask 255.255.255.248,
 which designates the addresses of hosts 6-8. The gateway is `router1's` address, the interface is the one connected towards
-`router1` (eth1). This rule is added to `router0's` routing table <strong>in addition</strong>
+`router1` (eth1). This rule is added to `router0's` routing table **in addition**
 to the rule added automatically by the configurator. They match the same packets, but the parameters are different (see at the result section
 below.) The manually added routes come before the automatic ones in routing tables, thus the manual ones take precedence.
 
@@ -133,4 +133,4 @@ to Part A. Routes to `host7` are visualized.
 
 This time both packets outbound to `hosts 6 and 7` take the diverted route, the replies come back on the original route.
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>

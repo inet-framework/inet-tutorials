@@ -19,7 +19,7 @@ and the configurator's routing table optimization features are turned off. The s
 
 ### Configuration
 
-All three parts in this step use the `ConfiguratorB` network defined in ConfiguratorB.ned. The network looks like this:
+All three parts in this step use the `ConfiguratorB` network defined in <a srcfile="configurator/ConfiguratorB.ned"/>. The network looks like this:
 
 <img class="screen" src="step7network.png" width="850px">
 
@@ -265,4 +265,4 @@ The difference between the configuration for this part and the previous one is t
 table of the backbone router contains six entries instead of 10 in the previous part. The other nodes' routing tables remained the same. The difference is not drastic because the network is small. However, using hierarchical address assignment in a larger network would make a significant
 difference in routing table size.
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorB.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorB.ned"/>

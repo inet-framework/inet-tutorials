@@ -19,7 +19,7 @@ config file can be used as the XML configuration for subsequent simulation runs.
 
 ### Configuration
 
-Both parts in this step use the `ConfiguratorA` network defined in ConfiguratorA.ned:
+Both parts in this step use the `ConfiguratorA` network defined in <a srcfile="configurator/ConfiguratorA.ned"/>:
 
 <img class="screen" src="step4network.png">
 
@@ -48,7 +48,7 @@ The configuration for this part in omnetpp.ini is the following:
 <p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step11B" until="####"></pre></p>
 
 The modified config is used as the XML configuration. Since the configuration specifies all routes, `addStaticRoutes` needs to be set to
-<strong>false</strong>, so the configurator doesn't add automatic static routes. A host in each LAN pings another host in the adjacent LAN in the counter-clockwise direction.
+**false**, so the configurator doesn't add automatic static routes. A host in each LAN pings another host in the adjacent LAN in the counter-clockwise direction.
 
 The routes in all three routers' routing tables are modified. Routes that would send packets the wrong way (i.e. not counter-clockwise in the triangle) are
 redirected to the other interface. In essence, all routers send out packets through their interface to the right (expect for packets destined to
@@ -71,4 +71,4 @@ The ping exchanges highlight the modified routes on the following animation:
 
 The packets travel only counter-clockwise in the triangle of the three routers.
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>

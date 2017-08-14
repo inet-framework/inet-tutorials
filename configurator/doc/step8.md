@@ -7,21 +7,21 @@ tutorial: Configurator
 ## Goals
 
 This step demonstrates routing table configuration in a mixed wired/wireless network. This step consists of two parts:
-- **Part A**: Determining members of wireless networks with the <wireless> element
+- **Part A**: Determining members of wireless networks with the \<wireless\> element
 - **Part B**: Determining members of wireless networks by SSID
 
-## Part A: Using the <wireless> element
+## Part A: Using the \<wireless\> element
 
 The configurator assumes that interfaces of wireless nodes in the same wireless network can reach each other directly.
 It can determine which nodes belong to a wireless network in two ways:
 - It looks at the `default_ssid` parameter in nodes' agent submodule. Nodes with the same SSID are assumed to be in the same wireless network.
-- Members of wireless networks can be specified by the <wireless> element in the XML configuration. In the <wireless> element, the <strong>hosts</strong> and <strong>interfaces</strong> selector attributes can be used to specify members.
+- Members of wireless networks can be specified by the \<wireless\> element in the XML configuration. In the \<wireless\> element, the **hosts** and **interfaces** selector attributes can be used to specify members.
 
 Note that nodes need to use the same radio medium module to be in the same wireless network.
 
 ### Configuration
 
-This step uses the `ConfiguratorC` network defined in ConfiguratorC.ned. The network is displayed on the following image.
+This step uses the `ConfiguratorC` network defined in <a srcfile="configurator/ConfiguratorC.ned"/>. The network is displayed on the following image.
 
 <img class="screen" src="step8network.png" width="850px">
 
@@ -65,7 +65,7 @@ can receive them correctly (i.e. nodes in the same LAN).
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step8A_1_cropped.mp4" width="850px" height="280"></video></p>
 <!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
 
-This is how the routes would look like if the XML configuration didn't contain the <wireless> elements:
+This is how the routes would look like if the XML configuration didn't contain the \<wireless\> elements:
 
 <center><a href="step8fullmesh_2.png" data-lightbox="step8fullmesh_2"><img class="screen" src="step8fullmesh_2.png" width="850px"></a></center>
 
@@ -86,7 +86,7 @@ The configuration for this part extends Part A. The configuration in omnetpp.ini
 
 <p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step8B" until="####"></pre></p>
 
-The XML configuration in step8b.xml (displayed below) is the same as the XML configuration for Part A, except there are no <wireless> elements that defined wireless networks.
+The XML configuration in step8b.xml (displayed below) is the same as the XML configuration for Part A, except there are no \<wireless\> elements that defined wireless networks.
 They are not needed because different SSIDs are configured for the members of the two wireless LANs.
 
 <p><pre class="snippet" src="../step8b.xml"></pre></p>
@@ -95,4 +95,4 @@ They are not needed because different SSIDs are configured for the members of th
 
 The results are the same as in the previous part. The two wireless LANs are considered to be different wireless networks.
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorC.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>

@@ -19,7 +19,7 @@ When they can't, the error rate metric can be used for automatic route configura
 
 ### Configuration
 
-This step uses the `ConfiguratorD` network, defined in ConfiguratorD.ned. The network looks like this:
+This step uses the `ConfiguratorD` network, defined in <a srcfile="configurator/ConfiguratorD.ned"/>. The network looks like this:
 
 <img class="screen" src="step10network.png" width="850px">
 
@@ -95,4 +95,4 @@ AODV is a reactive protocol, so unused routes expire after a while. This happens
 To record the animation, the simulation was run in fast mode, thus routes appear instantly. It takes a few seconds simulation time for the unused
 routes to expire.
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorD.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorD.ned"/>

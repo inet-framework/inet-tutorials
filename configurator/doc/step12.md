@@ -11,7 +11,7 @@ using the hop count and error rate metrics in a mixed wired/wireless network.
 
 ## The model
 
-This step uses the `ConfiguratorE` network, defined in ConfiguratorE.ned. The network looks like this:
+This step uses the `ConfiguratorE` network, defined in <a srcfile="configurator/ConfiguratorE.ned"/>. The network looks like this:
 
 <img class="screen" src="step12network.png">
 
@@ -47,8 +47,8 @@ To have routes from every node to every other node, all nodes must be covered by
 The XML configuration contains two autoroute elements. Routing tables of hosts in `area1` are configured according to the error rate metric,
 while all others according to hop count.
 
-The global `addStaticRoutes, addDefaultRoutes and addSubnetRoutes` parameters can be specified per interface, with the <interface> element.
-These can be set with the <strong>add-static-route</strong>, <strong>add-default-route</strong> and <strong>add-subnet-route</strong> bool parameters.
+The global `addStaticRoutes, addDefaultRoutes and addSubnetRoutes` parameters can be specified per interface, with the \<interface\> element.
+These can be set with the **add-static-route**, **add-default-route** and **add-subnet-route** bool parameters.
 They are true by default. The global and per-interface settings are in a logical AND relationship, thus both have to be true to take effect.
 
 The default route assumes there is one gateway,
@@ -99,4 +99,4 @@ The following video shows `area1host1` pinging `area2host1`:
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video></p>
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorE.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorE.ned"/>

@@ -30,7 +30,7 @@ will be configured automatically by the configurator. The configurator's various
 
 ### The configuration
 
-The configuration for this step uses the `ConfiguratorA` network, defined in <i>ConfiguratorA.ned</i>.
+The configuration for this step uses the `ConfiguratorA` network, defined in <a srcfile="configurator/ConfiguratorA.ned"/>.
 The network looks like this:
 
 <img class="screen" src="step1network.png">
@@ -85,4 +85,4 @@ Note that the configurator assigned a 29 bit netmask to the hosts and the router
 to the other router interfaces. Three hosts and the router's interface towards a switch as a group has four interfaces, thus a 30 bit netmask/2 bit host identifier
 would have sufficed. However, the configurator doesn't assign addresses where the host identifier (part of the address not covered by the subnet mask) is all-zeros or all-ones (indicating subnet zero and the subnet broadcast address.)
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>

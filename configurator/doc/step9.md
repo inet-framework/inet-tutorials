@@ -11,7 +11,7 @@ In this step, some wired and wireless LANs' addresses are left unspecified by th
 
 ## The model
 
-This step uses the `ConfiguratorC` network, defined in ConfiguratorC.ned.
+This step uses the `ConfiguratorC` network, defined in <a srcfile="configurator/ConfiguratorC.ned"/>.
 
 <img class="screen" src="step8network.png" width="850px">
 
@@ -97,4 +97,4 @@ Destination      Netmask          Gateway          Iface            Metric
 
 TODO: when the destination host gets its IP address, the routes appear
 
-Sources: <a srcfile="../omnetpp.ini"/>, <a srcfile="../ConfiguratorC.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>
