@@ -63,7 +63,7 @@ also used `IdealRadioMedium`.)
 models, path loss models, obstacle loss models, analog models and
 background noise models. Here we make use of the fact that the default
 background noise model is homogeneous isotropic white noise, and set up the
-noise level to a nonzero value (-110dBm).
+noise level to a nonzero value (-90dBm).
 
 Configuration:
 

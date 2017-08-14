@@ -47,13 +47,13 @@ operation. With the appropriate parameters, it can approximate basic
 - timing: interval to wait before transmitting ACK frame (SIFS) and before data
   frames in addition to the backoff slots (DIFS)
 
-For now, we turn off acknowledgement (sending of ACK packets) so we can see
+For now, we do not use an acknowledgement (sending of ACK packets) so we can see
 purely the effect of "listen before talk" and waiting a random backoff
-period before each transmission. In the absence of ACKs, the MAC has to
-assume that all its transmissions are successful, so no frame is ever
-retransmitted.
+period before each transmission (this is the default behavior for the MAC).
+In the absence of ACKs, the MAC has to assume that all its transmissions are successful,
+so no frame is ever retransmitted.
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless06\]" until="####"></pre></p>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless06\]" until="#---"></pre></p>
 
 ## Results
 
