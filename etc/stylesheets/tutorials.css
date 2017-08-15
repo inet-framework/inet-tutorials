@@ -31,14 +31,28 @@ var {
 	font-style: normal;
 }
 
-video, .screen {
-	display: block;
-	margin: auto;
-}
 
 .screen {
-	padding: 1em 0em 1em 0em;
+	display: block;
+	margin: auto;
 	max-width: 100%;
+	padding: 1em 0em 1em 0em;
+}
+
+
+div.stretchy-video-wrapper {
+	width: 100%;
+	position: relative;
+}
+
+div.stretchy-video-wrapper > video {
+	max-width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .border {
@@ -74,3 +88,11 @@ code {
 	color: #033c73;
 	font-family: monospace;
 }
+
+@media (min-width: 767px) {
+	.scroll-menu {
+		max-height: calc(90vh - 100px);
+		overflow: auto;
+	}
+}
+

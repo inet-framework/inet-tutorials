@@ -40,7 +40,7 @@
 
 - name: Visualization Tutorial
   tutorial: Visualization
-  hidden: ture
+  hidden: true
   submenu:
     - page: visualization/doc/index.md
       name: Introduction

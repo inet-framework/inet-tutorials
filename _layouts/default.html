@@ -86,8 +86,13 @@
                   {% endif %}
                 {% endcapture %}
                 <li {{linkstyle}} class="dropdown{% if page.underMenu == item.name %} active{% assign activeSubmenu = item.submenu %}{% endif %}">
-                  <a class="dropdown-toggle" href="{{ item.link }}">{{ item.name }}</a>
-                  <ul class="dropdown-menu">
+                  {% if item.link %}
+                    <a class="dropdown-toggle" href="{{ item.link }}">{{ item.name }}</a>
+                  {% else %}
+                    <a class="dropdown-toggle">{{ item.name }}</a>
+                  {% endif %}
+                  
+                  <ul class="dropdown-menu scroll-menu">
                     {% for submenuitem in item.submenu %}
                       {% if submenuitem.separator %}
                         <li role="presentation" class="divider"></li>
@@ -106,7 +111,7 @@
                 </li>
               {% else %}
                 <li{% if page.underMenu == item.name %} class="active"{% endif %}>
-                   <a href="{{ item.link }}">{{ item.name }}</a>
+                  <a href="{{ item.link }}">{{ item.name }}</a>
                 </li>
               {% endif %}
             {% endfor %}
@@ -147,6 +152,7 @@
     <script src="{{site.baseurl}}/etc/javascripts/bootstrap.min.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/cerulean.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/quoting.js"></script>
+    <script src="{{site.baseurl}}/etc/javascripts/videowrapper.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/rainbow-custom.min.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/rainbow-ned.js"></script>
     <script src="{{site.baseurl}}/etc/javascripts/rainbow-ini.js"></script>

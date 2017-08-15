@@ -15,9 +15,11 @@ pre {
 }
 .rainbow .line .line-number {
   text-align: right;
-  background-color: #ebeadf;
+  background-color: #eeeeee;
   padding-left: 0.8em;
   padding-right: 0.8em;
+  font-family: courier new;
+  font-weight: bold;
 }
 .rainbow .line .line-number:before {
   content: attr(data-line-number);
