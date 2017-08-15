@@ -69,3 +69,8 @@ div.fragment
 	border: 0px; 
 	margin-bottom: 0px
 }
+
+code {
+	color: #033c73;
+	font-family: monospace;
+}
