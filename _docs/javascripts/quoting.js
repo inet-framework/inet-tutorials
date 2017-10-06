@@ -8,24 +8,47 @@
 // Returns an object/dictionary/map with two values:
 //   startLine - the line number where the returned snippet begins in the whole text (starting from 1 as usual...)
 //   snippet   - the actual matched snippet text
-var getLines = function(text, from, until) {
-    let startLine = 1;
-    if (from == null && until == null) {
-        return { startLine: 1, snippet: text };
-    } else if (from == null) {
-        re = new RegExp("()(^[\\s\\S]*?)\n^.*" + until, 'm'); //TODO alert on regex syntax error!
-    } else if (until == null) {
-        re = new RegExp("([\\s\\S]*?)(^.*" + from + "[\\s\\S]*)", 'm'); //TODO alert on regex syntax error!
-    } else {
-        re = new RegExp("([\\s\\S]*?)(^.*" + from + "[\\s\\S]*?)\n^.*" + until, 'm'); //TODO alert on regex syntax error!
+var getLines = function(text, after, from, until, upto, comment) {
+
+    let startPattern = from == null ? after : from;
+    let isStartInclusive = from != null;
+
+    let endPattern = until == null ? upto : until;
+    let isEndInclusive = upto != null;
+
+    if (startPattern == null) {
+        startPattern = "";
+        isStartInclusive = true;
     }
-    matches = text.match(re);
+
+    if (endPattern == null) {
+        endPattern = "[\\s\\S]*";
+        isEndInclusive = true;
+    }
+
+    let re = new RegExp("([\\s\\S]*?)(^.*" + startPattern + ".*$\\n)([\\s\\S]*?)(^.*" + endPattern + ".*$)", "m");
+
+    let matches = text.match(re);
 
     // Group 1 is the "preface" - everything before the snippet.
-    // Group 2 is the snippet itself.
-    let snippet = matches ? matches[2] : "!!! No matching lines !!!";
-    let preface = matches ? matches[1] : "";
+    // Group 2 is the lines enclosing the start marker
+    // Group 3 is the snippet "body"
+    // Group 4 is the lines enclosing the end marker
+    if (matches == null)
+        return { startLine: 0, snippet: "!!! No matching lines !!!" };
+
+    let preface = isStartInclusive ? matches[1] + matches[2] : matches[1];
+    let snippet = (isStartInclusive ? matches[2] : "")
+                    + matches[3]
+                    + (isEndInclusive ? matches[4] : "");
+
     startLine = preface.split('\n').length;
+
+    // trimming trailing whitespace (empty lines)
+    snippet = snippet.replace(/\s+$/, '');
+
+    if (comment)
+        snippet = snippet.replace(new RegExp("[\\s]*" + comment + ".*$", "mg"), '\n');
 
     return { startLine: startLine, snippet: snippet };
 }
@@ -34,11 +57,15 @@ var fileLoaded = function(file, data) {
    pres = $('pre[src="' + file + '"]');
    $.each(pres, function(i,pre) {
       excerpt = getLines(data,
+                         pre.attributes.after ? pre.attributes.after.value : null,
                          pre.attributes.from ? pre.attributes.from.value : null,
-                         pre.attributes.until ? pre.attributes.until.value : null);
+                         pre.attributes.until ? pre.attributes.until.value : null,
+                         pre.attributes.upto ? pre.attributes.upto.value : null,
+                         pre.attributes.comment ? pre.attributes.comment.value : null);
 
-      var language = file.includes(".ned") ? "ned" : file.includes(".xml") ? "xml"
-          : file.includes(".ini") ? "ini" : file.includes(".py") ? "python" : "generic";
+      var language = file.endsWith(".ned") ? "ned" : file.endsWith(".xml") ? "xml"
+          : file.endsWith(".ini") ? "ini" : file.endsWith(".py") ? "python"
+          : file.endsWith("Dockerfile") ? "dockerfile" : "generic";
 
       // this new element will hold some attributes to aid Rainbow and Rainbow.linenumbers, as well as the snippet content.
       var codeElement = document.createElement('code');
