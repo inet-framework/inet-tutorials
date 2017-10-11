@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd $(dirname $0)
-docker run --rm -it -p 4000:4000 -v $(pwd):/site madduci/docker-github-pages serve --watch --host 0.0.0.0  --destination=/tmp/_site
+docker run --rm -it -p 4001:4001 -v $(pwd):/site madduci/docker-github-pages serve --watch --host 0.0.0.0  --destination=/tmp/_site --port 4001 --incremental

@@ -19,9 +19,8 @@
     - page: wireless/doc/step14.md
     - page: wireless/doc/conclusion.md
 
-- name: Configurator Tutorial
+- name: IPv4 Configurator Tutorial
   tutorial: Configurator
-  hidden: true
   submenu:
     - page: configurator/doc/index.md
       name: Introduction
@@ -37,6 +36,7 @@
     - page: configurator/doc/step10.md
     - page: configurator/doc/step11.md
     - page: configurator/doc/step12.md
+    - page: configurator/doc/conclusion.md
 
 - name: Visualization Tutorial
   tutorial: Visualization

@@ -5,15 +5,24 @@
 // right away, otherwise an event handler for the onmetadataloaded
 // event is added, and the wrapping is done once that event fires.
 
-const controlsHeight = 32; // in pixels
+const controlsHeight = 39; // in pixels
 
-function wrapVideoElement() {
-  let styleString =  "margin-top: -" + controlsHeight + "px; "
-    + "padding-bottom: calc(" + this.videoHeight + " / " + this.videoWidth + " * 100% + " + (2 * controlsHeight) + "px);";
+function wrapVideoElement(element) {
 
-  // console.log("wrapping in event handler with size " + this.videoWidth + "x" + this.videoHeight);
+  let videoWidthPercent = 95; // percent if the viewportr, does not stretch, only makes smaller
 
-  $(this).wrap("<div class='stretchy-video-wrapper' style='" + styleString + "'></div>");
+  let styleString =  "margin-top: -" + controlsHeight + "px; width: 100%;"
+    + "padding-bottom: calc(" + element.videoHeight + " / " + element.videoWidth + " * 100% + " + (2 * controlsHeight) + "px);";
+
+  // console.log("wrapping with size " + element.videoWidth + "x" + element.videoHeight);
+
+  // this div is to enforce a video size with a fixed aspect ratio, and to make the controls appear below the video - not covering it
+  $(element).wrap("<div class='stretchy-video-wrapper' style='" + styleString + "'></div>");
+
+  // this div is to prevent displaying the video in a larger size than it really is, and to constrain it to remain in the viewport
+  $(element).parent().wrap("<div style='margin:auto; overflow:hidden; max-width:" + element.videoWidth + "px; width:" + videoWidthPercent + "%;'></div>");
+
+  element.play();
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -21,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $("video").each(function() { // TODO filter for a special class?
     if (this.videoWidth > 0 && this.videoHeight > 0) {
       // console.log("could wrap right away, with size " + this.videoWidth + "x" + this.videoHeight);
-      wrapVideoElement(); // 'this' is the video element
+      wrapVideoElement(this); // 'this' is the video element
     } else {
       // console.log('added event handler to wrap');
-      this.onloadedmetadata = wrapVideoElement;
+      this.onloadedmetadata = function(event) { wrapVideoElement(event.target); };
     }
   });
-  
+
 });

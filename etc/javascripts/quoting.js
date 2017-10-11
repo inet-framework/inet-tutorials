@@ -57,7 +57,8 @@ var fileLoaded = function(file, data) {
 document.addEventListener("DOMContentLoaded", function (event) {
    pres = $('pre[src]');
    files = new Set();
-   $.each(pres, function(i,pre) {files.add(pre.attributes.src.value); });
+   $.each(pres, function(i,pre) {pre.textContent="Loading...\n"; files.add(pre.attributes.src.value); });
+
 
    files.forEach(function(file) {
       jQuery.ajax({url: file,
