@@ -124,7 +124,7 @@ an optional out-of-band acknowledgement mechanism which we turn off here.
 
 The configuration:
 
-<pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless01\]" until="#---"></pre>
+<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless01\]" until="#---"></pre></p>
 
 ## Results
 
@@ -141,7 +141,7 @@ the simulation. One can see a UDP packet being sent down from the
 `udpApp` submodule, traversing the intermediate protocol layers, and being
 transmitted by the wlan interface.
 
-<img class="screen" src="step1_10.gif">
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step1_10.mp4" width="396" height="462"></video></p>
 
 The next animation shows the communication between the hosts, using
 OMNeT++'s default "message sending" animation.

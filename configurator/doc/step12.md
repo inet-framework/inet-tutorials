@@ -6,27 +6,31 @@ tutorial: Configurator
 
 ## Goals
 
-Sometimes it is best to configure different parts of a network according to different metrics. This step demonstrates
-using the hop count and error rate metrics in a mixed wired/wireless network.
+Sometimes it is best to configure different parts of a network according to different metrics.
+This step demonstrates using the hop count and error rate metrics in a mixed wired/wireless network.
 
 ## The model
 
-This step uses the `ConfiguratorE` network, defined in <a srcfile="configurator/ConfiguratorE.ned"/>. The network looks like this:
+This step uses the `ConfiguratorE` network, defined in <a srcfile="configurator/ConfiguratorE.ned"/>.
+The network looks like this:
 
 <img class="screen" src="step12network.png">
 
-The core of the network is composed of three routers connected to each other, each belonging to an area. There are three areas, each containing a number of hosts,
-connected to the area router. 
-- Area1 is composed of three `WirelessHosts`, one of them
-is connected to the router with a wired connection. 
-- Area2 has an `AccessPoint`, and three `WirelessHosts`. 
-- Area3 has three `StandardHosts` connected to the
-router through a switch.
+The core of the network is composed of three routers connected to each other,
+each belonging to an area. There are three areas, each containing a number of hosts,
+connected to the area router.
 
-Since there is no access point in `area1`, the hosts create an ad-hoc wireless network. They connect to the rest of the network through `area1host3`,
-which has a wired connection to the router.
-However, `area1host3` is not in the communication range of `area1host1` (illustrated on the image below.) Thus `area1host2` needs configured to forward
-`area1host1's` packets to `area1host3`. The error rate metric, rather than hop count, is best suited to configure routes in this LAN. Routes in the rest of the network
+- Area1 is composed of three `WirelessHosts`, one of which is connected to the router 
+  with a wired connection.
+- Area2 has an `AccessPoint` and three `WirelessHosts`.
+- Area3 has three `StandardHosts` connected to the router via a switch.
+
+There is no access point in area 1, the hosts form an ad-hoc wireless network.
+They connect to the rest of the network through `area1host3`, which has a
+wired connection to the router. However, `area1host3` is not in the communication range
+of `area1host1` (illustrated on the image below.) Thus, `area1host2` needs to be configured to forward
+`area1host1`'s packets to `area1host3`. The error rate metric, rather than hop count,
+is best suited to configure routes in this LAN. Routes in the rest of the network
 can be configured properly based on the hop count metric.
 
 <img class="screen" src="step12ranges.png">
@@ -35,7 +39,10 @@ The configuration for this step in omnetpp.ini is the following:
 
 <p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step12" until="####"></pre></p>
 
-- For hosts in `area1` to operate in ad-hoc mode, IP forwarding is turned on, and their management modules are set to ad-hoc management.
+Explanation:
+
+- For hosts in area 1 to operate in ad-hoc mode, IP forwarding is turned on,
+  and their management modules are set to ad-hoc management.
 - `area1host1` is configured to ping `area2host1`, which is on the other side of the network.
 - Routes to all hosts and communication ranges are visualized.
 
@@ -43,17 +50,22 @@ The XML configuration in step12.xml is the following:
 
 <p><pre class="snippet" src="../step12.xml"></pre></p>
 
-To have routes from every node to every other node, all nodes must be covered by an autoroute element.
-The XML configuration contains two autoroute elements. Routing tables of hosts in `area1` are configured according to the error rate metric,
+To have routes from every node to every other node, all nodes must be covered by
+an autoroute element. The XML configuration contains two autoroute elements.
+Routing tables of hosts in area 1 are configured according to the error rate metric,
 while all others according to hop count.
 
-The global `addStaticRoutes, addDefaultRoutes and addSubnetRoutes` parameters can be specified per interface, with the \<interface\> element.
-These can be set with the **add-static-route**, **add-default-route** and **add-subnet-route** bool parameters.
-They are true by default. The global and per-interface settings are in a logical AND relationship, thus both have to be true to take effect.
+The global `addStaticRoutes`, `addDefaultRoutes` and `addSubnetRoutes` parameters
+can be also specified per interface, with attributes of the `<interface>` element.
+The attribute names are `add-static-route`, `add-default-route` and `add-subnet-route`,
+and they are all booleans with true as default value.
+The global and per-interface settings are in a logical AND relationship,
+so both have to be true to take effect.
 
-The default route assumes there is one gateway,
-and all nodes on the link can reach it directly. This is not the case for `area1`, because `area1host1` is out of range of the gateway host. 
-The `add-default-route` parameter is set to false for the `area1` hosts.
+The default route assumes there is one gateway, 
+and all nodes on the link can reach it directly. This is not the case for area 1,
+because `area1host1` is out of range of the gateway host.
+The `add-default-route` parameter is set to false for the area 1 hosts.
 
 ## Results
 
@@ -71,28 +83,29 @@ The routing table of `area1host1` is as follows:
 Node ConfiguratorF.area1host1
 -- Routing table --
 Destination      Netmask          Gateway          Iface             Metric
-10.0.0.1         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.2         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.5         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.6         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.9         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.10        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.18        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.28        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.33        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.34        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.41        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.16        255.255.255.248  *                wlan0 (10.0.0.17) 0
-10.0.0.24        255.255.255.248  10.0.0.19        wlan0 (10.0.0.17) 0
-10.0.0.40        255.255.255.248  10.0.0.19        wlan0 (10.0.0.17) 0
+10.0.0.1         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.2         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.5         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.6         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.9         255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.10        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.18        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.28        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.33        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.34        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.41        255.255.255.255  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.16        255.255.255.248  *                wlan0 (10.0.0.17)      0
+10.0.0.24        255.255.255.248  10.0.0.19        wlan0 (10.0.0.17)      0
+10.0.0.40        255.255.255.248  10.0.0.19        wlan0 (10.0.0.17)      0
 </pre>
 </div>
 </p>
 
-The gateway is 10.0.0.19 (`area1host2`) in all rules, except the one where it is *. That rule is for reaching
-the other hosts in the LAN directly. This doesn't seem to be according to the error rate metric, but the * rule
-matches destinations 10.0.0.18 and 10.0.0.19 only. Since 10.0.0.18 is covered by a previous rule, this one
-is actually for reaching 10.0.0.19 directly.
+The gateway is 10.0.0.19 (`area1host2`) in all rules, except in the one where it is `*`.
+That rule is for reaching the other hosts in the LAN directly.
+This doesn't seem to be according to the error rate metric, but the `*` rule
+matches destinations 10.0.0.18 and 10.0.0.19 only. Since 10.0.0.18 is covered by a
+previous rule, this one is actually for reaching 10.0.0.19 directly.
 
 The following video shows `area1host1` pinging `area2host1`:
 
@@ -100,3 +113,8 @@ The following video shows `area1host1` pinging `area2host1`:
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
 Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorE.ned"/>
+
+## Discussion
+
+Use <a href="https://github.com/inet-framework/inet-tutorials/issues/2" target="_blank">this page</a>
+in the GitHub issue tracker for commenting on this tutorial.

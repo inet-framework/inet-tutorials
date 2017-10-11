@@ -1,46 +1,47 @@
 ---
 layout: page
-title: IPv4Configurator Tutorial
+title: IPv4 Network Configurator Tutorial
 tutorial: Configurator
-hidden: true
 ---
 
-This tutorial will show how to use the `IPv4NetworkConfigurator` module to configure IP addresses and routing tables in wired and wireless IPv4 networks in the INET framework.
-The tutorial is organized into multiple steps, each corresponding to a simulation model. The steps demonstrate how to accomplish certain
-tasks with the `IPv4NetworkConfigurator`.
+This tutorial shows how to configure IP addresses and routing tables (that
+is, achieve static autoconfiguration) in wired and wireless networks
+in the INET Framework using the `IPv4NetworkConfigurator` module.
 
-This is an advanced tutorial, and assumes that the reader is familiar with creating and running simulations in OMNeT++ and INET. If that wasn't the case,
+In INET simulations, configurator modules are commonly used for assigning 
+IP addresses to network nodes and for setting up their routing tables. 
+There are various configurators modules in INET; this tutorial covers the 
+most generic and most featureful one, `IPv4NetworkConfigurator`. 
+`IPv4NetworkConfigurator` supports automatic and manual network configuration,
+and their combinations. By default, the configuration is fully automatic.
+The user can also specify parts (or all) of the configuration manually,
+and the rest will be configured automatically by the configurator. 
+The configurator's various features can be turned on and off with parameters.
+The details of the configuration, such as IP addresses and routes, can be specified
+in an XML file. 
+
+<!--
+The tutorial itself is organized into several steps, each one demonstrating
+a different feature or use case for the network configurator.
+
+Essentially, the configurator module simulates a real life network administrator. 
+The configurator assigns IP addresses to interfaces, and sets up static routing in IPv4 networks.
+It doesn't configure IP addresses and routes directly, but stores the configuration in its internal data structures.
+Network nodes contain an instance of `IPv4NodeConfigurator`, which configures the corresponding node's interface table and routing table based on information contained in the global `IPv4NetworkConfigurator` module.
+The purpose of this design is that when router reboots after a simulated failure or shutdown, 
+this way it can pull its IPv4 configuration from the configurator module, and restore
+its IPv4 addresses and routing table.
+-->
+
+This is an advanced tutorial, and it assumes that you are familiar with creating
+and running simulations in OMNeT++ and INET. If you aren't, you can check out
 the <a href="https://omnetpp.org/doc/omnetpp/tictoc-tutorial/"
-target="_blank">TicToc Tutorial</a> is a good starting point to get familiar with OMNeT++. The <a
-href="../../../doc/walkthrough/tutorial.html" target="_blank">INET Walkthrough</a> is an introduction to INET and how to work with protocols.
-The <a href="../../wireless/doc" target="_blank">Wireless Tutorial</a> is another advanced tutorial, and deals with wireless features of the INET framework. There is a comprehensive description of `IPv4NetworkConfigurator's` features in the <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html" target="_blank"><tt>IPv4NetworkConfigurator</tt> NED documentation</a>
-in the INET reference.
+target="_blank">TicToc Tutorial</a> to get started with using OMNeT++. 
 
-For additional information, the following documentation should be useful:
+If you need more information at any time, feel free to refer to the OMNeT++ and
+INET documentation:
 
 - <a href="https://omnetpp.org/doc/omnetpp/manual/usman.html" target="_blank">OMNeT++ User Manual</a>
 - <a href="https://omnetpp.org/doc/omnetpp/api/index.html" target="_blank">OMNeT++ API Reference</a>
 - <a href="https://omnetpp.org/doc/inet/api-current/inet-manual-draft.pdf" target="_blank">INET Manual draft</a>
 - <a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html" target="_blank">INET Reference</a>
-
-All simulation models are defined in the omnetpp.ini file as separate configurations. The configurations use a number of different networks,
-defined in separate .NED files.
-
-## Contents
-
-<!-- find active submenu -->
-{% for item in site.data.menu %}
-  {% if item.submenu %}
-    {% if page.tutorial == item.name %}{% assign activeSubmenu = item.submenu %}{% endif %}
-  {% endif %}
-{% endfor %}
-
-<ul>
-{% if activeSubmenu  %}
-  {% for submenuitem in activeSubmenu %}
-    {% unless submenuitem.separator %}
-<li><a href="{{ submenuitem.link }}">{{ submenuitem.name }}</a></li>
-    {% endunless %}
-  {% endfor %}
-{% endif %}
-</ul>
