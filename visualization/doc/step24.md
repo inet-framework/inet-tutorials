@@ -6,20 +6,12 @@ tutorial: Visualization
 
 ## Goals
 
-In this step we visualize changing routes between videoStreamServer and video clients.
-When devices roam in the network, routes may change between two nodes. By displaying 
-changes we always know the actual network routes between communicating devices.
-
-<! the routes change because of a dinamic protocol like RIP?>
-
-<!--
-Amikor az eszközök mozognak, gyakran változhat két node között a csomagok útja. 
-A változások megjelenítésével bármelyik pillanatban meg tudjuk állapítani, hogy az 
-eszközök között milyen úton folyik a kommunikáció.
--->
+Movement of nodes sometimes also causes routing changes. By displaying routing changes, 
+we always know the actual network route between network nodes. In this step, we display 
+changing routes.
 
 ## The model
 
 ## Results
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationH.ned" />

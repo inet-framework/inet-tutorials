@@ -1,65 +1,58 @@
 ---
 layout: page
-title: Step 5. Displaying communication/interference range
+title: Step 5. Using 3D models for network nodes
 tutorial: Visualization
 ---
 
 ## Goals
-
-Wireless communication is only possible if devices are within each other's communication range.
-In this step we visualize communication and interference ranges. This can help in the placement of network nodes.
-
-<!--
-Ebben a lépésben a wireless node-ok communication range-eit fogjuk megjeleníteni. 
-A wireless hálózatok működéséhez szükséges, hogy az eszközök egymás communication 
-range-ében legyenek. A node-ok elhelyezésekor erre figyelnünk kell, a range-ek 
-vizualizálása segíti ezt.
--->
+Although the environment is similar to the real world, customizing network nodes 
+may further ease the understanding of the simulation. In this step, we replace 
+default icon of the nodes with an external 3D osg model.
 
 ## The model
-<!--
-In this step we display the communication and interfaces range of wireless nodes in the network.
+So far, we only deal with the environment of the simulation. In this step, we add 
+network nodes to the simulation model. We add two `WirelessHost`s, 
+`pedestrian0` and `pedestrian1` and one `AccessPoint`, `accessPoint0`. 
+The pedestrians will communicate with each other via `accessPoint0` using a VoIP application. 
+Communication will be configured in later steps.
 
-Later we want to see communication between these network nodes, so we have to place them in each other's communication range.
-In this step we want to visualize these areas to place devices .
+The following picture shows what the network looks like and 
+what the default appearance of the `WirelessHost` nodes looks like.
+<img class="screen" src="step5_model_default_appearance_2d.png">
 
-TODO: Now we extend our model with two pedestrians, and an Access Point.
+To use a 3D model instead of a 2D icon, set the `osgModel` parameter of the network node. 
+Examine the following code snippet.
 
+<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization05\]" until="#---"></pre>
 
-This is our extended network file:
+The above `osgModel` parameter value will be explained below.
+- *boxman.osgb* is the name of the external 3D model,
+- *(0.05).scale* means that size of the external 3D model is decreased to 5%.
 
-@dontinclude VisualizationNetworks.ned
-@skip network VisualizationB
-@until ####
+By default, appearance of the nodes is the same in 2D and 3D visualization. The default 
+icon of `WirelessHost` is a laptop. In this tutorial, the `WirelessHost`s 
+represent pedestrians. In 2D visualization, we have cellphone icon that represents 
+pedestrians better, than a laptop icon. Icon can be replaced in the display string 
+of the network node.
 
-To achieve our goal, we need to add two <tt>WirelessHost</tt>s, and an <tt>AccessPoint</tt> to the network.
-To communicate with each other, we need an <tt>IPv4NetworkConfigurator</tt> and an <tt>Ieee80211ScalarRadioMedium</tt> submodule.
-The configurator prepares the network nodes to the communication, the radioMedium manages the media.
+The following code snippet shows `VisualizationD` network which is used for this step.
 
-In the <tt>omnetpp.ini</tt> file, we adjust the transmission power of the network nodes.
-We have to do that, because by using the default transmission power parameter, the ranges will be too big.
-We set the transmission power of the <i>accessPoint0</i> bigger, than the <i>pedestrian0</i> and <i>pedestrian1</i> transmission power.
-It's possible to modify the color of the ranges with the <tt>communicationRangeColor</tt> and <tt>interferenceRangeColor</tt> parameters.
-Now we leave them on the default value: the communication range is blue and the interference range color is grey.
-Below, there is the appropriate part of the ini file:
+<pre class="snippet" src="../VisualizationD.ned" from="network VisualizationD"></pre>
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization03]
-@until ####
--->
+An `IPv4NetworkConfigurator` module instance and an `Ieee80211ScalarRadioMedium` 
+module instance are also added to the model. We will use them as `configurator` 
+and `radioMedium`. The `configurator` module assigns IP addresses and sets up 
+static routing for an IPv4 network, `radioMedium` is a radio medium model, 
+uses scalar transmission power in the analog representation.
+
 ## Results
 
-<img src="step3_result1.png">
-<img src="step3_result2.png">
-<!--
-If we run the simulation in the 3D Scene view mode, we can see the three nodes and circles around them.
-Each node is in the center of a circle, that circle is the node's communication range.
+<!-- 3D visualization -->
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" width="446" height="279" src="step5_result_3d_enc.mp4"></video></p>
 
-We configured the visualization of interference ranges too.
-These are also on the map, but they're very big, so we have to zoom out or move to any direction to see these ranges.
-The communication and interference ranges seen in the Module view mode too.
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" width="874" height="493" src="step5_result_3d_v2_enc.mp4"></video></p>
 
-When we run the simulation, the pedestrians associate with the access point.
-In Module view mode there's a bubble message when its happens.
--->
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+<!-- 2D visualization -->
+<img class="screen" src="step5_result_2d.png">
+
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />

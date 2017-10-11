@@ -6,21 +6,13 @@ tutorial: Visualization
 
 ## Goals
 
-A handoff occurs when a client moves beyond the radio range of one access point, 
-and into the range of another access point. In general, it's difficult to tell 
-which nodes are associated with which access points. In this step we display 
+Mobile nodes roam often between the communication range of access points. 
+This leads wifi handover. It would be useful to follow the handover by 
+visualizing informations about wifi associations. In this step, we visualize 
 handovers.
-
-A handover happens when a client moves beyond the radio range of one access point,
-and into the range of another. The association state can be visualized, and this
-step shows what happens during a handover, i.e. how the association state changes.
-
-<!--
------
--->
 
 ## The model
 
 ## Results
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationH.ned" />

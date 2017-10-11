@@ -1,59 +1,72 @@
 ---
 layout: page
-title: Step 6. Using 3D models for network nodes
+title: Step 6. Displaying movement of nodes
 tutorial: Visualization
 ---
 
 ## Goals
-
-However it doesn't directly affect the outcome of the simulation, it is 
-more understandable if the appearance of nodes is similar as in real world.
-The default icon for the pedestrians is a cellphone. In this step we replace 
-the default icon with a 3D animated model.
-
-NOTE/TODO: visualization by definition doesnt affect the outcome of the simulation.
-
-By default, wirelessHosts are indicated by a cell phone icon.
-However, a 3D animated model of a pedestrian may depict the moving wirelessHosts better
-in a real world context. It also fits better in the 3D environment.
-In this step, we replace the cell phone icon that represents hosts with a 3D model.
-
-<!--
-ad2:
-The simulation is more understandable if the appearance of nodes is similar as in real world.
-The default icon for the pedestrians is a cellphone. In this step we replace 
-the default icon with an 3D animated model. It doesn't directly affect the 
-outcome of the simulation.
--->
-<!--
-A szimuláció sokkal érthetőbb, ha a node-ok hasonlóan néznek ki, mint ahogy a valóságban.
-A pedestrian-ok default ikonja egy mobil. Ebben a lépésben kicseréljük egy 
-3D animált modellre. Ennek semmi közvetlen hatása nincs a szimuláció eredményére.
--->
+In wireless networks with mobile nodes, mobility often affects network operation. 
+For this reason, visualizing mobility of nodes is essential. When mobile nodes are 
+roaming in the network, it is often difficult to visually follow their movement. 
+Visualizing movement of mobile nodes makes visually tracking easier and 
+also indicates other properties like speed and direction.
+In this step, we visualize movement of mobile nodes.
 
 ## The model
-<!--
-<i>Pedestrian0</i> and <i>pedestrian1</i> are <tt>WirelessHost</tt> node type, so by default their icon is a cellphone.
-We want to show, how to change network nodes' default icon.
-In INET Framework it's possible to change device appearance to an external 3D osg model.
-It's really simple.
-We have to change only the network node's <tt>osgModel</tt> attribute.
-We set that to <tt>boxman.osgb</tt>.
-That's the file name of the 3D model.
-In addition we can set the size and the rotation of the model.
-The <tt>(0.06).scale</tt> means the model size is 6% of the original.
-The three numbers are in for the rot keyword mean the rotation of the 3D model around x, y and z axis.
+Movement of mobile nodes is displayed by default but often we need more details about the recent 
+and the upcoming movements.
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization04]
-@until ####
--->
+### Mobility settings
+At first, we have to set mobility of network nodes. 
+
+<pre class="snippet" src="../omnetpp.ini" from="\# mobility settings" until="\# mobility settings end"></pre>
+
+The above code snippet shows how the mobility of the nodes is configured. 
+The code is explained below.
+Initial position can be set to all nodes by using 
+- `initialX`, `initialY` and `initialZ`
+- or `initialLatitude`, `initialLongitude` and `initialAltitude` parameters.
+
+In the first case, playground coordinates are used to place nodes on the playground. 
+In the second case, geographical coordinates are used and these coordinates 
+are converted before nodes will be placed on the playground. For pedestrians, 
+*Massmobility* is used as mobility type. This is a random mobility model 
+for a mobile host with a mass. Pedestrians movement area is restricted
+by `constraintAreaMinX`, `constraintAreaMaxX`, `constraintAreaMinY` and 
+`constraintAreaMaxY`to prevent pedestrians roaming out from communication range 
+of `accessPoint0`.
+
+The following video displays nodes' mobility using default visualization. 
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" width="822" height="907" src="step6_model_2d.mp4"></video>
+
+### Visualization settings
+<!-- a velocity-re meg az orientation-re szukseg van? -->
+
+Movement of nodes is visualized by default, but other useful informations can 
+also be visualized such as velocity, orientation and movement trail. We enable 
+these features by setting `displayVelocities`, `displayOrientations` and 
+`displayMovementTrails` to true. The pedestrians are moving slowly so the length of 
+velocity vector is too small. For this reason, we multiply the length of velocity 
+vector by the value of `velocityArrowScale`.
+
+The following code snippet shows how these features are configured.
+
+<pre class="snippet" src="../omnetpp.ini" from="\# displaying movements" until="#---"></pre>
+
 ## Results
+<video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" width="822" height="907" src="step6_result_2d.mp4"></video>
 
-<img src="step4_result1.gif">
 <!--
-In Module view mode there's no difference compared to the simulation before this.
-But in 3D Scene view mode instead of phones we see walker boxmans.
+<img src="step07_moving_2d.gif">
+<img src="step5_result3.gif" width="850">
+It is advisable to run the simulation in Fast mode, because the nodes move very slowly if viewed in Normal mode.
+
+It can be seen in the animation below <i>pedestrian0</i> and <i>pedestrian1</i> roam in the park between invisible borders that we adjust to them.
+
+Here's that in Module view mode:
+
+
+And here's that in 3D Scene view mode:
 -->
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />

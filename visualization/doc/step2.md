@@ -5,45 +5,39 @@ tutorial: Visualization
 ---
 
 ## Goals
-In network simulation it's often desirable to have a real world context. Although displaying a map
-doesn't directly affect the outcome of the simulation, nevertheless it can still facilitate understanding.
-In this step we display a street map of downtown Boston.
+In network simulations, it is often desirable to have a real world context. 
+Displaying a street map is one way to achieve this. Although displaying a map does 
+not directly affect the outcome of the simulation, nevertheless it can still 
+facilitate understanding. In this step, we display a street map of downtown Boston.
 
 ## The model
-<!--
-Here is the NED file of the network:
-@dontinclude VisualizationNetworks.ned
-@skip network VisualizationA
-@until ####
+The `SceneVisualizer` module is responsible for displaying the map.
+(Note that, `SceneVisualizer` can be used via `visualizer`.) 
+The `sceneVisualizerType` parameter is set to `SceneOsgEarthVisualizer`. 
+It displays a map of some part of the earth as an integrated part of 
+the 3D visualization of the simulation. The map is loaded 
+from an external file, specified in the `mapFile` parameter. The visualizer's name 
+contains *osg* refers to that map will be displayed only in 3D visualization.
 
-This is a very simple model, contains an <tt>IntegratedVisualizer</tt> and an <tt>OsgGeographicCoordinateSystem</tt> submodule. The visualizer is responsible all of phenomenon, that we can see on the playground.
-We can change their parameters in the <tt>omnetpp.ini</tt> file.
-The ini file contains the parameters of these submodules.
+Adding a map to the simulation model requires adding coordinate system module to the model, 
+because the map geographical coordinates are assigned to the coordinate system module.
+(In the next step we will explain the reason in detail.)
+We add an `OsgGeographicCoordinateSystem` module to the model and set the origin 
+of the coordinate system in the ini file.
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization01]
-@until ####
+We add the coordinate system to our model as follows. This snippet is copied 
+from <a srcfile="visualization/VisualizationB.ned"/> that is used in this step.
+<pre class="snippet" src="../VisualizationB.ned" from="network VisualizationB"></pre>
 
-In this part of the file, there are some coordinate system and the scene visualizer parameters. 
-<i>Coordinatesystem</i> parameters set the longitude, latitude and altitude coordinate of the playground origin and the heading of it.
-<tt>SceneVisualizer</tt> parameters set the visualizer type. 
-We add a map to the simulation with the <tt>mapFile</tt> parameter. 
-Besides these options we turn off the playground shading and configure the opacity and the color of the playground. 
-We need to make the playground transparent, because it's over the map, and later if we place a node, we can't see the map under of the area from the origin to the node. 
-With the <tt>axisLength</tt> parameter we can change the axis' size on the map.
--->
+The following lines show how `visualizer` and `coordinateSystem` are configured 
+in the ini file.
+<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization02\]" until="#---"></pre>
+
 ## Results
+<img class="screen" src="step2_result_boston3d.png"  onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
 
-<img src="step2_map_without_axis.png" width="850">
 <!--
-When we start the simulation we can see what we expected. 
-There's the map of Boston downtown with axis.
-
-Using the mouse, we can move and rotate the camera. 
-If we hold down the left mouse button, we can navigate on the map. 
-Holding down the mouse wheel or both mouse button at the same time we can rotate the camera, and if we scroll up and down we can zoom out and in. 
-If we click with the right mouse button, we can change between camera modes.
-In the top right corner of the playground, we can change between 3D Scene view mode and Module view.
+3d, real world context, camera zoom, rotate..., 
 -->
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationB.ned" />

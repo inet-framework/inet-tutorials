@@ -1,70 +1,50 @@
 ---
 layout: page
-title: Step 15. Showing configured routing tables
+title: Step 15. Showing routing table entries
 tutorial: Visualization
 ---
 
-TODO: Showing configured routes
-
-TODO: Add RIP to this step ?
-
-@nav{step14,step16}
-
 ## Goals
-
-We can visualize IP routes as set up by the configurator.
-We can see how routes are set up without examining routing tables, just by looking at the network.
-In this step we show routes from all nodes leading towards <tt>videoStreamServer</tt>.
-
-NOTE/TODO: seems trivial
-
-<!--
-Csomagkapcsolt hálózatokban a routing határozza meg a csomagtovábbítást, azaz az IP címmel ellátott
-csomagok átvitelét a forrás irányából a cél irányába, köztes node-okon keresztül. 
-A routing process általában a routing tábla alapján továbbítja a célok felé a csomagokat.
-A routing tábla az egyes route-okról tartalmaz információt. 
--->
-
-<!--
-After so many steps we extend our network. We add a pedestrian, who watch a video stream in the park.
-To this we need a Server to another network. To find ways between video stream server and the
-pedestrian, who want to watch video stream, we need a router.<br>
-We want to see how can the devices reach the server. To this, in this step we will show routing table entries.
--->
+Routing information is scattered among nodes and can be accessed 
+in individual routing tables of the nodes. Visualizing routing table entries graphically 
+clearly shows how a packet would be routed, without looking into individual routing tables.
+In this step, we enable visualization of routing table entries.
 
 ## The model
 
-<!--
-The video streamed by the videoStreamserver, that connects to the router0 through switch0.
-We need the switch, because later we want to add more nodes to that subnetwork.
+### Network topology
+The configuration for this step uses the `VisualizationE` network, defined in <a srcfile="visualization/VisualizationE.ned"/>.
 
-Here is the ned file, that contains the changes:
-@dontinclude VisualizationNetworks.ned
-@skip network VisualizationC
-@until ####
+We add the following nodes to the network:
+- one `Router` (`router0`),
+- one `EtherSwitch` (`switch0`),
+- one `WirelessHost` (`pedestrianVideo`)
+- and two `Standardhost`s (`videoStreamServer` and `server1`).
 
-We need to place the new network nodes on the map. To this we use the usual mobility parameters.
-Then we adjust the video stream server and client application. On the server side we have to
-set the length of the video packets and the full stream, the port to listen on, and the
-interval between sending packets.<br>
-On the client side we need to add a local port, and the server port and address. Optionally we
-can set when the application starts.<br>
-The video stream application works as follows:
-the client send a request to the given port of the server. Then the server starts the
-stream to the client's address. The client's serverPort parameter and the server's localPort parameter
-must match.
+Wireless hosts connect to `router0` via `accessPoint0`, `videoStreamServer` 
+and `server1` connect to `router0` via `switch0`. 
+The nodes are placed on the playground as follows.
+<pre class="snippet" src="../omnetpp.ini" from="# initializing pedestrianVideo position" until="# videoStreamServer application settings"></pre>
 
-After setting up communication, we need to configure the visualizer. We have to add
-the module path where the visualizer subscribes for routing table signals, and the
-route destination(s) in the destinationFilter parameter. In this case we want to
-see the routes towards the videoStreamServer. In addition we can change the default
- line style, width and color to make the routes more visible.
+The following image shows how the network looks like.
+<img class="screen" src="step15_model_network.png">
 
-The configuration:
-@dontinclude omnetpp.ini
-@skipline [Config Visualization13]
-@until ####
--->
+### Video stream application
+We add a video stream application to the configuration. The client is `pedestrianVideo`, 
+the server is `videoStreamServer`. They communicate at UDP port 4000. In addition, sending interval, 
+packet length and the video size are also defined in the `omnetpp.ini` file.
+<pre class="snippet" src="../omnetpp.ini" from="# videoStreamServer application settings" until="# showing routing table entries towards videoStreamServer"></pre>
+
+### Visualizer
+
+Routing entries are visualized by `RoutingTableVisualizer` (included in the network 
+as part of `IntegratedVisualizer`). The visualizer can be enabled by setting 
+`displayRoutingTables` to *true*. The `videoStreamServer` node is selected as destination by setting 
+`destinationFilter` to *\*videoStreamServer\**. We want to display the route which is 
+between *\*pedestrianVideo\** and *\*videoStreamServer\**. To this end, we set 
+the visualizer's `nodeFilter` parameter to 
+*pedestrianVideo or videoStreamServer or switch\* or router\**.
+(The route can lead through any switch or router so they need to be added to `nodeFilter`.)
 
 ## Results
 
@@ -82,4 +62,4 @@ and in response the server starts the video stream.
 [gif: video stream start]
 -->
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationE.ned" />

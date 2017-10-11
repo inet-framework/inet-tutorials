@@ -1,25 +1,19 @@
 ---
 layout: page
-title: Step 22. Showing link breaks
+title: Step 22. Showing link break - WIP
 tutorial: Visualization
 ---
 
 ## Goals
 
-In this step we display link breaks between network devices. When a mobile node 
-exits from an access point's communication range the link breaks up and the devices 
-can't communicate with each other any more. This leads to packet loss when the mobile 
-node distributes data on the network.<! this sentence seems unnecessary>
-
-<!--
-Ebben a lépésben a link break-eket mutatjuk meg. 
-Ha egy mozgó node kimegy egy access point communication range-éből, akkor a kapcsolat 
-megszakad az eszközök között és nem lesznek képesek a kommunikációra egymással. Ennek 
-csomagvesztés lehet a következménye, ha a mozgó eszköz adatokat forgalmaz a hálózaton.
--->
+When a mobile node moves out from an access point's communication range the link 
+breaks up and the nodes can't communicate with each other any more. This leads to 
+packet loss. When the sender node does not get an ACK frame from the receiver node 
+for a long time, the link breaks between the nodes. In this step, we display 
+link break between network nodes.
 
 ## The model
 
 ## Results
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationH.ned" />

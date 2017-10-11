@@ -1,24 +1,18 @@
 ---
 layout: page
-title: Step 18. Displaying physical environment
+title: Step 18. Displaying physical objects
 tutorial: Visualization
 ---
 
 ## Goals
 
-We can place obstacles into our simulation, which can obstruct radio signals. In this step we display the physical environment.
-
-In this step, we place obstacles into our model. Obstacles make up the physical environment, as they can obstruct radio signals.
-This makes it possible to simulate complex real world locations.
-
-<!--
-A szimulációba egyszerűen beépíthetjük azokat az akadályokat, amik valóban 
-hatással vannak a hálózat működésére. Ebben a lépésben a fizikai környezetet 
-jelenítjük meg.
--->
+The visualization of physical objects present in the physical environment is 
+essential in network simulations. Physical objects can be a buildings, forest, etc.
+Physical objects have an impact on network operation by obstructing the wireless 
+signal. In this step, we add physical objects to the model and visualize them.
 
 ## The model
 
 ## Results
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationG.ned" />

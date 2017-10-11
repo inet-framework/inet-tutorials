@@ -6,8 +6,8 @@ hidden: true
 ---
 
 In this tutorial we show you, how to use the visualization module in the INET Framework.
-The tutorial contains a series of simulation models, numbered from 1 through 24.
-The models are of increasing complexity – they start from the basics and in each step, 
+The tutorial contains a series of simulation models, numbered from 1 through 25.
+The models start from the basics and in each step, 
 they introduce new INET features and concepts related to visualization module.
 Our goal is show the working of the visualization module and its submodules in INET.
 
@@ -24,4 +24,3 @@ If you need more information at any time, feel free to refer to the OMNeT++ and 
 
 In the tutorial, each step is a separate configuration in the same omnetpp.ini file.
 Steps build on each other, they extend the configuration of the previous step by adding a few new lines.
-Consecutive steps mostly share the same network, defined in NED.

@@ -40,7 +40,7 @@ import inet.environment.common.PhysicalEnvironment;
 //
 // TODO documentation
 //
-network VisualizationA
+network VisuA
 {
     parameters:
         @display("bgb=0,0");
@@ -51,22 +51,22 @@ network VisualizationA
         }
 }
 
-network VisualizationB extends VisualizationA
+network VisuB extends VisuA
 {
     submodules:
-		coordinateSystem: OsgGeographicCoordinateSystem {
+        coordinateSystem: OsgGeographicCoordinateSystem {
             parameters:
                 @display("p=100,150");
-		}
+        }
 }
 
-network VisualizationC extends VisualizationB
+network VisuC extends VisuB
 {
     parameters:
         @display("bgb=800,800");
 }
 
-network VisualizationD extends VisualizationC
+network VisuD extends VisuC
 {
     submodules:
         pedestrian0: WirelessHost {
@@ -91,7 +91,7 @@ network VisualizationD extends VisualizationC
         }
 }
 
-network VisualizationE extends VisualizationD
+network VisuE extends VisuD
 {
     submodules:
         pedestrianVideo: WirelessHost {
@@ -110,13 +110,17 @@ network VisualizationE extends VisualizationD
             parameters:
                 @display("p=487,470");
         }
+        server1: StandardHost {
+            @display("p=350.544,438.984");
+        }
     connections:
         accessPoint0.ethg++ <--> Eth100M <--> router0.ethg++;
         switch0.ethg++ <--> Eth100M <--> router0.ethg++;
         videoStreamServer.ethg++ <--> Eth100M <--> switch0.ethg++;
+        server1.ethg++ <--> Eth100M <--> switch0.ethg++;
 }
 
-network VisualizationF extends VisualizationE
+network VisuF extends VisuE
 {
     submodules:
         accessPoint1: AccessPoint {
@@ -132,7 +136,7 @@ network VisualizationF extends VisualizationE
         accessPoint1.ethg++ <--> Eth100M <--> router1.ethg++;
 }
 
-network VisualizationG extends VisualizationF
+network VisuG extends VisuF
 {
     submodules:
         physicalEnvironment: PhysicalEnvironment {
@@ -141,7 +145,7 @@ network VisualizationG extends VisualizationF
         }
 }
 
-network VisualizationH extends VisualizationG
+network VisuH extends VisuG
 {
     submodules:
         car: WirelessHost {

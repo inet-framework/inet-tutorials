@@ -5,33 +5,37 @@ tutorial: Visualization
 ---
 
 ## Goals
-
-In infrastructure mode, wireless nodes have to be associated with an access point to be able to communicate.
-The association may change over time, or at any given time there might be several access points for a
-wireless node to associate with. It's useful to tell which node is associated with which access point just by looking at its icon.
-In this step we enable displaying the association between wireless nodes and access points.
-
-TODO/NOTE: its easier to tell which nodes are associated with which access points if its visualized. e.g. dont have to use the inspector window...
+In wifi infrastructure mode, wireless nodes have to be associated with an access point 
+to be able to communicate with other nodes on the same network. The association 
+may change over time, or at a time there might be several access points 
+for a wireless node to associate with. It can be useful to be able to display 
+information about wifi association e.g. the SSID above network node.
+In this step, we enable displaying wifi association.
 
 ## The model
-<!--
-The pedestrians are in the access point's communication range, so they can associate with that.
 
-In the ini file we need to set only the <tt>Ieee80211Visualizer</tt>'s parameters.
-This visualizer will display us information about the association.
-We can set which nodes and which interfaces are considered, like at <tt>InterfaceTableVisualizer</tt>.
+### Wifi association process
+The following image shows the wifi association process:
+<img class="screen" src="step9_model_assocprocess.png"  onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
 
-Here is the appropriate configuration:
+### Visualizer
+We configure `visualizer` as follows:
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization07]
-@until ####
--->
+<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization09\]" until="#---"></pre>
+
+Wifi association is displayed by `Ieee80211Visualizer`. We enable it 
+by setting `displayAssociations` to *true*. Wifi association is visualized 
+as a signal sign icon. We set `displacementHint` to *"topCenter"* 
+to place the association icon above the node to center.
+
 ## Results
+<p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="step9_result_2d_assoc.mp4"></video></p>
 
+association process
+
+<!--
 <img src="step09_wifi_assoc_2d.gif">
 <img src="step7_result2.gif">
-<!--
 In Module view mode we can monitor the association process, we see all messages between the nodes.
 When a pedestrian send an <tt>Assoc</tt> message, the access point in its communication range receive that, and a signal sign appear above the access point.
 In response to this <tt>Assoc</tt> message, the access point reply with an <tt>AssocResp-</tt> message.
@@ -40,4 +44,4 @@ If the association is successful it's <tt>AssocResp-OK</tt> and a signal sign ap
 In 3D view mode as a result of the association process the signal sing appears above the appropriate network node.
 -->
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />

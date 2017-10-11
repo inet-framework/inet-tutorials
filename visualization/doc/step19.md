@@ -6,19 +6,13 @@ tutorial: Visualization
 
 ## Goals
 
-Impediments shield the signals of wireless communication. In this step we 
-show the obstacle loss.
-
-Obstacles are in the model to simulate the effect they have on radio signals.
-It is useful to actually see how and where radio transmissions intersect obstacles,
-and how this affects communication. In this step, we visualize obstacle loss.
-<!--
-Az akadályok árnyékolják a vezeték nélküli kommunikáció jeleit. 
-Ebben a lépésben az akadályokon eső veszteségeket mutatjuk meg.
--->
+Wireless signal strength is usually reduced when it encounters an obstacle and 
+it can lead to data loss. It is not always clear where signal strength 
+is reduced so visualizing that can help to facilitate understanding working of the simulation. 
+In this step, we enable visualization of obstacle loss.
 
 ## The model
 
 ## Results
 
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationG.ned" />

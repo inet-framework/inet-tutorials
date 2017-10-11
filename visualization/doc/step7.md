@@ -1,55 +1,45 @@
 ---
 layout: page
-title: Step 7. Displaying recent movement
+title: Step 7. Displaying communication & interference range
 tutorial: Visualization
 ---
 
 ## Goals
-
-When wireless nodes roam in a network, it's often difficult to follow their movement. 
-In this step we visualize the recent movement trajectory of network nodes.
-
-TODO:
-When wireless nodes move around the playground, it can be easier to track them
-by displaying their recent movement. In this step, we visualize nodes' movement trails.
+For successful communication, wireless nodes must be within each other's 
+communication range. By default, communication range is not displayed, but INET 
+offers a visualizer to show it. Visualizing communication range also can help 
+to place network nodes to appropriate position on the playground. 
+In this step, we display the communication and interference range of the nodes.
 
 ## The model
+Here is the configuration of this step.
+<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization07\]" until="#---"></pre>
 
-<img src="step7_without_movement_trails.gif">
-<!--
-The network nodes movement handled by the <tt>Mobility</tt> submodule.
-To visualize that, we need to use <tt>MobilityVisualizer</tt>.
+The size of the communication and interference range is mainly depends on 
+the transmitter power of the device.
+We set the transmitter power of each device to *1mW*, because the default transmitter power 
+is too big for this simulation. 
+Communication and interference range are visualized by `MediumVisualizer`.
+We enable the `visualizer` by setting `displayCommunicationRanges` and 
+`displayInterferenceRanges` to true.
 
-Here is the configuration:
+TODO: Visualization of velocity and orientation is disabled in this step...
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization05]
-@until ####
-
-We have to adjust the nodes mobility settings. <i>Pedestrian0</i> and <i>Pedestrian1</i> movement is calculated using "MassMobility".
-This is a random mobility model for a mobile host with a mass.
-We set their initial position, and a border, because we don't want to let them go out from the <i>accessPoint0</i>'s communication range.
-We have more ways to set the nodes initial position.
-We can set that in meter or we can add that in degree.
-The pedestrians' movement based on three parameters.
-The <tt>changeInterval</tt> is the frequency of changing speed and angle, the <tt>changeAngleBy</tt> change the direction of the movement, and the <tt>speed</tt> means the movement speed.
-
-After that we need to add some visualizer parameters.
-We display a trail, that shows the passed route, and we visualize an arrow, that represents the velocity of the pedestrians.
--->
 ## Results
 
-<img src="step07_moving_2d.gif">
-<img src="step5_result3.gif" width="850">
+<img class="screen" src="step7_result_2d.png"  onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
+
 <!--
-It is advisable to run the simulation in Fast mode, because the nodes move very slowly if viewed in Normal mode.
+<img src="step3_result1.png">
+<img src="step3_result2.png">
+If we run the simulation in the 3D Scene view mode, we can see the three nodes and circles around them.
+Each node is in the center of a circle, that circle is the node's communication range.
 
-It can be seen in the animation below <i>pedestrian0</i> and <i>pedestrian1</i> roam in the park between invisible borders that we adjust to them.
+We configured the visualization of interference ranges too.
+These are also on the map, but they're very big, so we have to zoom out or move to any direction to see these ranges.
+The communication and interference ranges seen in the Module view mode too.
 
-Here's that in Module view mode:
-
-
-And here's that in 3D Scene view mode:
+When we run the simulation, the pedestrians associate with the access point.
+In Module view mode there's a bubble message when its happens.
 -->
-
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />

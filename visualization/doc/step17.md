@@ -1,26 +1,18 @@
 ---
 layout: page
-title: Step 17. Showing active network routes
+title: Step 17. Showing network path activity
 tutorial: Visualization
 ---
 
 ## Goals
 
-In this step we enable displaying active network routes for the videostream. 
-With this visualizer, we can verify whether the videostream packets arrived at the 
-destination's UDP client application. In network nodes, applications handle the 
-UDP based traffic, for example video stream. <! this sentence seems trivial>
-When an incoming video stream packet is passed up from the destination's network layer, the
-network route becomes active between the source and the destination node.<! this sentence should belong in the model section> 
-
-<!--
-Ebben a lépésben az aktív hálózati útvonalakat jelenítjük meg.
-Az eszközökben alkalmazások kezelik a TCP, illetve UDP alapú forgalmat, mint
-pl a videoStream-et vagy a VoIP-ot. Amikor a video vagy VoIP csomag elhagyja 
-a fogadó eszközben a hálózati réteget, a két eszköz között aktívvá válik 
-a hálózati útvonal. Ezzel a visualizer-rel megnézhetjük, hogy a csomag 
-eljut-e a célállomás megfelelő alkalmazásához.
--->
+In the Open Systems Interconnection (OSI) communications model, the network layer 
+has many tasks, for example selects routes and quality of service, and recognizes 
+and forwards to the transport layer incoming messages for local host domains. 
+INET offers a visualizer for displaying traffic at network layer level. 
+In this step, we enable network path activity visualization for video stream. 
+The visualization helps verifying whether a videoStream packet passed the 
+network layer of the client node.
 
 ## The model
 
@@ -54,7 +46,7 @@ The configuration:
 -->
 
 ## Results
-
+<!--
 <img src="step17_networkroute_3d.gif">
-
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+-->
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationF.ned" />

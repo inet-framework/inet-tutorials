@@ -5,44 +5,44 @@ tutorial: Visualization
 ---
 
 ## Goals
-
-Understanding network traffic often requires identifying nodes based on their IP addresses.
-In this step we show the IP addresses assigned by the network configurator. 
-
-TODO:
-It's often convenient to tell a node's IP address at a glance, without using the module inspector.
-In this step we show the IP addresses assigned by the network configurator.
+Understanding network traffic often requires identifying nodes based on their 
+IP addresses. The IP address is also accessible in the inspector, but it is unsuitable 
+for getting a good overview for the network. We can get a better overview 
+if the IP address is displayed next to the node or on the links.
+In this step, we demonstrate how to display IP address next to the node. 
 
 ## The model
-<!--
-If we want to see the network nodes' IP addresses we have to set the parameters of the <tt>InterfaceTableVisualizer</tt>.
-Here is the configuration:
 
-@dontinclude omnetpp.ini
-@skipline [Config Visualization06]
-@until ####
+### The configurator module
+IPv4 addresses are automatically assigned to the hosts by `configurator`. It is also possible 
+to assign IP addresses manually, we will use manual configuration in later steps. 
+You can examine working of the `configurator` module in the 
+<a href="http://inet.omnetpp.org/inet-tutorials//configurator/doc/" target="_blank">IPv4 Network Configurator Tutorial</a>.
 
-With the <tt>nodeFilter</tt> parameter we can define the nodes list, that are considered.
-By default that list is empty, so we must set it.
-Then we can set an interface list.
-That specifies which interfaces are considered at each node.
-Besides of these parameters we can change the font color, the background color, and the opacity of the text.
-These settings are optional, that may make the IP addresses clearly visible.
+### Visualizer
+We can look at the IP address of a node in the module inspector. 
+The IP address can be accessed as shown in the following picture.
+Accessing IP address takes a little time and the other nodes' address can not be seen. 
+<img class="screen" src="step8_model_ipaddress_in_inspector.png" onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
 
-With <tt>InterfaceTableVisualizer</tt> we can display not only the IP address of a NIC, but the MAC address too.
-To that we need to change the <tt>content</tt> parameter to <tt>macAddress</tt>.
--->
+This visualizer displays IPv4 or IPv6 address for each interface of each node, by default. 
+We narrow this selection by setting `nodeFilter` to *"pedestrian\*"* and setting 
+`interfaceFilter` to *"wlan\*"*. 
+This results in only the wlan IP address of the pedestrians being displayed. 
+By using `backgroundColor` and `textColor`, we customize the color of the background 
+and the text, for better appearance.
+
+By editing the `format` parameter, we can display other informations about the interfaces 
+of the nodes. For example, we can show the MAC address of the interfaces, by setting 
+`format` to *"%N %\\\\%m"*. Other possible parameter values can be found in the 
+NED documentation of `InterfaceTableVisualizer`.
+
+The configuration of the `InterfaceTableVisualizer` for this step is the following:
+<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization08\]" until="# showing mac address"></pre>
+
 ## Results
+By using `InterfaceTableVisualizer` we get much better overview about the IP address of the nodes. 
 
-<img src="step08_ipaddress_2d.gif">
-<img src="step6_result4.gif"  width="850">
-<img src="step6_result3.png" width="850">
-<!--
-If we run the simulation, we can see a yellow bubble above each pedestrian with its wlan NIC IP address.
+<img class="screen" src="step8_result_2d_ipaddress.png" onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
 
-In 3D view mode the text is a little bit fainter.
-
-If we set the content parameter to <tt>macAddress</tt>, we can see the given NIC MAC (layer 2) address.
--->
-
-Sources: <a srcfile="../omnetpp.ini" />, [VisualizationNetworks.ned](../VisualizationNetworks.ned)
+Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />
