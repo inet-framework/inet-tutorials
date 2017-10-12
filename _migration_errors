@@ -1,0 +1,8 @@
+tutorials:
+
+wireless 4,5,6,7,8,9: number of packets differ
+wireless 10: AODV not working
+wireless 12,13,14: Error: chunk is empty -- in module
+
+configurator: subnet mask missing from interfaceTableVisualizer
+configurator 9: UDPSocket: setOutputGate() must be invoked before socket can be used -- in module (inet::DHCPClient) ConfiguratorC.area1lan3host2.app[0] (id=1432), at t=0.519566176157s, event #2770
