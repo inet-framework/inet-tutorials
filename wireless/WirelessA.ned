@@ -30,7 +30,7 @@ network WirelessA
         @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
 
         @figure[rcvdPkText](type=indicatorText; pos=380,20; anchor=w; font=,18; textFormat="packets received: %g"; initialValue=0);
-        @statistic[rcvdPk](source=hostB.udpApp[0].rcvdPk; record=figure(count); targetFigure=rcvdPkText);
+        @statistic[rcvdPk](source=hostB.app[0].rcvdPk; record=figure(count); targetFigure=rcvdPkText);
 
     submodules:
         visualizer: <default("IntegratedCanvasVisualizer")> like IIntegratedVisualizer if hasVisualizer() {
