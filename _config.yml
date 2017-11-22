@@ -1,2 +1,5 @@
 baseurl: /inet-tutorials
 showallpages: true
+data_dir: docs/_data
+includes_dir: docs/_includes
+layouts_dir: docs/_layouts

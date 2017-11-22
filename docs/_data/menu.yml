@@ -1,23 +1,23 @@
 - name: Wireless Tutorial
   tutorial: Wireless
   submenu:
-    - page: wireless/doc/index.md
+    - page: docs/wireless/index.md
       name: Introduction
-    - page: wireless/doc/step1.md
-    - page: wireless/doc/step2.md
-    - page: wireless/doc/step3.md
-    - page: wireless/doc/step4.md
-    - page: wireless/doc/step5.md
-    - page: wireless/doc/step6.md
-    - page: wireless/doc/step7.md
-    - page: wireless/doc/step8.md
-    - page: wireless/doc/step9.md
-    - page: wireless/doc/step10.md
-    - page: wireless/doc/step11.md
-    - page: wireless/doc/step12.md
-    - page: wireless/doc/step13.md
-    - page: wireless/doc/step14.md
-    - page: wireless/doc/conclusion.md
+    - page: docs/wireless/step1.md
+    - page: wireless/step2.md
+    - page: wireless/step3.md
+    - page: wireless/step4.md
+    - page: wireless/step5.md
+    - page: wireless/step6.md
+    - page: wireless/step7.md
+    - page: wireless/step8.md
+    - page: wireless/step9.md
+    - page: wireless/step10.md
+    - page: wireless/step11.md
+    - page: wireless/step12.md
+    - page: wireless/step13.md
+    - page: wireless/step14.md
+    - page: wireless/conclusion.md
 
 - name: IPv4 Configurator Tutorial
   tutorial: Configurator

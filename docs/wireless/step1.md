@@ -21,7 +21,7 @@ In this step we'll use the model depicted below.
 
 Here is the NED source of the network:
 
-<p><pre class="snippet" src="../WirelessA.ned" from="network WirelessA"></pre></p>
+<p><pre class="snippet" src="../../wireless/WirelessA.ned" from="network WirelessA"></pre></p>
 
 We'll explain the above NED file below.
 
@@ -154,7 +154,7 @@ the transmission rate was around 660 kbps.
 
 **Number of packets received by host B: 2017**
 
-Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
+Sources: <a srcfile="../wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
 
 ## Discussion
 
