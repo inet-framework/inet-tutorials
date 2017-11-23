@@ -42,34 +42,34 @@
   tutorial: Visualization
   hidden: true
   submenu:
-    - page: visualization/doc/index.md
+    - page: docs/visualization/index.md
       name: Introduction
-    - page: visualization/doc/step1.md
-    - page: visualization/doc/step2.md
-    - page: visualization/doc/step3.md
-    - page: visualization/doc/step4.md
-    - page: visualization/doc/step5.md
-    - page: visualization/doc/step6.md
-    - page: visualization/doc/step7.md
-    - page: visualization/doc/step8.md
-    - page: visualization/doc/step9.md
-    - page: visualization/doc/step10.md
-    - page: visualization/doc/step11.md
-    - page: visualization/doc/step12.md
-    - page: visualization/doc/step13.md
-    - page: visualization/doc/step14.md
-    - page: visualization/doc/step15.md
-    - page: visualization/doc/step16.md
-    - page: visualization/doc/step17.md
-    - page: visualization/doc/step18.md
-    - page: visualization/doc/step19.md
-    - page: visualization/doc/step20.md
-    - page: visualization/doc/step21.md
-    - page: visualization/doc/step22.md
-    - page: visualization/doc/step23.md
-    - page: visualization/doc/step24.md
-    - page: visualization/doc/step25.md
-    - page: visualization/doc/conclusion.md
+    - page: docs/visualization/step1.md
+    - page: docs/visualization/step2.md
+    - page: docs/visualization/step3.md
+    - page: docs/visualization/step4.md
+    - page: docs/visualization/step5.md
+    - page: docs/visualization/step6.md
+    - page: docs/visualization/step7.md
+    - page: docs/visualization/step8.md
+    - page: docs/visualization/step9.md
+    - page: docs/visualization/step10.md
+    - page: docs/visualization/step11.md
+    - page: docs/visualization/step12.md
+    - page: docs/visualization/step13.md
+    - page: docs/visualization/step14.md
+    - page: docs/visualization/step15.md
+    - page: docs/visualization/step16.md
+    - page: docs/visualization/step17.md
+    - page: docs/visualization/step18.md
+    - page: docs/visualization/step19.md
+    - page: docs/visualization/step20.md
+    - page: docs/visualization/step21.md
+    - page: docs/visualization/step22.md
+    - page: docs/visualization/step23.md
+    - page: docs/visualization/step24.md
+    - page: docs/visualization/step25.md
+    - page: docs/visualization/conclusion.md
 
 - name: Back to INET
   link: https://inet.omnetpp.org

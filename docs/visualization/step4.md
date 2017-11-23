@@ -5,7 +5,7 @@ tutorial: Visualization
 ---
 
 ## Goals
-In tis step we extend the scene with a 3D object model. 
+In tis step we extend the scene with a 3D object model.
 
 TODO: We can add static 3D models to the scene, to put things in real world context. E.g. cars...
 
@@ -13,4 +13,4 @@ TODO: We can add static 3D models to the scene, to put things in real world cont
 
 ## Results
 
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationC.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationC.ned" />

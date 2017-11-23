@@ -6,12 +6,12 @@ tutorial: Visualization
 
 ## Goals
 
-In the Open Systems Interconnection (OSI) communications model, the network layer 
-has many tasks, for example selects routes and quality of service, and recognizes 
-and forwards to the transport layer incoming messages for local host domains. 
-INET offers a visualizer for displaying traffic at network layer level. 
-In this step, we enable network path activity visualization for video stream. 
-The visualization helps verifying whether a videoStream packet passed the 
+In the Open Systems Interconnection (OSI) communications model, the network layer
+has many tasks, for example selects routes and quality of service, and recognizes
+and forwards to the transport layer incoming messages for local host domains.
+INET offers a visualizer for displaying traffic at network layer level.
+In this step, we enable network path activity visualization for video stream.
+The visualization helps verifying whether a videoStream packet passed the
 network layer of the client node.
 
 ## The model
@@ -49,4 +49,4 @@ The configuration:
 <!--
 <img src="step17_networkroute_3d.gif">
 -->
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationF.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationF.ned" />

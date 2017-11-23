@@ -6,13 +6,13 @@ tutorial: Visualization
 
 ## Goals
 
-Several mechanisms are used as a part of 802.11 channel access to minimize 
-the likelihood of frame collisions. This function is necessary because 
-the wireless medium is half-duplex. For this reason, it is often useful 
-to display information about the access state of nodes. INET provides 
-a visualizer that display IEEE MAC 802.11 contention states during 
-the channel access method. This information is contained in submodules. 
-By visualizing this information, we get a clear picture about the contention states 
+Several mechanisms are used as a part of 802.11 channel access to minimize
+the likelihood of frame collisions. This function is necessary because
+the wireless medium is half-duplex. For this reason, it is often useful
+to display information about the access state of nodes. INET provides
+a visualizer that display IEEE MAC 802.11 contention states during
+the channel access method. This information is contained in submodules.
+By visualizing this information, we get a clear picture about the contention states
 of network nodes at a glance, without going deep into submodules.
 
 ## The model
@@ -47,4 +47,4 @@ to its waiting period, to reduce the collision probability.
 After that the the network node starts transmitting the data, and it's owning the channel.
 -->
 
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationE.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationE.ned" />

@@ -5,15 +5,15 @@ tutorial: Visualization
 ---
 
 ## Goals
-Routing information is scattered among nodes and can be accessed 
-in individual routing tables of the nodes. Visualizing routing table entries graphically 
+Routing information is scattered among nodes and can be accessed
+in individual routing tables of the nodes. Visualizing routing table entries graphically
 clearly shows how a packet would be routed, without looking into individual routing tables.
 In this step, we enable visualization of routing table entries.
 
 ## The model
 
 ### Network topology
-The configuration for this step uses the `VisualizationE` network, defined in <a srcfile="visualization/VisualizationE.ned"/>.
+The configuration for this step uses the `VisualizationE` network, defined in <a srcfile="../visualization/VisualizationE.ned"/>.
 
 We add the following nodes to the network:
 - one `Router` (`router0`),
@@ -21,28 +21,28 @@ We add the following nodes to the network:
 - one `WirelessHost` (`pedestrianVideo`)
 - and two `Standardhost`s (`videoStreamServer` and `server1`).
 
-Wireless hosts connect to `router0` via `accessPoint0`, `videoStreamServer` 
-and `server1` connect to `router0` via `switch0`. 
+Wireless hosts connect to `router0` via `accessPoint0`, `videoStreamServer`
+and `server1` connect to `router0` via `switch0`.
 The nodes are placed on the playground as follows.
-<pre class="snippet" src="../omnetpp.ini" from="# initializing pedestrianVideo position" until="# videoStreamServer application settings"></pre>
+<pre class="snippet" src="../../visualization/omnetpp.ini" from="# initializing pedestrianVideo position" until="# videoStreamServer application settings"></pre>
 
 The following image shows how the network looks like.
 <img class="screen" src="step15_model_network.png">
 
 ### Video stream application
-We add a video stream application to the configuration. The client is `pedestrianVideo`, 
-the server is `videoStreamServer`. They communicate at UDP port 4000. In addition, sending interval, 
+We add a video stream application to the configuration. The client is `pedestrianVideo`,
+the server is `videoStreamServer`. They communicate at UDP port 4000. In addition, sending interval,
 packet length and the video size are also defined in the `omnetpp.ini` file.
-<pre class="snippet" src="../omnetpp.ini" from="# videoStreamServer application settings" until="# showing routing table entries towards videoStreamServer"></pre>
+<pre class="snippet" src="../../visualization/omnetpp.ini" from="# videoStreamServer application settings" until="# showing routing table entries towards videoStreamServer"></pre>
 
 ### Visualizer
 
-Routing entries are visualized by `RoutingTableVisualizer` (included in the network 
-as part of `IntegratedVisualizer`). The visualizer can be enabled by setting 
-`displayRoutingTables` to *true*. The `videoStreamServer` node is selected as destination by setting 
-`destinationFilter` to *\*videoStreamServer\**. We want to display the route which is 
-between *\*pedestrianVideo\** and *\*videoStreamServer\**. To this end, we set 
-the visualizer's `nodeFilter` parameter to 
+Routing entries are visualized by `RoutingTableVisualizer` (included in the network
+as part of `IntegratedVisualizer`). The visualizer can be enabled by setting
+`displayRoutingTables` to *true*. The `videoStreamServer` node is selected as destination by setting
+`destinationFilter` to *\*videoStreamServer\**. We want to display the route which is
+between *\*pedestrianVideo\** and *\*videoStreamServer\**. To this end, we set
+the visualizer's `nodeFilter` parameter to
 *pedestrianVideo or videoStreamServer or switch\* or router\**.
 (The route can lead through any switch or router so they need to be added to `nodeFilter`.)
 
@@ -62,4 +62,4 @@ and in response the server starts the video stream.
 [gif: video stream start]
 -->
 
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationE.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationE.ned" />

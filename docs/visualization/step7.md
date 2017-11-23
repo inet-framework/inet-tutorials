@@ -5,22 +5,22 @@ tutorial: Visualization
 ---
 
 ## Goals
-For successful communication, wireless nodes must be within each other's 
-communication range. By default, communication range is not displayed, but INET 
-offers a visualizer to show it. Visualizing communication range also can help 
-to place network nodes to appropriate position on the playground. 
+For successful communication, wireless nodes must be within each other's
+communication range. By default, communication range is not displayed, but INET
+offers a visualizer to show it. Visualizing communication range also can help
+to place network nodes to appropriate position on the playground.
 In this step, we display the communication and interference range of the nodes.
 
 ## The model
 Here is the configuration of this step.
-<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization07\]" until="#---"></pre>
+<pre class="snippet" src="../../visualization/omnetpp.ini" from="\[Config Visualization07\]" until="#---"></pre>
 
-The size of the communication and interference range is mainly depends on 
+The size of the communication and interference range is mainly depends on
 the transmitter power of the device.
-We set the transmitter power of each device to *1mW*, because the default transmitter power 
-is too big for this simulation. 
+We set the transmitter power of each device to *1mW*, because the default transmitter power
+is too big for this simulation.
 Communication and interference range are visualized by `MediumVisualizer`.
-We enable the `visualizer` by setting `displayCommunicationRanges` and 
+We enable the `visualizer` by setting `displayCommunicationRanges` and
 `displayInterferenceRanges` to true.
 
 TODO: Visualization of velocity and orientation is disabled in this step...
@@ -42,4 +42,4 @@ The communication and interference ranges seen in the Module view mode too.
 When we run the simulation, the pedestrians associate with the access point.
 In Module view mode there's a bubble message when its happens.
 -->
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationD.ned" />

@@ -5,10 +5,10 @@ tutorial: Visualization
 ---
 
 ## Goals
-In wifi infrastructure mode, wireless nodes have to be associated with an access point 
-to be able to communicate with other nodes on the same network. The association 
-may change over time, or at a time there might be several access points 
-for a wireless node to associate with. It can be useful to be able to display 
+In wifi infrastructure mode, wireless nodes have to be associated with an access point
+to be able to communicate with other nodes on the same network. The association
+may change over time, or at a time there might be several access points
+for a wireless node to associate with. It can be useful to be able to display
 information about wifi association e.g. the SSID above network node.
 In this step, we enable displaying wifi association.
 
@@ -21,11 +21,11 @@ The following image shows the wifi association process:
 ### Visualizer
 We configure `visualizer` as follows:
 
-<pre class="snippet" src="../omnetpp.ini" from="\[Config Visualization09\]" until="#---"></pre>
+<pre class="snippet" src="../../visualization/omnetpp.ini" from="\[Config Visualization09\]" until="#---"></pre>
 
-Wifi association is displayed by `Ieee80211Visualizer`. We enable it 
-by setting `displayAssociations` to *true*. Wifi association is visualized 
-as a signal sign icon. We set `displacementHint` to *"topCenter"* 
+Wifi association is displayed by `Ieee80211Visualizer`. We enable it
+by setting `displayAssociations` to *true*. Wifi association is visualized
+as a signal sign icon. We set `displacementHint` to *"topCenter"*
 to place the association icon above the node to center.
 
 ## Results
@@ -44,4 +44,4 @@ If the association is successful it's <tt>AssocResp-OK</tt> and a signal sign ap
 In 3D view mode as a result of the association process the signal sing appears above the appropriate network node.
 -->
 
-Sources: <a srcfile="visualization/omnetpp.ini" />, <a srcfile="visualization/VisualizationD.ned" />
+Sources: <a srcfile="../visualization/omnetpp.ini" />, <a srcfile="../visualization/VisualizationD.ned" />
