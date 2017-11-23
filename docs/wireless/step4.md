@@ -63,7 +63,7 @@ steps.
 
 Configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless04\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless04\]" until="#---"></pre></p>
 
 ## Results
 
@@ -108,7 +108,7 @@ only relay packets at half the rate that host A emits.
 
 **Number of packets received by host B: 1125**
 
-Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
+Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned" />
 
 ## Discussion
 

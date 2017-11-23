@@ -124,7 +124,7 @@ an optional out-of-band acknowledgement mechanism which we turn off here.
 
 The configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless01\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless01\]" until="#---"></pre></p>
 
 ## Results
 
@@ -154,7 +154,7 @@ the transmission rate was around 660 kbps.
 
 **Number of packets received by host B: 2017**
 
-Sources: <a srcfile="../wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
+Sources: <a srcfile="../wireless/omnetpp.ini"/>, <a srcfile="../wireless/WirelessA.ned"/>
 
 ## Discussion
 

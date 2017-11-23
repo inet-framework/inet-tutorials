@@ -67,7 +67,7 @@ noise level to a nonzero value (-90dBm).
 
 Configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless12\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless12\]" until="#---"></pre></p>
 
 ## Results
 
@@ -93,7 +93,7 @@ the packet because of bit errors, this can be seen in the following log:
 
 **Number of packets received by host B: 665**
 
-Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessC.ned" />
+Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessC.ned" />
 
 ## Discussion
 

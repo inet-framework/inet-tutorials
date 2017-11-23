@@ -4,20 +4,20 @@
     - page: docs/wireless/index.md
       name: Introduction
     - page: docs/wireless/step1.md
-    - page: wireless/step2.md
-    - page: wireless/step3.md
-    - page: wireless/step4.md
-    - page: wireless/step5.md
-    - page: wireless/step6.md
-    - page: wireless/step7.md
-    - page: wireless/step8.md
-    - page: wireless/step9.md
-    - page: wireless/step10.md
-    - page: wireless/step11.md
-    - page: wireless/step12.md
-    - page: wireless/step13.md
-    - page: wireless/step14.md
-    - page: wireless/conclusion.md
+    - page: docs/wireless/step2.md
+    - page: docs/wireless/step3.md
+    - page: docs/wireless/step4.md
+    - page: docs/wireless/step5.md
+    - page: docs/wireless/step6.md
+    - page: docs/wireless/step7.md
+    - page: docs/wireless/step8.md
+    - page: docs/wireless/step9.md
+    - page: docs/wireless/step10.md
+    - page: docs/wireless/step11.md
+    - page: docs/wireless/step12.md
+    - page: docs/wireless/step13.md
+    - page: docs/wireless/step14.md
+    - page: docs/wireless/conclusion.md
 
 - name: IPv4 Configurator Tutorial
   tutorial: Configurator

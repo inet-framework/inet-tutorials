@@ -21,7 +21,7 @@ nodes of a simulated wireless network are on the same plane,
 as a vertical dipole. (INET contains support for directional antennas as
 well.)
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless14\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless14\]" until="#---"></pre></p>
 
 ## Results
 
@@ -37,6 +37,8 @@ two hops.
 <!--internal video recording, playback speed animation speed 1-->
 
 **Number of packets received by host B: 1045**
+
+Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessC.ned" />
 
 ## Discussion
 

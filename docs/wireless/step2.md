@@ -48,7 +48,7 @@ visible at any given time indicate recent successful communication patterns.
 
 Configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless02\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless02\]" until="#---"></pre></p>
 
 ## Results
 
@@ -102,7 +102,7 @@ are transmitted back-to-back, because there's no gap between them. UDPData-2 and
 
 **Number of packets received by host B: 2017**
 
-Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessA.ned"/>
+Sources: <a srcfile="../wireless/omnetpp.ini"/>, <a srcfile="../wireless/WirelessA.ned"/>
 
 ## Discussion
 

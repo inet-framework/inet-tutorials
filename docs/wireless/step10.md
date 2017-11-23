@@ -48,7 +48,7 @@ the topology of the network changes due to the movement of nodes.
 
 The configuration:
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless10\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless10\]" until="#---"></pre></p>
 
 ## Results
 
@@ -85,7 +85,7 @@ number received packets still increases substantially.
 
 **Number of packets received by host B: 956**
 
-Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
+Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned" />
 
 ## Discussion
 

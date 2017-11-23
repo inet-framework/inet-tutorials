@@ -39,7 +39,7 @@ Regarding visualization, we turn off the arrows indicating successful data
 link layer receptions, because in our case it does not add much value above
 displaying the network routes.
 
-<p><pre class="snippet" src="../omnetpp.ini" from="\[Config Wireless05\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless05\]" until="#---"></pre></p>
 
 ## Results
 
@@ -96,7 +96,7 @@ which host can transmit and when.
 
 **Number of packets received by host B: 183**
 
-Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
+Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned" />
 
 ## Discussion
 
