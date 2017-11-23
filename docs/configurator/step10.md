@@ -23,7 +23,7 @@ instead of the default hop count.
 
 ### Configuration
 
-This step uses the `ConfiguratorD` network, defined in <a srcfile="configurator/ConfiguratorD.ned"/>.
+This step uses the `ConfiguratorD` network, defined in <a srcfile="../configurator/ConfiguratorD.ned"/>.
 The network looks like this:
 
 <img class="screen" src="step10network.png" width="850px">
@@ -32,7 +32,7 @@ It contains eight `AODVRouters` laid out in a chain.
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step10A" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step10A" until="####"></pre></p>
 
 The transmitter power of radios determine their communication range.
 The range is set up so hosts are only in range of the adjacent hosts in the chain.
@@ -50,7 +50,7 @@ doesn't mean that it can receive the transmission correctly.
 
 The XML configuration in step10a.xml is as follows:
 
-<p><pre class="snippet" src="../step10a.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step10a.xml"></pre></p>
 
 It contains a copy of the default address configurations, and an \<autoroute\>
 element using the error rate metric. The configurator calculates the
@@ -75,7 +75,7 @@ It leaves the routing table configuration to the dynamic protocol.
 
 The configuration for this part in omnetpp.ini extends the one for Part A:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step10B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step10B" until="####"></pre></p>
 
 The configurator is instructed to leave the routing tables empty,
 by setting `addStaticRoutes` to false. The configurator just assigns
@@ -98,7 +98,7 @@ In this part, routing tables are set up by the Ad-hoc On-demand Distance Vector
 (AODV) dynamic routing protocol. The configuration for this part extends Part B.
 The configuration in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step10C" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step10C" until="####"></pre></p>
 
 As specified in the previous part, the configurator is still instructed not to add any routes.
 Also, the visualizer is still set to visualize all routes. Additionally, `host1` is set to ping
@@ -117,7 +117,7 @@ This is displayed in the following video.
 To record the video, the simulation was run in fast mode, thus, routes appear instantly.
 It takes a few seconds simulation time for the unused routes to expire.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorD.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorD.ned"/>
 
 ## Discussion
 

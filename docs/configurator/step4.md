@@ -15,7 +15,7 @@ This step demonstrates the default configuration for routing.
 This step uses the same network as the previous steps, `ConfiguratorA`.
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step4" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step4" until="####"></pre></p>
 
 The configuration leaves the configurator's parameters at their defaults.
 The configurator's parameters concerning static routing are the following:
@@ -65,7 +65,7 @@ with the visualizer's parameters (discussed in later steps.)
 Additional settings pertaining to routing are specified in the `General` configuration
 in omnetpp.ini:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="General" until="Wireless"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="General" until="Wireless"></pre></p>
 
 The `dumpTopology`, `dumpLinks` and `dumpRoutes` parameters are set to `true`.
 These parameter settings instruct the configurator to print to the module output the topology of
@@ -166,7 +166,7 @@ Below is a video of `host1` pinging `host7`.
 <!--internal video recording playback speed 1.38 animation speed none
 zoom level 0.77 crop: 30 70 150 80-->
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

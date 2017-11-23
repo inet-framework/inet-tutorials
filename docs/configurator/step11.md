@@ -23,13 +23,13 @@ The modified config file can be used as the XML configuration for subsequent sim
 
 ### Configuration
 
-Both parts in this step use the `ConfiguratorA` network defined in <a srcfile="configurator/ConfiguratorA.ned"/>:
+Both parts in this step use the `ConfiguratorA` network defined in <a srcfile="../configurator/ConfiguratorA.ned"/>:
 
 <img class="screen" src="step4network.png">
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step11A" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step11A" until="####"></pre></p>
 
 The configurator's `dumpConfig` parameter can be used to dump the configuration into a file.
 The parameter's value is the name of the config file.
@@ -40,7 +40,7 @@ Routes to all nodes are visualized on the following image.
 
 <img class="screen" src="step11a_routes.png" width="850px" onclick="imageFullSizeZoom(this);" style="cursor:zoom-in">
 
-The configuration is dumped into <a srcfile="configurator/step11a_dump.xml"/>.
+The configuration is dumped into <a srcfile="../configurator/step11a_dump.xml"/>.
 We will modify this config file in the next part.
 
 ## Part B - Using the modified configuration
@@ -53,7 +53,7 @@ i.e. each router should forward packets in the triangle through its interface on
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step11B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step11B" until="####"></pre></p>
 
 The modified config is used as the XML configuration. Since the configuration specifies all routes,
 `addStaticRoutes` needs to be set to `false`, so the configurator doesn't add automatic static routes.
@@ -64,8 +64,8 @@ send packets the wrong way  (i.e. not counter-clockwise in the triangle) are red
 to the other interface.  In essence, all routers send out packets through their interface
 to the right (expect for packets destined to the connecting LAN.)
 
-The modified XML configuration is in <a srcfile="configurator/step11b.xml"/>
-(see <a srcfile="configurator/step11a_dump.xml"/> for the original.)
+The modified XML configuration is in <a srcfile="../configurator/step11b.xml"/>
+(see <a srcfile="../configurator/step11a_dump.xml"/> for the original.)
 The differences between  the original and the modified config files area displayed below
 (the original is shown in red).
 
@@ -85,7 +85,7 @@ The ping exchanges highlight the modified routes on the following video:
 
 The packets travel only counter-clockwise in the triangle of the three routers.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

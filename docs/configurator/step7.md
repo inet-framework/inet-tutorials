@@ -26,7 +26,7 @@ this part can serve as a baseline to compare with.
 
 ### Configuration
 
-All three parts in this step use the `ConfiguratorB` network defined in <a srcfile="configurator/ConfiguratorB.ned"/>. The network looks like this:
+All three parts in this step use the `ConfiguratorB` network defined in <a srcfile="../configurator/ConfiguratorB.ned"/>. The network looks like this:
 
 <img class="screen" src="step7network.png" width="850px">
 
@@ -38,7 +38,7 @@ the area routers, and the backbone router.
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7A" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step7A" until="####"></pre></p>
 
 This configuration turns off every kind of optimization relating to address
 assignment and route generation. This means that nodes will have an individual
@@ -139,7 +139,7 @@ turned off in Part A. This should optimize routing tables and decrease table siz
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step7B" until="####"></pre></p>
 
 The configuration is empty, the default NED parameter values take effect.
 That means that the following optimization features are turned on:
@@ -209,12 +209,12 @@ because a large distant network can be covered with just one rule in a core rout
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step7C" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step7C" until="####"></pre></p>
 
 As in the previous part, all of the configurator's routing table optimization features are enabled.
 The XML configuration for this part in step7c.xml is the following:
 
-<p><pre class="snippet" src="../step7c.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step7c.xml"></pre></p>
 
 This XML configuration assigns addresses hierarchically in the following way,
 when looking down the hierarchy from the backbone router towards the hosts:
@@ -289,10 +289,9 @@ The other nodes' routing tables remained the same. The difference is not drastic
 because the network is small. However, using hierarchical address assignment
 in a larger network would make a significant difference in routing table size.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorB.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorB.ned"/>
 
 ## Discussion
 
 Use <a href="https://github.com/inet-framework/inet-tutorials/issues/2" target="_blank">this page</a>
 in the GitHub issue tracker for commenting on this tutorial.
-

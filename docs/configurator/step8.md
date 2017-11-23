@@ -28,7 +28,7 @@ Note that nodes need to use the same radio medium module to be in the same wirel
 
 ### Configuration
 
-This step uses the `ConfiguratorC` network defined in <a srcfile="configurator/ConfiguratorC.ned"/>.
+This step uses the `ConfiguratorC` network defined in <a srcfile="../configurator/ConfiguratorC.ned"/>.
 The network is displayed on the following image.
 
 <img class="screen" src="step8network.png" width="850px">
@@ -46,7 +46,7 @@ The two LANs need to be in two different wireless networks.
 
 Here is the configuration for this step in omnetpp.ini:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step8" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step8" until="####"></pre></p>
 
 A wireless host in area 1 is configured to ping a wireless host in area 3,
 which helps in visualizing routes.
@@ -54,11 +54,11 @@ which helps in visualizing routes.
 There is a setting in the `General` configuration pertaining to wireless networks:
 the control bit rate of all wireless nodes is set to 54 Mbps for faster ACK transmissions.
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="General" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="General" until="####"></pre></p>
 
 The XML configuration in step8a.xml is the following:
 
-<p><pre class="snippet" src="../step8a.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step8a.xml"></pre></p>
 
 The XML configuration uses the same hierarchical addressing scheme as in Step 7.
 The two wireless LANs are specified to be in separate wireless networks.
@@ -107,19 +107,19 @@ In this part, the SSID is used to put the two wireless LANs in two different wir
 
 The configuration for this part extends Part A. The configuration in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step8B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step8B" until="####"></pre></p>
 
 The XML configuration in step8b.xml (displayed below) is the same as the XML configuration for Part A, except there are no `<wireless>` elements that defined wireless networks.
 They are not needed because different SSIDs are configured for the members of the two wireless LANs.
 
-<p><pre class="snippet" src="../step8b.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step8b.xml"></pre></p>
 
 ### Results
 
 The results are the same as in the previous part. The two wireless LANs are
 considered to be different wireless networks.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorC.ned"/>
 
 ## Discussion
 

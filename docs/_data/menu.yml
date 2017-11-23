@@ -22,21 +22,21 @@
 - name: IPv4 Configurator Tutorial
   tutorial: Configurator
   submenu:
-    - page: configurator/doc/index.md
+    - page: docs/configurator/index.md
       name: Introduction
-    - page: configurator/doc/step1.md
-    - page: configurator/doc/step2.md
-    - page: configurator/doc/step3.md
-    - page: configurator/doc/step4.md
-    - page: configurator/doc/step5.md
-    - page: configurator/doc/step6.md
-    - page: configurator/doc/step7.md
-    - page: configurator/doc/step8.md
-    - page: configurator/doc/step9.md
-    - page: configurator/doc/step10.md
-    - page: configurator/doc/step11.md
-    - page: configurator/doc/step12.md
-    - page: configurator/doc/conclusion.md
+    - page: docs/configurator/step1.md
+    - page: docs/configurator/step2.md
+    - page: docs/configurator/step3.md
+    - page: docs/configurator/step4.md
+    - page: docs/configurator/step5.md
+    - page: docs/configurator/step6.md
+    - page: docs/configurator/step7.md
+    - page: docs/configurator/step8.md
+    - page: docs/configurator/step9.md
+    - page: docs/configurator/step10.md
+    - page: docs/configurator/step11.md
+    - page: docs/configurator/step12.md
+    - page: docs/configurator/conclusion.md
 
 - name: Visualization Tutorial
   tutorial: Visualization

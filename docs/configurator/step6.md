@@ -45,11 +45,11 @@ The configuration for this step extends Step 4, thus, it uses the `ConfiguratorA
 The configuration in omnetpp.ini is the following:
 <!--TODO: network image?-->
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step6A" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step6A" until="####"></pre></p>
 
 Below is the XML configuration in step6a.xml:
 
-<p><pre class="snippet" src="../step6a.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step6a.xml"></pre></p>
 
 The XML configuration contains the default rule for IP address assignment,
 and an `<autoroute>` element that configures the metric to be used.
@@ -149,11 +149,11 @@ be infinite.
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step6B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step6B" until="####"></pre></p>
 
 The XML configuration in step6b.xml is as follows:
 
-<p><pre class="snippet" src="../step6b.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step6b.xml"></pre></p>
 
 The `<autoroute>` elements can also contain the following optional sub-elements,
 which can be used to specify costs in the graph:
@@ -184,7 +184,7 @@ in both directions:
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step6A_1_cropped.mp4" width="850" height="560"></video></p>
 <!--internal video recording run until 1s playback speed 1.5 animation speed none zoom 0.77 crop 30 70 150 80-->
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

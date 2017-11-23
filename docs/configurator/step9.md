@@ -13,13 +13,13 @@ and they get addresses with DHCP.
 
 ## The model
 
-This step uses the `ConfiguratorC` network, defined in <a srcfile="configurator/ConfiguratorC.ned"/>.
+This step uses the `ConfiguratorC` network, defined in <a srcfile="../configurator/ConfiguratorC.ned"/>.
 
 <img class="screen" src="step8network.png" width="850px">
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step9" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step9" until="####"></pre></p>
 
 It boils down to the following:
 
@@ -38,7 +38,7 @@ It boils down to the following:
 
 The XML configuration in step9.xml is the following:
 
-<p><pre class="snippet" src="../step9.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step9.xml"></pre></p>
 
 Addresses are assigned hierarchically. Five LANs in the network have addresses
 assigned by the configurator. Three LANs get their addresses from DHCP servers,
@@ -117,7 +117,7 @@ No routes are visualized initially, because `area3lan3host2` (the destination of
 route visualization) has an unspecified IP address. When it gets an address
 from the DHCP server, the routes leading towards `area3lan3host2` appear.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorC.ned"/>
 
 ## Discussion
 

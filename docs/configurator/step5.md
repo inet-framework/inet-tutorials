@@ -27,7 +27,7 @@ from `router0`'s subnet would go through `router2` to reach `host7`
 
 The configuration in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step5" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step5" until="####"></pre></p>
 
 A ping application is added to `host0`, in addition to the one in `host1` added in Step 4.
 The new app in `host0` pings `host6` to demonstrate that only packets sent to `host7`
@@ -37,7 +37,7 @@ For the routes to go through `router1`, the routing table of `router0` has to be
 The new rules should dictate that packets with the destination of `host7` (10.0.0.35)
 should be routed towards `router2`. The XML configuration in step5a.xml is the following:
 
-<p><pre class="snippet" src="../step5a.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step5a.xml"></pre></p>
 
 The `<route>` element describes a routing table entry for one or more nodes in the network.
 The `hosts` optional selector attribute specifies which hosts' routing tables should contain
@@ -124,12 +124,12 @@ the subnet of hosts 6--8. These routes will go through `router1`, just as in Par
 
 The configuration in omnetpp.ini:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step5B" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step5B" until="####"></pre></p>
 
 As in Part A, the routing table of `router0` has to be altered, so that packets
 to hosts 6--8 go towards `router1`. The XML configuration in step5b.xml is as follows:
 
-<p><pre class="snippet" src="../step5b.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step5b.xml"></pre></p>
 
 The `<route>` element specifies a routing table entry for `router0`.
 The destination is 10.0.0.32 with netmask 255.255.255.248, which designates the
@@ -173,7 +173,7 @@ The following is the animation of `host1` pinging `host7` and `host0` pinging
 This time both packets destined to hosts 6 and 7 take the diverted route,
 and the replies come back on the original route.
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

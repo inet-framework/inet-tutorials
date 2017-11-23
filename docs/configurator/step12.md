@@ -11,7 +11,7 @@ This step demonstrates using the hop count and error rate metrics in a mixed wir
 
 ## The model
 
-This step uses the `ConfiguratorE` network, defined in <a srcfile="configurator/ConfiguratorE.ned"/>.
+This step uses the `ConfiguratorE` network, defined in <a srcfile="../configurator/ConfiguratorE.ned"/>.
 The network looks like this:
 
 <img class="screen" src="step12network.png">
@@ -20,7 +20,7 @@ The core of the network is composed of three routers connected to each other,
 each belonging to an area. There are three areas, each containing a number of hosts,
 connected to the area router.
 
-- Area1 is composed of three `WirelessHosts`, one of which is connected to the router 
+- Area1 is composed of three `WirelessHosts`, one of which is connected to the router
   with a wired connection.
 - Area2 has an `AccessPoint` and three `WirelessHosts`.
 - Area3 has three `StandardHosts` connected to the router via a switch.
@@ -37,7 +37,7 @@ can be configured properly based on the hop count metric.
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../omnetpp.uncommented.ini" from="Step12" until="####"></pre></p>
+<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step12" until="####"></pre></p>
 
 Explanation:
 
@@ -48,7 +48,7 @@ Explanation:
 
 The XML configuration in step12.xml is the following:
 
-<p><pre class="snippet" src="../step12.xml"></pre></p>
+<p><pre class="snippet" src="../../configurator/step12.xml"></pre></p>
 
 To have routes from every node to every other node, all nodes must be covered by
 an autoroute element. The XML configuration contains two autoroute elements.
@@ -62,7 +62,7 @@ and they are all booleans with true as default value.
 The global and per-interface settings are in a logical AND relationship,
 so both have to be true to take effect.
 
-The default route assumes there is one gateway, 
+The default route assumes there is one gateway,
 and all nodes on the link can reach it directly. This is not the case for area 1,
 because `area1host1` is out of range of the gateway host.
 The `add-default-route` parameter is set to false for the area 1 hosts.
@@ -112,7 +112,7 @@ The following video shows `area1host1` pinging `area2host1`:
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video></p>
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
-Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorE.ned"/>
+Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorE.ned"/>
 
 ## Discussion
 
