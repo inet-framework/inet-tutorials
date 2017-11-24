@@ -1,0 +1,75 @@
+- name: Wireless Tutorial
+  tutorial: Wireless
+  submenu:
+    - page: _docs/wireless/index.md
+      name: Introduction
+    - page: _docs/wireless/step1.md
+    - page: _docs/wireless/step2.md
+    - page: _docs/wireless/step3.md
+    - page: _docs/wireless/step4.md
+    - page: _docs/wireless/step5.md
+    - page: _docs/wireless/step6.md
+    - page: _docs/wireless/step7.md
+    - page: _docs/wireless/step8.md
+    - page: _docs/wireless/step9.md
+    - page: _docs/wireless/step10.md
+    - page: _docs/wireless/step11.md
+    - page: _docs/wireless/step12.md
+    - page: _docs/wireless/step13.md
+    - page: _docs/wireless/step14.md
+    - page: _docs/wireless/conclusion.md
+
+- name: IPv4 Configurator Tutorial
+  tutorial: Configurator
+  submenu:
+    - page: _docs/configurator/index.md
+      name: Introduction
+    - page: _docs/configurator/step1.md
+    - page: _docs/configurator/step2.md
+    - page: _docs/configurator/step3.md
+    - page: _docs/configurator/step4.md
+    - page: _docs/configurator/step5.md
+    - page: _docs/configurator/step6.md
+    - page: _docs/configurator/step7.md
+    - page: _docs/configurator/step8.md
+    - page: _docs/configurator/step9.md
+    - page: _docs/configurator/step10.md
+    - page: _docs/configurator/step11.md
+    - page: _docs/configurator/step12.md
+    - page: _docs/configurator/conclusion.md
+
+- name: Visualization Tutorial
+  tutorial: Visualization
+  hidden: true
+  submenu:
+    - page: _docs/visualization/index.md
+      name: Introduction
+    - page: _docs/visualization/step1.md
+    - page: _docs/visualization/step2.md
+    - page: _docs/visualization/step3.md
+    - page: _docs/visualization/step4.md
+    - page: _docs/visualization/step5.md
+    - page: _docs/visualization/step6.md
+    - page: _docs/visualization/step7.md
+    - page: _docs/visualization/step8.md
+    - page: _docs/visualization/step9.md
+    - page: _docs/visualization/step10.md
+    - page: _docs/visualization/step11.md
+    - page: _docs/visualization/step12.md
+    - page: _docs/visualization/step13.md
+    - page: _docs/visualization/step14.md
+    - page: _docs/visualization/step15.md
+    - page: _docs/visualization/step16.md
+    - page: _docs/visualization/step17.md
+    - page: _docs/visualization/step18.md
+    - page: _docs/visualization/step19.md
+    - page: _docs/visualization/step20.md
+    - page: _docs/visualization/step21.md
+    - page: _docs/visualization/step22.md
+    - page: _docs/visualization/step23.md
+    - page: _docs/visualization/step24.md
+    - page: _docs/visualization/step25.md
+    - page: _docs/visualization/conclusion.md
+
+- name: Back to INET
+  link: https://inet.omnetpp.org

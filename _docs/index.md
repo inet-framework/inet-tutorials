@@ -15,7 +15,7 @@ of the INET Framework repository.
 
 The following tutorials are available:
 <ul>
-{%include link.i page='docs/wireless/index.md' %}
-{%include link.i page='docs/configurator/index.md' %}
-{%include link.i page='docs/visualization/index.md' %}
+{%include link.i page='_docs/wireless/index.md' %}
+{%include link.i page='_docs/configurator/index.md' %}
+{%include link.i page='_docs/visualization/index.md' %}
 </ul>

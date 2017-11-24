@@ -1,4 +1,4 @@
-{% assign pg = site.pages | where: 'path', include.page | first %}
+{% assign pg = site.docs | where: 'path', include.page | first %}
 {% if pg == nil %}
   <li><strong>BOGUS LINK: No such page: {{include.page}}</strong></li>
 {% elsif pg.hidden and site.showallpages != true  %}

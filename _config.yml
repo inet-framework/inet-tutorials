@@ -1,5 +1,10 @@
 baseurl: /inet-tutorials
 showallpages: true
-data_dir: docs/_data
-includes_dir: docs/_includes
-layouts_dir: docs/_layouts
+data_dir: _docs/_data
+includes_dir: _docs/_includes
+layouts_dir: _docs/_layouts
+
+collections:
+  docs:
+    output: true
+    permalink: /:path

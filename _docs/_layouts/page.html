@@ -18,7 +18,7 @@ layout: default
             {% endfor %}
 
             {% for item in activeTutorialSubmenu %}
-                {% assign pg = site.pages | where: 'path', item.page | first %}
+                {% assign pg = site.docs | where: 'path', item.page | first %}
                 {% capture pagetitle %}{% if item.name %}{{ item.name }}{% else %}{{ pg.title }}{% endif %}{% endcapture %}
                 {% if page.path == item.page %}
                     {% assign activeStepPage = pg %}

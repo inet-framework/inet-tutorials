@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>INET Framework Tutorials - {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{site.baseurl}}/docs/stylesheets/bootstrap-cerulean.min.css" media="screen">
-    <link rel="stylesheet" href="{{site.baseurl}}/docs/stylesheets/inet.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/docs/stylesheets/tutorials.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/docs/stylesheets/rainbow.css">
-    <link rel="stylesheet" href="{{site.baseurl}}/docs/stylesheets/rainbow.linenumbers.theme.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/bootstrap-cerulean.min.css" media="screen">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/inet.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/tutorials.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/rainbow.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/rainbow.linenumbers.theme.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="/javascripts/html5shiv.js"></script>
@@ -47,7 +47,7 @@
           var srcref = $(this).attr('srcfile');
           var name = srcref.replace(/.*\//g, "");
           $(this).text(name);
-          $(this).attr('href', '{{site.baseurl}}/docs/showfile.html?url='+srcref);
+          $(this).attr('href', '{{site.baseurl}}/showfile.html?url='+srcref);
           $(this).attr('target', '_blank');
       });
     });
@@ -64,7 +64,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="{{site.baseurl}}/docs/" class="navbar-brand"><img src="{{site.baseurl}}/docs/images/router.png" style="width: 25px; display: inline; margin-top: -4px"> <b>INET Framework Tutorials</b></a>
+          <a href="{{site.baseurl}}/" class="navbar-brand"><img src="{{site.baseurl}}/images/router.png" style="width: 25px; display: inline; margin-top: -4px"> <b>INET Framework Tutorials</b></a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -97,10 +97,10 @@
                       {% if submenuitem.separator %}
                         <li role="presentation" class="divider"></li>
                       {% elsif submenuitem.page %}
-                        {% assign pg = site.pages | where: 'path', submenuitem.page | first %}
+                        {% assign pg = site.docs | where: 'path', submenuitem.page | first %}
                         {% if pg == nil %}<li>BOGUS MENU ITEM: No such page: {{submenuitem.page}}</li>{% endif %}
                         {% capture pagetitle %}{% if submenuitem.name %}{{ submenuitem.name }}{% else %}{{ pg.title }}{% endif %}{% endcapture %}
-                        <li><a href="{{site.baseurl}}/{{ pg.url }}">{{ pagetitle }}</a></li>
+                        <li><a href="{{site.baseurl}}{{ pg.url }}">{{ pagetitle }}</a></li>
                       {% elsif submenuitem.link %}
                         <li><a href="{{ submenuitem.link }}">{{ submenuitem.name }}</a></li>
                       {% else %}
@@ -149,17 +149,17 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/bootstrap.min.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/cerulean.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/quoting.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/videowrapper.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/rainbow-custom.min.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/rainbow-ned.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/rainbow-ini.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/rainbow-html.js"></script>
+    <script src="{{site.baseurl}}/javascripts/bootstrap.min.js"></script>
+    <script src="{{site.baseurl}}/javascripts/cerulean.js"></script>
+    <script src="{{site.baseurl}}/javascripts/quoting.js"></script>
+    <script src="{{site.baseurl}}/javascripts/videowrapper.js"></script>
+    <script src="{{site.baseurl}}/javascripts/rainbow-custom.min.js"></script>
+    <script src="{{site.baseurl}}/javascripts/rainbow-ned.js"></script>
+    <script src="{{site.baseurl}}/javascripts/rainbow-ini.js"></script>
+    <script src="{{site.baseurl}}/javascripts/rainbow-html.js"></script>
     <script>Rainbow.defer = true;</script>
-    <script src="{{site.baseurl}}/docs/javascripts/imgToFullSize.js"></script>
-    <script src="{{site.baseurl}}/docs/javascripts/rainbow.linenumbers.min.js"></script>
+    <script src="{{site.baseurl}}/javascripts/imgToFullSize.js"></script>
+    <script src="{{site.baseurl}}/javascripts/rainbow.linenumbers.min.js"></script>
   </body>
 </html>
 
