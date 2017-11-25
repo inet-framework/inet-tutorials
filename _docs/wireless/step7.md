@@ -44,7 +44,7 @@ number of retries and is discarded, the MAC emits a <i>link break</i>
 signal. This signal may be interpreted by routing protocols such as AODV as
 a sign that a route has become broken, and a new one needs to be found.
 
-<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless07\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../wireless/omnetpp.ini" from="\[Config Wireless07\]" until="#---"></pre></p>
 
 ## Results
 
@@ -85,7 +85,7 @@ as there are no lost packets.
 
 **Number of packets received by host B: 1393**
 
-Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned" />
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 
 ## Discussion
 

@@ -45,7 +45,7 @@ cause mobile nodes to leave a trail as they move. We also enable a visualizer op
 
 The configuration:
 
-<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless09\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../wireless/omnetpp.ini" from="\[Config Wireless09\]" until="#---"></pre></p>
 
 ## Results
 
@@ -71,7 +71,7 @@ protocol is required.
 
 **Number of packets received by host B: 547**
 
-Sources: <a srcfile="../wireless/omnetpp.ini"/>, <a srcfile="../wireless/WirelessB.ned"/>
+Sources: <a srcfile="wireless/omnetpp.ini"/>, <a srcfile="wireless/WirelessB.ned"/>
 
 ## Discussion
 

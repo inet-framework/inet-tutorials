@@ -79,7 +79,7 @@ so we turn it off.
 
 Configuration:
 
-<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless08\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../wireless/omnetpp.ini" from="\[Config Wireless08\]" until="#---"></pre></p>
 
 ## Results
 
@@ -96,7 +96,7 @@ the other nodes.
 
 **Number of packets received by host B: 1393**
 
-Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned"/>
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned"/>
 
 ## Discussion
 

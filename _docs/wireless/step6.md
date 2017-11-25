@@ -53,7 +53,7 @@ period before each transmission (this is the default behavior for the MAC).
 In the absence of ACKs, the MAC has to assume that all its transmissions are successful,
 so no frame is ever retransmitted.
 
-<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless06\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../wireless/omnetpp.ini" from="\[Config Wireless06\]" until="#---"></pre></p>
 
 ## Results
 
@@ -75,7 +75,7 @@ eight times as many packets are received by host B than in the previous step.
 
 **Number of packets received by host B: 1374**
 
-Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessB.ned" />
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessB.ned" />
 
 ## Discussion
 

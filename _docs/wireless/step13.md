@@ -33,7 +33,7 @@ the `physicalEnvironment` module. (Note that we added `physicalEnvironment`
 to the network when we introduced obstacles.) The ground's elevation is the
 `elevation` parameter of `FlatGround`. We set this parameter to 0m.
 
-<p><pre class="snippet" src="../../wireless/omnetpp.ini" from="\[Config Wireless13\]" until="#---"></pre></p>
+<p><pre class="snippet" src="../wireless/omnetpp.ini" from="\[Config Wireless13\]" until="#---"></pre></p>
 
 ## Results
 
@@ -53,7 +53,7 @@ the case of the two-ray ground reflection model, the bit error rate is greater.
 
 **Number of packets received by host B: 679**
 
-Sources: <a srcfile="../wireless/omnetpp.ini" />, <a srcfile="../wireless/WirelessC.ned" />
+Sources: <a srcfile="wireless/omnetpp.ini" />, <a srcfile="wireless/WirelessC.ned" />
 
 ## Discussion
 
