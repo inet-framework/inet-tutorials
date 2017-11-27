@@ -45,11 +45,11 @@ The configuration for this step extends Step 4, thus, it uses the `ConfiguratorA
 The configuration in omnetpp.ini is the following:
 <!--TODO: network image?-->
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step6A" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step6A" until="####" comment="#!"></pre></p>
 
 Below is the XML configuration in step6a.xml:
 
-<p><pre class="snippet" src="../../configurator/step6a.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step6a.xml"></pre></p>
 
 The XML configuration contains the default rule for IP address assignment,
 and an `<autoroute>` element that configures the metric to be used.
@@ -149,11 +149,11 @@ be infinite.
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step6B" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step6B" until="####" comment="#!"></pre></p>
 
 The XML configuration in step6b.xml is as follows:
 
-<p><pre class="snippet" src="../../configurator/step6b.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step6b.xml"></pre></p>
 
 The `<autoroute>` elements can also contain the following optional sub-elements,
 which can be used to specify costs in the graph:

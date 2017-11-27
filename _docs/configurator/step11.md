@@ -29,7 +29,7 @@ Both parts in this step use the `ConfiguratorA` network defined in <a srcfile=".
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step11A" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step11A" until="####" comment="#!"></pre></p>
 
 The configurator's `dumpConfig` parameter can be used to dump the configuration into a file.
 The parameter's value is the name of the config file.
@@ -53,7 +53,7 @@ i.e. each router should forward packets in the triangle through its interface on
 
 The configuration for this part in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step11B" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step11B" until="####" comment="#!"></pre></p>
 
 The modified config is used as the XML configuration. Since the configuration specifies all routes,
 `addStaticRoutes` needs to be set to `false`, so the configurator doesn't add automatic static routes.

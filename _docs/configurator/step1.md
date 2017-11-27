@@ -30,7 +30,7 @@ In many scenarios, including including this one, the `IPv4NetworkConfigurator`
 module can properly configure the network using just the default settings.
 Thus, the configuration in omnetpp.ini for this step is basically empty:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step1" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step1" until="####" comment="#!"></pre></p>
 
 The configurator has several parameters that affect its operation, but for now,
 all of them are left at their default settings. Let's briefly review the ones
@@ -73,7 +73,7 @@ switches and access points, as they don't have IP addresses.
 Other settings in the `General` section, such as the WiFi bit rate,
 are not relevant for the topic of the tutorial.
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="General" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="General" until="####"></pre></p>
 
 
 ## Results

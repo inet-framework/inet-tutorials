@@ -19,7 +19,7 @@ This step uses the `ConfiguratorC` network, defined in <a srcfile="../configurat
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step9" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step9" until="####" comment="#!"></pre></p>
 
 It boils down to the following:
 
@@ -38,7 +38,7 @@ It boils down to the following:
 
 The XML configuration in step9.xml is the following:
 
-<p><pre class="snippet" src="../../configurator/step9.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step9.xml"></pre></p>
 
 Addresses are assigned hierarchically. Five LANs in the network have addresses
 assigned by the configurator. Three LANs get their addresses from DHCP servers,

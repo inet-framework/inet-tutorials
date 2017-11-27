@@ -18,11 +18,11 @@ and there are three such groups in the network.
 
 The configuration is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step3" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step3" until="####" comment="#!"></pre></p>
 
 This time the XML configuration is supplied in an external file (step3.xml), using the `xmldoc()` function:
 
-<p><pre class="snippet" src="../../configurator/step3.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step3.xml"></pre></p>
 
 A brief explanation:
 
@@ -42,14 +42,14 @@ These seven rules assign addresses to all interfaces in the network, thus, a def
 The same effect can be achieved in more than one way. Here is an alternative
 XML configuration (step3alt1.xml) that results in the same address assignment:
 
-<p><pre class="snippet" src="../../configurator/step3alt1.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step3alt1.xml"></pre></p>
 
 The `among` selector selects the interfaces of the specified hosts towards the specified
 hosts (the statement `among="X Y Z"` is the same as `hosts="X Y Z" towards="X Y Z"`).
 
 Another alternative XML configuration is the following:
 
-<p><pre class="snippet" src="../../configurator/step3alt2.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step3alt2.xml"></pre></p>
 
 This one assigns an address to one host in each of the three subnets. It assigns addresses
 o the interfaces of the routers facing the other routers, and includes a copy of the default

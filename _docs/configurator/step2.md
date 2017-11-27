@@ -21,7 +21,7 @@ The configurator will automatically assign addresses to the rest of the nodes.
 
 The configuration in omnetpp.ini for this step is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step2" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step2" until="####" comment="#!"></pre></p>
 
 The value for the `config` parameter can be supplied either inline using the `xml()`
 function, or in an external XML file using the `xmldoc()` function (with the file name

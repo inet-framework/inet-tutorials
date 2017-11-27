@@ -37,7 +37,7 @@ can be configured properly based on the hop count metric.
 
 The configuration for this step in omnetpp.ini is the following:
 
-<p><pre class="snippet" src="../../configurator/omnetpp.uncommented.ini" from="Step12" until="####"></pre></p>
+<p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step12" until="####" comment="#!"></pre></p>
 
 Explanation:
 
@@ -48,7 +48,7 @@ Explanation:
 
 The XML configuration in step12.xml is the following:
 
-<p><pre class="snippet" src="../../configurator/step12.xml"></pre></p>
+<p><pre class="snippet" src="../configurator/step12.xml"></pre></p>
 
 To have routes from every node to every other node, all nodes must be covered by
 an autoroute element. The XML configuration contains two autoroute elements.
