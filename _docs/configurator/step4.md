@@ -76,8 +76,8 @@ are considered to be on the same link.
 
 ### Additional configuration
 
-The `General` configuration also sets up `GlobalARP` to keep the packet exchanges
-simpler. `GlobalARP` fills the ARP tables of all nodes in advance, so when
+The `General` configuration also sets up `GlobalArp` to keep the packet exchanges
+simpler. `GlobalArp` fills the ARP tables of all nodes in advance, so when
 the simulation begins no ARP exchanges are necessary.
 
 The `**.routingTable.netmaskRoutes = ""` line keeps the routing table modules from

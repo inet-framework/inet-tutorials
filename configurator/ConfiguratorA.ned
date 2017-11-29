@@ -15,7 +15,7 @@
 
 package inet.tutorials.configurator;
 
-import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.node.ethernet.Eth100M;
 import inet.node.ethernet.Eth10M;
 import inet.node.ethernet.EtherSwitch;
@@ -28,7 +28,7 @@ network ConfiguratorA
 {
     @display("bgb=1610.5125,874.96497");
     submodules:
-        configurator: IPv4NetworkConfigurator {
+        configurator: Ipv4NetworkConfigurator {
             @display("p=100,100");
         }
         host0: StandardHost {

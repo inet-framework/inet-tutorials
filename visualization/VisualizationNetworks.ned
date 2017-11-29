@@ -23,7 +23,7 @@ import inet.common.geometry.common.OsgGeographicCoordinateSystem;
 import inet.node.inet.WirelessHost;
 import inet.node.wireless.AccessPoint;
 
-import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
 
 //networkC
@@ -81,7 +81,7 @@ network VisuD extends VisuC
             parameters:
                 @display("p=487,163");
         }
-        configurator: IPv4NetworkConfigurator {
+        configurator: Ipv4NetworkConfigurator {
             parameters:
                 @display("p=100,250");
         }

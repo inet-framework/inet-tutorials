@@ -22,11 +22,11 @@ The network we want to configure is `ConfiguratorA`, defined in
 
 The network contains three routers, each connected to the other two. There
 are three subnetworks with `StandardHosts`, connected to the routers by Ethernet
-switches. It also contains an instance of `IPv4NetworkConfigurator`.
+switches. It also contains an instance of `Ipv4NetworkConfigurator`.
 
 ## The configuration
 
-In many scenarios, including including this one, the `IPv4NetworkConfigurator`
+In many scenarios, including including this one, the `Ipv4NetworkConfigurator`
 module can properly configure the network using just the default settings.
 Thus, the configuration in omnetpp.ini for this step is basically empty:
 

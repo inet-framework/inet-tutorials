@@ -15,7 +15,7 @@
 
 package inet.tutorials.configurator;
 
-import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.node.ethernet.Eth10M;
 import inet.node.ethernet.EtherSwitch;
 import inet.node.inet.Router;
@@ -57,7 +57,7 @@ network ConfiguratorE
         area3Switch: EtherSwitch {
             @display("p=805.6125,665.775");
         }
-        configurator: IPv4NetworkConfigurator {
+        configurator: Ipv4NetworkConfigurator {
             @display("p=100,50");
         }
         radioMedium: Ieee80211ScalarRadioMedium {

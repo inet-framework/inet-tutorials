@@ -20,11 +20,11 @@ try to).
 
 Let's configure ad-hoc routing with AODV. As AODV will manage the routing
 tables, we don't need the statically added routes any more. We only need
-`IPv4NetworkConfigurator` to assign the IP addresses, and turn all other
+`Ipv4NetworkConfigurator` to assign the IP addresses, and turn all other
 functions off.
 
-More important, we change the hosts to be instances of `AODVRouter`.
-`AODVRouter` is like  `WirelessHost`, but with an added `AODVRouting`
+More important, we change the hosts to be instances of `AodvRouter`.
+`AodvRouter` is like  `WirelessHost`, but with an added `AodvRouting`
 submodule. This change turns each node into an AODV router.
 
 AODV stands for Ad hoc On-Demand Distance Vector. In AODV, routes are

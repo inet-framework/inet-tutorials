@@ -39,7 +39,7 @@ The following code snippet shows `VisualizationD` network which is used for this
 
 <pre class="snippet" src="../../visualization/VisualizationD.ned" from="network VisualizationD"></pre>
 
-An `IPv4NetworkConfigurator` module instance and an `Ieee80211ScalarRadioMedium`
+An `Ipv4NetworkConfigurator` module instance and an `Ieee80211ScalarRadioMedium`
 module instance are also added to the model. We will use them as `configurator`
 and `radioMedium`. The `configurator` module assigns IP addresses and sets up
 static routing for an IPv4 network, `radioMedium` is a radio medium model,

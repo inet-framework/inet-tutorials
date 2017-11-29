@@ -15,7 +15,7 @@
 
 package inet.tutorials.configurator;
 
-import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.node.ethernet.Eth10M;
 import inet.node.ethernet.EtherSwitch;
 import inet.node.inet.Router;
@@ -111,7 +111,7 @@ network ConfiguratorB
         backbonerouter: Router {
             @display("p=1620.795,934.23;i=abstract/router2");
         }
-        configurator: IPv4NetworkConfigurator {
+        configurator: Ipv4NetworkConfigurator {
             @display("p=150,100");
         }
         visualizer: IntegratedCanvasVisualizer {

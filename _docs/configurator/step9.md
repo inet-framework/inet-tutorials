@@ -27,10 +27,10 @@ It boils down to the following:
 - `Area1lan3host2` is configured to ping `area3lan3host3`.
   The ping application is delayed, so it starts sending pings after the hosts
   associated with the access points and got their addresses from the DHCP servers.
-- `DHCPServer` submodules are added to the area routers. The DHCP server
+- `DhcpServer` submodules are added to the area routers. The DHCP server
   is configured to listen on the interface connecting to the unspecified LAN.
   The interface's netmask is the DHCP server's address range.
-- `DHCPClient` submodules are added to the LANs which are unspecified
+- `DhcpClient` submodules are added to the LANs which are unspecified
   by the configurator. There is one such LAN in each area, they are
   `area1lan3`, `area2lan1` and `area3lan3`. Hosts in these LANs get
   the addresses from the DHCP server in the corresponding area router.

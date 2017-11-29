@@ -14,7 +14,7 @@ calculates with one reflection from the ground.
 
 ## The model
 
-It has been mentioned that `APSKScalarRadioMedium` relies on various
+It has been mentioned that `ApskScalarRadioMedium` relies on various
 subcomponents for computing path loss, obstacle loss, and background noise,
 among others. Installing the two-ray ground reflection model is just a matter
 of changing its `pathLossType` parameter from the default

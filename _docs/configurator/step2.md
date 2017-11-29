@@ -62,7 +62,7 @@ on those interfaces. The attributes used in the configuration above are:
 
 All attributes are optional. There are many other attributes available. For the
 complete list, please refer to the configurator's
-<a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator.html"
+<a href="https://omnetpp.org/doc/inet/api-current/neddoc/index.html?p=inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator.html"
 target="_blank">NED documentation</a>.
 
 The order of configuration elements is important, but the configurator doesn't assign

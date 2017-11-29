@@ -52,20 +52,20 @@ file), and later steps will override this setting using `omnetpp.ini`.
 
 ### Address assignment
 
-IP addresses are assigned to hosts by an `IPv4NetworkConfigurator` module,
+IP addresses are assigned to hosts by an `Ipv4NetworkConfigurator` module,
 which appears as the `configurator` submodule in the network. The hosts
 also need to know each others' MAC addresses to communicate, which in this
-model is taken care of by using per-host `GlobalARP` modules instead of
+model is taken care of by using per-host `GlobalArp` modules instead of
 real ARP.
 
 ### Traffic model
 
 In the model, host A generates UDP packets which are received by host B. To
-this end, host A is configured to contain a `UDPBasicApp` module, which generates 1000-byte
+this end, host A is configured to contain a `UdpBasicApp` module, which generates 1000-byte
 UDP messages at random intervals with exponential distribution, the mean of
 which is 12ms. Therefore the app is going to generate 100 kbyte/s (800
 kbps) UDP traffic, not counting protocol overhead. Host B contains a
-`UDPSink` application that just discards received packets.
+`UdpSink` application that just discards received packets.
 
 The model also displays the number of packets received by host B. The text
 is added by the `@figure[rcvdPkText]` line, and the subsequent
@@ -128,7 +128,7 @@ The configuration:
 
 ## Results
 
-When we run the simulation, here's what happens. Host A's `UDPBasicApp`
+When we run the simulation, here's what happens. Host A's `UdpBasicApp`
 generates UDP packets at random intervals. These packets are sent down via
 UDP and IPv4 to the network interface for transmission. The network
 interface queues packets, and transmits them as soon as it can. As long as

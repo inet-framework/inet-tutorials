@@ -16,8 +16,8 @@ attenuation and obstacle loss.
 
 ### Switching to APSK radio
 
-In this step, we replace `IdealRadio` with `APSKScalarRadio`.
-`APSKScalarRadio` models a radio with an APSK (amplitude and phase-shift
+In this step, we replace `IdealRadio` with `ApskScalarRadio`.
+`ApskScalarRadio` models a radio with an APSK (amplitude and phase-shift
 keying) modulation scheme. By default it uses BPSK, but QPSK, QAM-16,
 QAM-64, QAM-256 and several other modulations can also be configured.
 (Modulation is a parameter of the radio's transmitter component.)
@@ -28,7 +28,7 @@ power of the radios. Together with other parameters, they will allow the
 radio channel and the receiver models to compute path loss, SNIR, bit error
 rate and other values, and ultimately determine the success of reception.
 
-`APSKScalarRadio` also adds realism in that it simulates that the data are
+`ApskScalarRadio` also adds realism in that it simulates that the data are
 preceded by a preamble and a physical layer header. Their lengths are also
 parameters (and may be set to zero when not needed.)
 
@@ -54,12 +54,12 @@ previous steps.
 
 ### Setting up the wireless channel
 
-Since we switched the radio to `APSKScalarRadio`, we also need to change
-the medium to `APSKScalarRadioMedium`. In general, one always needs to use
+Since we switched the radio to `ApskScalarRadio`, we also need to change
+the medium to `ApskScalarRadioMedium`. In general, one always needs to use
 a medium that is compatible with the given radio. (With `IdealRadio`, we
 also used `IdealRadioMedium`.)
 
-`APSKScalarRadioMedium` has "slots" to plug in various propagation
+`ApskScalarRadioMedium` has "slots" to plug in various propagation
 models, path loss models, obstacle loss models, analog models and
 background noise models. Here we make use of the fact that the default
 background noise model is homogeneous isotropic white noise, and set up the

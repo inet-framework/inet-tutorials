@@ -25,7 +25,7 @@ enabled. This can be done by setting the `forwarding` parameter of
 We also need to set up static routing. Static configuration in the INET
 Framework is often done by configurator modules. Static IPv4 configuration,
 including address assignment and adding routes, is usually done using the
-`IPv4NetworkConfigurator` module. The model already has an instance of this
+`Ipv4NetworkConfigurator` module. The model already has an instance of this
 module, the `configurator` submodule. The configurator can be configured
 using an XML specification and some additional parameters. Here, the XML
 specification is provided as a string constant inside the ini file.
