@@ -37,7 +37,7 @@ var getLines = function(text, after, from, until, upto, comment) {
     if (matches == null)
         return { startLine: 0, snippet: "!!! No matching lines !!!" };
 
-    let preface = isStartInclusive ? matches[1] + matches[2] : matches[1];
+    let preface = isStartInclusive ? matches[1] : (matches[1] + matches[2]);
     let snippet = (isStartInclusive ? matches[2] : "")
                     + matches[3]
                     + (isEndInclusive ? matches[4] : "");
