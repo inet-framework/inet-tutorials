@@ -26,7 +26,7 @@ switches. It also contains an instance of `IPv4NetworkConfigurator`.
 
 ## The configuration
 
-In many scenarios, including including this one, the `IPv4NetworkConfigurator`
+In many scenarios, including this one, the `IPv4NetworkConfigurator`
 module can properly configure the network using just the default settings. 
 Thus, the configuration in omnetpp.ini for this step is basically empty:
 
