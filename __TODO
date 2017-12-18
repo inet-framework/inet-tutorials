@@ -1,5 +1,2 @@
-tutorials:
-
-wireless 4,5,6,7,8,9: number of packets differ
-wireless 10: AODV not working
+- Wireless: Step 8: energyBalance is nan
 
