@@ -81,7 +81,7 @@ and other physical phenomena into account.
 
 INET can model the wireless physical layer at various levels of detail,
 realized with different radio medium modules. In this step, we use
-`IdealRadioMedium`, which is the simplest model. It implements a variation
+`UnitDiskRadioMedium`, which is the simplest model. It implements a variation
 of unit disc radio, meaning that physical phenomena like signal attenuation
 are ignored, and the communication range is simply specified in meters.
 Transmissions within range are always correctly received unless collisions
@@ -94,7 +94,7 @@ NOTE: Naturally, this model of the physical layer has little correspondence
 to reality. However, it has its uses in the simulation. Its simplicity and
 consequent predictability are an advantage in scenarios where realistic
 modeling of the physical layer is not a primary concern, for example in the
-modeling of ad-hoc routing protocols. Simulations using `IdealRadioMedium`
+modeling of ad-hoc routing protocols. Simulations using `UnitDiskRadioMedium`
 also run faster than more realistic ones, due to the low computational
 cost.
 
@@ -104,7 +104,7 @@ use one that is compatible with the medium module. In this step, hosts contain
 `UnitDiskRadio` as part of `IdealWirelessNic`.
 
 In this model, we configure the chosen physical layer model
-(`IdealRadioMedium` and `UnitDiskRadio`) as follows. The communication range
+(`UnitDiskRadioMedium` and `UnitDiskRadio`) as follows. The communication range
 is set to 500m. Modeling packet losses due to collision (termed
 "interference" in this model) is turned off, resulting in pairwise
 independent duplex communication channels. The radio data rates are set to

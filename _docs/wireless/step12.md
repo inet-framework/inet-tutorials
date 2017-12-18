@@ -57,7 +57,7 @@ previous steps.
 Since we switched the radio to `ApskScalarRadio`, we also need to change
 the medium to `ApskScalarRadioMedium`. In general, one always needs to use
 a medium that is compatible with the given radio. (With `UnitDiskRadio`, we
-also used `IdealRadioMedium`.)
+also used `UnitDiskRadioMedium`.)
 
 `ApskScalarRadioMedium` has "slots" to plug in various propagation
 models, path loss models, obstacle loss models, analog models and
