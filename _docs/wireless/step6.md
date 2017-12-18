@@ -31,7 +31,7 @@ will be less collisions, and the medium will be utilized better.
 
 To use CSMA, we need to replace `IdealWirelessNic` in the hosts with
 `WirelessNic`. `WirelessNic` is a generic NIC with both the radio and
-the MAC module left open, so we specify `IdealRadio` for its `radioType`
+the MAC module left open, so we specify `UnitDiskRadio` for its `radioType`
 parameter, and `CsmaCaMac` for `macType`.
 
 The `CsmaCaMac` module implements CSMA/CA with optional acknowledgements

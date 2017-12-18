@@ -16,7 +16,7 @@ attenuation and obstacle loss.
 
 ### Switching to APSK radio
 
-In this step, we replace `IdealRadio` with `ApskScalarRadio`.
+In this step, we replace `UnitDiskRadio` with `ApskScalarRadio`.
 `ApskScalarRadio` models a radio with an APSK (amplitude and phase-shift
 keying) modulation scheme. By default it uses BPSK, but QPSK, QAM-16,
 QAM-64, QAM-256 and several other modulations can also be configured.
@@ -56,7 +56,7 @@ previous steps.
 
 Since we switched the radio to `ApskScalarRadio`, we also need to change
 the medium to `ApskScalarRadioMedium`. In general, one always needs to use
-a medium that is compatible with the given radio. (With `IdealRadio`, we
+a medium that is compatible with the given radio. (With `UnitDiskRadio`, we
 also used `IdealRadioMedium`.)
 
 `ApskScalarRadioMedium` has "slots" to plug in various propagation
@@ -81,7 +81,7 @@ In this model, more physical effects are simulated than in previous steps.
 There is radio signal attenuation, background noise and a more realistic radio
 model. The blue circles representing communication range is an approximation.
 There is no distinct distance where receptions fail, as in the case of
-`IdealRadio`.
+`UnitDiskRadio`.
 
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="wireless-step12-1.mp4" width="655" height="575"></video></p>
 <!--internal video recording, playback speed animation speed 1-->

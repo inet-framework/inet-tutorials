@@ -101,10 +101,10 @@ cost.
 In hosts, network interface cards are represented by NIC modules. Radio is part of
 wireless NIC modules. There are various radio modules, and one must always
 use one that is compatible with the medium module. In this step, hosts contain
-`IdealRadio` as part of `IdealWirelessNic`.
+`UnitDiskRadio` as part of `IdealWirelessNic`.
 
 In this model, we configure the chosen physical layer model
-(`IdealRadioMedium` and `IdealRadio`) as follows. The communication range
+(`IdealRadioMedium` and `UnitDiskRadio`) as follows. The communication range
 is set to 500m. Modeling packet losses due to collision (termed
 "interference" in this model) is turned off, resulting in pairwise
 independent duplex communication channels. The radio data rates are set to

@@ -28,8 +28,8 @@ channel, so we expect the number of packets that go through to drop.
 ## The model
 
 To turn on interference modeling, we set the `ignoreInterference` parameter
-in the receiver part of `IdealRadio` to `false`. Interference range is the
-`interferenceRange` parameter of `IdealRadio`'s transmitter part, so we set that to 500m.
+in the receiver part of `UnitDiskRadio` to `false`. Interference range is the
+`interferenceRange` parameter of `UnitDiskRadio`'s transmitter part, so we set that to 500m.
 
 We expect that although host B will not be able to receive host A's
 transmissions, those transmission will still cause interference with other
