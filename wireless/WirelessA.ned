@@ -24,7 +24,7 @@ network WirelessA
 {
     parameters:
         string hostType = default("WirelessHost");
-        string mediumType = default("IdealRadioMedium");
+        string mediumType = default("UnitDiskRadioMedium");
 
         @display("bgb=650,500;bgg=100,1,grey95");
         @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
