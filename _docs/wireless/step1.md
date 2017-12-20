@@ -116,10 +116,10 @@ the appropriate modules.
 
 NICs modules also contain an L2 (i.e. data link layer) protocol. The MAC
 protocol in `AckingWirelessNic` is configurable, the default choice being
-`IdealMac`. `IdealMac` implements a trivial MAC layer which only provides
+`MultipleAccessMac`. `MultipleAccessMac` implements a trivial MAC layer which only provides
 encapsulation/decapsulation but no real medium access protocol. There is
 virtually no medium access control: packets are transmitted as soon as the
-previous packet has completed transmission. `IdealMac` also contains
+previous packet has completed transmission. `MultipleAccessMac` also contains
 an optional out-of-band acknowledgement mechanism which we turn off here.
 
 The configuration:
