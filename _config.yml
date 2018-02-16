@@ -3,6 +3,11 @@ showallpages: true
 data_dir: _docs/_data
 includes_dir: _docs/_includes
 layouts_dir: _docs/_layouts
+exclude: [
+"configurator/results",
+"wireless/results",
+"visualization/results"
+]
 
 collections:
   docs:
