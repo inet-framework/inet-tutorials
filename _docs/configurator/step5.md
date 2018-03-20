@@ -40,7 +40,7 @@ should be routed towards `router2`. The XML configuration in step5a.xml is the f
 <p><pre class="snippet" src="../configurator/step5a.xml"></pre></p>
 
 The `<route>` element describes a routing table entry for one or more nodes in the network.
-The `hosts` optional selector attribute specifies which hosts' routing tables should contain
+The `hosts` optional selector attribute specifies which hosts' routing tables should
 be affected. There are five additional optional parameter attributes.
 These are the same as in real life routing tables: `address`, `netmask`, `gateway`, `interface`, `metric`.
 
@@ -102,7 +102,7 @@ Destination      Netmask          Gateway          Iface            Metric
 
 The routing table of `router0` in the previous step had six entries. Now it has seven,
 as the rule specified in the XML configuration has been added (highlighted).
-This and the last rule both match packets to `host7`, but the manually added route
+This and the second to last rule both match packets to `host7`, but the manually added route
 takes effect because it has a longer netmask (plus it's also earlier in the table).
 
 The following animation depicts `host1` pinging `host7`, and `host0` pinging `host6`. Routes to `host7` are visualized.
