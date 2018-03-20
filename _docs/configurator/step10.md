@@ -28,7 +28,7 @@ The network looks like this:
 
 <img class="screen" src="step10network.png" width="850px">
 
-It contains eight `AODVRouters` laid out in a chain.
+It contains seven `AODVRouters` laid out in a chain.
 
 The configuration for this part in omnetpp.ini is the following:
 
