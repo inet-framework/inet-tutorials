@@ -16,7 +16,7 @@ covered in later steps.
 ## The network
 
 The network we want to configure is `ConfiguratorA`, defined in
-<a srcfile="../configurator/ConfiguratorA.ned"/>. It looks like this:
+<a srcfile="configurator/ConfiguratorA.ned"/>. It looks like this:
 
 <img class="screen" src="step1network.png">
 
@@ -27,7 +27,7 @@ switches. It also contains an instance of `Ipv4NetworkConfigurator`.
 ## The configuration
 
 In many scenarios, including this one, the `Ipv4NetworkConfigurator`
-module can properly configure the network using just the default settings. 
+module can properly configure the network using just the default settings.
 Thus, the configuration in omnetpp.ini for this step is basically empty:
 
 <p><pre class="snippet" src="../configurator/omnetpp.ini" from="Step1" until="####" comment="#!"></pre></p>
@@ -94,7 +94,7 @@ the configurator doesn't assign addresses where the host identifier is all-zeros
 or all-ones (as they are commonly refer to the subnet itself and to the subnet
 broadcast address.)
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

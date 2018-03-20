@@ -11,7 +11,7 @@ This step demonstrates using the hop count and error rate metrics in a mixed wir
 
 ## The model
 
-This step uses the `ConfiguratorE` network, defined in <a srcfile="../configurator/ConfiguratorE.ned"/>.
+This step uses the `ConfiguratorE` network, defined in <a srcfile="configurator/ConfiguratorE.ned"/>.
 The network looks like this:
 
 <img class="screen" src="step12network.png">
@@ -112,7 +112,7 @@ The following video shows `area1host1` pinging `area2host1`:
 <p><video autoplay loop controls onclick="this.paused ? this.play() : this.pause();" src="Step12_2_cropped.mp4" width="850" height="520"></video></p>
 <!--internal video recording playback speed 2 animation speed none zoom 1.0 from sendPing(1) to #1734 crop 140 380 150 440-->
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorE.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorE.ned"/>
 
 ## Discussion
 

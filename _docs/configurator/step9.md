@@ -13,7 +13,7 @@ and they get addresses with DHCP.
 
 ## The model
 
-This step uses the `ConfiguratorC` network, defined in <a srcfile="../configurator/ConfiguratorC.ned"/>.
+This step uses the `ConfiguratorC` network, defined in <a srcfile="configurator/ConfiguratorC.ned"/>.
 
 <img class="screen" src="step8network.png" width="850px">
 
@@ -117,7 +117,7 @@ No routes are visualized initially, because `area3lan3host2` (the destination of
 route visualization) has an unspecified IP address. When it gets an address
 from the DHCP server, the routes leading towards `area3lan3host2` appear.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorC.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>
 
 ## Discussion
 

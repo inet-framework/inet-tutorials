@@ -166,7 +166,7 @@ Below is a video of `host1` pinging `host7`.
 <!--internal video recording playback speed 1.38 animation speed none
 zoom level 0.77 crop: 30 70 150 80-->
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

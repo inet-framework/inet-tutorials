@@ -90,7 +90,7 @@ Note that the configurator still assigned addresses sequentially,
 i.e. after setting the 10.0.0.100 address to `host3`, it didn't go back to the
 beginning of the address pool when assigning the remaining addresses.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

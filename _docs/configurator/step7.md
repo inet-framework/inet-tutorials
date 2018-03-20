@@ -26,7 +26,7 @@ this part can serve as a baseline to compare with.
 
 ### Configuration
 
-All three parts in this step use the `ConfiguratorB` network defined in <a srcfile="../configurator/ConfiguratorB.ned"/>. The network looks like this:
+All three parts in this step use the `ConfiguratorB` network defined in <a srcfile="configurator/ConfiguratorB.ned"/>. The network looks like this:
 
 <img class="screen" src="step7network.png" width="850px">
 
@@ -289,7 +289,7 @@ The other nodes' routing tables remained the same. The difference is not drastic
 because the network is small. However, using hierarchical address assignment
 in a larger network would make a significant difference in routing table size.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorB.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorB.ned"/>
 
 ## Discussion
 

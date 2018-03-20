@@ -173,7 +173,7 @@ The following is the animation of `host1` pinging `host7` and `host0` pinging
 This time both packets destined to hosts 6 and 7 take the diverted route,
 and the replies come back on the original route.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorA.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorA.ned"/>
 
 ## Discussion
 

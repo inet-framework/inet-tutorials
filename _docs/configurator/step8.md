@@ -28,7 +28,7 @@ Note that nodes need to use the same radio medium module to be in the same wirel
 
 ### Configuration
 
-This step uses the `ConfiguratorC` network defined in <a srcfile="../configurator/ConfiguratorC.ned"/>.
+This step uses the `ConfiguratorC` network defined in <a srcfile="configurator/ConfiguratorC.ned"/>.
 The network is displayed on the following image.
 
 <img class="screen" src="step8network.png" width="850px">
@@ -119,7 +119,7 @@ They are not needed because different SSIDs are configured for the members of th
 The results are the same as in the previous part. The two wireless LANs are
 considered to be different wireless networks.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorC.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorC.ned"/>
 
 ## Discussion
 

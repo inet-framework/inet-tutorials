@@ -23,7 +23,7 @@ instead of the default hop count.
 
 ### Configuration
 
-This step uses the `ConfiguratorD` network, defined in <a srcfile="../configurator/ConfiguratorD.ned"/>.
+This step uses the `ConfiguratorD` network, defined in <a srcfile="configurator/ConfiguratorD.ned"/>.
 The network looks like this:
 
 <img class="screen" src="step10network.png" width="850px">
@@ -117,7 +117,7 @@ This is displayed in the following video.
 To record the video, the simulation was run in fast mode, thus, routes appear instantly.
 It takes a few seconds simulation time for the unused routes to expire.
 
-Sources: <a srcfile="../configurator/omnetpp.ini"/>, <a srcfile="../configurator/ConfiguratorD.ned"/>
+Sources: <a srcfile="configurator/omnetpp.ini"/>, <a srcfile="configurator/ConfiguratorD.ned"/>
 
 ## Discussion
 
