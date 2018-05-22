@@ -1,7 +1,7 @@
 - CRASH:	RadioMedium.cc				line 715: listener->radioRemoved(radio);
 			MediumOSGVisualizer.cc		line 325: auto module = const_cast<cModule *>(check_and_cast<const cModule *>(radio));
-			No source available for "0x72657a" 
-			
+			No source available for "0x72657a"
+
 - ieee80211Visualizer: Lehetne rajta cimke: ssid, jelerösség
 
 - egymásra lógnak a 3dben az interfaceTableVisualizer és a ieee80211Visualizer
