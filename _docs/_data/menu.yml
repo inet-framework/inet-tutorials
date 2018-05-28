@@ -38,6 +38,23 @@
     - page: _docs/configurator/step12.md
     - page: _docs/configurator/conclusion.md
 
+- name: RIP Tutorial
+  tutorial: RIP
+  submenu:
+    - page: _docs/rip/index.md
+      name: Introduction
+    - page: _docs/rip/step1.md
+    - page: _docs/rip/step2.md
+    - page: _docs/rip/step3.md
+    - page: _docs/rip/step4.md
+    - page: _docs/rip/step5.md
+    - page: _docs/rip/step6.md
+    - page: _docs/rip/step7.md
+    - page: _docs/rip/step8.md
+    - page: _docs/rip/step9.md
+    - page: _docs/rip/step10.md
+    - page: _docs/rip/conclusion.md
+
 - name: Visualization Tutorial
   tutorial: Visualization
   hidden: true
