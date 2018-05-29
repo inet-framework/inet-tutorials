@@ -16,8 +16,8 @@ a few new lines. Consecutive steps mostly share the same network, defined in NED
 
 This is an advanced tutorial, and it assumes that you are familiar with creating
 and running simulations in OMNeT++ and  INET. If you aren't, you can check out
-the <a href="https://omnetpp.org/doc/omnetpp/tictoc-tutorial/"
-target="_blank">TicToc Tutorial</a> to get started with using OMNeT++. 
+the <a href="https://docs.omnetpp.org/tutorials/tictoc/"
+target="_blank">TicToc Tutorial</a> to get started with using OMNeT++.
 
 If you need more information at any time, feel free to refer to the OMNeT++ and
 INET documentation:
