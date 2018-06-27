@@ -40,6 +40,7 @@
 
 - name: RIP Tutorial
   tutorial: RIP
+  hidden: true
   submenu:
     - page: _docs/rip/index.md
       name: Introduction
