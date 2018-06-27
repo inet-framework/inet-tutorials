@@ -23,9 +23,6 @@ import inet.visualizer.contract.IIntegratedVisualizer;
 network WirelessA
 {
     parameters:
-        string hostType = default("WirelessHost");
-        string mediumType = default("UnitDiskRadioMedium");
-
         @display("bgb=650,500;bgg=100,1,grey95");
         @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
 
@@ -39,13 +36,13 @@ network WirelessA
         configurator: Ipv4NetworkConfigurator {
             @display("p=580,200");
         }
-        radioMedium: <mediumType> like IRadioMedium {
+        radioMedium: <default("UnitDiskRadioMedium")> like IRadioMedium {
             @display("p=580,275");
         }
-        hostA: <hostType> like INetworkNode {
+        hostA: <default("WirelessHost")> like INetworkNode {
             @display("p=50,325");
         }
-        hostB: <hostType> like INetworkNode {
+        hostB: <default("WirelessHost")> like INetworkNode {
             @display("p=450,325");
         }
 }
