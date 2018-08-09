@@ -7,13 +7,14 @@ increasing complexity.
 
 You can browse the tutorial pages on this web site. The source code of the simulations
 (NED, ini and other files) and the web site live in the
-[inet-framework/inet-tutorials](https://github.com/inet-framework/inet-tutorials)
+`inet-framework/inet-tutorials <https://github.com/inet-framework/inet-tutorials>`_
 GitHub repository, which also appears as the `tutorials/` subdirectory
 of the INET Framework repository.
 
 .. toctree::
    :maxdepth: 1
-   :glob:
-   :caption: The following tutorials are available:
 
-   */doc/index
+   wireless/doc/index
+   configurator/doc/index
+.. rip/doc/index
+.. visualization/doc/index
