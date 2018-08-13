@@ -18,10 +18,11 @@ introduction to INET and working with protocols. `INET
 Showcases <https://inet.omnetpp.org/inet-showcases/>`__ are also help to
 get familiar with INET modules.
 
+Visualization Tutorial:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Visualization Tutorial:
 
    step?
    step1?

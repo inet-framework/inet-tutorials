@@ -3,16 +3,14 @@
 RIP Tutorial
 ============
 
-hidden: True
-
 This tutorial demonstrates the Routing Information Protocol, and its
 implementation in INET.
 
+RIP Tutorial:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: RIP Tutorial:
 
    step?
    step1?

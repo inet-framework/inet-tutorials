@@ -31,10 +31,11 @@ XML file.
    this way it can pull its IPv4 configuration from the configurator module, and restore
    its IPv4 addresses and routing table.
 
+IPv4 Network Configurator Tutorial:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: IPv4 Network Configurator Tutorial:
 
    step?
    step1?

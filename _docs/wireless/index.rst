@@ -16,10 +16,11 @@ This is an advanced tutorial, and it assumes that you are familiar with
 creating and running simulations in OMNeT++ and INET. If you aren't, you
 can check out the TicToc Tutorial to get started with using OMNeT++.
 
+Wireless Tutorial:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Wireless Tutorial:
 
    step?
    step1?

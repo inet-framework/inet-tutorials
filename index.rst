@@ -11,10 +11,12 @@ You can browse the tutorial pages on this web site. The source code of the simul
 GitHub repository, which also appears as the `tutorials/` subdirectory
 of the INET Framework repository.
 
+The following tutorials are available:
+
 .. toctree::
    :maxdepth: 1
 
-   wireless/doc/index
-   configurator/doc/index
+   Wireless <wireless/doc/index>
+   IPv4 Network Confgurator <configurator/doc/index>
 .. rip/doc/index
 .. visualization/doc/index
