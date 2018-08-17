@@ -3,5 +3,4 @@
 .tkenvlog
 .cmdenv-log
 **/results/*
-_site
 */cache/*
