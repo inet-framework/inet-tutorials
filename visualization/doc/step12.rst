@@ -35,9 +35,9 @@ Results
 
 .. todo::
 
-   .. figure:: step12_phys_link_3d.gif
+   figure:: step12_phys_link_3d.gif
 
-   .. figure:: step12_phys_link_2d.gif
+   figure:: step12_phys_link_2d.gif
 
    The VoIP application starts at 1s. Then the pedestrian0 sends the first VoIP message. Because only
    the accessPoint0 is in its communication range, only between them appears an arrow. But when the sender
