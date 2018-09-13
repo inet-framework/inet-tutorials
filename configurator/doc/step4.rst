@@ -12,7 +12,7 @@ The model
 ---------
 
 This step uses the same network as the previous steps,
-``ConfiguratorA``. The configuration for this step in omnetpp.ini is the
+:ned:`ConfiguratorA`. The configuration for this step in omnetpp.ini is the
 following:
 
 .. literalinclude:: ../omnetpp.ini
@@ -49,13 +49,13 @@ the route between the two hosts.
 Logging and visualization settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``RoutingTableCanvasVisualizer`` module (present in the network as a
-submodule of ``IntegratedCanvasVisualizer``) can be used to visualize IP
+The :ned:`RoutingTableCanvasVisualizer` module (present in the network as a
+submodule of :ned:`IntegratedCanvasVisualizer`) can be used to visualize IP
 routes in the network. Routes are visualized with arrows. In general, an
 arrow indicates an entry in the source host's routing table. It points
 to the host that is the next hop or gateway for that routing table
 entry. The visualization is activated by setting the
-``RoutingTableVisualizer``'s ``displayRoutingTables`` parameter to
+:ned:`RoutingTableVisualizer`'s ``displayRoutingTables`` parameter to
 ``true``. The set of routes to be visualized are selected with the
 visualizer's ``destinationFilter`` and ``nodeFilter`` parameters. All
 routes leading towards the selected set of destinations from the
@@ -88,8 +88,8 @@ are considered to be on the same link.
 Additional configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``General`` configuration also sets up ``GlobalArp`` to keep the
-packet exchanges simpler. ``GlobalArp`` fills the ARP tables of all
+The ``General`` configuration also sets up :ned:`GlobalArp` to keep the
+packet exchanges simpler. :ned:`GlobalArp` fills the ARP tables of all
 nodes in advance, so when the simulation begins no ARP exchanges are
 necessary.
 

@@ -13,9 +13,9 @@ display a street map of downtown Boston.
 The model
 ---------
 
-The ``SceneVisualizer`` module is responsible for displaying the map.
-(Note that, ``SceneVisualizer`` can be used via ``visualizer``.) The
-``sceneVisualizerType`` parameter is set to ``SceneOsgEarthVisualizer``.
+The :ned:`SceneVisualizer` module is responsible for displaying the map.
+(Note that, :ned:`SceneVisualizer` can be used via ``visualizer``.) The
+``sceneVisualizerType`` parameter is set to :ned:`SceneOsgEarthVisualizer`.
 It displays a map of some part of the earth as an integrated part of the
 3D visualization of the simulation. The map is loaded from an external
 file, specified in the ``mapFile`` parameter. The visualizer's name
@@ -26,7 +26,7 @@ Adding a map to the simulation model requires adding coordinate system
 module to the model, because the map geographical coordinates are
 assigned to the coordinate system module. (In the next step we will
 explain the reason in detail.) We add an
-``OsgGeographicCoordinateSystem`` module to the model and set the origin
+:ned:`OsgGeographicCoordinateSystem` module to the model and set the origin
 of the coordinate system in the ini file.
 
 We add the coordinate system to our model as follows. This snippet is
@@ -47,7 +47,7 @@ Results
 -------
 
 .. figure:: step2_result_boston3d.png
-   :width: 100% 
+   :width: 100%
 
 .. 3d, real world context, camera zoom, rotate...,
 

@@ -27,9 +27,9 @@ The model
 ---------
 
 To turn on interference modeling, we set the ``ignoreInterference``
-parameter in the receiver part of ``UnitDiskRadio`` to ``false``.
+parameter in the receiver part of :ned:`UnitDiskRadio` to ``false``.
 Interference range is the ``interferenceRange`` parameter of
-``UnitDiskRadio``'s transmitter part, so we set that to 500m.
+:ned:`UnitDiskRadio`'s transmitter part, so we set that to 500m.
 
 We expect that although host B will not be able to receive host A's
 transmissions, those transmission will still cause interference with
@@ -93,7 +93,7 @@ occasionally receives packets successfully, most packets sent by R1 do
 not make it to host B's IP layer.
 
 .. figure:: wireless-step5-seq.png
-   :width: 100% 
+   :width: 100%
 
 The sequence chart below shows host R1's and host A's signals
 overlapping at host B.
@@ -109,7 +109,7 @@ interval, the more it is inflated to make the events visible and
 discernible on the chart.
 
 .. figure:: wireless-step5-seq-2.png
-   :width: 100% 
+   :width: 100%
 
 To minimize interference, some kind of media access protocol is needed
 to govern which host can transmit and when.

@@ -12,11 +12,11 @@ configurator, and they get addresses with DHCP.
 The model
 ---------
 
-This step uses the ``ConfiguratorC`` network, defined in
+This step uses the :ned:`ConfiguratorC` network, defined in
 :download:`ConfiguratorC.ned <../ConfiguratorC.ned>`.
 
 .. figure:: step8network.png
-   :width: 100% 
+   :width: 100%
 
 The configuration for this step in omnetpp.ini is the following:
 
@@ -32,11 +32,11 @@ It boils down to the following:
    application is delayed, so it starts sending pings after the hosts
    associated with the access points and got their addresses from the
    DHCP servers.
--  ``DhcpServer`` submodules are added to the area routers. The DHCP
+-  :ned:`DhcpServer` submodules are added to the area routers. The DHCP
    server is configured to listen on the interface connecting to the
    unspecified LAN. The interface's netmask is the DHCP server's address
    range.
--  ``DhcpClient`` submodules are added to the LANs which are unspecified
+-  :ned:`DhcpClient` submodules are added to the LANs which are unspecified
    by the configurator. There is one such LAN in each area, they are
    ``area1lan3``, ``area2lan1`` and ``area3lan3``. Hosts in these LANs
    get the addresses from the DHCP server in the corresponding area
@@ -64,7 +64,7 @@ The addresses and routes are visualized below. The state of the network
 at the start of the simulation is shown on the following image:
 
 .. figure:: step9routes_2.png
-   :width: 100% 
+   :width: 100%
 
 The hosts of ``area1lan3``, ``area2lan1`` and ``area3lan3`` have
 unspecified addresses. The routing tables of all hosts contain subnet

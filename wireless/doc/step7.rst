@@ -11,7 +11,7 @@ The model
 ---------
 
 We turn on acknowledgements by setting the ``useAcks`` parameter of
-``CsmaCaMac`` to ``true``. This change will make the operation of the
+:ned:`CsmaCaMac` to ``true``. This change will make the operation of the
 MAC module both more interesting and more complicated.
 
 On the receiver side, the change is quite simple: when the MAC correctly
@@ -33,7 +33,7 @@ Note that when ACKs (in contrast to data frames) are lost,
 retransmissions will introduce duplicates in the packet stream the MAC
 sends up to to the higher layer protocols in the receiver host. This
 could be eliminated by adding sequence numbers to frames and maintaining
-per-sender sequence numbers in each receiver, but the ``CsmaCaMac``
+per-sender sequence numbers in each receiver, but the :ned:`CsmaCaMac`
 module does not contain such a duplicate detection algorithm in order to
 keep its code simple and accessible.
 
@@ -64,7 +64,7 @@ corresponding ACK from host B.
 The UDPData + ACK sequences can be seen in the sequence chart below:
 
 .. figure:: wireless-step7-seq-2.png
-   :width: 100% 
+   :width: 100%
 
 In the following chart, the UDPData packet sequence numbers that are
 received by host B's UDPApp, are plotted against time. This chart
@@ -72,7 +72,7 @@ contains the statistics of the previous step (ACK off, blue) and of the
 current step (ACK on, red).
 
 .. figure:: wireless-step7-seqno.png
-   :width: 100% 
+   :width: 100%
 
 When ACKs are turned on, each successfully received UDPData packet has
 to be ackowledged before the next one can be sent. Lost packets are

@@ -7,9 +7,9 @@ Goals
 When setting up routes, the configurator uses the shortest path
 algorithm. By default, paths are optimized for hop count. However, there
 are other cost functions available, like data rate, error rate, etc.
-This step consists of two parts: 
+This step consists of two parts:
 
-- **Part A** demonstrates using the data rate metric for automatically setting up routes. 
+- **Part A** demonstrates using the data rate metric for automatically setting up routes.
 - **Part B** demonstrates instructing the configurator not to use a link when setting
   up routes, by manually specifying a high link cost.
 
@@ -29,15 +29,15 @@ network nodes with IP forwarding turned off have infinite weight, all
 others have 0. Finally, the shortest path algorithm is used to determine
 the routes based on the assigned weights.
 
-The available metrics are the following: 
+The available metrics are the following:
 
-- ``hopCount``: routes are optimized for hop count. All edges have a cost of 1. 
-  This is the default metric. 
-- ``dataRate``: routes prefer connections with higher bandwidth. Edge costs are 
+- ``hopCount``: routes are optimized for hop count. All edges have a cost of 1.
+  This is the default metric.
+- ``dataRate``: routes prefer connections with higher bandwidth. Edge costs are
   inversely proportional to the data rate of the
   connection.
-- ``delay``: routes are optimized for lower delay. Edge costs are proportional 
-  to the delay of the connection. 
+- ``delay``: routes are optimized for lower delay. Edge costs are proportional
+  to the delay of the connection.
 - ``errorRate``: routes are optimized for smaller error rate. Edge costs are proportional
   to the error rate of the connection. This is mostly useful for wireless
   networks because the error rate of wired connections is usually negligible.
@@ -46,7 +46,7 @@ Configuration
 ~~~~~~~~~~~~~
 
 The configuration for this step extends Step 4, thus, it uses the
-``ConfiguratorA`` network. The configuration in omnetpp.ini is the
+:ned:`ConfiguratorA` network. The configuration in omnetpp.ini is the
 following:
 
 .. literalinclude:: ../omnetpp.ini
@@ -141,7 +141,7 @@ One can easily check that no routes go through the link between
 in the visualizer. This indicates all routes in the network:
 
 .. figure:: step6allroutes.png
-   :width: 100% 
+   :width: 100%
 
 Part B - Manually specifying link cost
 --------------------------------------
@@ -187,7 +187,7 @@ Results
 The routes towards ``host1`` are visualized on the following image:
 
 .. figure:: step6broutes.png
-   :width: 100% 
+   :width: 100%
 
 The routes are the same as in Part A, where the data rate metric was
 used, and routes didn't use the 10Mbps link between ``router0`` and

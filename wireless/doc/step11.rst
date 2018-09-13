@@ -23,8 +23,8 @@ The model
 ---------
 
 First, we need to represent obstacles. In INET, obstacles are managed as
-part of the ``PhysicalEnvironment`` module, so we need to add an
-instance to the ``WirelessB`` network:
+part of the :ned:`PhysicalEnvironment` module, so we need to add an
+instance to the :ned:`WirelessB` network:
 
 
 
@@ -45,7 +45,7 @@ dielectric loss tangent, refractive index and signal propagation speed,
 and ultimately in the computation of signal loss.
 
 Our wall is defined in walls.xml, and the file name is given to
-``PhysicalEnvironment`` in its ``config`` parameter. The file contents:
+:ned:`PhysicalEnvironment` in its ``config`` parameter. The file contents:
 
 .. literalinclude:: ../walls.xml
 
@@ -53,11 +53,11 @@ Our wall is defined in walls.xml, and the file name is given to
 Having obstacles is not enough in itself, we also need to teach the
 model of the wireless medium to take them into account. This is done by
 specifying an obstacle loss model. Since our model contains
-``IdealMedium``, we specify ``IdealObstacleLoss``. With
-``IdealObstacleLoss``, obstacles completely block radio signals, making
+``IdealMedium``, we specify :ned:`IdealObstacleLoss`. With
+:ned:`IdealObstacleLoss`, obstacles completely block radio signals, making
 reception behind them impossible.
 
-The ``IntegratedCanvasVisualizer`` we use as the ``visualizer``
+The :ned:`IntegratedCanvasVisualizer` we use as the ``visualizer``
 submodule in the network contains two submodules related to obstacles:
 ``physicalEnvironmentVisualizer`` displays the obstacles themselves, and
 ``obstacleLossVisualizer`` is responsible for visualizing the obstacle

@@ -11,12 +11,12 @@ error rate metrics in a mixed wired/wireless network.
 The model
 ---------
 
-This step uses the ``ConfiguratorE`` network, defined in
+This step uses the :ned:`ConfiguratorE` network, defined in
 :download:`ConfiguratorE.ned <../ConfiguratorE.ned>`. The network
 looks like this:
 
 .. figure:: step12network.png
-   :width: 100% 
+   :width: 100%
 
 The core of the network is composed of three routers connected to each
 other, each belonging to an area. There are three areas, each containing
@@ -24,7 +24,7 @@ a number of hosts, connected to the area router.
 
 -  Area1 is composed of three ``WirelessHosts``, one of which is
    connected to the router with a wired connection.
--  Area2 has an ``AccessPoint`` and three ``WirelessHosts``.
+-  Area2 has an :ned:`AccessPoint` and three ``WirelessHosts``.
 -  Area3 has three ``StandardHosts`` connected to the router via a
    switch.
 
@@ -83,7 +83,7 @@ Results
 The routes are visualized on the following image.
 
 .. figure:: step12routes_2.png
-   :width: 100% 
+   :width: 100%
 
 As intended, ``area1host1`` connects to the network via ``area1host2``.
 

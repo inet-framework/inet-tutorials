@@ -18,7 +18,7 @@ Visualizers are parameterizable, and some visualizers are themselves
 composed of several optional components.
 
 The ``visualizer`` submodule in this network is an
-``IntegratedCanvasVisualizer``, which is a compound module that contains
+:ned:`IntegratedCanvasVisualizer`, which is a compound module that contains
 all typically useful visualizers as submodules. It can display physical
 objects in the physical environment, movement trail, discovered network
 connectivity, discovered network routes, ongoing transmissions, ongoing
@@ -34,7 +34,7 @@ distance where successful transmission is still possible with some hosts
 in the network.
 
 The visualization of signal propagation is enabled with the
-``displaySignals`` parameter of ``MediumCanvasVisualizer``. It displays
+``displaySignals`` parameter of :ned:`MediumCanvasVisualizer`. It displays
 transmissions as colored rings emanating from hosts. Since this is
 sufficient to represent radio signals visually, it is advisable to turn
 off message animations in the Tkenv/Qtenv preferences dialog.
@@ -114,7 +114,7 @@ gap between them. UDPData-2 and UDPData-3 are also transmitted
 back-to-back.
 
 .. figure:: wireless-step2-seq3.png
-   :width: 100% 
+   :width: 100%
 
 **Number of packets received by host B: 2017**
 

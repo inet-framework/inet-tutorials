@@ -21,13 +21,13 @@ The simulation is configured as follows.
    :start-at: [Config Visualization11]
    :end-before: #---
 
-Propagating signals are visualized by ``MediumVisualizer`` as animated
+Propagating signals are visualized by :ned:`MediumVisualizer` as animated
 disks. ``Visualizer`` is enabled by setting ``displaySignals`` to true.
 In 3D visualization, we have three options to customize shape for
-displaying signals: 
+displaying signals:
 
 - *ring*: signal propagates on the ground as a ring
-- *sphere*: signal propagates in the air 
+- *sphere*: signal propagates in the air
 - *both*: it combines *ring* and *sphere* options.
 
 .. todo::
@@ -43,7 +43,7 @@ The following video shows what happens when we start the simulation.
 .. video:: step11_result_2d_propsignal.mp4
    :width: 698
 
-The signal propagation process consists of three phases: 
+The signal propagation process consists of three phases:
 
 1. Expansion
 2. Presence

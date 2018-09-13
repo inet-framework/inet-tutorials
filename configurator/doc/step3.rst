@@ -11,7 +11,7 @@ demonstrates how to assign a range of IP addresses to subnets.
 The model
 ---------
 
-This step uses the ``ConfiguratorA`` network, as in the previous two
+This step uses the :ned:`ConfiguratorA` network, as in the previous two
 steps. One switch and the connected hosts as a group will be on the same
 subnet, and there are three such groups in the network.
 
@@ -74,7 +74,7 @@ Results
 The assigned addresses are shown on the following image.
 
 .. figure:: step3address.png
-   :width: 100% 
+   :width: 100%
 
 The addresses are assigned as intended. This is useful because it is
 easy to recognize which group a node belongs to just by looking at its

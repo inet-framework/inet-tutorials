@@ -17,7 +17,7 @@ The model
 In this step we'll use the model depicted below.
 
 .. figure:: wireless-step1.png
-   :width: 100% 
+   :width: 100%
 
 Here is the NED source of the network:
 
@@ -42,38 +42,38 @@ modeling the physical radio channel. We'll return to them later.
 The hosts
 ~~~~~~~~~
 
-In INET, hosts are usually represented with the ``StandardHost`` NED
+In INET, hosts are usually represented with the :ned:`StandardHost` NED
 type, which is a generic template for TCP/IP hosts. It contains protocol
 components like TCP, UDP and IP, slots for plugging in application
-models, and various network interfaces (NICs). ``StandardHost`` has some
-variations in INET, for example ``WirelessHost``, which is basically a
-``StandardHost`` preconfigured for wireless scenarios.
+models, and various network interfaces (NICs). :ned:`StandardHost` has some
+variations in INET, for example :ned:`WirelessHost`, which is basically a
+:ned:`StandardHost` preconfigured for wireless scenarios.
 
 As you can see, the hosts' type is parametric in this NED file (defined
-via a ``hostType`` parameter and the ``INetworkNode`` module interface).
+via a ``hostType`` parameter and the :ned:`INetworkNode` module interface).
 This is done so that in later steps we can replace hosts with a
-different NED type. The actual NED type here is ``WirelessHost`` (given
+different NED type. The actual NED type here is :ned:`WirelessHost` (given
 near the top of the NED file), and later steps will override this
 setting using ``omnetpp.ini``.
 
 Address assignment
 ~~~~~~~~~~~~~~~~~~
 
-IP addresses are assigned to hosts by an ``Ipv4NetworkConfigurator``
+IP addresses are assigned to hosts by an :ned:`Ipv4NetworkConfigurator`
 module, which appears as the ``configurator`` submodule in the network.
 The hosts also need to know each others' MAC addresses to communicate,
-which in this model is taken care of by using per-host ``GlobalArp``
+which in this model is taken care of by using per-host :ned:`GlobalArp`
 modules instead of real ARP.
 
 Traffic model
 ~~~~~~~~~~~~~
 
 In the model, host A generates UDP packets which are received by host B.
-To this end, host A is configured to contain a ``UdpBasicApp`` module,
+To this end, host A is configured to contain a :ned:`UdpBasicApp` module,
 which generates 1000-byte UDP messages at random intervals with
 exponential distribution, the mean of which is 12ms. Therefore the app
 is going to generate 100 kbyte/s (800 kbps) UDP traffic, not counting
-protocol overhead. Host B contains a ``UdpSink`` application that just
+protocol overhead. Host B contains a :ned:`UdpSink` application that just
 discards received packets.
 
 The model also displays the number of packets received by host B. The
@@ -91,7 +91,7 @@ and other physical phenomena into account.
 
 INET can model the wireless physical layer at various levels of detail,
 realized with different radio medium modules. In this step, we use
-``UnitDiskRadioMedium``, which is the simplest model. It implements a
+:ned:`UnitDiskRadioMedium`, which is the simplest model. It implements a
 variation of unit disc radio, meaning that physical phenomena like
 signal attenuation are ignored, and the communication range is simply
 specified in meters. Transmissions within range are always correctly
@@ -105,17 +105,17 @@ correspondence to reality. However, it has its uses in the simulation.
 Its simplicity and consequent predictability are an advantage in
 scenarios where realistic modeling of the physical layer is not a
 primary concern, for example in the modeling of ad-hoc routing
-protocols. Simulations using ``UnitDiskRadioMedium`` also run faster
+protocols. Simulations using :ned:`UnitDiskRadioMedium` also run faster
 than more realistic ones, due to the low computational cost.
 
 In hosts, network interface cards are represented by NIC modules. Radio
 is part of wireless NIC modules. There are various radio modules, and
 one must always use one that is compatible with the medium module. In
-this step, hosts contain ``UnitDiskRadio`` as part of
+this step, hosts contain :ned:`UnitDiskRadio` as part of
 ``AckingWirelessNic``.
 
 In this model, we configure the chosen physical layer model
-(``UnitDiskRadioMedium`` and ``UnitDiskRadio``) as follows. The
+(:ned:`UnitDiskRadioMedium` and :ned:`UnitDiskRadio`) as follows. The
 communication range is set to 500m. Modeling packet losses due to
 collision (termed "interference" in this model) is turned off, resulting
 in pairwise independent duplex communication channels. The radio data
@@ -145,7 +145,7 @@ Results
 -------
 
 When we run the simulation, here's what happens. Host A's
-``UdpBasicApp`` generates UDP packets at random intervals. These packets
+:ned:`UdpBasicApp` generates UDP packets at random intervals. These packets
 are sent down via UDP and IPv4 to the network interface for
 transmission. The network interface queues packets, and transmits them
 as soon as it can. As long as there are packets in the network

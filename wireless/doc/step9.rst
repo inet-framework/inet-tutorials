@@ -22,8 +22,8 @@ line, rectangle or circle), probabilistic (e.g. random waypoint),
 scripted (e.g. a "turtle" script) or trace-driven. There are also
 individual and group mobility models.
 
-Here we install ``LinearMobility`` into the intermediate nodes.
-``LinearMobility`` implements movement along a line, where the heading
+Here we install :ned:`LinearMobility` into the intermediate nodes.
+:ned:`LinearMobility` implements movement along a line, where the heading
 and speed are parameters. We configure the nodes to move north at the
 speed of 12 m/s.
 

@@ -32,16 +32,16 @@ same wireless network.
 Configuration
 ~~~~~~~~~~~~~
 
-This step uses the ``ConfiguratorC`` network defined in
+This step uses the :ned:`ConfiguratorC` network defined in
 :download:`ConfiguratorC.ned <../ConfiguratorC.ned>`. The network is
 displayed on the following image.
 
 .. figure:: step8network.png
-   :width: 100% 
+   :width: 100%
 
-The ``ConfiguratorC`` network extends ``ConfiguratorB`` by adding two
+The :ned:`ConfiguratorC` network extends :ned:`ConfiguratorB` by adding two
 wireless LANs, ``area1lan3`` and ``area3lan3``. The additional LANs
-consist of an ``AccessPoint`` and three ``WirelessHosts``.
+consist of an :ned:`AccessPoint` and three ``WirelessHosts``.
 
 The default SSID settings of all wireless nodes is ``"SSID"``. By
 default, the configurator would put them in the same wireless network,
@@ -84,7 +84,7 @@ The addresses and routes are indicated on the following image. Routes
 leading towards hosts ``area3lan3`` are visualized.
 
 .. figure:: step8a_2.png
-   :width: 100% 
+   :width: 100%
 
 Wireless hosts connect to the router through the access points. The
 access points are L2 devices, similar to switches, so they are
@@ -106,7 +106,7 @@ This is how the routes would look like if the XML configuration didn't
 contain the ``<wireless>`` elements:
 
 .. figure:: step8fullmesh_2.png
-   :width: 100% 
+   :width: 100%
 
 There are no routes visualized between the ``backbonerouter`` and
 ``area3router``, because routes towards ``area3lan3`` go via

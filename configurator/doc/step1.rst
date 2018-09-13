@@ -14,22 +14,22 @@ filling routing tables for now -- it will be covered in later steps.
 The network
 -----------
 
-The network we want to configure is ``ConfiguratorA``, defined in
+The network we want to configure is :ned:`ConfiguratorA`, defined in
 ``ConfiguratorA.ned``. It looks like
 this:
 
 .. figure:: step1network.png
-   :width: 100% 
+   :width: 100%
 
 The network contains three routers, each connected to the other two.
 There are three subnetworks with ``StandardHosts``, connected to the
 routers by Ethernet switches. It also contains an instance of
-``Ipv4NetworkConfigurator``.
+:ned:`Ipv4NetworkConfigurator`.
 
 The configuration
 -----------------
 
-In many scenarios, including this one, the ``Ipv4NetworkConfigurator``
+In many scenarios, including this one, the :ned:`Ipv4NetworkConfigurator`
 module can properly configure the network using just the default
 settings. Thus, the configuration in omnetpp.ini for this step is
 basically empty:
@@ -75,9 +75,9 @@ them to true in the ``General`` section of omnetpp.ini to facilitate
 experimenting with the configurator.
 
 Network interface information, such as interface names and IP addresses,
-can be visualized using the ``InterfaceTableCanvasVisualizer`` module,
+can be visualized using the :ned:`InterfaceTableCanvasVisualizer` module,
 which is already included in the network as a submodule of
-``IntegratedCanvasVisualizer``. We also turn on interface visualization,
+:ned:`IntegratedCanvasVisualizer`. We also turn on interface visualization,
 but tell the visualizer to ignore switches and access points, as they
 don't have IP addresses.
 
@@ -100,7 +100,7 @@ and netmasks, as instructed by the ``assignDisjunctSubnetAddresses``
 parameter.
 
 .. figure:: step1addresses.png
-   :width: 100% 
+   :width: 100%
 
 Note that the configurator assigned a 29-bit netmask to the hosts and
 the router interfaces connecting to the switches, and a 30-bit netmask

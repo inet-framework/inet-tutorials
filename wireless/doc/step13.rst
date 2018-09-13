@@ -13,13 +13,13 @@ that calculates with one reflection from the ground.
 The model
 ---------
 
-It has been mentioned that ``ApskScalarRadioMedium`` relies on various
+It has been mentioned that :ned:`ApskScalarRadioMedium` relies on various
 subcomponents for computing path loss, obstacle loss, and background
 noise, among others. Installing the two-ray ground reflection model is
 just a matter of changing its ``pathLossType`` parameter from the
-default ``FreeSpacePathLoss`` to ``TwoRayGroundReflection``. (Further
-options include ``RayleighFading``, ``RicianFading``,
-``LogNormalShadowing`` and some others.)
+default :ned:`FreeSpacePathLoss` to :ned:`TwoRayGroundReflection`. (Further
+options include :ned:`RayleighFading`, :ned:`RicianFading`,
+:ned:`LogNormalShadowing` and some others.)
 
 The two-ray ground reflection model uses the altitudes of the
 transmitter and the receiver antennas above the ground as input. To
@@ -28,10 +28,10 @@ ground's elevation at those points. The z coordinates of hosts have been
 set to 1.7m in an earlier step. The ground's elevation is defined by the
 ground model. which is part of the physical environment model.
 
-In this model, we'll use ``FlatGround`` for ground model, and specify it
+In this model, we'll use :ned:`FlatGround` for ground model, and specify it
 to the ``physicalEnvironment`` module. (Note that we added
 ``physicalEnvironment`` to the network when we introduced obstacles.)
-The ground's elevation is the ``elevation`` parameter of ``FlatGround``.
+The ground's elevation is the ``elevation`` parameter of :ned:`FlatGround`.
 We set this parameter to 0m.
 
 
@@ -58,7 +58,7 @@ interval. As expected, in the case of the two-ray ground reflection
 model, the bit error rate is greater.
 
 .. figure:: wireless-step13.png
-   :width: 100% 
+   :width: 100%
 
 **Number of packets received by host B: 679**
 

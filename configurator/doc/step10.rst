@@ -24,12 +24,12 @@ for automatic route configuration instead of the default hop count.
 Configuration
 ~~~~~~~~~~~~~
 
-This step uses the ``ConfiguratorD`` network, defined in
+This step uses the :ned:`ConfiguratorD` network, defined in
 :download:`ConfiguratorD.ned <../ConfiguratorD.ned>`. The network
 looks like this:
 
 .. figure:: step10network.png
-   :width: 100% 
+   :width: 100%
 
 It contains seven ``AODVRouters`` laid out in a chain.
 
@@ -41,7 +41,7 @@ The configuration for this part in omnetpp.ini is the following:
 
 The transmitter power of radios determine their communication range. The
 range is set up so hosts are only in range of the adjacent hosts in the
-chain. ``RoutingTableCanvasVisualizer`` is set to visualize routes to
+chain. :ned:`RoutingTableCanvasVisualizer` is set to visualize routes to
 all destinations. The routing table visualization is simplified by
 turning off arrow labels, and setting the arrow line shift to 0. The
 latter setting causes the visualizer to draw only one arrow between any
@@ -74,7 +74,7 @@ hosts in the chain. In each segment of the path, correct reception is
 possible.
 
 .. figure:: step10a_routes.png
-   :width: 100% 
+   :width: 100%
 
 Part B: Unconfigured routing tables, prepared for MANET routing
 ---------------------------------------------------------------
@@ -102,7 +102,7 @@ Results
 ~~~~~~~
 
 .. figure:: step10b.png
-   :width: 100% 
+   :width: 100%
 
 As instructed, the configurator didn't add any routes, as indicated by
 the lack of arrows. The routing tables are empty.

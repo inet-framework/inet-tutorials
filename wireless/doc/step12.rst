@@ -16,8 +16,8 @@ The model
 Switching to APSK radio
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-In this step, we replace ``UnitDiskRadio`` with ``ApskScalarRadio``.
-``ApskScalarRadio`` models a radio with an APSK (amplitude and
+In this step, we replace :ned:`UnitDiskRadio` with :ned:`ApskScalarRadio`.
+:ned:`ApskScalarRadio` models a radio with an APSK (amplitude and
 phase-shift keying) modulation scheme. By default it uses BPSK, but
 QPSK, QAM-16, QAM-64, QAM-256 and several other modulations can also be
 configured. (Modulation is a parameter of the radio's transmitter
@@ -30,13 +30,13 @@ will allow the radio channel and the receiver models to compute path
 loss, SNIR, bit error rate and other values, and ultimately determine
 the success of reception.
 
-``ApskScalarRadio`` also adds realism in that it simulates that the data
+:ned:`ApskScalarRadio` also adds realism in that it simulates that the data
 are preceded by a preamble and a physical layer header. Their lengths
 are also parameters (and may be set to zero when not needed.)
 
 NOTE: When choosing the preamble and the physical layer header lengths,
 we needed to take care that the ``ackTimeout`` parameter of
-``CsmaCaMac`` is still valid. (The preamble and the physical layer
+:ned:`CsmaCaMac` is still valid. (The preamble and the physical layer
 header contribute to the duration of the ACK frame as well.)
 
 Physical parameters of the receiver are important, too. We configure the
@@ -55,12 +55,12 @@ steps.
 Setting up the wireless channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since we switched the radio to ``ApskScalarRadio``, we also need to
-change the medium to ``ApskScalarRadioMedium``. In general, one always
+Since we switched the radio to :ned:`ApskScalarRadio`, we also need to
+change the medium to :ned:`ApskScalarRadioMedium`. In general, one always
 needs to use a medium that is compatible with the given radio. (With
-``UnitDiskRadio``, we also used ``UnitDiskRadioMedium``.)
+:ned:`UnitDiskRadio`, we also used :ned:`UnitDiskRadioMedium`.)
 
-``ApskScalarRadioMedium`` has "slots" to plug in various propagation
+:ned:`ApskScalarRadioMedium` has "slots" to plug in various propagation
 models, path loss models, obstacle loss models, analog models and
 background noise models. Here we make use of the fact that the default
 background noise model is homogeneous isotropic white noise, and set up
@@ -87,7 +87,7 @@ In this model, more physical effects are simulated than in previous
 steps. There is radio signal attenuation, background noise and a more
 realistic radio model. The blue circles representing communication range
 is an approximation. There is no distinct distance where receptions
-fail, as in the case of ``UnitDiskRadio``.
+fail, as in the case of :ned:`UnitDiskRadio`.
 
 
 
@@ -104,7 +104,7 @@ MAC drops the packet because of bit errors, this can be seen in the
 following log:
 
 .. figure:: wireless-step12-log.png
-   :width: 100% 
+   :width: 100%
 
 **Number of packets received by host B: 665**
 

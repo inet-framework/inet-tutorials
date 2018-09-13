@@ -19,9 +19,9 @@ The configuration in the ini file is the following.
    :end-before: # turning off physical link activity
 
 The configuration is similar to the configuration of physical link
-activity visualization, because ``PhysicalLinkVisualizer`` and
-``DataLinkVisualizer`` have the same base (``LinkVisualizerBase``) and
-their most parameters are the same. ``DataLinkVisualizer`` is enabled by
+activity visualization, because :ned:`PhysicalLinkVisualizer` and
+:ned:`DataLinkVisualizer` have the same base (:ned:`LinkVisualizerBase`) and
+their most parameters are the same. :ned:`DataLinkVisualizer` is enabled by
 setting ``displayLinks`` to *true*. The ``lineColor`` and ``labelColor``
 parameters are set to *orange* so that the activity arrows are easy to
 recognize just by looking at the simulation. We adjust the

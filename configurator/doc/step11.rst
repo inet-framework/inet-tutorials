@@ -24,11 +24,11 @@ the XML configuration for subsequent simulation runs.
 Configuration
 ~~~~~~~~~~~~~
 
-Both parts in this step use the ``ConfiguratorA`` network defined in
+Both parts in this step use the :ned:`ConfiguratorA` network defined in
 :download:`ConfiguratorA.ned <../ConfiguratorA.ned>`:
 
 .. figure:: step4network.png
-   :width: 100% 
+   :width: 100%
 
 The configuration for this part in omnetpp.ini is the following:
 
@@ -46,7 +46,7 @@ Results
 Routes to all nodes are visualized on the following image.
 
 .. figure:: step11a_routes.png
-   :width: 100% 
+   :width: 100%
 
 The configuration is dumped into
 :download:`step11a\_dump.xml <../step11a_dump.xml>`. We will modify
@@ -88,7 +88,7 @@ The differences between the original and the modified config files area
 displayed below (the original is shown in red).
 
 .. figure:: step11diff.png
-   :width: 100% 
+   :width: 100%
 
 Results
 ~~~~~~~
@@ -97,7 +97,7 @@ Routes to all nodes are visualized on the following image. Note that
 arrows point only counter-clockwise in the triangle.
 
 .. figure:: step11b_routes.png
-   :width: 100% 
+   :width: 100%
 
 The ping exchanges highlight the modified routes on the following video:
 

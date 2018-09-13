@@ -22,7 +22,7 @@ several type of visualizers, displaying various aspects of the
 simulation. Visualization can be more specific by using several
 visualizer parameters.
 
-This simulation model contains one ``IntegratedVisualizer`` which will
+This simulation model contains one :ned:`IntegratedVisualizer` which will
 be called ``visualizer`` during this tutorial. This type of visualizer
 integrates all single visualizers into a single module. In addition,
 each visualizer integrates a canvas and an osg visualizer. Canvas and
@@ -32,7 +32,7 @@ parameters, however it is also possible to set them separately.
 The configuration
 ~~~~~~~~~~~~~~~~~
 
-The configuration for this step uses the ``VisualizationA`` network,
+The configuration for this step uses the :ned:`VisualizationA` network,
 defined in
 :download:`VisualizationA.ned <../VisualizationA.ned>`.
 
@@ -55,7 +55,7 @@ As you can see in the following image, in 2D visualization you can see
 only the ``visualizer`` module on the playground.
 
 .. figure:: step1_result_2d.png
-   :width: 100% 
+   :width: 100%
 
 Sources:
 :download:`omnetpp.ini <../omnetpp.ini>`,

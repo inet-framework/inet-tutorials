@@ -12,7 +12,7 @@ assignment for the rest of the network.
 The model
 ---------
 
-This step uses the ``ConfiguratorA`` network from the previous step. We
+This step uses the :ned:`ConfiguratorA` network from the previous step. We
 will assign the 10.0.0.50 address to ``host1``, and 10.0.0.100 to
 ``host3``. The configurator will automatically assign addresses to the
 rest of the nodes.
@@ -101,7 +101,7 @@ Results
 The assigned addresses are shown in the following image.
 
 .. figure:: step2address.png
-   :width: 100% 
+   :width: 100%
 
 As in the previous step, the configurator assigned disjunct subnet
 addresses. Note that the configurator still assigned addresses

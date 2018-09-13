@@ -27,12 +27,12 @@ serve as a baseline to compare with.
 Configuration
 ~~~~~~~~~~~~~
 
-All three parts in this step use the ``ConfiguratorB`` network defined
+All three parts in this step use the :ned:`ConfiguratorB` network defined
 in :download:`ConfiguratorB.ned <../ConfiguratorB.ned>`. The network
 looks like this:
 
 .. figure:: step7network.png
-   :width: 100% 
+   :width: 100%
 
 The network is comprised of three areas, each containing two local area
 networks (LANs). Each LAN contains three hosts. The hosts in the LAN
@@ -57,7 +57,7 @@ Results
 The assigned addresses are shown on the image below:
 
 .. figure:: step7a_addresses.png
-   :width: 100% 
+   :width: 100%
 
 The size of some of the routing tables are the following:
 
@@ -259,7 +259,7 @@ Results
 The image below shows the assigned addresses.
 
 .. figure:: step7c_addresses.png
-   :width: 100% 
+   :width: 100%
 
 The sizes of some of the routing tables are displayed on the following
 image.

@@ -11,12 +11,12 @@ taking antenna gain into account.
 The model
 ---------
 
-For simplicity, we configure the hosts to use ``ConstantGainAntenna``.
-``ConstantGainAntenna`` is an abstraction: it models an antenna that has
+For simplicity, we configure the hosts to use :ned:`ConstantGainAntenna`.
+:ned:`ConstantGainAntenna` is an abstraction: it models an antenna that has
 a constant gain in the directions relevant for the simulation,
 regardless of how such antenna could be implemented in real life. For
 example, if all nodes of a simulated wireless network are on the same
-plane, ``ConstantGainAntenna`` could correspond to an omnidirectional
+plane, :ned:`ConstantGainAntenna` could correspond to an omnidirectional
 antenna such as a vertical dipole. (INET contains support for
 directional antennas as well.)
 

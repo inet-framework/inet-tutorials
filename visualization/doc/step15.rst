@@ -16,14 +16,14 @@ The model
 Network topology
 ~~~~~~~~~~~~~~~~
 
-The configuration for this step uses the ``VisualizationE`` network,
+The configuration for this step uses the :ned:`VisualizationE` network,
 defined in :download:`VisualizationE.ned <../VisualizationE.ned>`.
 
-We add the following nodes to the network: 
+We add the following nodes to the network:
 
-- one ``Router`` (``router0``), 
-- one ``EtherSwitch`` (``switch0``), 
-- one ``WirelessHost`` (``pedestrianVideo``) 
+- one :ned:`Router` (``router0``),
+- one :ned:`EtherSwitch` (``switch0``),
+- one :ned:`WirelessHost` (``pedestrianVideo``)
 - and two ``Standardhost`` s (``videoStreamServer`` and ``server1``).
 
 Wireless hosts connect to ``router0`` via ``accessPoint0``,
@@ -53,8 +53,8 @@ length and the video size are also defined in the ``omnetpp.ini`` file.
 Visualizer
 ~~~~~~~~~~
 
-Routing entries are visualized by ``RoutingTableVisualizer`` (included
-in the network as part of ``IntegratedVisualizer``). The visualizer can
+Routing entries are visualized by :ned:`RoutingTableVisualizer` (included
+in the network as part of :ned:`IntegratedVisualizer`). The visualizer can
 be enabled by setting ``displayRoutingTables`` to *true*. The
 ``videoStreamServer`` node is selected as destination by setting
 ``destinationFilter`` to *\*videoStreamServer\**. We want to display the

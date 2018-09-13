@@ -3,14 +3,14 @@ IPv4 Network Configurator Tutorial
 
 This tutorial shows how to configure IP addresses and routing tables
 (that is, achieve static autoconfiguration) in wired and wireless
-networks in the INET Framework using the ``Ipv4NetworkConfigurator``
+networks in the INET Framework using the :ned:`Ipv4NetworkConfigurator`
 module.
 
 In INET simulations, configurator modules are commonly used for
 assigning IP addresses to network nodes and for setting up their routing
 tables. There are various configurators modules in INET; this tutorial
 covers the most generic and most featureful one,
-``Ipv4NetworkConfigurator``. ``Ipv4NetworkConfigurator`` supports
+:ned:`Ipv4NetworkConfigurator`. :ned:`Ipv4NetworkConfigurator` supports
 automatic and manual network configuration, and their combinations. By
 default, the configuration is fully automatic. The user can also specify
 parts (or all) of the configuration manually, and the rest will be
@@ -26,7 +26,7 @@ XML file.
    Essentially, the configurator module simulates a real life network administrator.
    The configurator assigns IP addresses to interfaces, and sets up static routing in IPv4 networks.
    It doesn't configure IP addresses and routes directly, but stores the configuration in its internal data structures.
-   Network nodes contain an instance of `Ipv4NodeConfigurator`, which configures the corresponding node's interface table and routing table based on information contained in the global `Ipv4NetworkConfigurator` module.
+   Network nodes contain an instance of :ned:`Ipv4NodeConfigurator`, which configures the corresponding node's interface table and routing table based on information contained in the global :ned:`Ipv4NetworkConfigurator` module.
    The purpose of this design is that when router reboots after a simulated failure or shutdown,
    this way it can pull its IPv4 configuration from the configurator module, and restore
    its IPv4 addresses and routing table.

@@ -15,8 +15,8 @@ step, we display a statistic about VoIP packet's end-to-end delay.
 The model
 ---------
 
-``StatisticVisualizer`` (included in the network as part of
-``IntegratedVisualizer``) keeps track of the last values of statistics,
+:ned:`StatisticVisualizer` (included in the network as part of
+:ned:`IntegratedVisualizer`) keeps track of the last values of statistics,
 and displays them above the icon of the network node.
 
 In this tutorial, we show statistic about end-to-end delay of VoIP

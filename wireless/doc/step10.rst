@@ -19,11 +19,11 @@ The model
 
 Let's configure ad-hoc routing with AODV. As AODV will manage the
 routing tables, we don't need the statically added routes any more. We
-only need ``Ipv4NetworkConfigurator`` to assign the IP addresses, and
+only need :ned:`Ipv4NetworkConfigurator` to assign the IP addresses, and
 turn all other functions off.
 
-More important, we change the hosts to be instances of ``AodvRouter``.
-``AodvRouter`` is like ``WirelessHost``, but with an added
+More important, we change the hosts to be instances of :ned:`AodvRouter`.
+:ned:`AodvRouter` is like :ned:`WirelessHost`, but with an added
 ``AodvRouting`` submodule. This change turns each node into an AODV
 router.
 
@@ -91,7 +91,7 @@ The AODV route discovery messages can be seen in the following packet
 log:
 
 .. figure:: wireless-step10-packetlog.png
-   :width: 100% 
+   :width: 100%
 
 The number of successfully received packets at host B has roughly
 doubled compared to the previous step. This is because the flow of

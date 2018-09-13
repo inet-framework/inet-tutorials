@@ -31,10 +31,10 @@ The model
 
 To use CSMA, we need to replace ``AckingWirelessNic`` in the hosts with
 ``WirelessNic``. ``WirelessNic`` is a generic NIC with both the radio
-and the MAC module left open, so we specify ``UnitDiskRadio`` for its
-``radioType`` parameter, and ``CsmaCaMac`` for ``macType``.
+and the MAC module left open, so we specify :ned:`UnitDiskRadio` for its
+``radioType`` parameter, and :ned:`CsmaCaMac` for ``macType``.
 
-The ``CsmaCaMac`` module implements CSMA/CA with optional
+The :ned:`CsmaCaMac` module implements CSMA/CA with optional
 acknowledgements and a retry mechanism. It has a number of parameters
 for tweaking its operation. With the appropriate parameters, it can
 approximate basic 802.11b ad-hoc mode operation. Parameters include:
@@ -81,7 +81,7 @@ The following sequence chart displays that after receiving the UDPData-2
 packet, host R1 transmits it after the backoff period timer has expired.
 
 .. figure:: wireless-step6-seq-3.png
-   :width: 100% 
+   :width: 100%
 
 It is already apparent by watching the simulation that there are much
 fewer collisions this time. The numbers also confirm that CSMA has

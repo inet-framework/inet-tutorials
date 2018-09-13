@@ -32,7 +32,7 @@ We configure ``visualizer`` as follows:
    :start-at: [Config Visualization09]
    :end-before: #---
 
-Wifi association is displayed by ``Ieee80211Visualizer``. We enable it
+Wifi association is displayed by :ned:`Ieee80211Visualizer`. We enable it
 by setting ``displayAssociations`` to *true*. Wifi association is
 visualized as a signal sign icon. We set ``displacementHint`` to
 *"topCenter"* to place the association icon above the node to center.

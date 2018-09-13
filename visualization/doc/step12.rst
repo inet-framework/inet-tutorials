@@ -19,7 +19,7 @@ The simulation is configured as follows.
    :start-at: [Config Visualization12]
    :end-before: # turning off transmissions and receptions
 
-Physical link activity is displayed by ``PhysicalLinkVisualizer``. By
+Physical link activity is displayed by :ned:`PhysicalLinkVisualizer`. By
 setting ``displayLinks`` to *true*, we enable displaying physical link
 activity. By default, all packets and all nodes are considered for the
 visualization. In this step, we want to display physical link activity

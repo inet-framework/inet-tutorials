@@ -5,7 +5,7 @@ Goals
 -----
 
 In this step, RIP is not used, all IPv4 routes are assigned statically
-by the ``Ipv4NetworkConfigurator`` module.
+by the :ned:`Ipv4NetworkConfigurator` module.
 
 The model
 ---------
@@ -19,7 +19,7 @@ via ethernet switches
 
 TODO: In the simulation, a host from one subnet will ping a host in
 another subnet. The ping packets will be routed via the routers, which
-use static routes assigned by ``Ipv4NetworkConfigurator``.
+use static routes assigned by :ned:`Ipv4NetworkConfigurator`.
 
 The configuration in is the following:
 

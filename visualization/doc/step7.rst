@@ -24,7 +24,7 @@ The size of the communication and interference range is mainly depends
 on the transmitter power of the device. We set the transmitter power of
 each device to *1mW*, because the default transmitter power is too big
 for this simulation. Communication and interference range are visualized
-by ``MediumVisualizer``. We enable the ``visualizer`` by setting
+by :ned:`MediumVisualizer`. We enable the ``visualizer`` by setting
 ``displayCommunicationRanges`` and ``displayInterferenceRanges`` to
 true.
 
@@ -34,7 +34,7 @@ Results
 -------
 
 .. figure:: step7_result_2d.png
-   :width: 100% 
+   :width: 100%
 
 .. todo::
 
@@ -47,7 +47,7 @@ Results
    The communication and interference ranges seen in the Module view mode too.
    When we run the simulation, the pedestrians associate with the access point.
    In Module view mode there's a bubble message when its happens.
- 
+
 
 Sources: :download:`omnetpp.ini <../omnetpp.ini>`,
 :download:`VisualizationD.ned <../VisualizationD.ned>`

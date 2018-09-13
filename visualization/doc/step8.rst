@@ -45,9 +45,9 @@ By editing the ``format`` parameter, we can display other informations
 about the interfaces of the nodes. For example, we can show the MAC
 address of the interfaces, by setting ``format`` to *"%N %\\\\%m"*.
 Other possible parameter values can be found in the NED documentation of
-``InterfaceTableVisualizer``.
+:ned:`InterfaceTableVisualizer`.
 
-The configuration of the ``InterfaceTableVisualizer`` for this step is
+The configuration of the :ned:`InterfaceTableVisualizer` for this step is
 the following:
 
 .. literalinclude:: ../omnetpp.ini
@@ -57,11 +57,11 @@ the following:
 Results
 -------
 
-By using ``InterfaceTableVisualizer`` we get much better overview about
+By using :ned:`InterfaceTableVisualizer` we get much better overview about
 the IP address of the nodes.
 
 .. figure:: step8_result_2d_ipaddress.png
-   :width: 100% 
+   :width: 100%
 
 Sources: :download:`omnetpp.ini <../omnetpp.ini>`,
 :download:`VisualizationD.ned <../VisualizationD.ned>`

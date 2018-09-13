@@ -5,7 +5,7 @@ Goals
 -----
 
 TODO: routes will be added by RIP...then a link break is scheduled by
-``ScenarioManager``. SplitHorizon is enabled. RIP should update the
+:ned:`ScenarioManager`. SplitHorizon is enabled. RIP should update the
 routes to indicate that the link is broken
 
 The model

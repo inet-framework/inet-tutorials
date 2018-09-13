@@ -15,7 +15,7 @@ The model
 
 We need to add three more hosts. This could be done by copying and
 editing the network used in the previous steps, but instead we extend
-``WirelessA`` into ``WirelessB`` using the inheritance feature of NED:
+:ned:`WirelessA` into :ned:`WirelessB` using the inheritance feature of NED:
 
 
 
@@ -50,13 +50,13 @@ yet (it will be configured in a later step). Therefore no packets are
 received by host B.
 
 .. figure:: wireless-step3-2.png
-   :width: 100% 
+   :width: 100%
 
 Host R1's MAC submodule logs indicate that it is discarding the received
 packets, as they are not addressed to it:
 
 .. figure:: wireless-step3-log.png
-   :width: 100% 
+   :width: 100%
 
 **Number of packets received by host B: 0**
 
