@@ -52,6 +52,7 @@ The configuration:
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless09]
    :end-before: #---
 

@@ -85,9 +85,8 @@ needed, so we turn it off.
 
 Configuration:
 
-
-
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless08]
    :end-before: #---
 

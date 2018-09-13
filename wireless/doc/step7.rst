@@ -45,6 +45,7 @@ sign that a route has become broken, and a new one needs to be found.
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless07]
    :end-before: #---
 

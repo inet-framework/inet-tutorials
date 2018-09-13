@@ -50,12 +50,14 @@ The configuration for this step extends Step 4, thus, it uses the
 following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step6A
    :end-before: ####
 
 Below is the XML configuration in step6a.xml:
 
 .. literalinclude:: ../step6a.xml
+   :language: xml
 
 The XML configuration contains the default rule for IP address
 assignment, and an ``<autoroute>`` element that configures the metric to
@@ -159,12 +161,14 @@ Configuration
 The configuration for this step in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step6B
    :end-before: ####
 
 The XML configuration in step6b.xml is as follows:
 
 .. literalinclude:: ../step6b.xml
+   :language: xml
 
 The ``<autoroute>`` elements can also contain the following optional
 sub-elements, which can be used to specify costs in the graph: -

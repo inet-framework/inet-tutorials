@@ -15,6 +15,7 @@ The model
 The configuration in the ini file is the following.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization13]
    :end-before: # turning off physical link activity
 

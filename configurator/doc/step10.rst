@@ -36,6 +36,7 @@ It contains seven ``AODVRouters`` laid out in a chain.
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step10A
    :end-before: ####
 
@@ -58,6 +59,7 @@ correctly.
 The XML configuration in step10a.xml is as follows:
 
 .. literalinclude:: ../step10a.xml
+   :language: xml
 
 It contains a copy of the default address configurations, and an
 <autoroute> element using the error rate metric. The configurator
@@ -88,6 +90,7 @@ configuration to the dynamic protocol.
 The configuration for this part in omnetpp.ini extends the one for Part A:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step10B
    :end-before: ####
 
@@ -117,6 +120,7 @@ Vector (AODV) dynamic routing protocol. The configuration for this part
 extends Part B. The configuration in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step10C
    :end-before: ####
 

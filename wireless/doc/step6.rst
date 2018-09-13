@@ -56,6 +56,7 @@ transmissions are successful, so no frame is ever retransmitted.
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless06]
    :end-before: #---
 

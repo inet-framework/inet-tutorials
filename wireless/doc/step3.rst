@@ -20,6 +20,7 @@ editing the network used in the previous steps, but instead we extend
 
 
 .. literalinclude:: ../WirelessB.ned
+   :language: ned
    :start-at: network WirelessB
 
 We decrease the communication range of the radios of all hosts to 250
@@ -32,6 +33,7 @@ not be able to communicate at all.
 The configuration:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Config Wireless03
    :end-before: #---
 

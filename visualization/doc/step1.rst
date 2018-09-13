@@ -37,11 +37,13 @@ defined in
 :download:`VisualizationA.ned <../VisualizationA.ned>`.
 
 .. literalinclude:: ../VisualizationA.ned
+   :language: ned
    :start-at: network VisualizationA
 
 For the first step, configuration is empty in the ini file.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization01]
    :end-before: #---
 

@@ -30,6 +30,7 @@ Configuration
 The configuration in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step5
    :end-before: ####
 
@@ -44,6 +45,7 @@ with the destination of ``host7`` (10.0.0.35) should be routed towards
 ``router2``. The XML configuration in step5a.xml is the following:
 
 .. literalinclude:: ../step5a.xml
+   :language: xml
 
 The ``<route>`` element describes a routing table entry for one or more
 nodes in the network. The ``hosts`` optional selector attribute
@@ -144,6 +146,7 @@ Configuration
 The configuration in omnetpp.ini:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step5B
    :end-before: ####
 
@@ -152,6 +155,7 @@ that packets to hosts 6--8 go towards ``router1``. The XML configuration
 in step5b.xml is as follows:
 
 .. literalinclude:: ../step5b.xml
+   :language: xml
 
 The ``<route>`` element specifies a routing table entry for ``router0``.
 The destination is 10.0.0.32 with netmask 255.255.255.248, which

@@ -35,6 +35,7 @@ settings. Thus, the configuration in omnetpp.ini for this step is
 basically empty:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step1
    :end-before: ####
 
@@ -85,6 +86,7 @@ Other settings in the ``General`` section, such as the WiFi bit rate,
 are not relevant for the topic of the tutorial.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: General
    :end-before: ####
 

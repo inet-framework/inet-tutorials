@@ -33,6 +33,7 @@ Both parts in this step use the :ned:`ConfiguratorA` network defined in
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step11A
    :end-before: ####
 
@@ -66,6 +67,7 @@ Configuration
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step11B
    :end-before: ####
 

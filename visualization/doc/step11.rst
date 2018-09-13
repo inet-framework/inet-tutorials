@@ -18,6 +18,7 @@ The model
 The simulation is configured as follows.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization11]
    :end-before: #---
 

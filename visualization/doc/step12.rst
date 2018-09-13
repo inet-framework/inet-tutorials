@@ -16,6 +16,7 @@ The model
 The simulation is configured as follows.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization12]
    :end-before: # turning off transmissions and receptions
 

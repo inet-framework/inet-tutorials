@@ -42,6 +42,7 @@ value above displaying the network routes.
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless05]
    :end-before: #---
 

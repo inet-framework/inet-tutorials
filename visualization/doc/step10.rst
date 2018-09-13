@@ -18,6 +18,7 @@ VoIP application
 ~~~~~~~~~~~~~~~~
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization10]
    :end-before: # displaying transmissions & receptions
 
@@ -36,6 +37,7 @@ Visualization
 We configure ``visualizer`` as follows.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: # displaying transmissions & receptions
    :end-before: #---
 

@@ -16,6 +16,7 @@ This step uses the same network as the previous steps,
 following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step4
    :end-before: ####
 
@@ -74,6 +75,7 @@ Additional settings pertaining to routing are specified in the
 ``General`` configuration in omnetpp.ini:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: General
    :end-before: Wireless
 

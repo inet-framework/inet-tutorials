@@ -23,6 +23,7 @@ Configuration
 The configuration in omnetpp.ini for this step is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step2
    :end-before: ####
 

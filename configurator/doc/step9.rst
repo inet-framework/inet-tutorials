@@ -21,6 +21,7 @@ This step uses the :ned:`ConfiguratorC` network, defined in
 The configuration for this step in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step9
    :end-before: ####
 
@@ -46,6 +47,7 @@ It boils down to the following:
 The XML configuration in step9.xml is the following:
 
 .. literalinclude:: ../step9.xml
+   :language: xml
 
 Addresses are assigned hierarchically. Five LANs in the network have
 addresses assigned by the configurator. Three LANs get their addresses

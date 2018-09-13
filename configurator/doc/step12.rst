@@ -43,6 +43,7 @@ the hop count metric.
 The configuration for this step in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step12
    :end-before: ####
 
@@ -57,6 +58,7 @@ Explanation:
 The XML configuration in step12.xml is the following:
 
 .. literalinclude:: ../step12.xml
+   :language: xml
 
 To have routes from every node to every other node, all nodes must be
 covered by an autoroute element. The XML configuration contains two

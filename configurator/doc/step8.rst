@@ -54,6 +54,7 @@ networks.
 Here is the configuration for this step in omnetpp.ini:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step8
    :end-before: ####
 
@@ -65,12 +66,14 @@ wireless networks: the control bit rate of all wireless nodes is set to
 54 Mbps for faster ACK transmissions.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: General
    :end-before: ####
 
 The XML configuration in step8a.xml is the following:
 
 .. literalinclude:: ../step8a.xml
+   :language: xml
 
 The XML configuration uses the same hierarchical addressing scheme as in
 Step 7. The two wireless LANs are specified to be in separate wireless
@@ -135,6 +138,7 @@ The configuration for this part extends Part A. The configuration in
 omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step8B
    :end-before: ####
 
@@ -144,6 +148,7 @@ elements that defined wireless networks. They are not needed because
 different SSIDs are configured for the members of the two wireless LANs.
 
 .. literalinclude:: ../step8b.xml
+   :language: xml
 
 Results
 ~~~~~~~

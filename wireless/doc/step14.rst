@@ -23,6 +23,7 @@ directional antennas as well.)
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless14]
    :end-before: #---
 

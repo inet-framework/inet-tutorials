@@ -67,6 +67,7 @@ Configuration:
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless04]
    :end-before: #---
 

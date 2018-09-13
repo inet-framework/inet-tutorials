@@ -37,6 +37,7 @@ We set this parameter to 0m.
 
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless13]
    :end-before: #---
 

@@ -51,6 +51,7 @@ The configuration of the :ned:`InterfaceTableVisualizer` for this step is
 the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization08]
    :end-before: # showing mac address
 

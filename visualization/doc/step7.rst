@@ -17,6 +17,7 @@ The model
 Here is the configuration of this step.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization07]
    :end-before: #---
 

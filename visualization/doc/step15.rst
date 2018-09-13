@@ -31,6 +31,7 @@ Wireless hosts connect to ``router0`` via ``accessPoint0``,
 ``switch0``. The nodes are placed on the playground as follows.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: # initializing pedestrianVideo position
    :end-before: # videoStreamServer application settings
 
@@ -47,6 +48,7 @@ communicate at UDP port 4000. In addition, sending interval, packet
 length and the video size are also defined in the ``omnetpp.ini`` file.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: # videoStreamServer application settings
    :end-before: # showing routing table entries towards videoStreamServer
 

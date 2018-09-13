@@ -24,6 +24,7 @@ Mobility settings
 At first, we have to set mobility of network nodes.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: # mobility settings
    :end-before: # mobility settings end
 
@@ -64,6 +65,7 @@ the length of velocity vector by the value of ``velocityArrowScale``.
 The following code snippet shows how these features are configured.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: # displaying movements
    :end-before: #---
 

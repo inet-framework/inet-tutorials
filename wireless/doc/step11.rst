@@ -29,6 +29,7 @@ instance to the :ned:`WirelessB` network:
 
 
 .. literalinclude:: ../WirelessC.ned
+   :language: ned
    :start-at: network WirelessC
 
 Obstacles are described in an XML file. An obstacle is defined by its
@@ -48,6 +49,7 @@ Our wall is defined in walls.xml, and the file name is given to
 :ned:`PhysicalEnvironment` in its ``config`` parameter. The file contents:
 
 .. literalinclude:: ../walls.xml
+   :language: xml
 
 
 Having obstacles is not enough in itself, we also need to teach the
@@ -71,6 +73,7 @@ blocks their signals.
 The configuration:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless11]
    :end-before: #---
 

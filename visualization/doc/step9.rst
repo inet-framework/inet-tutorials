@@ -29,6 +29,7 @@ Visualizer
 We configure ``visualizer`` as follows:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization09]
    :end-before: #---
 

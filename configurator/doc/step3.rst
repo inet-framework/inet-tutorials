@@ -18,6 +18,7 @@ subnet, and there are three such groups in the network.
 The configuration is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step3
    :end-before: ####
 
@@ -25,6 +26,7 @@ This time the XML configuration is supplied in an external file
 (step3.xml), using the ``xmldoc()`` function:
 
 .. literalinclude:: ../step3.xml
+   :language: xml
 
 A brief explanation:
 
@@ -52,6 +54,7 @@ alternative XML configuration (step3alt1.xml) that results in the same
 address assignment:
 
 .. literalinclude:: ../step3alt1.xml
+   :language: xml
 
 The ``among`` selector selects the interfaces of the specified hosts
 towards the specified hosts (the statement ``among="X Y Z"`` is the same
@@ -60,6 +63,7 @@ as ``hosts="X Y Z" towards="X Y Z"``).
 Another alternative XML configuration is the following:
 
 .. literalinclude:: ../step3alt2.xml
+   :language: xml
 
 This one assigns an address to one host in each of the three subnets. It
 assigns addresses o the interfaces of the routers facing the other

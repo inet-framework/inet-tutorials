@@ -24,6 +24,7 @@ Here is the NED source of the network:
 
 
 .. literalinclude:: ../WirelessA.ned
+   :language: ned
    :start-at: network WirelessA
 
 We'll explain the above NED file below.
@@ -138,6 +139,7 @@ out-of-band acknowledgement mechanism which we turn off here.
 The configuration:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Wireless01]
    :end-before: #---
 

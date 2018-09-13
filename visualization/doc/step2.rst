@@ -34,12 +34,14 @@ copied from :download:`VisualizationB.ned <../VisualizationB.ned>`
 that is used in this step.
 
 .. literalinclude:: ../VisualizationB.ned
+   :language: ned
    :start-at: network VisualizationB
 
 The following lines show how ``visualizer`` and ``coordinateSystem`` are
 configured in the ini file.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization02]
    :end-before: #---
 

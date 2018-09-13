@@ -28,6 +28,7 @@ To use a 3D model instead of a 2D icon, set the ``osgModel`` parameter
 of the network node. Examine the following code snippet.
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization05]
    :end-before: #---
 
@@ -47,6 +48,7 @@ The following code snippet shows :ned:`VisualizationD` network which is
 used for this step.
 
 .. literalinclude:: ../VisualizationD.ned
+   :language: ned
    :start-at: network VisualizationD
 
 An :ned:`Ipv4NetworkConfigurator` module instance and an

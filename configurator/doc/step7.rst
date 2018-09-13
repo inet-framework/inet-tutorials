@@ -44,6 +44,7 @@ routers, and the backbone router.
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step7A
    :end-before: ####
 
@@ -153,6 +154,7 @@ Configuration
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step7B
    :end-before: ####
 
@@ -231,6 +233,7 @@ Configuration
 The configuration for this part in omnetpp.ini is the following:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: Step7C
    :end-before: ####
 
@@ -239,6 +242,7 @@ optimization features are enabled. The XML configuration for this part
 in step7c.xml is the following:
 
 .. literalinclude:: ../step7c.xml
+   :language: xml
 
 This XML configuration assigns addresses hierarchically in the following
 way, when looking down the hierarchy from the backbone router towards

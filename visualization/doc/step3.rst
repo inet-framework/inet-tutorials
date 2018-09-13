@@ -31,6 +31,7 @@ axis length is set to 100m.
 This step is configured as follows:
 
 .. literalinclude:: ../omnetpp.ini
+   :language: ini
    :start-at: [Config Visualization03]
    :end-before: #---
 
