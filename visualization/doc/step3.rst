@@ -18,8 +18,8 @@ The size of the playground is 800x800 meters and is set via display
 string. In 2D visualization, the playground is visualized as a grey
 square. In 3D visualization the playground color is *light green*, but
 it is opaque by default so we can not see it. By decrease
-``playgroundOpacity`` we make the playground visible. In addition, we
-change ``playgroundColor`` to *black* because it fits better with the
+``sceneOpacity`` we make the playground visible. In addition, we
+change ``sceneColor`` to *black* because it fits better with the
 map.
 
 The playground is placed on the map according to the coordinate system
@@ -39,7 +39,7 @@ Results
 -------
 
 .. figure:: step3_result_playground.png
-   :width: 100% 
+   :width: 100%
 
 .. 3d img, axes, playground
 
