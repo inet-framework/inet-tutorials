@@ -2,6 +2,8 @@
 			MediumOSGVisualizer.cc		line 325: auto module = const_cast<cModule *>(check_and_cast<const cModule *>(radio));
 			No source available for "0x72657a"
 
+- Step 6 & 7: in anf file, there is no rcvdPkSeqNo statistic
+
 - ieee80211Visualizer: Lehetne rajta cimke: ssid, jelerösség
 
 - egymásra lógnak a 3dben az interfaceTableVisualizer és a ieee80211Visualizer
