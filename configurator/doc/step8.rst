@@ -18,7 +18,7 @@ The configurator assumes that interfaces of wireless nodes in the same
 wireless network can reach each other directly. It can determine which
 nodes belong to a wireless network in two ways:
 
--  It looks at the ``default_ssid`` parameter in nodes' agent submodule.
+-  It looks at the ``defaultSsid`` parameter in nodes' agent submodule.
    Nodes with the same SSID are assumed to be in the same wireless
    network.
 -  Members of wireless networks can be specified by the ``<wireless>``
