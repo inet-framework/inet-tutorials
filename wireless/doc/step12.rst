@@ -4,7 +4,7 @@ Step 12. Changing to a more realistic radio model
 Goals
 -----
 
-After so many steps, we let go of the ideal radio model, and introduce a
+After so many steps, we let go of the unit disk radio model, and introduce a
 more realistic one. Our new radio will use an APSK modulation scheme,
 but still without other techniques like forward error correction,
 interleaving or spreading. We also want our model of the radio channel

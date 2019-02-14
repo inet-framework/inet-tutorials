@@ -14,7 +14,7 @@ reception.
 
 In this step, we add a concrete wall to the model that sits between
 hosts ``A`` and ``R1``, and see what happens. Since our model still uses
-the ideal radio and ideal wireless medium models that do not model
+the unit disk radio and unit disk wireless medium models that do not model
 physical phenomena, obstacle modeling will be very simple: all obstacles
 completely absorb radio signals, making reception behind them
 impossible.
@@ -55,7 +55,7 @@ Our wall is defined in walls.xml, and the file name is given to
 Having obstacles is not enough in itself, we also need to teach the
 model of the wireless medium to take them into account. This is done by
 specifying an obstacle loss model. Since our model contains
-``IdealMedium``, we specify :ned:`IdealObstacleLoss`. With
+``UnitDiskRadioMedium``, we specify :ned:`IdealObstacleLoss`. With
 :ned:`IdealObstacleLoss`, obstacles completely block radio signals, making
 reception behind them impossible.
 
