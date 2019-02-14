@@ -113,7 +113,7 @@ In hosts, network interface cards are represented by NIC modules. Radio
 is part of wireless NIC modules. There are various radio modules, and
 one must always use one that is compatible with the medium module. In
 this step, hosts contain :ned:`UnitDiskRadio` as part of
-``AckingWirelessNic``.
+``AckingWirelessInterface``.
 
 In this model, we configure the chosen physical layer model
 (:ned:`UnitDiskRadioMedium` and :ned:`UnitDiskRadio`) as follows. The
@@ -128,7 +128,7 @@ MAC layer
 ~~~~~~~~~
 
 NICs modules also contain an L2 (i.e. data link layer) protocol. The MAC
-protocol in ``AckingWirelessNic`` is configurable, the default choice
+protocol in ``AckingWirelessInterface`` is configurable, the default choice
 being ``MultipleAccessMac``. ``MultipleAccessMac`` implements a trivial
 MAC layer which only provides encapsulation/decapsulation but no real
 medium access protocol. There is virtually no medium access control:

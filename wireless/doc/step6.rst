@@ -29,8 +29,8 @@ utilized better.
 The model
 ---------
 
-To use CSMA, we need to replace ``AckingWirelessNic`` in the hosts with
-``WirelessNic``. ``WirelessNic`` is a generic NIC with both the radio
+To use CSMA, we need to replace ``AckingWirelessInterface`` in the hosts with
+``WirelessInterface``. ``WirelessInterface`` is a generic NIC with both the radio
 and the MAC module left open, so we specify :ned:`UnitDiskRadio` for its
 ``radioType`` parameter, and :ned:`CsmaCaMac` for ``macType``.
 
