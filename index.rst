@@ -17,6 +17,6 @@ The following tutorials are available:
    :maxdepth: 1
 
    Wireless <wireless/doc/index>
-   IPv4 Network Confgurator <configurator/doc/index>
+   IPv4 Network Configurator <configurator/doc/index>
 .. rip/doc/index
 .. visualization/doc/index
