@@ -7,13 +7,13 @@ Goals
 In an attempt to make our simulation both more realistic and more
 interesting, we add some obstacles to the playground.
 
-In the real world, objects like walls, trees, buildings and hills act as
+In the real world, objects like walls, trees, buildings, and hills act as
 obstacles to radio signal propagation. They absorb and reflect radio
 waves, reducing signal quality and decreasing the chance of successful
 reception.
 
 In this step, we add a concrete wall to the model that sits between
-hosts ``A`` and ``R1``, and see what happens. Since our model still uses
+hosts ``A`` and ``R1`` and see what happens. Since our model still uses
 the unit disk radio and unit disk wireless medium models that do not model
 physical phenomena, obstacle modeling will be very simple: all obstacles
 completely absorb radio signals, making reception behind them
@@ -40,9 +40,9 @@ prism, polyhedron or sphere, and also to define new shapes that may be
 reused for any number of obstacles. It is similar for materials: there
 are predefined materials like concrete, brick, wood, glass, forest, and
 one can also define new materials. A material is defined with its
-physical properties like resistivity, relative permittivity and relative
+physical properties like resistivity, relative permittivity, and relative
 permeability. These properties are used in the computations of
-dielectric loss tangent, refractive index and signal propagation speed,
+dielectric loss tangent, refractive index, and signal propagation speed,
 and ultimately in the computation of signal loss.
 
 Our wall is defined in walls.xml, and the file name is given to
@@ -65,7 +65,7 @@ submodule in the network contains two submodules related to obstacles:
 ``obstacleLossVisualizer`` is responsible for visualizing the obstacle
 loss of individual signals.
 
-The wall in our simulation is at an elevation of 0m, and is 4m high. So
+The wall in our simulation is at an elevation of 0m and is 4m high. So
 far the hosts (more precisely, their antennas) were at 0m elevation, the
 default setting; we change this to 1.7m so that the wall definitely
 blocks their signals.

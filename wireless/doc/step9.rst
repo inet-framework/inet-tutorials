@@ -5,7 +5,7 @@ Goals
 -----
 
 In this step, we make the model more interesting by adding node
-mobility. Namely, we make the intermediate nodes travel north during
+mobility. Namely, we make the intermediate nodes travel north during the
 simulation. After a while, they will move out of the range of host A
 (and B), breaking the communication path.
 
@@ -16,7 +16,7 @@ Mobility
 ~~~~~~~~
 
 In the INET Framework, node mobility is handled by the ``mobility``
-submodule of hosts. Several mobility module type exist that can be
+submodule of hosts. Several mobility module types exist that can be
 plugged into a host. The movement trail may be deterministic (such as
 line, rectangle or circle), probabilistic (e.g. random waypoint),
 scripted (e.g. a "turtle" script) or trace-driven. There are also
@@ -32,17 +32,17 @@ Other changes
 
 So far, L2 queues (the queues in the wireless interfaces) have been
 unlimited, that is, no packet would be dropped due to congestion.
-Meanwhile, there was indeed a congestion in host R1 and host A, because
-the the application in host A was generating packets at a higher rate
-that the netwok could carry.
+Meanwhile, there was indeed congestion in host R1 and host A, because
+the application in host A was generating packets at a higher rate
+than what the network could carry.
 
 From this step on, we limit the queue lengths at 10 packets. This allows
 the network to react faster to topology changes caused by node
-movements, because queues will not be clogged up by old packets.
+movements because queues will not be clogged up by old packets.
 However, as a consequence of packet drops, we expect that the sequence
 numbers of packets received by host B will no longer be continuous.
 
-We also update the visualization settings, and turn on an option that
+We also update the visualization settings and turn on an option that
 will cause mobile nodes to leave a trail as they move. We also enable a
 visualizer option that will display the velocity vector of the moving
 nodes.

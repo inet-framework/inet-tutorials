@@ -1,11 +1,11 @@
-Step 13. Configuring a more accurate pathloss model
-===================================================
+Step 13. Configuring a more accurate path loss model
+====================================================
 
 Goals
 -----
 
 By default, the medium uses the free-space path loss model, which
-assumes line-of-sight path, with no obstacles nearby to cause reflection
+assumes a line-of-sight path, with no obstacles nearby to cause reflection
 or diffraction. Since our wireless hosts move on the ground, a more
 accurate path loss model would be the two-ray ground reflection model
 that calculates with one reflection from the ground.
@@ -19,16 +19,16 @@ noise, among others. Installing the two-ray ground reflection model is
 just a matter of changing its ``pathLossType`` parameter from the
 default :ned:`FreeSpacePathLoss` to :ned:`TwoRayGroundReflection`. (Further
 options include :ned:`RayleighFading`, :ned:`RicianFading`,
-:ned:`LogNormalShadowing` and some others.)
+:ned:`LogNormalShadowing`, and some others.)
 
 The two-ray ground reflection model uses the altitudes of the
 transmitter and the receiver antennas above the ground as input. To
-compute the altitude, we need the hosts' (x,y,z) positions, and the
+compute the altitude, we need the hosts' (x,y,z) positions and the
 ground's elevation at those points. The z coordinates of hosts have been
 set to 1.7m in an earlier step. The ground's elevation is defined by the
 ground model. which is part of the physical environment model.
 
-In this model, we'll use :ned:`FlatGround` for ground model, and specify it
+In this model, we'll use :ned:`FlatGround` for the ground model, and specify it
 to the ``physicalEnvironment`` module. (Note that we added
 ``physicalEnvironment`` to the network when we introduced obstacles.)
 The ground's elevation is the ``elevation`` parameter of :ned:`FlatGround`.

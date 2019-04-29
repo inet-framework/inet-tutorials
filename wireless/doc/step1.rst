@@ -14,7 +14,7 @@ We'll make the model more realistic in later steps.
 The model
 ---------
 
-In this step we'll use the model depicted below.
+In this step, we'll use the model depicted below.
 
 .. figure:: wireless-step1.png
    :width: 100%
@@ -47,7 +47,7 @@ In INET, hosts are usually represented with the :ned:`StandardHost` NED
 type, which is a generic template for TCP/IP hosts. It contains protocol
 components like TCP, UDP and IP, slots for plugging in application
 models, and various network interfaces (NICs). :ned:`StandardHost` has some
-variations in INET, for example :ned:`WirelessHost`, which is basically a
+variations in INET, for example, :ned:`WirelessHost`, which is basically a
 :ned:`StandardHost` preconfigured for wireless scenarios.
 
 As you can see, the hosts' type is parametric in this NED file (defined
@@ -134,7 +134,7 @@ MAC layer which only provides encapsulation/decapsulation but no real
 medium access protocol. There is virtually no medium access control:
 packets are transmitted as soon as the previous packet has completed
 transmission. ``MultipleAccessMac`` also contains an optional
-out-of-band acknowledgement mechanism which we turn off here.
+out-of-band acknowledgment mechanism which we turn off here.
 
 The configuration:
 
@@ -149,7 +149,7 @@ Results
 When we run the simulation, here's what happens. Host A's
 :ned:`UdpBasicApp` generates UDP packets at random intervals. These packets
 are sent down via UDP and IPv4 to the network interface for
-transmission. The network interface queues packets, and transmits them
+transmission. The network interface queues packets and transmits them
 as soon as it can. As long as there are packets in the network
 interface's transmission queue, packets are transmitted back-to-back,
 with no gaps between subsequent packets.

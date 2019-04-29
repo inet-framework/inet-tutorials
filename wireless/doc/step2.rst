@@ -25,7 +25,7 @@ connectivity, discovered network routes, ongoing transmissions, ongoing
 receptions, propagating radio signals, statistics, and more.
 
 We enable several kinds of visualizations: communication range, signal
-propagation and recent successful physical layer transmissions.
+propagation, and recent successful physical layer transmissions.
 
 The visualization of communication range is enabled using the
 ``displayCommunicationRange`` parameter of the radio module in host A.
@@ -102,15 +102,15 @@ the OMNeT++ IDE. The following image was obtained by recording an event
 log (``.elog``) file from the simulation, opening it in the IDE, and
 tweaking the settings in the Sequence Chart tool.
 
-The transmission of packet UDPData-0 starts at around 23ms, and
+The transmission of packet UDPData-0 starts at around 23ms and
 completes at around 30ms. The signal propagation takes a nonzero amount
 of time, but it's such a small value compared to the transmission
 duration that it's not visible in this image. (The arrow signifying the
 beginning of the transmission appears to be vertical, one needs to zoom
-in along the time axis to see that in fact it is not. In a later step,
+in along the time axis to see that in fact, it is not. In a later step,
 we will see that it is possible to configure the Sequence Chart tool to
 represent time in a non-linear way.) The chart also indicates that
-UDPData-0 and UDPData-1 are transmitted back-to-back, because there's no
+UDPData-0 and UDPData-1 are transmitted back-to-back because there's no
 gap between them. UDPData-2 and UDPData-3 are also transmitted
 back-to-back.
 

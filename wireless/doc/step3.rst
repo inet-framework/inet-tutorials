@@ -6,7 +6,7 @@ Goals
 
 Later in this tutorial, we'll want to turn our model into an ad-hoc
 network and experiment with routing. To this end, we add three more
-wireless nodes, and reduce the communication range so that our two
+wireless nodes and reduce the communication range so that our two
 original hosts cannot reach one another directly. In later steps, we'll
 set up routing and use the extra nodes as relays.
 
@@ -14,7 +14,7 @@ The model
 ---------
 
 We need to add three more hosts. This could be done by copying and
-editing the network used in the previous steps, but instead we extend
+editing the network used in the previous steps, but instead, we extend
 :ned:`WirelessA` into :ned:`WirelessB` using the inheritance feature of NED:
 
 
@@ -25,7 +25,7 @@ editing the network used in the previous steps, but instead we extend
 
 We decrease the communication range of the radios of all hosts to 250
 meters. This will make direct communication between hosts A and B
-impossible, because their distance is 400 meters. The recently added
+impossible because their distance is 400 meters. The recently added
 hosts are in the correct positions to relay data between hosts A and B,
 but routing is not yet configured. The result is that hosts A and B will
 not be able to communicate at all.
@@ -47,7 +47,7 @@ by the dotted arrows connecting host A to R1 and R2, respectively,
 representing recent successful receptions in the physical layer.
 
 Host B is in the transmission range of host R1, and R1 could potentially
-relay A's packets, but it drops them, because routing is not configured
+relay A's packets, but it drops them because routing is not configured
 yet (it will be configured in a later step). Therefore no packets are
 received by host B.
 

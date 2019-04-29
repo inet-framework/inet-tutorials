@@ -5,12 +5,12 @@ Goals
 -----
 
 In this step, we try to make link layer communication more reliable by
-adding acknowledgements to the MAC protocol.
+adding acknowledgments to the MAC protocol.
 
 The model
 ---------
 
-We turn on acknowledgements by setting the ``useAcks`` parameter of
+We turn on acknowledgments by setting the ``useAcks`` parameter of
 :ned:`CsmaCaMac` to ``true``. This change will make the operation of the
 MAC module both more interesting and more complicated.
 
@@ -22,7 +22,7 @@ retransmission. The contention window (from which the random backoff
 period is drawn) will be doubled for each retransmission until it
 reaches the maximum (and then it will stay constant for further
 retransmissions). After a given number of unsuccessful retries, the MAC
-will give up and discard the data frame, and will take the next data
+will give up, discard the data frame, and will take the next data
 frame from the queue. The next frame will start with a clean slate (i.e.
 the contention window and the retry count will be reset).
 
@@ -76,11 +76,11 @@ current step (ACK on, red).
    :width: 100%
 
 When ACKs are turned on, each successfully received UDPData packet has
-to be ackowledged before the next one can be sent. Lost packets are
-retransmitted until an ACK arrives, impementing a kind of reliable
+to be acknowledged before the next one can be sent. Lost packets are
+retransmitted until an ACK arrives, implementing a kind of reliable
 transport. Because of this, the sequence numbers are sequential. In the
 case of ACKs turned off, lost packets are not retransmitted, which
-results in gaps in the sequence numbers. The blue curve is steeper,
+results in gaps in the sequence numbers. The blue curve is steeper
 because the sequence numbers grow more rapidly. This is in contrast to
 the red curve, where the sequence numbers grow only by one.
 
@@ -109,5 +109,3 @@ Discussion
 Use `this
 page <https://github.com/inet-framework/inet-tutorials/issues/1>`__ in
 the GitHub issue tracker for commenting on this tutorial.
-
-

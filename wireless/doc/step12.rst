@@ -4,7 +4,7 @@ Step 12. Changing to a more realistic radio model
 Goals
 -----
 
-After so many steps, we let go of the unit disk radio model, and introduce a
+After so many steps, we let go of the unit disk radio model and introduce a
 more realistic one. Our new radio will use an APSK modulation scheme,
 but still without other techniques like forward error correction,
 interleaving or spreading. We also want our model of the radio channel
@@ -27,8 +27,8 @@ Since we are moving away from the "unit disc radio" type of abstraction,
 we need to specify the carrier frequency, signal bandwidth and
 transmission power of the radios. Together with other parameters, they
 will allow the radio channel and the receiver models to compute path
-loss, SNIR, bit error rate and other values, and ultimately determine
-the success of reception.
+loss, SNIR, bit error rate, and other values, and ultimately determine
+the success of the reception.
 
 :ned:`ApskScalarRadio` also adds realism in that it simulates that the data
 are preceded by a preamble and a physical layer header. Their lengths
@@ -61,7 +61,7 @@ needs to use a medium that is compatible with the given radio. (With
 :ned:`UnitDiskRadio`, we also used :ned:`UnitDiskRadioMedium`.)
 
 :ned:`ApskScalarRadioMedium` has "slots" to plug in various propagation
-models, path loss models, obstacle loss models, analog models and
+models, path loss models, obstacle loss models, analog models, and
 background noise models. Here we make use of the fact that the default
 background noise model is homogeneous isotropic white noise, and set up
 the noise level to a nonzero value (-90dBm).
@@ -86,7 +86,7 @@ new route goes through hosts R2 and R3.
 
 In this model, more physical effects are simulated than in previous
 steps. There is radio signal attenuation, background noise and a more
-realistic radio model. The blue circles representing communication range
+realistic radio model. The blue circles representing the communication range
 is an approximation. There is no distinct distance where receptions
 fail, as in the case of :ned:`UnitDiskRadio`.
 

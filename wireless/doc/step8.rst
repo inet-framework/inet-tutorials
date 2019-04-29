@@ -12,7 +12,7 @@ battery lasts until it can be recharged or replaced.
 
 In this step, we augment the nodes with components so that we can model
 (and measure) their energy consumption. For simplicity, we ignore energy
-constraints, and just install infinite energy sources into the nodes.
+constraints and just install infinite energy sources into the nodes.
 
 The model
 ---------
@@ -42,7 +42,7 @@ in a particular state.
 To go into a little bit more detail: the radio maintains two state
 variables, *receive state* and *transmit state*. At any given time, the
 radio mode (one of *off*, *sleep*, *switching*, *receiver*,
-*transmitter* and *transciever*) decides which of the two state
+*transmitter*, and *transceiver*) decides which of the two state
 variables are valid. The receive state may be *idle*, *busy*, or
 *receiving*, the former two referring to the channel state. When it is
 *receiving*, a sub-state stores which part of the signal it is
@@ -99,7 +99,7 @@ energy.
 
 .. figure:: wireless-step8-energy-2.png
 
-The ``residualCapacity`` statistic of hosts A, R1 and B is plotted in
+The ``residualCapacity`` statistic of hosts A, R1 and B is plotted on the
 following diagram. The diagram shows that host A has consumed the most
 power because it transmitted more than the other nodes.
 

@@ -6,7 +6,7 @@ Goals
 
 In this step, we make our model of the physical layer a little bit more
 realistic. First, we turn on interference modeling in the unit disc
-radio. By interference we mean that if two signals collide (arrive at
+radio. By interference, we mean that if two signals collide (arrive at
 the receiver at the same time), they will become garbled and the
 reception will fail. (Remember that so far we were essentially modeling
 pairwise duplex communication.)
@@ -32,7 +32,7 @@ Interference range is the ``interferenceRange`` parameter of
 :ned:`UnitDiskRadio`'s transmitter part, so we set that to 500m.
 
 We expect that although host B will not be able to receive host A's
-transmissions, those transmission will still cause interference with
+transmissions, those transmissions will still cause interference with
 other (e.g. R1's) transmissions at host B.
 
 Regarding visualization, we turn off the arrows indicating successful
@@ -59,7 +59,7 @@ R1 can transmit a packet without collision at B.
 
 When the packet UDPData-54 of host A arrives at host R1, it gets routed
 towards host B, so host R1 immediately starts transmitting it.
-Unfortunately at the same time, host A already transmits the next packet
+Unfortunately, at the same time, host A already transmits the next packet
 (UDPData-55) back-to-back with the previous one. Thus, the reception of
 UDPData-54 from host R1 at host B fails due to a collision. The
 colliding packets are the UDPData-55 from host A and UDPData-54 from
@@ -100,7 +100,7 @@ The sequence chart below shows host R1's and host A's signals
 overlapping at host B.
 
 NOTE: On this and all other sequence charts in this tutorial, grey
-vertical strips are constant-time zones: all events within a same grey
+vertical strips are constant-time zones: all events within the same grey
 area have the same simulation time. Also, time is mapped to the
 horizontal axis using a nonlinear transformation, so that both small and
 large time intervals can be depicted on the same chart. A larger
