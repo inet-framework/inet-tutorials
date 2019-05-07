@@ -56,7 +56,7 @@ this config file in the next part.
 Part B - Using the modified configuration
 -----------------------------------------
 
-In this part, we edit the config file, and use it as the XML
+In this part, we edit the config file and use it as the XML
 configuration. The goal is that packets should travel counter-clockwise
 in the triangle of the three routers, i.e. each router should forward
 packets in the triangle through its interface on the right.
@@ -80,13 +80,13 @@ counter-clockwise direction.
 The routes in all three routers' routing tables are modified. Routes
 that would send packets the wrong way (i.e. not counter-clockwise in the
 triangle) are redirected to the other interface. In essence, all routers
-send out packets through their interface to the right (expect for
+send out packets through their interface to the right (except for
 packets destined to the connecting LAN.)
 
 The modified XML configuration is in
 :download:`step11b.xml <../step11b.xml>` (see
 :download:`step11a\_dump.xml <../step11a_dump.xml>` for the original.)
-The differences between the original and the modified config files area
+The differences between the original and the modified config files are
 displayed below (the original is shown in red).
 
 .. figure:: step11diff.png

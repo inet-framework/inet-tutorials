@@ -4,7 +4,7 @@ Step 4. Fully automatic static routing table configuration
 Goals
 -----
 
-Just as with IP addresses, in many cases the configurator sets up routes
+Just as with IP addresses, in many cases, the configurator sets up routes
 in a network properly without any user input. This step demonstrates the
 default configuration for routing.
 
@@ -64,7 +64,7 @@ selected set of source nodes are indicated by arrows. The default
 setting for both parameters is ``"*"``, which visualizes all routes
 going from every node to every other node. Visualizing routes from all
 nodes to all destinations can often make the screen cluttered. In this
-step the ``destinationFilter`` is set to visualize all routes heading
+step, the ``destinationFilter`` is set to visualize all routes heading
 towards ``host7``.
 
 The visualizer annotates the arrows with information about the
@@ -79,7 +79,7 @@ Additional settings pertaining to routing are specified in the
    :start-at: General
    :end-before: Wireless
 
-The ``dumpTopology``, ``dumpLinks`` and ``dumpRoutes`` parameters are
+The ``dumpTopology``, ``dumpLinks``, and ``dumpRoutes`` parameters are
 set to ``true``. These parameter settings instruct the configurator to
 print to the module output the topology of the network, the recognized
 network links, and the routing tables of all nodes, respectively.

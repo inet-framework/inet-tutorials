@@ -43,11 +43,11 @@ The :ned:`ConfiguratorC` network extends :ned:`ConfiguratorB` by adding two
 wireless LANs, ``area1lan3`` and ``area3lan3``. The additional LANs
 consist of an :ned:`AccessPoint` and three ``WirelessHosts``.
 
-The default SSID settings of all wireless nodes is ``"SSID"``. By
+The default SSID setting of all wireless nodes is ``"SSID"``. By
 default, the configurator would put them in the same wireless network,
 and assume that they can all reach each other directly. This would be
 reflected in the routes, hosts in ``area1lan3`` would reach hosts in
-``area3lan3`` directly. This is obviously wrong, because they are out of
+``area3lan3`` directly. This is obviously wrong because they are out of
 range of each other. The two LANs need to be in two different wireless
 networks.
 
@@ -83,7 +83,7 @@ belong to the wireless networks.
 Results
 ~~~~~~~
 
-The addresses and routes are indicated on the following image. Routes
+The addresses and routes are indicated in the following image. Routes
 leading towards hosts ``area3lan3`` are visualized.
 
 .. figure:: step8a_2.png

@@ -55,7 +55,7 @@ an individual routing table entry to every destination interface.
 Results
 ~~~~~~~
 
-The assigned addresses are shown on the image below:
+The assigned addresses are shown in the image below:
 
 .. figure:: step7a_addresses.png
    :width: 100%
@@ -214,7 +214,7 @@ We can make the following observations:
 -  Similarly, the backbone router has three rules for reaching the three
    area routers, and six rules for reaching the six LANs in the network.
 -  The backbone router has separate rules for the two LANs connected to
-   an area router, because the addresses are not contiguously assigned
+   an area router because the addresses are not contiguously assigned
    to the two LANs (e.g. ``area2lan1`` has address 10.0.0.8/29,
    ``area2lan2`` has 10.0.0.32/29. But ``area3lan1`` has 10.0.0.16/29,
    which is between the two former address ranges). Thus, area 2 cannot

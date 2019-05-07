@@ -7,7 +7,7 @@ Goals
 In the first step, we want to automatically assign addresses in a wired
 network. To make the task a little bit more complicated, the network
 won't be a single LAN but several LANs connected via routers. We want to
-place nodes on each subnet into a different subnet, but otherwise we
+place nodes on each subnet into a different subnet, but otherwise, we
 don't care how addresses are assigned. We also ignore the question of
 filling routing tables for now -- it will be covered in later steps.
 
@@ -78,7 +78,7 @@ experimenting with the configurator.
 Network interface information, such as interface names and IP addresses,
 can be visualized using the :ned:`InterfaceTableCanvasVisualizer` module,
 which is already included in the network as a submodule of
-:ned:`IntegratedCanvasVisualizer`. We also turn on interface visualization,
+:ned:`IntegratedCanvasVisualizer`. We also turn on interface visualization
 but tell the visualizer to ignore switches and access points, as they
 don't have IP addresses.
 
@@ -96,7 +96,7 @@ Results
 The IP addresses assigned to interfaces by the configurator are shown on
 the image below. The switches and hosts connected to the individual
 routers are considered to be on the same link. Note that the
-configurator assigned addresses sequentially starting from 10.0.0.1,
+configurator assigned addresses sequentially starting from 10.0.0.1
 while making sure that different subnets got different address prefixes
 and netmasks, as instructed by the ``assignDisjunctSubnetAddresses``
 parameter.
@@ -110,7 +110,7 @@ to the other router interfaces. Three hosts and the router's interface
 towards a switch as a group has four interfaces, thus, a 30-bit netmask
 with a 2-bit host identifier would have sufficed. However, the
 configurator doesn't assign addresses where the host identifier is
-all-zeros or all-ones (as they are commonly refer to the subnet itself
+all-zeros or all-ones (as they commonly refer to the subnet itself
 and to the subnet broadcast address.)
 
 Sources: :download:`omnetpp.ini <../omnetpp.ini>`,

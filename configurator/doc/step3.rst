@@ -40,7 +40,7 @@ A brief explanation:
 
 -  The last entry sets the network prefix of interfaces of all routers
    to be 10.1.x.x. The routers' interfaces facing the subnets were
-   assigned addresses by the previous rules, so this rule only effects
+   assigned addresses by the previous rules, so this rule only affects
    the interfaces facing the other routers.
 
 These seven rules assign addresses to all interfaces in the network,
@@ -75,7 +75,7 @@ subnet as the specified host.
 Results
 -------
 
-The assigned addresses are shown on the following image.
+The assigned addresses are shown in the following image.
 
 .. figure:: step3address.png
    :width: 100%

@@ -68,7 +68,7 @@ at the start of the simulation is shown on the following image:
 .. figure:: step9routes_2.png
    :width: 100%
 
-The hosts of ``area1lan3``, ``area2lan1`` and ``area3lan3`` have
+The hosts of ``area1lan3``, ``area2lan1``, and ``area3lan3`` have
 unspecified addresses. The routing tables of all hosts contain subnet
 routes to these three LANs. Since these hosts don't have addresses at
 the start of the simulation, there are no routes leading to
@@ -79,7 +79,7 @@ routes leading to these LANs are added to the routing tables of all
 hosts. The addresses for the interfaces connecting to these LANs have a
 netmask assigned so there are addresses allocated for the unspecified
 hosts. For example, ``area1router``'s ``eth3`` interface has the address
-10.1.4.1/29, and has four addresses allocated (``10.1.4.2``..\ ``5``).
+10.1.4.1/29 and has four addresses allocated (``10.1.4.2``..\ ``5``).
 
 The routing tables of ``area1lan3host2``, ``area1router`` and
 ``backbonerouter`` are the following (routes for reaching the
@@ -127,7 +127,7 @@ In the following video, ``area1lan3host2`` sends a ping packet to
 .. video:: Step9_2.mp4
    :width: 698
 
-No routes are visualized initially, because ``area3lan3host2`` (the
+No routes are visualized initially because ``area3lan3host2`` (the
 destination of route visualization) has an unspecified IP address. When
 it gets an address from the DHCP server, the routes leading towards
 ``area3lan3host2`` appear.

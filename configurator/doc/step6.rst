@@ -180,7 +180,7 @@ attribute selects which links are affected, by specifying an interface
 they belong to. The ``cost`` parameter sets the cost. Both attributes
 are mandatory.
 
-This XML configuration specifies the metric to be hop count, and sets
+This XML configuration specifies the metric to be hop count and sets
 the cost of ``router0``'s eth2 interface to infinite. This affects the
 link between ``router0`` and ``router2`` - no routes should go through
 it.

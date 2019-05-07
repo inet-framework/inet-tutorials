@@ -40,11 +40,11 @@ The configuration for this part in omnetpp.ini is the following:
    :start-at: Step10A
    :end-before: ####
 
-The transmitter power of radios determine their communication range. The
-range is set up so hosts are only in range of the adjacent hosts in the
+The transmitter power of radios determines their communication range. The
+range is set up so hosts are only in the range of the adjacent hosts in the
 chain. :ned:`RoutingTableCanvasVisualizer` is set to visualize routes to
 all destinations. The routing table visualization is simplified by
-turning off arrow labels, and setting the arrow line shift to 0. The
+turning off arrow labels and setting the arrow line shift to 0. The
 latter setting causes the visualizer to draw only one arrow between any
 nodes even if there would be multiple arrows, e.g. one for both
 directions (bi-directional routes will be displayed as bi-directional
@@ -144,7 +144,7 @@ happens to the routes to ``host2``, as it's not in the path between
    :height: 650
 
 To record the video, the simulation was run in fast mode, thus, routes
-appear instantly. It takes a few seconds simulation time for the unused
+appear instantly. It takes a few seconds of simulation time for the unused
 routes to expire.
 
 Sources: :download:`omnetpp.ini <../omnetpp.ini>`,

@@ -6,7 +6,7 @@ Goals
 
 Automatic address assignment is great, but it is sometimes also useful
 to be able to manually specify IP addresses for certain nodes or
-interfaces. This step shows how to do that, while retaining automatic
+interfaces. This step shows how to do that while retaining automatic
 assignment for the rest of the network.
 
 The model
@@ -36,11 +36,11 @@ XML.
 In the above XML configuration, the first two rules state that
 ``host3``'s ``eth0`` interface should get the address 10.0.0.100, and
 ``host1``'s ``eth0`` interface should get the address 10.0.0.50. The
-third rule is the exact copy of the default configuration, and tells the
+third rule is the exact copy of the default configuration and tells the
 configurator to assign the rest of the addresses automatically.
 
 Note that the XML configuration contains ``<config>`` as root element.
-Under this root element there can be multiple configuration elements,
+Under this root element, there can be multiple configuration elements,
 such as the ``<interface>`` elements here.
 
 The <interface> element
@@ -55,7 +55,7 @@ set on those interfaces. The attributes used in the configuration above
 are:
 
 -  The ``hosts`` selector attribute selects hosts. The selection pattern
-   can be full path (e.g. ``"*.host0"``) or a module name anywhere in
+   can be a full path (e.g. ``"*.host0"``) or a module name anywhere in
    the hierarchy (e.g. ``"host0"``). Only interfaces in the selected
    hosts will be affected by the ``<interface>`` element.
 
@@ -79,7 +79,7 @@ documentation.
 
 The order of configuration elements is important, but the configurator
 doesn't assign addresses in the order of XML ``<interface>`` elements.
-It iterates interfaces in the network, and for each interface the first
+It iterates interfaces in the network, and for each interface, the first
 matching rule in the XML configuration will take effect. Thus,
 statements that are positioned earlier in the configuration take
 precedence over those that come later.
@@ -89,7 +89,7 @@ elements in order to assign addresses at all. To make sure the
 configurator automatically assigns addresses to all interfaces, a rule
 similar to the one in the default configuration has to be included
 (unless the intention is to leave some interfaces unassigned.) The
-default rule should be the *last one* among the interface rules, so that
+default rule should be the *last one* among the interface rules so that
 more specific rules can override it.
 
 Note that after applying a manually specified address, auto address
