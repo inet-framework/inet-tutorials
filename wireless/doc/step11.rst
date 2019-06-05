@@ -52,7 +52,7 @@ Our wall is defined in walls.xml, and the file name is given to
    :language: xml
 
 
-Having obstacles is not enough in itself, we also need to teach the
+Having obstacles is not enough in itself; we also need to teach the
 model of the wireless medium to take them into account. This is done by
 specifying an obstacle loss model. Since our model contains
 ``UnitDiskRadioMedium``, we specify :ned:`IdealObstacleLoss`. With

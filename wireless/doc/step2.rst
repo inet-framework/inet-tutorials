@@ -29,7 +29,7 @@ propagation, and recent successful physical layer transmissions.
 
 The visualization of communication range is enabled using the
 ``displayCommunicationRange`` parameter of the radio module in host A.
-It displays a circle around the host which represents the maximum
+It displays a circle around the host, which represents the maximum
 distance where successful transmission is still possible with some hosts
 in the network.
 

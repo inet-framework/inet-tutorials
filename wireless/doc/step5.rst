@@ -36,7 +36,7 @@ transmissions, those transmissions will still cause interference with
 other (e.g. R1's) transmissions at host B.
 
 Regarding visualization, we turn off the arrows indicating successful
-data link layer receptions, because in our case it does not add much
+data link layer receptions, because in our case, it does not add much
 value above displaying the network routes.
 
 
@@ -90,7 +90,7 @@ This is shown in the animation below:
 As we expected, the number of packets received by host B is low. The
 following sequence chart illustrates packet traffic between hosts A's,
 R1's and B's network layer. The image indicates that host B only
-occasionally receives packets successfully, most packets sent by R1 do
+occasionally receives packets successfully; most packets sent by R1 do
 not make it to host B's IP layer.
 
 .. figure:: wireless-step5-seq.png

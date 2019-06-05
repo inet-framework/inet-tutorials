@@ -85,7 +85,7 @@ submodule triggers the reconfiguration of the route. To detect possible
 new routes and establish one, there is a burst of AODV transmissions
 between the hosts, and a new route is established through hosts R2 and
 R3. This detection and reconfiguration take very little time. After the
-AODV packet burst, the arrows displaying it quickly fade, and the UDP
+AODV packet burst, the arrows displaying it fade quickly, and the UDP
 traffic continues.
 
 The AODV route discovery messages can be seen in the following packet
@@ -98,7 +98,7 @@ The number of successfully received packets at host B has roughly
 doubled compared to the previous step. This is because the flow of
 packets doesn't stop when host R1 gets out of communication range of
 host A. Although the AODV protocol adds some overhead, in this
-simulation it is not significant, the number of received packets still
+simulation, it is not significant, the number of received packets still
 increases substantially.
 
 **Number of packets received by host B: 956**

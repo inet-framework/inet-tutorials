@@ -26,7 +26,7 @@ transmitter and the receiver antennas above the ground as input. To
 compute the altitude, we need the hosts' (x,y,z) positions and the
 ground's elevation at those points. The z coordinates of hosts have been
 set to 1.7m in an earlier step. The ground's elevation is defined by the
-ground model. which is part of the physical environment model.
+ground model, which is part of the physical environment model.
 
 In this model, we'll use :ned:`FlatGround` for the ground model, and specify it
 to the ``physicalEnvironment`` module. (Note that we added

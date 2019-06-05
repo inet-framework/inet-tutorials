@@ -41,7 +41,7 @@ Results
 -------
 
 When we run the simulation, blue circles confirm that hosts R1 and R2
-are the only hosts in the communication range of host A. Therefore they
+are the only hosts in the communication range of host A. Therefore, they
 are the only ones that receive host A's transmissions. This is indicated
 by the dotted arrows connecting host A to R1 and R2, respectively,
 representing recent successful receptions in the physical layer.

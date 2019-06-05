@@ -69,7 +69,7 @@ modules instead of real ARP.
 Traffic model
 ~~~~~~~~~~~~~
 
-In the model, host A generates UDP packets which are received by host B.
+In the model, host A generates UDP packets that are received by host B.
 To this end, host A is configured to contain a :ned:`UdpBasicApp` module,
 which generates 1000-byte UDP messages at random intervals with
 exponential distribution, the mean of which is 12ms. Therefore the app

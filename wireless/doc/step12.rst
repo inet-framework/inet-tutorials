@@ -85,7 +85,7 @@ from behind the wall. Then it gets out of communication range, and the
 new route goes through hosts R2 and R3.
 
 In this model, more physical effects are simulated than in previous
-steps. There is radio signal attenuation, background noise and a more
+steps. There are radio signal attenuation, background noise and a more
 realistic radio model. The blue circles representing the communication range
 is an approximation. There is no distinct distance where receptions
 fail, as in the case of :ned:`UnitDiskRadio`.
@@ -101,7 +101,7 @@ fail, as in the case of :ned:`UnitDiskRadio`.
    <!--internal video recording, playback speed animation speed 1-->
 
 In host A, the MAC receives the packet UDPData-408 from the radio. The
-MAC drops the packet because of bit errors, this can be seen in the
+MAC drops the packet because of bit errors; this can be seen in the
 following log:
 
 .. figure:: wireless-step12-log.png

@@ -26,7 +26,7 @@ energy consumption is represented by a separate component. This energy
 consumption model maps the activity of the core parts of the radio (the
 transmitter and the receiver) to power (energy) consumption. The core
 parts of the radio themselves do not contain anything about power
-consumption, they only expose their state variables. This allows one to
+consumption; they only expose their state variables. This allows one to
 switch to arbitrarily complex (or simple) power consumption models,
 without affecting the operation of the radio. The energy consumption
 model can be specified in the ``energyConsumerType`` parameter of the
@@ -54,7 +54,7 @@ being transmitted (if any).
 :ned:`StateBasedEpEnergyConsumer` expects the consumption in various states
 to be specified in watts in parameters like ``sleepPowerConsumption``,
 ``receiverBusyPowerConsumption``,
-``transmitterTransmittingPreamblePowerConsumption`` and so on.
+``transmitterTransmittingPreamblePowerConsumption``, and so on.
 
 Measuring energy consumption
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +99,7 @@ energy.
 
 .. figure:: wireless-step8-energy-2.png
 
-The ``residualCapacity`` statistic of hosts A, R1 and B is plotted on the
+The ``residualCapacity`` statistic of hosts A, R1 and B are plotted on the
 following diagram. The diagram shows that host A has consumed the most
 power because it transmitted more than the other nodes.
 

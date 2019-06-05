@@ -69,7 +69,7 @@ The UDPData + ACK sequences can be seen in the sequence chart below:
 
 In the following chart, the UDPData packet sequence numbers that are
 received by host B's UDPApp, are plotted against time. This chart
-contains the statistics of the previous step (ACK off, blue) and of the
+contains the statistics of the previous step (ACK off, blue) and the
 current step (ACK on, red).
 
 .. figure:: wireless-step7-seqno.png

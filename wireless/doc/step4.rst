@@ -39,7 +39,7 @@ configurator looks at the wireless network as a full graph. Links with
 high error rates will have high costs, and links with low error rates
 will have low costs. Routes are formed such as to minimize their costs.
 In the case of the :ned:`UnitDiskRadio` model, the error rate is 1 for
-nodes that are out of range, and a very small value for ones in range.
+nodes that are out of range and a very small value for ones in range.
 The result will be that nodes that are out of range of each other will
 send packets to intermediate nodes that can forward them.)
 
@@ -47,16 +47,16 @@ Visualization
 ~~~~~~~~~~~~~
 
 The :ned:`IntegratedCanvasVisualizer` we use as the ``visualizer``
-submodule in this network contains a ``networkRouteVisualizer`` module
+submodule in this network contains a ``networkRouteVisualizer`` module,
 which is able to render packet paths. This module displays paths where a
 packet has been recently sent between the network layers of the two end
 hosts. The path is displayed as a colored arrow that goes through the
-visited hosts. The path continually fades and then it disappears after a
+visited hosts. The path continually fades, and then it disappears after a
 certain amount of time unless it is reinforced by another packet.
 
 The network route visualizer is activated by setting its
 ``displayRoutes`` parameter to ``true``. Its ``packetFilter`` parameter
-specifies which packets it should take into account. By default it is
+specifies which packets it should take into account. By default, it is
 set to ``*``, which means all packets. Our UDP application generates
 packets with the name ``UDPData-0``, ``UDPData-1``, etc, so we set the
 packet filter to ``UDPData*`` in order to filter out other types of

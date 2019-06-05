@@ -16,10 +16,10 @@ the "sense before transmit" (or "listen before talk") principle.
 
 CSMA (carrier sense multiple access) is a probabilistic MAC protocol in
 which a node verifies the absence of other traffic before transmitting
-on the shared transmission medium. CSMA has several variants, we'll use
+on the shared transmission medium. CSMA has several variants; we'll use
 CSMA/CA (where CA stands for collision avoidance). In this protocol, a
 node that has data to send first waits for the channel to become idle,
-and then it also waits for a random backoff period. If the channel was
+and then it also waits for a random backoff period. If the channel is
 still idle during the backoff, the node can actually start transmitting.
 Otherwise, the procedure starts over, possibly with an updated range for
 the backoff period. We expect that the use of CSMA will improve
@@ -47,7 +47,7 @@ approximate basic 802.11b ad-hoc mode operation. Parameters include:
 -  timing: interval to wait before transmitting ACK frame (SIFS) and
    before data frames in addition to the backoff slots (DIFS)
 
-For now, we do not use an acknowledgment (sending of ACK packets) so we
+For now, we do not use an acknowledgment (sending of ACK packets), so we
 can see purely the effect of "listen before talk" and waiting a random
 backoff period before each transmission (this is the default behavior
 for the MAC). In the absence of ACKs, the MAC has to assume that all its
