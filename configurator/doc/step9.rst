@@ -4,7 +4,7 @@ Step 9. Leaving some part of the network unconfigured
 Goals
 -----
 
-Configuring the whole network is not always desirable, because some part
+Configuring the whole network is not always desirable, because some parts
 of the network should rather be configured dynamically. In this step,
 some wired and wireless LANs' addresses are left unspecified by the
 configurator, and they get addresses with DHCP.
@@ -38,7 +38,7 @@ It boils down to the following:
    unspecified LAN. The interface's netmask is the DHCP server's address
    range.
 -  :ned:`DhcpClient` submodules are added to the LANs which are unspecified
-   by the configurator. There is one such LAN in each area, they are
+   by the configurator. There is one such LAN in each area; they are
    ``area1lan3``, ``area2lan1`` and ``area3lan3``. Hosts in these LANs
    get the addresses from the DHCP server in the corresponding area
    router.
@@ -77,7 +77,7 @@ the start of the simulation, there are no routes leading to
 Though the hosts in the three LANs have unspecified addresses, subnet
 routes leading to these LANs are added to the routing tables of all
 hosts. The addresses for the interfaces connecting to these LANs have a
-netmask assigned so there are addresses allocated for the unspecified
+netmask assigned, so there are addresses allocated for the unspecified
 hosts. For example, ``area1router``'s ``eth3`` interface has the address
 10.1.4.1/29 and has four addresses allocated (``10.1.4.2``..\ ``5``).
 

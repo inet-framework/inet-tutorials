@@ -25,7 +25,7 @@ connected to all other wireless nodes in the same wireless network.
 
 After the graph is built, the configurator assigns weights to vertices
 and edges according to the configured metric. Vertices that represent
-network nodes with IP forwarding turned off have infinite weight, all
+network nodes with IP forwarding turned off have infinite weight; all
 others have 0. Finally, the shortest path algorithm is used to determine
 the routes based on the assigned weights.
 

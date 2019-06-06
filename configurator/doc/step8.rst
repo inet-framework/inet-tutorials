@@ -105,7 +105,7 @@ LAN).
 
    <!--internal video recording playback speed 2 animation speed none crop 210 360 50 30-->
 
-This is how the routes would look like if the XML configuration didn't
+The following image shows how the routes would look like if the XML configuration didn't
 contain the ``<wireless>`` elements:
 
 .. figure:: step8fullmesh_2.png

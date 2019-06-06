@@ -57,7 +57,7 @@ arrow indicates an entry in the source host's routing table. It points
 to the host that is the next hop or gateway for that routing table
 entry. The visualization is activated by setting the
 :ned:`RoutingTableVisualizer`'s ``displayRoutingTables`` parameter to
-``true``. The set of routes to be visualized are selected with the
+``true``. The set of routes to be visualized is selected with the
 visualizer's ``destinationFilter`` and ``nodeFilter`` parameters. All
 routes leading towards the selected set of destinations from the
 selected set of source nodes are indicated by arrows. The default
@@ -92,7 +92,7 @@ Additional configuration
 
 The ``General`` configuration also sets up :ned:`GlobalArp` to keep the
 packet exchanges simpler. :ned:`GlobalArp` fills the ARP tables of all
-nodes in advance, so when the simulation begins no ARP exchanges are
+nodes in advance, so when the simulation begins, no ARP exchanges are
 necessary.
 
 The ``**.routingTable.netmaskRoutes = ""`` line keeps the routing table

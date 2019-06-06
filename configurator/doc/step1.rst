@@ -6,7 +6,7 @@ Goals
 
 In the first step, we want to automatically assign addresses in a wired
 network. To make the task a little bit more complicated, the network
-won't be a single LAN but several LANs connected via routers. We want to
+won't be a single LAN, but several LANs connected via routers. We want to
 place nodes on each subnet into a different subnet, but otherwise, we
 don't care how addresses are assigned. We also ignore the question of
 filling routing tables for now -- it will be covered in later steps.
@@ -111,7 +111,7 @@ towards a switch as a group has four interfaces, thus, a 30-bit netmask
 with a 2-bit host identifier would have sufficed. However, the
 configurator doesn't assign addresses where the host identifier is
 all-zeros or all-ones (as they commonly refer to the subnet itself
-and to the subnet broadcast address.)
+and the subnet broadcast address.)
 
 Sources: :download:`omnetpp.ini <../omnetpp.ini>`,
 :download:`ConfiguratorA.ned <../ConfiguratorA.ned>`

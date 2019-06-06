@@ -28,7 +28,7 @@ a number of hosts, connected to the area router.
 -  Area3 has three ``StandardHosts`` connected to the router via a
    switch.
 
-There is no access point in area 1, the hosts form an ad-hoc wireless
+There is no access point in area 1; the hosts form an ad-hoc wireless
 network. They connect to the rest of the network through ``area1host3``,
 which has a wired connection to the router. However, ``area1host3`` is
 not in the communication range of ``area1host1`` (illustrated on the
@@ -67,7 +67,7 @@ according to the error rate metric, while all others according to hop
 count.
 
 The global ``addStaticRoutes``, ``addDefaultRoutes`` and
-``addSubnetRoutes`` parameters can be also specified per interface, with
+``addSubnetRoutes`` parameters can also be specified per interface, with
 attributes of the ``<interface>`` element. The attribute names are
 ``add-static-route``, ``add-default-route`` and ``add-subnet-route``,
 and they are all booleans with true as default value. The global and

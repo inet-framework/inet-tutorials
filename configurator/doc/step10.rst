@@ -6,7 +6,7 @@ Goals
 
 This step demonstrates using the error rate metric for configuring
 static routes. It also demonstrates leaving the routing tables
-unconfigured, so a dynamic routing protocol can configure them. The step
+unconfigured, so that a dynamic routing protocol can configure them. The step
 consists of three parts:
 
 -  **Part A**: Static routing based on error rate metric
@@ -41,7 +41,7 @@ The configuration for this part in omnetpp.ini is the following:
    :end-before: ####
 
 The transmitter power of radios determines their communication range. The
-range is set up so hosts are only in the range of the adjacent hosts in the
+range is set up so that hosts are only in the range of the adjacent hosts in the
 chain. :ned:`RoutingTableCanvasVisualizer` is set to visualize routes to
 all destinations. The routing table visualization is simplified by
 turning off arrow labels and setting the arrow line shift to 0. The

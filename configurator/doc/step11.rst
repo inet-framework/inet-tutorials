@@ -16,7 +16,7 @@ Part A - Dumping the full configuration
 ---------------------------------------
 
 The configurator can be instructed to dump its configuration into a
-config file, in the XML configuration format. This contains all the
+config file, in the XML configuration format. This file contains all the
 assigned addresses, routing table entries and members of wireless links,
 so they can be easily modified. The modified config file can be used as
 the XML configuration for subsequent simulation runs.
